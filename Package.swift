@@ -10,7 +10,8 @@ let package = Package(
             path: "Sources/Bill",
             resources: [
                 .copy("Resources/Sprites"),
-                .copy("Resources/Dialogue")
+                .copy("Resources/Dialogue"),
+                .copy("Resources/Packs")
             ]
         )
     ]

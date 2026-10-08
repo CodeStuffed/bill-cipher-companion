@@ -1,0 +1,143 @@
+{
+ "idle": {
+  "any": [
+   "Hmph. Don't wander too far.",
+   "So. This is the world you keep returning to. It has... character.",
+   "Quiet. Almost too quiet. I don't trust it."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Careful. My needle is never far.",
+   "Bold. I'll allow it. Once."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.annoyed": {
+  "any": [
+   "You test my patience. It is a shorter weapon than my needle."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.furious": {
+  "any": [
+   "ENOUGH! Aaduuuu! Do not make me use this window as a battleground!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "You're up. Good. The day won't conquer itself."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "Night. The time when careless bugs get eaten. Stay near me."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "{app}. Another human ritual. Fine. Proceed.",
+   "So this is your 'work'. I've seen silk-spinning with more urgency."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "Threads of logic, woven like silk. I respect the craft. Marginally."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "A battle simulation? Show me your form. ...Hmph. Needs work."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryLow": {
+  "any": [
+   "Your energy wanes. Even the strongest vessels need rest."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "You return. Promptly, this time. Good."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "Rain. It suits this gloomy kingdom of yours."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.thunder": {
+  "any": [
+   "A storm brews. Good. I've always liked the loud ones."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "hollowed": {
+  "any": [
+   "Ah... so there are two of us here now, little ghost."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [
+   "The small one speaks. ...Of course it does.",
+   "Hmph. Keep swinging, little shadow. You'll get there.",
+   "You've come far, little bug. Don't waste it on idleness."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

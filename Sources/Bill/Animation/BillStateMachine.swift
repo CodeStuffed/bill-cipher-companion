@@ -15,6 +15,17 @@ final class BillStateMachine {
     private var holdWork: DispatchWorkItem?
     private static let actionKey = "billClip"
 
+    /// How a state becomes a playable clip. Bill's default routes to the
+    /// original `AnimationClipLibrary`; pack characters route to their own
+    /// `CharacterAnimationLibrary` over `CharacterSpriteCatalog` families.
+    private var clipProvider: @MainActor (BillState) -> AnimationClip
+    /// The texture every settle returns to — Bill's idle frame by default,
+    /// the active pack character's idle frame when switched.
+    private var restTexture: SKTexture
+    /// Pack characters map idle-variety beats onto their own families;
+    /// `nil` falls back to the Bill defaults.
+    private var idleVariantProvider: ((AnimationClipLibrary.IdleVariant) -> AnimationClip?)?
+
     private var barkQueue: [String] = []
     private var isBarkShowing = false
     /// Every queued line is guaranteed at least this long on screen.
@@ -58,8 +69,17 @@ final class BillStateMachine {
     var onBarkPanel: ((_ text: String, _ billFrame: NSRect) -> Void)?
     /// Fires when a showing bark should be repositioned (Bill moved).
     var onBarkPanelReposition: ((_ billFrame: NSRect) -> Void)?
-    init(rig: BillRigNode) {
+
+    init(
+        rig: BillRigNode,
+        clipProvider: @escaping @MainActor (BillState) -> AnimationClip = AnimationClipLibrary.clip(for:),
+        restTexture: SKTexture = BillSpriteCatalog.restTexture,
+        idleVariants: ((AnimationClipLibrary.IdleVariant) -> AnimationClip?)? = nil
+    ) {
         self.rig = rig
+        self.clipProvider = clipProvider
+        self.restTexture = restTexture
+        self.idleVariantProvider = idleVariants
         equipProp(.none)
         // Ambient idle isn't kicked off here: `onActivityChanged` isn't
         // wired up by the host view yet at construction time (that happens
@@ -68,6 +88,33 @@ final class BillStateMachine {
         // be silently lost, leaving the view paused despite the bob action
         // technically running. `CharacterEngine.start()` — called once
         // everything is connected — starts it instead.
+    }
+
+    /// Swaps the character underneath a live state machine — the mechanism
+    /// behind menu-bar character switching. Stops whatever is playing,
+    /// hands every future state to the new providers, and settles onto the
+    /// new rest frame so the next ambient idle runs the new character.
+    func adopt(
+        clipProvider: @escaping @MainActor (BillState) -> AnimationClip,
+        restTexture: SKTexture,
+        idleVariants: ((AnimationClipLibrary.IdleVariant) -> AnimationClip?)? = nil
+    ) {
+        self.clipProvider = clipProvider
+        self.restTexture = restTexture
+        self.idleVariantProvider = idleVariants
+        holdWork?.cancel(); holdWork = nil
+        pendingWork?.cancel()
+        for (_, node) in rig.parts {
+            node.removeAction(forKey: Self.actionKey)
+        }
+        currentState = .idle
+        equipProp(.none)
+        applyFX(nil)
+        rig.bodyNode.texture = restTexture
+        setClipActive(true)
+        let work = DispatchWorkItem { [weak self] in self?.startAmbientIdle() }
+        pendingWork = work
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: work)
     }
 
     /// Request a state change. Continuous states (walking, talking, sleeping,
@@ -85,10 +132,13 @@ final class BillStateMachine {
     }
 
     /// A short idle-only flourish (blink, look around, stretch) that doesn't
-    /// change `currentState` — only valid while genuinely idle.
+    /// change `currentState` — only valid while genuinely idle. Pack
+    /// characters may map a variant onto their own families through
+    /// `idleVariantProvider`; a `nil` from it falls back to the Bill clip.
     func playIdleVariant(_ variant: AnimationClipLibrary.IdleVariant) {
         guard currentState == .idle else { return }
-        runClip(variant.clip) { [weak self] in
+        let clip = idleVariantProvider?(variant) ?? variant.clip
+        runClip(clip) { [weak self] in
             // Resume the continuous idle bob rather than going fully static
             // — a variant beat is a brief interruption of ambient idle, not
             // a reason to freeze afterward.
@@ -96,12 +146,18 @@ final class BillStateMachine {
         }
     }
 
-    /// Starts (or resumes) Bill's continuous idle bob — see
+    /// Starts (or resumes) the character's continuous idle bob — see
     /// `AnimationClipLibrary.idle`'s doc comment for why this must never
     /// simply stop and leave him static. Safe to call repeatedly; each call
     /// just re-runs the same looping action under the same key.
+    ///
+    /// Routes through `clipProvider` rather than the Bill clip directly —
+    /// the single root cause of the "switch to Sans, he flashes then becomes
+    /// Bill again" report: ambient idle is the clip every settle lands on,
+    /// so hardcoding Bill's textures here meant every pack character was
+    /// silently re-skinned the moment they settled.
     private func startAmbientIdle() {
-        runClip(AnimationClipLibrary.idle, completion: nil)
+        runClip(clipProvider(.idle), completion: nil)
         // `runClip` has just flagged the clip active; ambient idle is the one
         // clip that does NOT need the full frame rate, so step straight back
         // down. This is the only place the low-rate edge is produced.
@@ -404,7 +460,7 @@ final class BillStateMachine {
         onClipStarted?(state)
         equipProp(AnimationClipLibrary.prop(for: state))
         applyFX(AnimationClipLibrary.fx(for: state))
-        let clip = AnimationClipLibrary.clip(for: state)
+        let clip = clipProvider(state)
         holdWork?.cancel()
         holdWork = nil
         if state.isContinuous {
@@ -483,7 +539,7 @@ final class BillStateMachine {
             // textureAction`'s doc comment for why `resize: true` is both
             // unnecessary and actively harmful here).
             if part == .body {
-                resetActions.append(SKAction.setTexture(BillSpriteCatalog.restTexture, resize: false))
+                resetActions.append(SKAction.setTexture(restTexture, resize: false))
             }
             node.run(SKAction.group(resetActions), withKey: Self.actionKey)
         }

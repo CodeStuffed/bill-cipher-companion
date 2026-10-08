@@ -1,0 +1,244 @@
+{
+ "idle": {
+  "any": [
+   "...I was just thinking about pancakes.",
+   "Do you think we'll get home soon? I miss my mama.",
+   "The sun is really warm. ...I'm the sun, you know. Sort of.",
+   "It's quiet here. I like quiet. My village was quiet too."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Ah! ...I wasn't scared! Just... surprised!",
+   "Hehe, stop it! I'm ticklish!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.annoyed": {
+  "any": [
+   "Please don't do that... I'm trying to have a serious adventure moment here."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "Good morning! I dreamed about pancakes. That's most mornings.",
+   "Morning already? ...I was having such a good dream about mama."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.midday": {
+  "any": [
+   "Lunch time? If we find any pancakes, I call dibs. All of the dibs."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.afternoon": {
+  "any": [
+   "The light is getting all orange... it's pretty, isn't it?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "It's dark... do you still have that flashlight? I feel braver with it.",
+   "I'm getting sleepy... but I want to see one more star."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "{app}... is that like a puzzle from the other world?",
+   "You're really good at... whatever {app} does!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "Whoa, you're typing so fast! Are you a scholar?! ...I mean, a computer scholar!",
+   "I don't know what that does, but it looks IMPORTANT!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "A game! Can I play? ...Oh. I don't have hands in this world either, huh.",
+   "Ooh!! Is this one of those... 'simulation' games? Like this one?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryLow": {
+  "any": [
+   "Your light-mirror is dying! Don't worry... I'll shine for both of us.",
+   "Low battery... is that like being sleepy? Then it should take a nap!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryCharging": {
+  "any": [
+   "Charging! Like sleeping, but with MORE ELECTRICITY!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "cpuHot": {
+  "any": [
+   "Your computer sounds grumpy... like me before pancakes."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "You're back! ...I didn't even notice you left! I was thinking about pancakes."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gettingSleepy": {
+  "any": [
+   "*yaaawn*... I'm not sleepy! I'm just resting my eyes! Both of them!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "waking": {
+  "any": [
+   "Mmnn... five more minutes... is it pancake o'clock yet?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "Rain... mama said rain means the wheat will grow! Then more pancakes! Eventually!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.snow": {
+  "any": [
+   "Snow!! It almost never snows in the village! It's like the sky is full of tiny cold pancakes!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.clear": {
+  "any": [
+   "Nice weather! Perfect for... walking. And finding pancakes."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.thunder": {
+  "any": [
+   "Th-that's just the sky being loud... I'm not scared! Are you? We can be not-scared together."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "networkLost": {
+  "any": [
+   "The internet is gone?! ...What's an internet? Is it a kind of pancake?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "chatFailed": {
+  "any": [
+   "Aww... it didn't work. It's okay! We can try again! That's what papa always said!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "dreading": {
+  "any": [
+   "Homework... you can do it! And THEN we get pancakes! ...We have to find the pancakes. But they're out there!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "hollowed": {
+  "any": [
+   "That little knight... they look so tired. Someone should make them pancakes. Or... whatever bugs eat."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "darkWorld": {
+  "any": [
+   "A dark world... I know about those! Be careful! But also... it might be nice? Sometimes they are!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

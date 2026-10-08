@@ -1,0 +1,170 @@
+{
+ "idle": {
+  "any": [
+   "Heh. What're you lookin' at?",
+   "This spot's decent. Could use more... explosions.",
+   "*chews on a chalk stick* ...What. It's a snack."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Rrrgh!! Do that again an' I'll... heh. Do it again. I DARE ya.",
+   "Whoa!! ...Heh. Alright. You got guts, punk."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.annoyed": {
+  "any": [
+   "Okay, OKAY. Personal space, freak!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.furious": {
+  "any": [
+   "THAT'S IT. Rude Mode fully engaged!!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "Mornin'. ...Quit lookin' at me like I'm a morning person. I'm a MORNING MENACE."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "Night, huh. ...The dark's not so bad. Kinda cozy. Don't tell anyone I said that."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "{app}, huh. It better be somethin' I can smash.",
+   "{app}. ...Heh. Sounds like a warm-up."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "Typing stuff. Makin' the box do stuff. ...Y'know what, that's kinda metal."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "A GAME?? Finally. Move over. I'll show ya how it's done. Violently."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryLow": {
+  "any": [
+   "Yo, your thing's dyin'. Even machines gotta rest. ...Heh. 'Rest.' Nerdy machine naps."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "Oh. You're back. ...I wasn't worried or nothin'. I was BORED. Different thing."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "Rain!! Good. I was gettin' too dry. ...Monsters, y'know. Hydrate or... whatever."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.thunder": {
+  "any": [
+   "THUNDER!! HAH!! Sky's showin' off!! I respect that!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.snow": {
+  "any": [
+   "Snow. ...Snow's fine. What. Stop lookin' at me. I don't gotta justify enjoyin' SNOW."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "dreading": {
+  "any": [
+   "Homework?! ...Alright, look. You do it, and I'll... supervotate. Aggressively."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "guilty": {
+  "any": [
+   "Language practice? Blegh. ...Fine. Do your weird word reps. I'll allow it."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "hollowed": {
+  "any": [
+   "That knight bug?! They're TINY!! ...And they fight a whole kingdom?! ...Heh. Respect."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [
+   "Quiet, ya nerd. ...I mean. Keep goin'. Whatever.",
+   "HAH!! Nice one. ...I mean. It was OKAY.",
+   "Kris!! You're... doin' fine or whatever."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

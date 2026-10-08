@@ -1,0 +1,112 @@
+{
+ "idle": {
+  "any": [
+   "Yo!! What's up?!",
+   "Man, I wish Undyne was here. She'd LOVE this spot.",
+   "Yo, this is so cool! Standing here! With no arms!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Yo!! Haha, that tickles! I think! I can't really feel my sides!",
+   "Whoa!! Careful! I fall over super easy!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.annoyed": {
+  "any": [
+   "Yo, quit it! I can't poke back! IT'S A BIG DISADVANTAGE!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "Yo, morning!! Undyne's probably up doing like a thousand pushups right now!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "Yo... it's getting dark. Undyne says the dark is when COOL things happen!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "Yo!! {app}!! Is it cool?! It's probably cool!!",
+   "Whoa!! {app}!! My mom won't let me use that one!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "Yo, a game!! I'm SO good at games! ...I use my face for the buttons."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "Yo, rain!! I can't hold an umbrella!! This is GREAT!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.snow": {
+  "any": [
+   "SNOW?! YO!! Snowmen!! I'm basically a snowman with no arms ALREADY!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "hollowed": {
+  "any": [
+   "Yo!! That knight is SO COOL!! They're small like me!! But way better at stuff!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trickster": {
+  "any": [
+   "Yo, it's Undertale!! That's ME in there!! With no arms!! REPRESENT!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

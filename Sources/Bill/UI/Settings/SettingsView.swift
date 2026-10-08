@@ -12,8 +12,12 @@ struct SettingsView: View {
     var onTestWeather: (() -> Void)?
     var onOpenQuotesManager: (() -> Void)?
     var onTestTrigger: ((_ keys: [String], _ animationKey: String) -> Void)?
+    /// Switches the on-screen character — AppDelegate wires this to
+    /// `switchCharacter(to:)`.
+    var onSwitchCharacter: ((_ id: String) -> Void)?
 
     enum Section: String, CaseIterable, Identifiable {
+        case characters = "Characters"
         case appearance = "Appearance"
         case behaviour = "Behaviour"
         case animations = "Animations"
@@ -25,6 +29,7 @@ struct SettingsView: View {
         var id: String { rawValue }
         var icon: String {
             switch self {
+            case .characters: return "person.2"
             case .appearance: return "paintbrush"
             case .behaviour: return "gearshape"
             case .animations: return "figure.dance"
@@ -87,6 +92,7 @@ struct SettingsView: View {
     private var detail: some View {
         ScrollView {
             switch Section(rawValue: preferences.selectedSettingsSection) ?? .appearance {
+            case .characters: charactersDetail
             case .appearance: appearanceDetail
             case .behaviour: behaviourDetail
             case .animations: animationsDetail
@@ -399,6 +405,135 @@ struct SettingsView: View {
             Spacer()
         }
         .padding(24)
+    }
+
+
+    // MARK: - Characters
+
+    /// The pack system's front door in Settings: pick who's on screen, who
+    /// stands beside them, and *watch* each animation before committing —
+    /// the preview is a real SpriteKit view running the same
+    /// `CharacterAnimationLibrary` clips the desktop character plays.
+    private var charactersDetail: some View {
+        VStack(alignment: .leading, spacing: 24) {
+            sectionHeader("Characters", subtitle: "Who lives on your desktop — and who they bring along")
+
+            card("On screen now") {
+                VStack(alignment: .leading, spacing: 12) {
+                    let current = CharacterRoster.character(preferences.activeCharacterID)
+                    HStack {
+                        Text("Active character")
+                        Spacer()
+                        Text(current.displayName + " — " + current.packName)
+                            .foregroundColor(.secondary)
+                    }
+                    characterGrid
+                }
+            }
+
+            card("Companions") {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Show alongside " + CharacterRoster.character(preferences.activeCharacterID).displayName)
+                        .foregroundColor(.secondary)
+                    let packCharacters = CharacterRoster.all.filter {
+                        $0.packID == CharacterRoster.character(preferences.activeCharacterID).packID
+                            && !$0.isBill
+                            && $0.id != preferences.activeCharacterID
+                    }
+                    if packCharacters.isEmpty {
+                        Text("This character flies solo.")
+                            .foregroundColor(.secondary)
+                    } else {
+                        ForEach(packCharacters) { companion in
+                            Toggle(companion.displayName, isOn: companionBinding(companion.id))
+                        }
+                        Text("Leave everything unchecked to use the pack's default pair.")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                }
+            }
+
+            card("Animation preview") {
+                CharacterPreviewView(characterID: preferences.previewCharacterID.isEmpty
+                    ? preferences.activeCharacterID
+                    : preferences.previewCharacterID)
+            }
+
+            if !currentCredit.isEmpty {
+                card("Sprite credit") {
+                    Text(currentCredit)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+            }
+        }
+        .padding(20)
+    }
+
+    /// One tile per character, grouped by pack — click to switch, watch the
+    /// preview update live.
+    private var characterGrid: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 8) {
+                characterTile(CharacterRoster.bill)
+            }
+            ForEach(CharacterRoster.packs, id: \.name) { pack in
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(pack.name)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 110), spacing: 8)], spacing: 8) {
+                        ForEach(pack.characters) { character in
+                            characterTile(character)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private func characterTile(_ character: CharacterDefinition) -> some View {
+        Button {
+            preferences.activeCharacterID = character.id
+            preferences.previewCharacterID = character.id
+            onSwitchCharacter?(character.id)
+        } label: {
+            Text(character.displayName)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 8)
+        }
+        .buttonStyle(.bordered)
+        .background(
+            RoundedRectangle(cornerRadius: 6)
+                .fill(preferences.activeCharacterID == character.id
+                      ? Color.accentColor.opacity(0.25)
+                      : Color.clear)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 6)
+                .strokeBorder(preferences.activeCharacterID == character.id ? Color.accentColor : Color.clear, lineWidth: 2)
+        )
+    }
+
+    private func companionBinding(_ id: String) -> Binding<Bool> {
+        Binding(
+            get: { preferences.activeCompanionIDs.contains(id) },
+            set: { included in
+                var current = preferences.activeCompanionIDs
+                if included {
+                    if !current.contains(id) { current.append(id) }
+                } else {
+                    current.removeAll { $0 == id }
+                }
+                preferences.activeCompanionIDs = current
+                onSwitchCharacter?(preferences.activeCharacterID)
+            }
+        )
+    }
+
+    private var currentCredit: String {
+        CharacterRoster.character(preferences.activeCharacterID).credit
     }
 
     // MARK: - About

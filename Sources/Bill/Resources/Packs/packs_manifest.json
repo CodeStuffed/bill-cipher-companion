@@ -1,0 +1,253 @@
+{
+ "sans": {
+  "canvas": [
+   40,
+   37
+  ],
+  "families": {
+   "idle": 4,
+   "walking": 4,
+   "talking": 4,
+   "happy": 4,
+   "annoyed": 2,
+   "surprised": 1,
+   "sleeping": 2,
+   "coding": 2,
+   "gaming": 3,
+   "charging": 8,
+   "celebrating": 3,
+   "smug": 3,
+   "heating": 2,
+   "confused": 4,
+   "dazed": 2,
+   "poked": 4,
+   "ghost": 3,
+   "dining": 10
+  }
+ },
+ "papyrus": {
+  "canvas": [
+   27,
+   43
+  ],
+  "families": {
+   "idle": 4,
+   "walking": 4,
+   "talking": 6,
+   "happy": 4,
+   "annoyed": 4,
+   "surprised": 3,
+   "celebrating": 6,
+   "confused": 2,
+   "back": 4
+  }
+ },
+ "toriel": {
+  "canvas": [
+   51,
+   55
+  ],
+  "families": {
+   "idle": 3,
+   "walking": 4,
+   "talking": 4,
+   "happy": 3,
+   "annoyed": 3,
+   "surprised": 3,
+   "sleeping": 2,
+   "coding": 4,
+   "gaming": 4,
+   "celebrating": 4
+  }
+ },
+ "undyne": {
+  "canvas": [
+   34,
+   55
+  ],
+  "families": {
+   "idle": 4,
+   "walking": 6,
+   "talking": 4,
+   "happy": 5,
+   "annoyed": 3,
+   "surprised": 4,
+   "attack": 6
+  }
+ },
+ "frisk": {
+  "canvas": [
+   23,
+   29
+  ],
+  "families": {
+   "idle": 4,
+   "walking": 4,
+   "talking": 4,
+   "happy": 6,
+   "surprised": 4
+  }
+ },
+ "flowey": {
+  "canvas": [
+   25,
+   33
+  ],
+  "families": {
+   "idle": 2,
+   "talking": 2,
+   "happy": 2,
+   "annoyed": 2,
+   "laugh": 3,
+   "surprised": 2,
+   "evil": 4
+  }
+ },
+ "temmie": {
+  "canvas": [
+   29,
+   26
+  ],
+  "families": {
+   "idle": 4,
+   "walking": 4,
+   "talking": 2,
+   "happy": 5,
+   "surprised": 1
+  }
+ },
+ "monsterkid": {
+  "canvas": [
+   29,
+   28
+  ],
+  "families": {
+   "idle": 4,
+   "walking": 8,
+   "talking": 4,
+   "happy": 4,
+   "surprised": 4,
+   "goner": 2
+  }
+ },
+ "annoyingdog": {
+  "canvas": [
+   21,
+   26
+  ],
+  "families": {
+   "idle": 1,
+   "walking": 4,
+   "talking": 3,
+   "happy": 3,
+   "sleeping": 1
+  }
+ },
+ "niko": {
+  "canvas": [
+   21,
+   29
+  ],
+  "families": {
+   "idle": 4,
+   "walking": 4,
+   "talking": 4,
+   "happy": 4,
+   "sad": 4,
+   "surprised": 4,
+   "walkup": 4
+  }
+ },
+ "nikodt": {
+  "canvas": [
+   21,
+   29
+  ],
+  "families": {
+   "idle": 1,
+   "walking": 8,
+   "talking": 8,
+   "happy": 8,
+   "sad": 8,
+   "surprised": 8
+  }
+ },
+ "knight": {
+  "canvas": [
+   170,
+   170
+  ],
+  "families": {
+   "idle": 4,
+   "walking": 7,
+   "talking": 5,
+   "happy": 9,
+   "attack": 17,
+   "surprised": 5,
+   "dazed": 8,
+   "sit": 6,
+   "focus": 6
+  }
+ },
+ "hornet": {
+  "canvas": [
+   202,
+   215
+  ],
+  "families": {
+   "idle": 2,
+   "walking": 6,
+   "talking": 4,
+   "happy": 8,
+   "jump": 10,
+   "land": 6,
+   "throw": 8
+  }
+ },
+ "kris": {
+  "canvas": [
+   54,
+   47
+  ],
+  "families": {
+   "idle": 4,
+   "walking": 4,
+   "talking": 4,
+   "happy": 4,
+   "annoyed": 4,
+   "surprised": 4,
+   "attack": 8,
+   "celebrating": 4
+  }
+ },
+ "ralsei": {
+  "canvas": [
+   24,
+   43
+  ],
+  "families": {
+   "idle": 4,
+   "walking": 4,
+   "talking": 4,
+   "happy": 4,
+   "annoyed": 4,
+   "surprised": 4,
+   "sad": 2
+  }
+ },
+ "susie": {
+  "canvas": [
+   58,
+   47
+  ],
+  "families": {
+   "idle": 4,
+   "walking": 6,
+   "talking": 6,
+   "happy": 4,
+   "annoyed": 4,
+   "surprised": 4,
+   "laugh": 4
+  }
+ }
+}

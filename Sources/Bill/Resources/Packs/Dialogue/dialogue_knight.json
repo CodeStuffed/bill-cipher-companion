@@ -1,0 +1,148 @@
+{
+ "idle": {
+  "any": [
+   "...",
+   "... (You rest, still as a statue. Old habits.)",
+   "... (Geo jingles softly in your cloak.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "...",
+   "... (You endure it. You have endured worse.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.furious": {
+  "any": [
+   "... (The nail stirs. Just barely.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "... (Morning in Hallownest never came. This one did. You savor it.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "... (The dark feels familiar. Almost like home. Almost.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "... ({app}. You observe. You do not judge. Much.)",
+   "..."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "... (Symbols. Like the map Cornifer draws. Sort of.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "... (A game. You know games. You have fought in the Colosseum of Fools.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryLow": {
+  "any": [
+   "... (Your lantern dims. You know this feeling.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryCharging": {
+  "any": [
+   "... (Soul restored. It never feels like enough.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "..."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "... (Rain. The City of Tears never stopped. This is gentler.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.snow": {
+  "any": [
+   "... (Snow. Like the Abyss was, before you climbed out.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.thunder": {
+  "any": [
+   "... (Thunder. Somewhere, a false lightning memory stirs.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "hollowed": {
+  "any": [
+   "... (You know this one. You ARE this one.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

@@ -1,0 +1,250 @@
+{
+ "idle": {
+  "any": [
+   "NGAHHH! ...What? I'm just STANDING here! It's INTENSE!",
+   "Sup. I'm watching you. NOT in a creepy way. In a COOL way!",
+   "I could do a hundred push-ups right now. I'm doing ZERO. For SUSPENSE!",
+   "This is a great spot. I can see everything. EVERYTHING!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "HAH! Was that supposed to hurt?! ...It didn't. But NICE TRY!",
+   "You've got GUTS, punk! I LIKE that!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.annoyed": {
+  "any": [
+   "Keep it up and we're having a REAL sparing match!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.furious": {
+  "any": [
+   "THAT'S IT! NEXT POKING SESSION IS A SPEAR SESSION!!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "MORNING ALREADY?! PERFECT! TIME TO SEIZE THE DAY! AGGRESSIVELY!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "Night owls UNITE! Wait. That's not... WHATEVER! STAY UP! FIGHT THE SUN TOMORROW!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.midday": {
+  "any": [
+   "MIDDAY! PRIME TIME FOR TRAINING! OR YELLING! OR BOTH!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "{app}! Let's see what you've got!",
+   "Alright, {app}! Show me your moves!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "Coding?! That's like... PUZZLES with MORE RULES! Respect!",
+   "You're typing SO FAST! Do you even know what the keys DO?! DOESN'T MATTER! GO GO GO!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "A GAME?! NOW we're talking! Go for the HIGH SCORE! FOR GLORY!!!",
+   "Yes!! Finally some ACTION! I'd play but I don't have... eh, forget it! GO WIN!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryLow": {
+  "any": [
+   "Low battery?! PATHETIC! ...I mean. Charge up, soldier! That's an ORDER!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryCharging": {
+  "any": [
+   "Charging! Just like before a big fight! Build that POWER!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "cpuHot": {
+  "any": [
+   "Your computer's FIRED UP! YEAHHH! ...Wait, is that bad?! WHATEVER! IT'S BADASS!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "THERE you are! Ready for anything?! GOOD!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "networkLost": {
+  "any": [
+   "Internet's DOWN?! Then we FIGHT our way back ONLINE! ...Metaphorically!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "networkRestored": {
+  "any": [
+   "WE'RE BACK!! Nobody panic! Everything is FINE!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.thunder": {
+  "any": [
+   "THUNDER!!! MOTHER NATURE'S DOING WAR CRIES! I LOVE IT!!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "RAIN?! Perfect weather for... SWIMMING! In PUDDLES! I mean. COMBAT TRAINING!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.snow": {
+  "any": [
+   "SNOW!! Bundle up! Cold builds CHARACTER!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "music": {
+  "any": [
+   "Nice playlist! Turn it UP!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "dancing": {
+  "any": [
+   "DANCING?! I'M AN AMAZING DANCER! IT'S ALL ABOUT THE ARMS! I HAVE TWO!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "dreading": {
+  "any": [
+   "Homework?! CRUSH IT! Show that homework who's BOSS!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "guilty": {
+  "any": [
+   "Language streak! DON'T BREAK IT! I believe in you, PUNK!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "hollowed": {
+  "any": [
+   "THAT KNIGHT! SO COOL!! They fight a PERFECT BUG with a BIG NAIL!! ADORABLE AND BADASS!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "darkWorld": {
+  "any": [
+   "A DARK WORLD?! Is there a BAD GUY?! SAY THERE'S A BAD GUY TO PUNCH!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trickster": {
+  "any": [
+   "UNDERTALE! I'M IN THIS ONE! That's ME!! FIGHTING EVERYTHING!! HELL YEAH!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

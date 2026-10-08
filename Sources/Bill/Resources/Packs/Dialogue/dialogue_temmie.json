@@ -1,0 +1,112 @@
+{
+ "idle": {
+  "any": [
+   "hOI!!!",
+   "tEM tINK tEM SMOLL!!1! aND CUTE!!1!",
+   "dis is... MY ROOM!!1! wel... not realY but tEM PRETEND"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "AAAH!!1! sTOP dat... UNLESS... u buying somthing?!!",
+   "OWchie!!1! dat cost EXTRA!!1!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.annoyed": {
+  "any": [
+   "tem said NO POKE!!1! NO!!1! ...ok maybe lil bit is FINE"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "mORNING!!1! tEM need COFFEE... tEM dont hav hands tho"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "sleep tim!!1! tEM dream of COLLEGE!!1! an mEMES!!1!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "woa!!1! {app}!!1! is dat... a SHOP??!! tEM LOVE SHOP!!1!",
+   "{app}!!1! wOA!!1!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "CODE!!1! tem learned dat in COLLEGE!!1! ...tEM forget all of it"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "GAM!!1! tEM play!!1! tEM not gud but tEM PLAY!!1!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryLow": {
+  "any": [
+   "NO POWR!!1! tem 2 poor 2 buy battery!!1!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "hOI AGAIN!!1!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "RAIN!!1! tem get SOGGY!!1! it ok... tem dry FAST"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

@@ -10,6 +10,16 @@ final class CharacterEngine {
     let rig: BillRigNode
     let stateMachine: BillStateMachine
 
+    /// The character currently on screen — Bill by default. Everything the
+    /// engine does (clips, barks, idle beats, rare eggs) reads through this
+    /// so the whole behavior stack works unchanged for pack characters.
+    private(set) var character: CharacterDefinition = CharacterRoster.bill
+    /// The active state→clip resolver, kept so `holdBeat` measures the right
+    /// clip duration whichever character is playing.
+    private var activeClipProvider: @MainActor (BillState) -> AnimationClip = AnimationClipLibrary.clip(for:)
+    /// Pack sprites, when a non-Bill character is active.
+    private(set) var catalog: CharacterSpriteCatalog?
+
     private var idleBeatTimer: Timer?
     private var catchUpTimer: Timer?
     private var isRunning = false
@@ -47,9 +57,65 @@ final class CharacterEngine {
     private static let rareEventChance = 0.10
     private static let rareEventCooldown: TimeInterval = 3 * 60
 
-    init() {
-        rig = BillRigNode.build()
-        stateMachine = BillStateMachine(rig: rig)
+    init(character: CharacterDefinition = CharacterRoster.bill) {
+        self.character = character
+        if character.isBill {
+            rig = BillRigNode.build()
+            stateMachine = BillStateMachine(rig: rig)
+        } else {
+            let packCatalog = CharacterSpriteCatalog(definition: character)
+            catalog = packCatalog
+            rig = BillRigNode.build(catalog: packCatalog, displayScale: character.displayScale)
+            let library = CharacterAnimationLibrary(catalog: packCatalog)
+            activeClipProvider = { library.clip(for: $0) }
+            stateMachine = BillStateMachine(
+                rig: rig,
+                clipProvider: activeClipProvider,
+                restTexture: packCatalog.restTexture,
+                idleVariants: { library.idleVariant($0) }
+            )
+        }
+    }
+
+    /// Switches the on-screen character without a restart — menu bar
+    /// "Character → …". The rig node itself stays mounted (the scene keeps
+    /// its child reference); the body's texture, **size**, scale, clip
+    /// provider and rest frame all swap underneath. The size matters as
+    /// much as the texture: the body node's pixel size comes from whatever
+    /// character was first mounted, and `setTexture(resize: false)` never
+    /// updates it — so without this resize, switching Bill → Sans stretched
+    /// Sans's 40×37 canvas across Bill's 224×211pt body ("their really
+    /// big!" + the squash), and the companion showed the same corruption
+    /// in reverse.
+    func adopt(_ newCharacter: CharacterDefinition) {
+        guard newCharacter.id != character.id else { return }
+        character = newCharacter
+        if newCharacter.isBill {
+            catalog = nil
+            activeClipProvider = AnimationClipLibrary.clip(for:)
+            rig.bodyNode.size = BillSpriteCatalog.restTexture.size()
+            rig.bodyNode.setScale(BillRigNode.displayScale)
+            stateMachine.adopt(
+                clipProvider: activeClipProvider,
+                restTexture: BillSpriteCatalog.restTexture,
+                idleVariants: nil
+            )
+        } else {
+            let packCatalog = CharacterSpriteCatalog(definition: newCharacter)
+            catalog = packCatalog
+            rig.bodyNode.size = packCatalog.restTexture.size()
+            rig.bodyNode.setScale(newCharacter.displayScale)
+            let library = CharacterAnimationLibrary(catalog: packCatalog)
+            activeClipProvider = { library.clip(for: $0) }
+            stateMachine.adopt(
+                clipProvider: activeClipProvider,
+                restTexture: packCatalog.restTexture,
+                idleVariants: { library.idleVariant($0) }
+            )
+        }
+        // Re-roll the next idle beat so the new character's idle starts
+        // breathing promptly rather than after the previous delay.
+        if isRunning { scheduleNextIdleBeat() }
     }
 
     func start() {
@@ -210,8 +276,23 @@ final class CharacterEngine {
     private var lastIdleState: BillState?
 
     private func holdBeat(for state: BillState) {
-        let clip = AnimationClipLibrary.clip(for: state)
+        let clip = activeClipProvider(state)
         pendingBeatExtension = max(pendingBeatExtension ?? 0, clip.singlePassDuration + 0.8)
+    }
+
+    /// Bill's scripted pools are Bill's voice; pack characters pull the
+    /// same trigger's line from their own dialogue file instead (their
+    /// pools carry the same keys — see `Resources/Packs/Dialogue`). A key
+    /// the character doesn't carry resolves to nothing, which is the
+    /// graceful "stays quiet" path.
+    private func contextualBark(for state: BillState) {
+        if character.isBill {
+            return  // Bill's own paths handle their pools directly.
+        }
+        if let key = DialogueKey(rawValue: state.rawValue),
+           let line = DialogueLibrary.shared.line(key) {
+            bark(line)
+        }
     }
 
     /// Pure-text fan-service beats — the Gravity Falls appeal layer:
@@ -222,6 +303,9 @@ final class CharacterEngine {
     private static let cipherChance = 0.30
 
     private func rollFanServiceBark() -> Bool {
+        // The cipher/deal pools are Bill's Gravity Falls appeal layer —
+        // pack characters don't have them and shouldn't invent them.
+        guard character.isBill else { return false }
         guard Double.random(in: 0..<1) < Self.fanServiceChance else { return false }
         let key = Double.random(in: 0..<1) < Self.cipherChance
             ? "cipher.message"
@@ -266,8 +350,12 @@ final class CharacterEngine {
         stateMachine.request(state, force: true)
         // The line describing a rare beat is contextual to the beat itself,
         // so it is kept — but it still respects the speaking-frequency slider.
-        if let line = BarkLines.showcaseLine(for: state) {
-            bark(line)
+        if character.isBill {
+            if let line = BarkLines.showcaseLine(for: state) {
+                bark(line)
+            }
+        } else {
+            contextualBark(for: state)
         }
     }
 
@@ -286,7 +374,11 @@ final class CharacterEngine {
         lastRareEventDate = Date()
         stateMachine.request(event, force: true)
         holdBeat(for: event)
-        bark(BarkLines.random(from: BarkLines.rareEvent(for: event)))
+        if character.isBill {
+            bark(BarkLines.random(from: BarkLines.rareEvent(for: event)))
+        } else {
+            contextualBark(for: event)
+        }
         return true
     }
 }

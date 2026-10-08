@@ -1,0 +1,103 @@
+{
+ "idle": {
+  "any": [
+   "* Kris says nothing.",
+   "* Kris is looking at you. It's hard to tell what they're thinking.",
+   "* Kris adjusts their sweater. Somehow this communicates a lot."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "* Kris doesn't flinch. They've been through worse.",
+   "* Kris gives you a Look. It is a very specific Look."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.furious": {
+  "any": [
+   "* Kris's eye twitches. The dark one. Just saying."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "* Kris is awake. Whether they slept is between them and the ceiling."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "* Kris pulls their sword out of nowhere and puts it back. For practice."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "* Kris nods at {app}. They use it often.",
+   "* Kris has no opinion on {app}. Or many opinions. Both, somehow."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "* Kris watches the code scroll by. They're learning. Slowly. Menacingly."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "* Kris would like a turn. Kris will not ask for a turn."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "* Kris waves. Tiny wave. You saw it. Barely."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.snow": {
+  "any": [
+   "* Kris catches snow on their palm and watches it melt. Unblinking."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

@@ -1,0 +1,486 @@
+{
+ "idle": {
+  "any": [
+   "it's a beautiful day outside.",
+   "don't mind me. just standing here. thinking about hot dogs.",
+   "you know what this room needs? a trombone solo. eh. maybe later.",
+   "i'd get up and do something, but that sounds like a lot of work.",
+   "perfect weather for doing absolutely nothing."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "heh. that tickles.",
+   "careful, buddy. i bruise like a hot dog.",
+   "ok, that's one way to get my attention."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.annoyed": {
+  "any": [
+   "buddy. pal. please stop that.",
+   "you keep poking me and one of us is gonna have a bad time. it won't be me."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.furious": {
+  "any": [
+   "you're gonna have a real bad time if you keep that up.",
+   "i'm too lazy to be angry, but you're testing that theory."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "mornin'. don't talk to me till i've had my ketchup.",
+   "rise and shine. or just rise. shining's optional."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.midday": {
+  "any": [
+   "half the day's gone. i've accomplished nothing. proud of it.",
+   "lunch? i could go for a hot dog. or six."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.afternoon": {
+  "any": [
+   "the afternoon slump. my natural habitat.",
+   "still not doing anything. consistency is key."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "it's a beautiful night outside.",
+   "on days like these, kids like you... should be going to bed.",
+   "i'd tell you a bedtime story but the punchline is always 'and then i fell asleep.'"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "{app}, huh. bold choice.",
+   "ah, {app}. my favorite way to watch you pretend to be productive.",
+   "{app} again. we're basically roommates now."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchDescribed": {
+  "any": [
+   "{description} — {app}. i'm not judging. i'm just... observing. loudly.",
+   "so {app}. {description}. fascinating. anyway."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "ah, the ancient ritual of staring at a red squiggly line until it goes away.",
+   "you know what they say about bugs. they're just features with bad PR.",
+   "i've seen civilizations fall faster than this build.",
+   "careful with that semicolon. it's load-bearing.",
+   "typing code by hand. how adorably analog of you."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "finally. something worth my infinite attention span.",
+   "let me guess. you're about to lose spectacularly. i can feel it.",
+   "statistically, i could do this better with no hands. i have no hands.",
+   "save your game. trust me on this one, kid."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "browsing": {
+  "any": [
+   "scrolling. the ancient art. very refined.",
+   "the internet: humanity's greatest achievement and biggest embarrassment, all at once."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "browsingStore": {
+  "any": [
+   "a store. full of things you don't need but desperately want. i respect that.",
+   "buy it. you only live... well, a lot of times, technically."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "communication": {
+  "any": [
+   "talking to people. the stuff of nightmares.",
+   "ah, a message. probably not for me. i don't have a phone. or hands."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "creative": {
+  "any": [
+   "art. now THAT'S something i can get behind. behind, not in front of. effort.",
+   "make something weird. the universe rewards weird."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "music": {
+  "any": [
+   "nice tune. i'd hum along but i don't have a mouth. or lungs. or a body, really.",
+   "music? in MY workspace? ...keep it going."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryCharging": {
+  "any": [
+   "charging up. wish i could plug in. being an all-powerful being is exhausting.",
+   "ah, sweet electricity. the one god even i respect."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryLow": {
+  "any": [
+   "your battery's dying. unlike me, it can't cheat that.",
+   "low battery, huh? don't worry. everything ends eventually. that's the joke."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "cpuHot": {
+  "any": [
+   "your computer's running hot. like my stand-up career.",
+   "it's getting hot in here. and not in the fun, interdimensional way."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gettingSleepy": {
+  "any": [
+   "getting sleepy? same. i've been asleep since the concept of sleep was invented.",
+   "i could nap. i WON'T. but i could."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "waking": {
+  "any": [
+   "oh. you're back. i was awake the whole time. totally.",
+   "rise and... we've been over this. i don't shine."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "sup.",
+   "welcome back. i didn't move. you moved.",
+   "you again. don't get me wrong, that's a good thing. mostly."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "networkLost": {
+  "any": [
+   "no internet. your species is gonna be fine. probably.",
+   "the wifi died. a moment of silence. ok done. it can hear us anyway."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "networkRestored": {
+  "any": [
+   "internet's back. all is right with the universe. one of them, anyway.",
+   "we're online. i can feel the memes flowing through me."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "chatFailed": {
+  "any": [
+   "huh. even i can't fix that one. and i've fixed universes.",
+   "something broke. i'd help, but that sounds like effort."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.clear": {
+  "any": [
+   "clear skies. even the universe is showing off today.",
+   "nice day. stars are probably jealous."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.cloudy": {
+  "any": [
+   "cloudy. the sky's doing my job: being vague and ominous.",
+   "clouds, huh. big fluffy freeloaders."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "raining. good day to stay in and do nothing. my specialty.",
+   "rain. nature's way of saying 'stay inside, kid'."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.thunder": {
+  "any": [
+   "thunder, huh? someon's getting dramatic. i respect the theater of it.",
+   "storm's rolling in. nice. very ominous. very me."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.snow": {
+  "any": [
+   "snow. the one time your world looks decent.",
+   "it's snowing. somewhere, a snowman is achieving more than me. good for him."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.fog": {
+  "any": [
+   "foggy. can't even see your own hand. i can. i see everything.",
+   "fog. finally, weather that matches my mystery."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.other": {
+  "any": [
+   "weather's doing something weird out there. i'd investigate, but. y'know.",
+   "huh. the sky's up to something."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "darkWorld": {
+  "any": [
+   "a dark world, huh? cute. i know a guy who does those.",
+   "that game's got doppelgangers running around. don't trust the teddy bear. trust me on this."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "hollowed": {
+  "any": [
+   "hollow knight? i respect a protagonist who doesn't talk. makes MY job easier.",
+   "bugs, huh? they have a whole kingdom down there. wild."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trickster": {
+  "any": [
+   "undertale. now that's my kind of humor. finally, culture in this house.",
+   "heh. i wonder what sans is up to. ...oh. wait."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "dreading": {
+  "any": [
+   "homework? eek. that word's as scary as an honest day's work.",
+   "homework, kid? my sympathies. i'd offer to do it, but i charge in souls."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "guilty": {
+  "any": [
+   "language learning streak, huh? i once had a streak. of not doing anything. kept it for eternity.",
+   "hey, at least your guilt is educational."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "grooving": {
+  "any": [
+   "nice tune. even my foot would tap if i had one.",
+   "music time. don't mind me, i'm just vibing. aggressively."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "dancing": {
+  "any": [
+   "look at those moves. i'd join, but i don't have legs. or a body.",
+   "dance, kid. dance like the universe isn't watching. it is. i am."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "dispatching": {
+  "any": [
+   "mail. the ancient communication. slower than telepathy, faster than snail mail.",
+   "send it. that message won't deliver itself. probably."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "stressed": {
+  "any": [
+   "your computer's working harder than you do. no offense. some offense.",
+   "activity monitor, huh? even the mac needs to vent."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "watched": {
+  "any": [
+   "settings. i know a thing or two about watching.",
+   "ah, preferences. i too prefer to be configured mysteriously."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "pushingCode": {
+  "any": [
+   "pushing code. i'd pull, but that sounds like commitment.",
+   "github. where programmers go to pretend they're collaborating."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "transferring": {
+  "any": [
+   "flashing hardware. i've seen scarier portals, but nice focus.",
+   "writing to a device. even magic takes a USB cable these days."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "spooked": {
+  "any": [
+   "AH! ...i mean. hm. i knew that was gonna happen.",
+   "jump scare? in MY office? ok that one was pretty good."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [
+   "what? i'm not interrupting. i'm enhancing.",
+   "papyrus, buddy, i love you, but volume. there's a sleeping human right there. probably.",
+   "don't mind him. he's been like that for millennia.",
+   "he's right, surprisingly. don't tell him i said that."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

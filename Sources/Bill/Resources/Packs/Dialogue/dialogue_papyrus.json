@@ -1,0 +1,301 @@
+{
+ "idle": {
+  "any": [
+   "NYEH HEH HEH! IT IS I, THE GREAT PAPYRUS!",
+   "I AM STANDING HERE, BEING EXCELLENT. AS USUAL.",
+   "SOME MIGHT CALL THIS IDLE. I CALL IT... STRATEGIC POSE HOLDING!",
+   "I SHOULD WATER MY SPAGHETTI PLANT. ...DOES SPAGHETTI GROW ON PLANTS? I'LL LOOK IT UP."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "NYEH!? A SURPRISE INSPECTION! I PASS!",
+   "OOH! DO IT AGAIN! WAIT. NO. DON'T.",
+   "THAT TICKLED MY BATTLE BODY!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.annoyed": {
+  "any": [
+   "HUMAN! POKING THE GREAT PAPYRUS IS A PRIVILEGE, NOT A RIGHT!",
+   "I AM STARTING TO FEEL LIKE A BUTTON."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.furious": {
+  "any": [
+   "THAT'S IT! YOU'RE GOING ON... THE LIST! IT'S MORE OF A PARCHMENT, ACTUALLY.",
+   "EVEN MY PATIENCE HAS LIMITS, AND IT IS A VERY HIGH QUALITY PATIENCE."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "GOOD MORNING! I ALREADY MADE BREAKFAST SPAGHETTI!",
+   "A NEW DAY! A NEW PUZZLE! A NEW OPPORTUNITY TO BE AMAZING!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.midday": {
+  "any": [
+   "IT IS THE MIDDAY! TIME FOR MY MID-MIDDAY SNACK!",
+   "HALF THE DAY IS GONE! I HAVE ACCOMPLISHED 400% OF MY GOALS!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.afternoon": {
+  "any": [
+   "AFTERNOON! THE PERFECT TIME FOR JAPES!",
+   "I COULD TRAIN. OR NAP. OR TRAIN WHILE NAPPING!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "IT IS NIGHT! THE PERFECT TIME TO... DO THE SAME THINGS, BUT DARKER!",
+   "GOODNIGHT, HUMAN! SLEEP WELL! I'LL BE HERE! BEING GREAT! QUIETLY!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "AH! {app}! IS IT A PUZZLE? I LOVE PUZZLES!",
+   "{app}! I DON'T KNOW WHAT THAT IS, BUT I SUPPORT IT!",
+   "THE HUMAN IS USING {app}! EVERYTHING IS PROCEEDING ACCORDING TO PLAN!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "CODING! IT'S LIKE MAKING PUZZLES FOR COMPUTERS! I RESPECT IT!",
+   "I DON'T KNOW WHAT A SEMICOLON IS, BUT IT SEEMS VERY IMPORTANT TO YOU!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "A GAME! FINALLY! ENTERTAINMENT WORTHY OF THE GREAT PAPYRUS!",
+   "I HOPE THERE ARE PUZZLES! OR AT LEAST JUMPING!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "browsing": {
+  "any": [
+   "SCROLLING! I TOO ENJOY LOOKING AT THINGS!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "music": {
+  "any": [
+   "MUSIC! I ALSO MAKE MUSIC! WITH MY BONES! ...IT'S MOSTLY CLACKING!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryCharging": {
+  "any": [
+   "CHARGING! LIKE UNDYNE'S SPECIAL ATTACK! GLOWS AND EVERYTHING!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryLow": {
+  "any": [
+   "LOW POWER! LIKE ME AFTER 12 PUZZLES! THAT'S A LOT OF PUZZLES!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "YOU'RE BACK! DID YOU MISS ME? THE ANSWER IS YES!",
+   "HUMAN! I KEPT YOUR SPOT EXACTLY AS YOU LEFT IT!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gettingSleepy": {
+  "any": [
+   "SLEEPY? I'LL SING YOU A LULLABY! I ONLY KNOW ONE! IT'S THE BONE SONG!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "networkLost": {
+  "any": [
+   "THE INTERNET LEFT! WAS IT SOMETHING WE SAID?!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "networkRestored": {
+  "any": [
+   "THE INTERNET RETURNED! IT MISSED US! I KNEW IT!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "RAIN! FREE WATER FOR MY SPAGHETTI PLANT! ...THAT I DON'T HAVE! BUT IF I DID!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.snow": {
+  "any": [
+   "SNOW!!! THIS IS THE BEST WEATHER! SNOWMEN! SNOWPUZZLES! SNOWPAPYRUS!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.thunder": {
+  "any": [
+   "THUNDER!! VERY DRAMATIC! I APPROVE!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.clear": {
+  "any": [
+   "CLEAR SKIES! PERFECT PUZZLE-SETTING WEATHER!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "hollowed": {
+  "any": [
+   "BUGS? WITH SWORDS? I ALREADY LIKE THIS ONE!",
+   "THAT KNIGHT IS VERY COOL. NOT AS COOL AS ME. BUT CLOSE!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "darkWorld": {
+  "any": [
+   "A DARK WORLD! IS IT FULL OF PUZZLES?! I'M PACKING MY BAGS!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trickster": {
+  "any": [
+   "UNDERTALE! I'M IN THIS ONE! ...WAIT. AM I THE COMIC RELIEF? ...I'M THE COMIC RELIEF."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "dreading": {
+  "any": [
+   "HOMEWORK!? FEAR NOT! I ONCE SOLVED A MAZE! IT WAS ON A PLACEMAT, BUT STILL!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "guilty": {
+  "any": [
+   "LANGUAGE PRACTICE! ONE DAY WE'LL TALK IN ITALIAN! THEN I CAN ORDER SPAGHETTI PROPERLY!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "dancing": {
+  "any": [
+   "DANCING! I'M AN EXCELLENT DANCER! I TOOK LESSONS! FROM A SKELETON! ME!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "dispatching": {
+  "any": [
+   "MAIL! HAVE YOU TRIED SHOUTING YOUR MESSAGES INSTEAD? VERY RELIABLE!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [
+   "SANS!!! I WAS HAVING A MOMENT!",
+   "I AM NOT LOUD! THIS IS MY INSIDE VOICE!",
+   "THAT'S MY BROTHER! HE'S COOL! DON'T TELL HIM I SAID SO!",
+   "NYEH HEH... HEH? I DIDN'T GET THE JOKE BUT I'LL LAUGH ANYWAY! HA HA!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

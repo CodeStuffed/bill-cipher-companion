@@ -71,6 +71,47 @@ final class DialogueLibrary {
         generated = new
     }
 
+    // MARK: - Character packs
+
+    /// Bill's authored/generated/personalized halves, stashed while a pack
+    /// character is active so switching back loses nothing.
+    private var billStash: (pools: [String: DialoguePool], generated: [String: DialoguePool], personalized: [String: DialoguePool])?
+
+    /// Activates a character's voice: Bill keeps everything (authored +
+    /// ChatGPT-generated + personalized); a pack character loads its own
+    /// dialogue file as the authored half and parks the Bill-specific
+    /// halves until he returns. All keys stay the same — every trigger in
+    /// the app (reactions, weather, clock, pokes) just speaks in the new
+    /// voice.
+    func activate(character: CharacterDefinition) {
+        if character.isBill {
+            if let stash = billStash {
+                pools = stash.pools
+                generated = stash.generated
+                personalized = stash.personalized
+                billStash = nil
+            }
+            return
+        }
+        guard let resource = character.dialogueResource else { return }
+        if billStash == nil {
+            billStash = (pools, generated, personalized)
+        }
+        generated = [:]
+        personalized = [:]
+        guard let url = Bundle.module.url(forResource: resource, withExtension: "json", subdirectory: "Packs/Dialogue") else {
+            pools = [:]
+            return
+        }
+        do {
+            let data = try Data(contentsOf: url)
+            pools = try JSONDecoder().decode([String: DialoguePool].self, from: data)
+        } catch {
+            print("DialogueLibrary: character \(character.id) decode failed: \(error)")
+            pools = [:]
+        }
+    }
+
     /// Replaces the personalized half. Called by
     /// `PersonalizedDialogueStore.publishToDialogueLibrary` at launch and
     /// after each setup-flow batch lands.

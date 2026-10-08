@@ -17,6 +17,7 @@ final class SettingsWindowController: NSObject {
     var onOpenQuotesManager: (() -> Void)?
     /// Set by `AppDelegate` — fires a reaction trigger live.
     var onTestTrigger: ((_ keys: [String], _ animationKey: String) -> Void)?
+    var onSwitchCharacter: ((_ id: String) -> Void)?
 
     /// The window's frame in screen coordinates, or `nil` while closed —
     /// Bill's drop-by Easter egg (drag him onto Settings, he reacts)
@@ -40,7 +41,8 @@ final class SettingsWindowController: NSObject {
                 onResetMemory: { [weak self] in self?.memoryStore.reset() },
                 onTestWeather: { [weak self] in self?.onTestWeather?() },
                 onOpenQuotesManager: { [weak self] in self?.onOpenQuotesManager?() },
-                onTestTrigger: { [weak self] keys, anim in self?.onTestTrigger?(keys, anim) }
+                onTestTrigger: { [weak self] keys, anim in self?.onTestTrigger?(keys, anim) },
+                onSwitchCharacter: { [weak self] id in self?.onSwitchCharacter?(id) }
             )
             let hosting = NSHostingController(rootView: view)
             let win = NSWindow(contentViewController: hosting)

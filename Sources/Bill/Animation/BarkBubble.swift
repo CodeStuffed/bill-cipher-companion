@@ -159,9 +159,9 @@ enum BarkBubble {
             ctx.setAllowsAntialiasing(false)
             ctx.interpolationQuality = .none
 
-            let fillRect = drawLayeredBorder(ctx, bodyRect: bodyRect, cornerRadius: cornerRadius, borderThickness: borderThickness, accentThickness: accentThickness, accentColor: BillPalette.bubbleAccent)
+            let fillRect = drawLayeredBorder(ctx, bodyRect: bodyRect, cornerRadius: cornerRadius, borderThickness: borderThickness, accentThickness: accentThickness, accentColor: BubbleTheme.current.accent)
             drawTail(ctx, bodyRect: bodyRect, edge: tailEdge, offsetUnits: tailOffsetUnits)
-            PixelFont.drawCentered(ctx, lines: lines, in: fillRect, color: BillPalette.black)
+            PixelFont.drawCentered(ctx, lines: lines, in: fillRect, color: BubbleTheme.current.text)
 
             return true
         }
@@ -226,9 +226,9 @@ enum BarkBubble {
             ctx.setShouldAntialias(false)
             ctx.setAllowsAntialiasing(false)
             ctx.interpolationQuality = .none
-            let fillRect = drawLayeredBorder(ctx, bodyRect: bodyRect, cornerRadius: cornerRadius, borderThickness: borderThickness, accentThickness: accentThickness, accentColor: BillPalette.bubbleAccent)
+            let fillRect = drawLayeredBorder(ctx, bodyRect: bodyRect, cornerRadius: cornerRadius, borderThickness: borderThickness, accentThickness: accentThickness, accentColor: BubbleTheme.current.accent)
             drawTail(ctx, bodyRect: bodyRect, edge: tailEdge, offsetUnits: tailOffsetUnits)
-            PixelFont.drawCentered(ctx, lines: lines, in: fillRect, color: BillPalette.black)
+            PixelFont.drawCentered(ctx, lines: lines, in: fillRect, color: BubbleTheme.current.text)
             return true
         }
 
@@ -258,9 +258,9 @@ enum BarkBubble {
             ctx.setAllowsAntialiasing(false)
             ctx.interpolationQuality = .none
             let bodyRect = CGRect(x: 0, y: tailHeight, width: bodyWidth, height: bodyHeight)
-            let fillRect = drawLayeredBorder(ctx, bodyRect: bodyRect, cornerRadius: cornerRadius, borderThickness: borderThickness, accentThickness: accentThickness, accentColor: BillPalette.bubbleAccent)
+            let fillRect = drawLayeredBorder(ctx, bodyRect: bodyRect, cornerRadius: cornerRadius, borderThickness: borderThickness, accentThickness: accentThickness, accentColor: BubbleTheme.current.accent)
             drawTail(ctx, bodyRect: bodyRect, edge: .above, offsetUnits: 0)
-            PixelFont.drawCentered(ctx, lines: lines, in: fillRect, color: BillPalette.black)
+            PixelFont.drawCentered(ctx, lines: lines, in: fillRect, color: BubbleTheme.current.text)
             return true
         }
     }
@@ -292,9 +292,9 @@ enum BarkBubble {
     /// body's border, narrowing to a solid black tip: the tail is part of
     /// the border, never a solid wedge.
     private static func drawTail(_ ctx: CGContext, bodyRect: CGRect, edge: TailEdge, offsetUnits: CGFloat) {
-        let white = NSColor(calibratedWhite: 0.98, alpha: 1).cgColor
-        let accent = BillPalette.bubbleAccent.cgColor
-        let black = BillPalette.black.cgColor
+        let white = BubbleTheme.current.fill.cgColor
+        let accent = BubbleTheme.current.accent.cgColor
+        let black = BubbleTheme.current.border.cgColor
 
         func layer(_ midX: CGFloat, _ y: CGFloat, _ blackW: CGFloat, _ accentW: CGFloat, _ fillW: CGFloat) {
             ctx.setFillColor(black)

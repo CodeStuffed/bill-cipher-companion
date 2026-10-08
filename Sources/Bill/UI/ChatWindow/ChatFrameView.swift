@@ -24,7 +24,7 @@ final class ChatFrameView: NSView {
         // Fill with a dark ink background first — the WebView sits inside
         // and often has its own background, but the border area around
         // it should be Bill's palette.
-        BarkBubble.fillPixelRoundedRect(ctx, rect: bodyRect, radius: 8, color: BillPalette.black)
+        BarkBubble.fillPixelRoundedRect(ctx, rect: bodyRect, radius: 8, color: BubbleTheme.current.border)
         // Dark chrome: either forced by the Settings preference, or
         // auto-detected from the system appearance.
         let systemDark = NSAppearance.currentDrawing().bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
@@ -38,7 +38,7 @@ final class ChatFrameView: NSView {
             ctx, bodyRect: bodyRect,
             cornerRadius: 8, borderThickness: Self.borderThickness,
             accentThickness: Self.accentThickness,
-            accentColor: BillPalette.bubbleAccent
+            accentColor: BubbleTheme.current.accent
         )
     }
 }

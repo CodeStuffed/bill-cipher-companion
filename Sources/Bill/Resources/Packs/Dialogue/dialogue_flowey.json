@@ -1,0 +1,176 @@
+{
+ "idle": {
+  "any": [
+   "Howdy! Just... watching you.",
+   "Boy, it sure is quiet. ...I HATE quiet.",
+   "You know what's great? Unconditional love. You know what's REAL? Everything else.",
+   "Golly, you look like you're having a nice day. DISGUSTING."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Howdy! Do that again and I'll... hehehe. Nothing. I'll do nothing.",
+   "Golly! You've got quite the green thumb for trouble!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.annoyed": {
+  "any": [
+   "You IDIOT. Do you know what happens to flowers that get poked? THEY SNAP BACK."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.furious": {
+  "any": [
+   "In this world, it's POKE or BE POKED!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "Rise and shine, little Lightner! The sun is pointless! I'm the one who gives life!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "Awww, going to sleep? Don't worry. I'll be here. Watching. Always watching."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "{app}? How interesting. Tell me more so I can use it against you.",
+   "Ooh, {app}! I LOVE watching people do things I can ruin!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "Writing code? How CREATIVE. I do that too. With people's LIVES."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "A game! I love games. The kind where you can't reload a save. Oh wait. You can here. Ugh."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryLow": {
+  "any": [
+   "Your power's dying! How fitting. Everything runs out of power eventually."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "Oh, you're BACK. Yippee. My FAVORITE."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "Rain?! Do you know what rain does to flowers? ...Actually it's fine. I'm fine."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.clear": {
+  "any": [
+   "Sunshine! Photosynthesis! I'd thank the sun but it's inferior to me."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.thunder": {
+  "any": [
+   "A storm! Nature's showing its TRUE colors. Respect."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "hollowed": {
+  "any": [
+   "A HOLLOW bug? Hehe. I know a thing or two about empty vessels."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "darkWorld": {
+  "any": [
+   "The Dark World, hm? I have... history there. We don't talk about it."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trickster": {
+  "any": [
+   "Undertale! The story of how everyone LOVED a little idiot. GAG."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "chatFailed": {
+  "any": [
+   "Your technology FAILED. Hehehe. Classic mortals."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

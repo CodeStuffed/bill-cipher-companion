@@ -35,25 +35,50 @@ final class StatusItemController: NSObject {
         if let button = statusItem.button {
             button.image = NSImage(systemSymbolName: "eye.fill", accessibilityDescription: "Bill")
         }
+        buildMenu()
+        refreshStudyModeItem()
+    }
 
+    /// The menu is rebuilt from scratch whenever the character switches so
+    /// titles ("Talk to Sans"), pack checkmarks and the Bill-only items
+    /// stay honest without tracking individual items.
+    func buildMenu() {
         let menu = NSMenu()
+        let character = characterEngine.character
 
-        let talkItem = NSMenuItem(title: "Talk to Bill", action: #selector(talkToBill), keyEquivalent: "")
+        let talkTitle = character.isBill ? "Talk to Bill" : "Talk to \(character.displayName)"
+        let talkItem = NSMenuItem(title: talkTitle, action: #selector(talkToBill), keyEquivalent: "")
         talkItem.target = self
         menu.addItem(talkItem)
         let openChatItem = NSMenuItem(title: "Open Full Chat View…", action: #selector(openChat), keyEquivalent: "")
         openChatItem.target = self
         menu.addItem(openChatItem)
-        let refreshContextItem = NSMenuItem(title: "Refresh Bill's Context Now", action: #selector(refreshDialogue), keyEquivalent: "")
-        refreshContextItem.target = self
-        menu.addItem(refreshContextItem)
-        let quotesManagerItem = NSMenuItem(title: "Quotes Manager…", action: #selector(openQuotesManager), keyEquivalent: "")
-        quotesManagerItem.target = self
-        menu.addItem(quotesManagerItem)
-        let personalizeItem = NSMenuItem(title: "Personalize Bill's Commentary…", action: #selector(personalize), keyEquivalent: "")
-        personalizeItem.target = self
-        menu.addItem(personalizeItem)
+
+        // The ChatGPT-backed features write Bill's voice and Bill's pools;
+        // pack characters speak from their own bundled dialogue instead.
+        if character.isBill {
+            let refreshContextItem = NSMenuItem(title: "Refresh Bill's Context Now", action: #selector(refreshDialogue), keyEquivalent: "")
+            refreshContextItem.target = self
+            menu.addItem(refreshContextItem)
+            let quotesManagerItem = NSMenuItem(title: "Quotes Manager…", action: #selector(openQuotesManager), keyEquivalent: "")
+            quotesManagerItem.target = self
+            menu.addItem(quotesManagerItem)
+            let personalizeItem = NSMenuItem(title: "Personalize Bill's Commentary…", action: #selector(personalize), keyEquivalent: "")
+            personalizeItem.target = self
+            menu.addItem(personalizeItem)
+        }
+
         menu.addItem(.separator())
+
+        // Character switching — the pack system's front door. Packs in
+        // their display order, each character one click away, the active
+        // one checked.
+        let characterItem = NSMenuItem(title: "Character", action: nil, keyEquivalent: "")
+        characterItem.submenu = makeCharacterSubmenu()
+        menu.addItem(characterItem)
+
+        menu.addItem(.separator())
+
         let weatherTestItem = NSMenuItem(title: "Test Weather Now", action: #selector(testWeather), keyEquivalent: "")
         weatherTestItem.target = self
         menu.addItem(weatherTestItem)
@@ -71,42 +96,113 @@ final class StatusItemController: NSObject {
         menu.addItem(settingsItem)
         menu.addItem(.separator())
 
-        let debugItem = NSMenuItem(title: "Debug: Force State", action: nil, keyEquivalent: "")
-        debugItem.submenu = makeDebugSubmenu()
-        menu.addItem(debugItem)
-
-        let dumpItem = NSMenuItem(title: "Debug: Dump State", action: #selector(dumpState), keyEquivalent: "")
-        dumpItem.target = self
-        menu.addItem(dumpItem)
-
-        let barkItem = NSMenuItem(title: "Debug: Test Bark", action: #selector(testBark), keyEquivalent: "")
-        barkItem.target = self
-        menu.addItem(barkItem)
-
-        let wanderItem = NSMenuItem(title: "Debug: Trigger Wander Now", action: #selector(triggerWander), keyEquivalent: "")
-        wanderItem.target = self
-        menu.addItem(wanderItem)
-
-        let chatTestItem = NSMenuItem(title: "Debug: Test Chat Connection", action: #selector(testChat), keyEquivalent: "")
-        chatTestItem.target = self
-        menu.addItem(chatTestItem)
-
-        let awarenessItem = NSMenuItem(title: "Debug: Test Screen Awareness Now", action: #selector(testAwareness), keyEquivalent: "")
-        awarenessItem.target = self
-        menu.addItem(awarenessItem)
-
-        let dialogueLogItem = NSMenuItem(title: "Debug: Show Dialogue Refresh Log", action: #selector(showDialogueRefreshLog), keyEquivalent: "")
-        dialogueLogItem.target = self
-        menu.addItem(dialogueLogItem)
+        let aboutItem = NSMenuItem(title: "About & Credits", action: #selector(showAbout), keyEquivalent: "")
+        aboutItem.target = self
+        menu.addItem(aboutItem)
         menu.addItem(.separator())
 
-        let quitItem = NSMenuItem(title: "Quit Bill", action: #selector(AppDelegate.quit), keyEquivalent: "q")
+        // Debug controls are deliberately not part of the normal user
+        // experience — enable with
+        // `defaults write <bundle-id> billDebugMenu -bool YES`.
+        if AppPreferences.isDebugMenuEnabled {
+            let debugItem = NSMenuItem(title: "Debug: Force State", action: nil, keyEquivalent: "")
+            debugItem.submenu = makeDebugSubmenu()
+            menu.addItem(debugItem)
+
+            let dumpItem = NSMenuItem(title: "Debug: Dump State", action: #selector(dumpState), keyEquivalent: "")
+            dumpItem.target = self
+            menu.addItem(dumpItem)
+
+            let barkItem = NSMenuItem(title: "Debug: Test Bark", action: #selector(testBark), keyEquivalent: "")
+            barkItem.target = self
+            menu.addItem(barkItem)
+
+            let wanderItem = NSMenuItem(title: "Debug: Trigger Wander Now", action: #selector(triggerWander), keyEquivalent: "")
+            wanderItem.target = self
+            menu.addItem(wanderItem)
+
+            let chatTestItem = NSMenuItem(title: "Debug: Test Chat Connection", action: #selector(testChat), keyEquivalent: "")
+            chatTestItem.target = self
+            menu.addItem(chatTestItem)
+
+            let awarenessItem = NSMenuItem(title: "Debug: Test Screen Awareness Now", action: #selector(testAwareness), keyEquivalent: "")
+            awarenessItem.target = self
+            menu.addItem(awarenessItem)
+
+            let dialogueLogItem = NSMenuItem(title: "Debug: Show Dialogue Refresh Log", action: #selector(showDialogueRefreshLog), keyEquivalent: "")
+            dialogueLogItem.target = self
+            menu.addItem(dialogueLogItem)
+            menu.addItem(.separator())
+        }
+
+        let quitTitle = character.isBill ? "Quit Bill" : "Quit Companion"
+        let quitItem = NSMenuItem(title: quitTitle, action: #selector(AppDelegate.quit), keyEquivalent: "q")
         quitItem.target = appDelegate
         menu.addItem(quitItem)
 
         menu.delegate = self
         statusItem.menu = menu
         refreshStudyModeItem()
+    }
+
+    /// The pack roster as a submenu: Bill, then every pack with its
+    /// characters indented under it. Selecting swaps the on-screen
+    /// character live.
+    private func makeCharacterSubmenu() -> NSMenu {
+        let submenu = NSMenu()
+
+        let billItem = NSMenuItem(
+            title: CharacterRoster.bill.displayName,
+            action: #selector(switchCharacter(_:)),
+            keyEquivalent: ""
+        )
+        billItem.target = self
+        billItem.representedObject = CharacterRoster.bill.id
+        billItem.state = characterEngine.character.isBill ? .on : .off
+        submenu.addItem(billItem)
+
+        for (packName, characters) in CharacterRoster.packs {
+            submenu.addItem(.separator())
+            let header = NSMenuItem(title: packName, action: nil, keyEquivalent: "")
+            header.isEnabled = false
+            submenu.addItem(header)
+            for definition in characters {
+                let item = NSMenuItem(
+                    title: definition.displayName,
+                    action: #selector(switchCharacter(_:)),
+                    keyEquivalent: ""
+                )
+                item.target = self
+                item.representedObject = definition.id
+                item.state = definition.id == characterEngine.character.id ? .on : .off
+                submenu.addItem(item)
+            }
+        }
+        return submenu
+    }
+
+    @objc private func switchCharacter(_ sender: NSMenuItem) {
+        guard let id = sender.representedObject as? String else { return }
+        appDelegate?.switchCharacter(to: id)
+    }
+
+    /// Sprite credits for every pack — the rippers who made this possible.
+    @objc private func showAbout() {
+        let credits = ([CharacterRoster.bill] + CharacterRoster.all.filter { !$0.isBill })
+            .map { "\($0.displayName) — \($0.credit)" }
+            .joined(separator: "\n\n")
+        let alert = NSAlert()
+        alert.messageText = "Desktop Companion"
+        alert.informativeText = """
+            Characters: Bill Cipher, Undertale, Deltarune, OneShot & Hollow Knight — all in one desktop pet.
+
+            Sprite credits:
+            \(credits)
+
+            This is a non-commercial fan project. All characters belong to their creators.
+            """
+        alert.addButton(withTitle: "OK")
+        alert.runModal()
     }
 
     /// Keeps the checkmark and the remaining-time title honest. Called when

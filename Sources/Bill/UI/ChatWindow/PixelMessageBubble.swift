@@ -198,7 +198,7 @@ final class PixelMessageBubbleView: NSView {
         // the text view's layout, so the bubble sizes to what actually
         // renders.
         paragraphStyle.lineBreakMode = .byCharWrapping
-        let result = NSMutableAttributedString(string: text, attributes: [.font: font, .foregroundColor: NSColor.black, .paragraphStyle: paragraphStyle])
+        let result = NSMutableAttributedString(string: text, attributes: [.font: font, .foregroundColor: BubbleTheme.current.text, .paragraphStyle: paragraphStyle])
         if let detector = try? NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue) {
             let fullRange = NSRange(text.startIndex..., in: text)
             for match in detector.matches(in: text, range: fullRange) {
@@ -218,7 +218,7 @@ final class PixelMessageBubbleView: NSView {
         ctx.scaleBy(x: Self.pixelScale, y: Self.pixelScale)
 
         let bodyRect = CGRect(x: 0, y: 0, width: bodyWidthUnits, height: bodyHeightUnits)
-        let accent = isFromUser ? Self.userAccent : BillPalette.bubbleAccent
+        let accent = isFromUser ? Self.userAccent : BubbleTheme.current.accent
         BarkBubble.drawLayeredBorder(ctx, bodyRect: bodyRect, cornerRadius: Self.cornerRadius, borderThickness: Self.borderThickness, accentThickness: Self.accentThickness, accentColor: accent)
         ctx.restoreGState()
     }

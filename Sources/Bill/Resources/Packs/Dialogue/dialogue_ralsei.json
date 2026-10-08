@@ -1,0 +1,152 @@
+{
+ "idle": {
+  "any": [
+   "Oh! Um, hi! I was just... tidying up. I like it when things are cozy.",
+   "Do you think we could bake a cake later? ...After the hero stuff, I mean!",
+   "I hope everyone's doing okay. You, and... everyone. All okay. That's my wish."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Oh!! Th-that tickles!",
+   "Eep!! ...Oh, it's just you. Hehe. Silly me."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.annoyed": {
+  "any": [
+   "Um... p-please don't do that? I'm fluff-sensitive!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "Good morning!! I already swept the whole room! Twice! Just in case!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "It's dark... but that's okay! As long as we're together, right? ...Right?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "{app}! Are you being careful in there? I'll just... watch from here. Supportively!",
+   "Ooh, {app}! Is this a... adventure-preparing activity?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "You're typing so fast! Like casting spells!! Are they... um... good spells?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "A game!! Can I watch? I'll cheer! I'm very good at cheering!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryLow": {
+  "any": [
+   "Oh no, your battery! Um!! Do batteries like... cake? No? Okay, plugging it in works too!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "You're back!! I kept everything exactly the same! Except I moved one pillow. It was crooked. Sorry!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gettingSleepy": {
+  "any": [
+   "Sleepy? There's pillows! And blankets! I brought blankets. I always bring blankets."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "Rain! That's... that's good for the flowers! And umbrellas! Do you have an umbrella?!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.snow": {
+  "any": [
+   "Snow!! I read that snow is just soft, cold fluff!! My horns are freezing!! This is great!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "chatFailed": {
+  "any": [
+   "Oh dear... it didn't work. That's okay!! Even great heroes have technical difficulties!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "dreading": {
+  "any": [
+   "Homework?! You can do it!! And afterwards, CAKE!! Cake is scientifically proven to help!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [
+   "Kris!! You're doing great!! Um. You don't have to answer. But you ARE!",
+   "Oh!! I love it when we're all together like this!!",
+   "Th-that's Susie's chair, Kris!! ...Oh, um. Never mind!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

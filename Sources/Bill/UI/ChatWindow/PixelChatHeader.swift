@@ -56,9 +56,9 @@ final class PixelChatHeader: NSView {
         // A two-tone pixel rule: black line with the user's accent as a
         // single highlight row above it — reads as part of the same chrome
         // family as the bubbles below.
-        ctx.setFillColor(BillPalette.bubbleAccent.cgColor)
+        ctx.setFillColor(BubbleTheme.current.accent.cgColor)
         ctx.fill([CGRect(x: 0, y: 1, width: bounds.width, height: 1)])
-        ctx.setFillColor(BillPalette.black.cgColor)
+        ctx.setFillColor(BubbleTheme.current.border.cgColor)
         ctx.fill([CGRect(x: 0, y: 0, width: bounds.width, height: 1)])
         ctx.restoreGState()
     }
@@ -83,7 +83,7 @@ final class PixelLabelView: NSView {
             ctx.setShouldAntialias(false)
             ctx.setAllowsAntialiasing(false)
             let rect = CGRect(x: 0, y: 1, width: width, height: PixelFont.glyphHeight)
-            PixelFont.drawCentered(ctx, lines: [text.uppercased()], in: rect, color: BillPalette.black)
+            PixelFont.drawCentered(ctx, lines: [text.uppercased()], in: rect, color: BubbleTheme.current.text)
             return true
         }
         super.init(frame: NSRect(x: 0, y: 0, width: intrinsicWidth, height: intrinsicHeight))

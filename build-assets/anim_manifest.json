@@ -1,0 +1,398 @@
+[
+ {
+  "name": "idle",
+  "prefix": "bill_idle",
+  "count": 7,
+  "duration_ms": 150
+ },
+ {
+  "name": "walk",
+  "prefix": "bill_walk",
+  "count": 6,
+  "duration_ms": 140
+ },
+ {
+  "name": "annoyed",
+  "prefix": "bill_annoyed",
+  "count": 6,
+  "duration_ms": 160
+ },
+ {
+  "name": "happy",
+  "prefix": "bill_happy",
+  "count": 2,
+  "duration_ms": 160
+ },
+ {
+  "name": "confused",
+  "prefix": "bill_confused",
+  "count": 4,
+  "duration_ms": 180
+ },
+ {
+  "name": "heating",
+  "prefix": "bill_heating",
+  "count": 7,
+  "duration_ms": 140
+ },
+ {
+  "name": "charging",
+  "prefix": "bill_charging",
+  "count": 1,
+  "duration_ms": 140
+ },
+ {
+  "name": "surprised",
+  "prefix": "bill_surprised",
+  "count": 3,
+  "duration_ms": 180
+ },
+ {
+  "name": "poked",
+  "prefix": "bill_poked",
+  "count": 4,
+  "duration_ms": 110
+ },
+ {
+  "name": "dazed",
+  "prefix": "bill_dazed",
+  "count": 2,
+  "duration_ms": 220
+ },
+ {
+  "name": "sleeping",
+  "prefix": "bill_sleeping",
+  "count": 1,
+  "duration_ms": 140
+ },
+ {
+  "name": "thinking",
+  "prefix": "bill_thinking",
+  "count": 4,
+  "duration_ms": 350
+ },
+ {
+  "name": "coding",
+  "prefix": "bill_coding",
+  "count": 2,
+  "duration_ms": 220
+ },
+ {
+  "name": "talking",
+  "prefix": "bill_talking",
+  "count": 3,
+  "duration_ms": 150
+ },
+ {
+  "name": "smug",
+  "prefix": "bill_smug",
+  "count": 2,
+  "duration_ms": 200
+ },
+ {
+  "name": "snap",
+  "prefix": "bill_snap",
+  "count": 3,
+  "duration_ms": 140
+ },
+ {
+  "name": "focused",
+  "prefix": "bill_focused",
+  "count": 4,
+  "duration_ms": 200
+ },
+ {
+  "name": "channeling",
+  "prefix": "bill_channeling",
+  "count": 9,
+  "duration_ms": 150
+ },
+ {
+  "name": "celebrating",
+  "prefix": "bill_celebrating",
+  "count": 5,
+  "duration_ms": 140
+ },
+ {
+  "name": "curious",
+  "prefix": "bill_curious",
+  "count": 4,
+  "duration_ms": 140
+ },
+ {
+  "name": "cane",
+  "prefix": "bill_cane",
+  "count": 8,
+  "duration_ms": 140
+ },
+ {
+  "name": "powerSurge",
+  "prefix": "bill_powersurge",
+  "count": 4,
+  "duration_ms": 90
+ },
+ {
+  "name": "powerSurgeClose",
+  "prefix": "bill_powersurgeclose",
+  "count": 1,
+  "duration_ms": 140
+ },
+ {
+  "name": "portalRing",
+  "prefix": "bill_portalring",
+  "count": 8,
+  "duration_ms": 140
+ },
+ {
+  "name": "zodiac",
+  "prefix": "bill_zodiac",
+  "count": 8,
+  "duration_ms": 140
+ },
+ {
+  "name": "summonRitual",
+  "prefix": "bill_summonritual",
+  "count": 4,
+  "duration_ms": 250
+ },
+ {
+  "name": "ghost",
+  "prefix": "bill_ghost",
+  "count": 8,
+  "duration_ms": 140
+ },
+ {
+  "name": "glitch",
+  "prefix": "bill_glitch",
+  "count": 4,
+  "duration_ms": 140
+ },
+ {
+  "name": "shadowA",
+  "prefix": "bill_shadowa",
+  "count": 5,
+  "duration_ms": 140
+ },
+ {
+  "name": "shadowB",
+  "prefix": "bill_shadowb",
+  "count": 4,
+  "duration_ms": 140
+ },
+ {
+  "name": "meltdown",
+  "prefix": "bill_meltdown",
+  "count": 8,
+  "duration_ms": 150
+ },
+ {
+  "name": "trickster",
+  "prefix": "bill_trickster",
+  "count": 8,
+  "duration_ms": 150
+ },
+ {
+  "name": "darkWorld",
+  "prefix": "bill_darkworld",
+  "count": 9,
+  "duration_ms": 170
+ },
+ {
+  "name": "hollowed",
+  "prefix": "bill_hollowed",
+  "count": 11,
+  "duration_ms": 160
+ },
+ {
+  "name": "cultLeader",
+  "prefix": "bill_cultleader",
+  "count": 8,
+  "duration_ms": 170
+ },
+ {
+  "name": "spooked",
+  "prefix": "bill_spooked",
+  "count": 5,
+  "duration_ms": 130
+ },
+ {
+  "name": "scanning",
+  "prefix": "bill_scanning",
+  "count": 8,
+  "duration_ms": 130
+ },
+ {
+  "name": "sneaking",
+  "prefix": "bill_sneaking",
+  "count": 6,
+  "duration_ms": 140
+ },
+ {
+  "name": "glitching",
+  "prefix": "bill_glitching",
+  "count": 4,
+  "duration_ms": 140
+ },
+ {
+  "name": "charged",
+  "prefix": "bill_charged",
+  "count": 6,
+  "duration_ms": 140
+ },
+ {
+  "name": "transferring",
+  "prefix": "bill_transferring",
+  "count": 12,
+  "duration_ms": 90
+ },
+ {
+  "name": "summoning",
+  "prefix": "bill_summoning",
+  "count": 8,
+  "duration_ms": 140
+ },
+ {
+  "name": "sculpting",
+  "prefix": "bill_sculpting",
+  "count": 14,
+  "duration_ms": 160
+ },
+ {
+  "name": "kinship",
+  "prefix": "bill_kinship",
+  "count": 5,
+  "duration_ms": 130
+ },
+ {
+  "name": "fractaling",
+  "prefix": "bill_fractaling",
+  "count": 3,
+  "duration_ms": 200
+ },
+ {
+  "name": "presenting",
+  "prefix": "bill_presenting",
+  "count": 3,
+  "duration_ms": 170
+ },
+ {
+  "name": "guilty",
+  "prefix": "bill_guilty",
+  "count": 3,
+  "duration_ms": 200
+ },
+ {
+  "name": "dreading",
+  "prefix": "bill_dreading",
+  "count": 4,
+  "duration_ms": 160
+ },
+ {
+  "name": "grooving",
+  "prefix": "bill_grooving",
+  "count": 3,
+  "duration_ms": 150
+ },
+ {
+  "name": "dispatching",
+  "prefix": "bill_dispatching",
+  "count": 4,
+  "duration_ms": 140
+ },
+ {
+  "name": "ambushed",
+  "prefix": "bill_ambushed",
+  "count": 8,
+  "duration_ms": 130
+ },
+ {
+  "name": "stressed",
+  "prefix": "bill_stressed",
+  "count": 7,
+  "duration_ms": 160
+ },
+ {
+  "name": "watched",
+  "prefix": "bill_watched",
+  "count": 5,
+  "duration_ms": 160
+ },
+ {
+  "name": "flinching",
+  "prefix": "bill_flinching",
+  "count": 3,
+  "duration_ms": 130
+ },
+ {
+  "name": "huffy",
+  "prefix": "bill_huffy",
+  "count": 6,
+  "duration_ms": 110
+ },
+ {
+  "name": "pushingCode",
+  "prefix": "bill_pushingcode",
+  "count": 6,
+  "duration_ms": 100
+ },
+ {
+  "name": "browsingStore",
+  "prefix": "bill_browsingstore",
+  "count": 3,
+  "duration_ms": 100
+ },
+ {
+  "name": "dancing",
+  "prefix": "bill_dancing",
+  "count": 7,
+  "duration_ms": 120
+ },
+ {
+  "name": "caneTwist",
+  "prefix": "bill_canetwist",
+  "count": 8,
+  "duration_ms": 130
+ },
+ {
+  "name": "hookCane",
+  "prefix": "bill_hookcane",
+  "count": 5,
+  "duration_ms": 180
+ },
+ {
+  "name": "conjuring",
+  "prefix": "bill_conjuring",
+  "count": 18,
+  "duration_ms": 150
+ },
+ {
+  "name": "tumbling",
+  "prefix": "bill_tumbling",
+  "count": 4,
+  "duration_ms": 150
+ },
+ {
+  "name": "dashTarget",
+  "prefix": "bill_dashtarget",
+  "count": 4,
+  "duration_ms": 110
+ },
+ {
+  "name": "grumpEyes",
+  "prefix": "bill_grumpeyes",
+  "count": 6,
+  "duration_ms": 150
+ },
+ {
+  "name": "zipAround",
+  "prefix": "bill_ziparound",
+  "count": 11,
+  "duration_ms": 110
+ },
+ {
+  "name": "rampaging",
+  "prefix": "bill_rampaging",
+  "count": 10,
+  "duration_ms": 110
+ }
+]

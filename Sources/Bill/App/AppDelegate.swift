@@ -3,7 +3,7 @@ import Combine
 
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
-    private let characterEngine = CharacterEngine()
+    private var characterEngine: CharacterEngine!
     let chatBridge = ChatBridge()
     private let systemMonitor = SystemMonitor()
     private let weatherMonitor = WeatherMonitor()
@@ -22,7 +22,25 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var dialogueRefreshLogWindowController: DialogueRefreshLogWindowController!
     private var cancellables = Set<AnyCancellable>()
 
+    /// Menu-bar "Character → …": swaps the on-screen character live and
+    /// persists the choice. The window keeps its position; only the
+    /// silhouette, voice, clips and companion change.
+    func switchCharacter(to id: String) {
+        let definition = CharacterRoster.character(id)
+        preferences.activeCharacterID = definition.id
+        BubbleTheme.packID = definition.packID
+        characterWindowController.applyCharacter(definition)
+        statusItemController.buildMenu()
+    }
+
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // The persisted character decides whose rig even gets built — the
+        // rest of the method wires against whatever `characterEngine`
+        // holds, so nothing below needs to know who is on screen.
+        let activeCharacter = CharacterRoster.character(preferences.activeCharacterID)
+        characterEngine = CharacterEngine(character: activeCharacter)
+        BubbleTheme.packID = activeCharacter.packID
+
         // Decode the dialogue library before anything can ask it for a line.
         // A few milliseconds for ~750 short strings, and every bark path
         // depends on it, so it happens first rather than lazily mid-reaction.
@@ -38,6 +56,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         // `PersonalizationEngine`). Absent on a fresh install, present from
         // the first relaunch after setup.
         PersonalizedDialogueStore.shared.publishToDialogueLibrary()
+        // Finally: if the persisted character isn't Bill, swap the authored
+        // pools to their voice (Bill's halves are stashed inside the
+        // library until he comes back).
+        if !activeCharacter.isBill {
+            DialogueLibrary.shared.activate(character: activeCharacter)
+        }
 
         characterWindowController = CharacterWindowController(characterEngine: characterEngine, preferences: preferences, chatBridge: chatBridge, memoryStore: memoryStore)
         chatPanelController = ChatPanelController(chatBridge: chatBridge)
@@ -76,6 +100,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         settingsWindowController.onOpenQuotesManager = { [weak self] in
             self?.openQuotesManager()
         }
+        settingsWindowController.onSwitchCharacter = { [weak self] id in
+            self?.switchCharacter(to: id)
+        }
         settingsWindowController.onTestTrigger = { [weak self] keys, animationKey in
             guard let self else { return }
             // Fire the trigger live: request the assigned animation (or
@@ -111,6 +138,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             settingsWindowController: settingsWindowController,
             dialogueRefreshLogWindowController: dialogueRefreshLogWindowController
         )
+        // A persisted pack character launches with the engine already built
+        // for them, but the window controller still holds Bill's geometry —
+        // apply once so the window, hit region, companions and bubble
+        // theme all match who is actually on screen before `show()`.
+        if !activeCharacter.isBill {
+            characterWindowController.applyCharacter(activeCharacter)
+        }
         characterWindowController.show()
         // The multicolour prism beat as the opening flourish — a brief
         // welcome light-show that says "I'm here and I'm fabulous"

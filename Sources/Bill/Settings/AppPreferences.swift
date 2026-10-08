@@ -27,6 +27,31 @@ final class AppPreferences: ObservableObject {
         static let weatherAnnounceMinutes = "billWeatherAnnounceMinutes"
         static let perAppAnimations = "billPerAppAnimations"
         static let darkModeChrome = "billDarkModeChrome"
+        static let activeCharacter = "billActiveCharacterID"
+        static let activeCompanions = "billActiveCompanionIDs"
+    }
+
+    /// The character currently on screen — "bill" (default) or any id from
+    /// `CharacterRoster`. Persisted so a relaunch brings the same character
+    /// back; menu-bar switching keeps it live.
+    @Published var activeCharacterID: String {
+        didSet { UserDefaults.standard.set(activeCharacterID, forKey: Keys.activeCharacter) }
+    }
+
+    /// The companions shown alongside the active character — a user-chosen
+    /// subset of the active pack's roster ("for Deltarune you can have all,
+    /// only 2, or one"). IDs outside the active pack are ignored at build
+    /// time. When empty, a pack's default pair applies (Sans→Papyrus,
+    /// Knight→Hornet, Kris→Ralsei).
+    @Published var activeCompanionIDs: [String] {
+        didSet { UserDefaults.standard.set(activeCompanionIDs, forKey: Keys.activeCompanions) }
+    }
+
+    /// Whether the debug menu section is exposed at all. Off by default —
+    /// debug controls live behind `defaults write <bundle> billDebugMenu -bool YES`
+    /// rather than in every user's menu bar.
+    static var isDebugMenuEnabled: Bool {
+        UserDefaults.standard.bool(forKey: "billDebugMenu")
     }
 
     @Published var isRoamingEnabled: Bool {
@@ -145,7 +170,12 @@ final class AppPreferences: ObservableObject {
 
     /// The selected Settings section — tracked in the model since
     /// `@State` is unavailable in this toolchain.
-    @Published var selectedSettingsSection: String = "Appearance"
+    @Published var selectedSettingsSection: String = "Characters"
+
+    /// The character whose animations the Settings preview pane is showing
+    /// — same reason as above (`@State` unavailable). Empty = follow the
+    /// active character.
+    @Published var previewCharacterID: String = ""
 
     /// Shared static for views that can't access the preferences instance
     /// (like `ChatFrameView.draw`). Set by `AppDelegate` at launch and
@@ -213,6 +243,8 @@ final class AppPreferences: ObservableObject {
         )
         perAppAnimations = defaults.dictionary(forKey: Keys.perAppAnimations) as? [String: String] ?? [:]
         isDarkModeChrome = (defaults.object(forKey: Keys.darkModeChrome) as? Bool) ?? false
+        activeCharacterID = defaults.string(forKey: Keys.activeCharacter) ?? "bill"
+        activeCompanionIDs = defaults.stringArray(forKey: Keys.activeCompanions) ?? []
         let disabledRaw = defaults.stringArray(forKey: Keys.disabledCategories) ?? []
         disabledCategories = Set(disabledRaw.compactMap(AppCategory.init(rawValue:)))
         let storedScale = (defaults.object(forKey: Keys.characterScale) as? Double) ?? 1.0

@@ -24,14 +24,22 @@ struct BillRigNode {
     /// on-screen presence while nearest-neighbor filtering (set in
     /// `BillSpriteCatalog`) keeps every pixel crisp — no blur, no
     /// anti-aliasing, exactly as the pixel-art requirement calls for.
+    /// Pack characters pass their own scale (see `CharacterDefinition`).
     static let displayScale: CGFloat = 1.9
 
-    static func build() -> BillRigNode {
+    /// Builds the rig for Bill (default) or a pack character: same single
+    /// body node + texture-swap design, just seeded from that character's
+    /// first idle frame at their tuned display scale.
+    static func build(
+        catalog: CharacterSpriteCatalog? = nil,
+        displayScale scale: CGFloat = displayScale
+    ) -> BillRigNode {
         let root = SKNode()
-        root.name = "billRoot"
+        root.name = "characterRoot"
 
-        let body = SKSpriteNode(texture: BillSpriteCatalog.restTexture)
-        body.setScale(displayScale)
+        let restTexture = catalog?.restTexture ?? BillSpriteCatalog.restTexture
+        let body = SKSpriteNode(texture: restTexture)
+        body.setScale(scale)
         body.position = .zero
         root.addChild(body)
 

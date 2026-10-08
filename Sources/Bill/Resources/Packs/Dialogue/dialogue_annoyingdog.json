@@ -1,0 +1,115 @@
+{
+ "idle": {
+  "any": [
+   "* Bark!",
+   "* The dog is asleep on something important.",
+   "* The dog absorbs the concept of idleness. It is now a dog."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "* The dog borks with the energy of a thousand deadlines.",
+   "* The dog has already forgotten you poked it."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.furious": {
+  "any": [
+   "* The dog radiates mild inconvenience at you."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "* The dog wakes you up. It does not need to be awake. It just likes the power."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "* The dog snores on the source code of the universe."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "* The dog absorbs {app}. It is now, somehow, a dog feature.",
+   "* Bark! (The dog has strong opinions about {app}. It will not share them.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "* The dog lies on your keyboard. Hjkl;;lkjh fdsa is now your new variable name.",
+   "* The dog deletes your best code. This is canon."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "* The dog is playing your game. It is better than you."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryLow": {
+  "any": [
+   "* The dog is also running low. On attention. Pet accordingly."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "* The dog is wet. The dog is displeased. The dog will shake. You have been warned."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.snow": {
+  "any": [
+   "* The dog becomes a small snowdrift with ears."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [
+   "* Bark bark! (Translation: yes.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

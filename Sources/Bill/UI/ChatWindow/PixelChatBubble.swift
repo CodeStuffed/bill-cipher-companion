@@ -204,7 +204,7 @@ private final class PixelInputBubbleView: NSView {
         ctx.scaleBy(x: Self.pixelScale, y: Self.pixelScale)
 
         let bodyRect = CGRect(x: 0, y: 0, width: bodyWidthUnits, height: bodyHeightUnits)
-        BarkBubble.drawLayeredBorder(ctx, bodyRect: bodyRect, cornerRadius: Self.cornerRadius, borderThickness: Self.borderThickness, accentThickness: Self.accentThickness, accentColor: BillPalette.bubbleAccent)
+        BarkBubble.drawLayeredBorder(ctx, bodyRect: bodyRect, cornerRadius: Self.cornerRadius, borderThickness: Self.borderThickness, accentThickness: Self.accentThickness, accentColor: BubbleTheme.current.accent)
 
         // Blocky tail on whichever edge faces Bill — the same outlined
         // 3-layer treatment as the bark bubble's tail (black outline,
@@ -214,36 +214,36 @@ private final class PixelInputBubbleView: NSView {
         switch tailSide {
         case .left:
             // Column 1 flush against the body's left border.
-            ctx.setFillColor(BillPalette.black.cgColor)
+            ctx.setFillColor(BubbleTheme.current.border.cgColor)
             ctx.fill([CGRect(x: -1, y: midY - 5, width: 1, height: 10)])
-            ctx.setFillColor(BillPalette.bubbleAccent.cgColor)
+            ctx.setFillColor(BubbleTheme.current.accent.cgColor)
             ctx.fill([CGRect(x: -1, y: midY - 4, width: 1, height: 8)])
-            ctx.setFillColor(NSColor(calibratedWhite: 0.98, alpha: 1).cgColor)
+            ctx.setFillColor(BubbleTheme.current.fill.cgColor)
             ctx.fill([CGRect(x: -1, y: midY - 3, width: 1, height: 6)])
             // Column 2.
-            ctx.setFillColor(BillPalette.black.cgColor)
+            ctx.setFillColor(BubbleTheme.current.border.cgColor)
             ctx.fill([CGRect(x: -2, y: midY - 3, width: 1, height: 6)])
-            ctx.setFillColor(BillPalette.bubbleAccent.cgColor)
+            ctx.setFillColor(BubbleTheme.current.accent.cgColor)
             ctx.fill([CGRect(x: -2, y: midY - 2, width: 1, height: 4)])
-            ctx.setFillColor(NSColor(calibratedWhite: 0.98, alpha: 1).cgColor)
+            ctx.setFillColor(BubbleTheme.current.fill.cgColor)
             ctx.fill([CGRect(x: -2, y: midY - 1, width: 1, height: 2)])
             // Column 3: solid black tip.
-            ctx.setFillColor(BillPalette.black.cgColor)
+            ctx.setFillColor(BubbleTheme.current.border.cgColor)
             ctx.fill([CGRect(x: -3, y: midY - 1, width: 1, height: 2)])
         case .right:
-            ctx.setFillColor(BillPalette.black.cgColor)
+            ctx.setFillColor(BubbleTheme.current.border.cgColor)
             ctx.fill([CGRect(x: bodyRect.width, y: midY - 5, width: 1, height: 10)])
-            ctx.setFillColor(BillPalette.bubbleAccent.cgColor)
+            ctx.setFillColor(BubbleTheme.current.accent.cgColor)
             ctx.fill([CGRect(x: bodyRect.width, y: midY - 4, width: 1, height: 8)])
-            ctx.setFillColor(NSColor(calibratedWhite: 0.98, alpha: 1).cgColor)
+            ctx.setFillColor(BubbleTheme.current.fill.cgColor)
             ctx.fill([CGRect(x: bodyRect.width, y: midY - 3, width: 1, height: 6)])
-            ctx.setFillColor(BillPalette.black.cgColor)
+            ctx.setFillColor(BubbleTheme.current.border.cgColor)
             ctx.fill([CGRect(x: bodyRect.width + 1, y: midY - 3, width: 1, height: 6)])
-            ctx.setFillColor(BillPalette.bubbleAccent.cgColor)
+            ctx.setFillColor(BubbleTheme.current.accent.cgColor)
             ctx.fill([CGRect(x: bodyRect.width + 1, y: midY - 2, width: 1, height: 4)])
-            ctx.setFillColor(NSColor(calibratedWhite: 0.98, alpha: 1).cgColor)
+            ctx.setFillColor(BubbleTheme.current.fill.cgColor)
             ctx.fill([CGRect(x: bodyRect.width + 1, y: midY - 1, width: 1, height: 2)])
-            ctx.setFillColor(BillPalette.black.cgColor)
+            ctx.setFillColor(BubbleTheme.current.border.cgColor)
             ctx.fill([CGRect(x: bodyRect.width + 2, y: midY - 1, width: 1, height: 2)])
         }
         ctx.restoreGState()
@@ -361,7 +361,7 @@ final class PixelChatBubble: NSObject, NSTextViewDelegate {
         panel.isReleasedWhenClosed = false
 
         textView.font = NSFont.monospacedSystemFont(ofSize: 13, weight: .medium)
-        textView.textColor = .black
+        textView.textColor = BubbleTheme.current.text
         textView.backgroundColor = .clear
         textView.drawsBackground = false
         textView.isRichText = false
@@ -594,7 +594,7 @@ final class PixelChatBubble: NSObject, NSTextViewDelegate {
         isComposing = true
         textView.isEditable = true
         textView.isSelectable = true
-        textView.textColor = .black
+        textView.textColor = BubbleTheme.current.text
         inputBubble.placeholderText = textView.string.isEmpty ? Self.placeholderText : nil
     }
 

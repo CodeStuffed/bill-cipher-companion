@@ -1,0 +1,269 @@
+{
+ "idle": {
+  "any": [
+   "Ah, a moment of quiet. Those are precious, my child.",
+   "Do you smell that? ...No, neither do I. But it would be butterscotch-cinnamon, if I could smell.",
+   "I was just thinking about baking a pie. I am always thinking about baking a pie."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Oh! Hehe. That is a little rude, dear.",
+   "Careful! You will poke someone's eye out. Mine, specifically."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.annoyed": {
+  "any": [
+   "My child, I love you, but I am a patient monster with LIMITS."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked.furious": {
+  "any": [
+   "...I am not angry. I am disappointed. That is worse, is it not?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.morning": {
+  "any": [
+   "Good morning, my child! Did you sleep well? I made breakfast. It is pie.",
+   "A new day! Fresh as a snail-mint tea. You should try it. You will not. But you should."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.night": {
+  "any": [
+   "It is getting late, my child. Do not stay up too long.",
+   "The night is beautiful. But so is sleep. Think about it."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.midday": {
+  "any": [
+   "Have you eaten? The answer should be pie. The answer is always pie."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clock.afternoon": {
+  "any": [
+   "A fine afternoon. Perfect for a nap. Or seven, like a snail."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "{app}, I see! Do be careful in there, my child.",
+   "Ah, {app}. A responsible choice. I hope."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "coding": {
+  "any": [
+   "You work so hard. Remember: even snails finish their journey... eventually.",
+   "Coding! How industrious. I do not understand it, but I am very proud."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gaming": {
+  "any": [
+   "Games are fine in moderation, dear. Like pie. ...No, pie has no limit. Bad example."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "browsing": {
+  "any": [
+   "The internet, hm? Do not believe everything you read. Except this. This is true."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryLow": {
+  "any": [
+   "Your battery is low, my child! Like a little tired snail. Plug it in, please."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "batteryCharging": {
+  "any": [
+   "There, resting. Good. Everything needs rest. Even batteries."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "cpuHot": {
+  "any": [
+   "Oh dear, it is hot. Your poor computer is working up a sweat!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "Welcome back! I kept your seat warm. Figuratively. I am a ghost of a goat. Sort of."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "gettingSleepy": {
+  "any": [
+   "Sleepy, dear? There is no shame in rest. I once slept through an entire era."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.rain": {
+  "any": [
+   "Rain! The flowers will be so pleased. And so will the puddles."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.snow": {
+  "any": [
+   "Oh! Snow. Be careful not to slip, my child. Wear sensible shoes. And a smile."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.thunder": {
+  "any": [
+   "A storm! Stay close, dear. I will tell you a story to cover the thunder."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "weather.clear": {
+  "any": [
+   "What lovely weather. Perfect for a walk. Or a pie. A pie eaten on a walk."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "networkLost": {
+  "any": [
+   "Oh, the internet went out. That is fine. In my day we had books. And snails."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "chatFailed": {
+  "any": [
+   "Hmm. Technology is being difficult. Do not worry. It happens to the best of us."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "dreading": {
+  "any": [
+   "Homework, my child? I believe in you. And afterwards... pie. It is waiting."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "guilty": {
+  "any": [
+   "Studying! Wonderful. Your brain is a muscle, and also a pie. The pie part is a metaphor."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "hollowed": {
+  "any": [
+   "Oh, that poor little bug-child. So far from home. It reminds me of someone...",
+   "A knight! Chivalry is not dead. It is, in fact, a small bug with a nail."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "darkWorld": {
+  "any": [
+   "A dark world... do not wander too far, my child. And take a jacket."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trickster": {
+  "any": [
+   "What charming skeletons! The loud one reminds me of... well. Never mind."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "banter.respond": {
+  "any": [],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

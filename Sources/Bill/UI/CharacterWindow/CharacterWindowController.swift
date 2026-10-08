@@ -72,17 +72,134 @@ final class CharacterWindowController: NSObject {
     ///
     /// The window used to be 260x700 at all times — roughly 500pt of empty,
     /// invisible window sitting directly above him. Click-through hides most
-    /// of that, but only on a poll, so a click landing in that column within a
-    /// tick of the cursor being near him was still swallowed by an invisible
+    /// of that, but only on a poll, so a click landing in that column within
+    /// a tick of the cursor being near him was still swallowed by an invisible
     /// window. Shrinking to what he actually occupies removes the problem
     /// rather than papering over it: there is simply no window there to eat
     /// anything.
+    ///
+    /// Per-character switching: the values below are Bill's calibration and
+    /// the default of `geometry`; pack characters compute their own from
+    /// their canvas/displayScale (see `geometry(for:)`).
     private static let baseWindowSize = NSSize(width: 260, height: 250)
     /// Grown to this only while a speech bubble is on screen, which is the one
     /// time the headroom is genuinely needed.
     private static let barkWindowHeight: CGFloat = 700
     private static let baseHitRegion = CGRect(x: 60, y: 25, width: 140, height: 195)
     private static let baseBodyAnchorY: CGFloat = 110
+
+    /// The active character's window calibration — a value type so
+    /// `applyCharacterScale` keeps working for Bill unchanged while pack
+    /// characters resize the window around their own silhouette.
+    private struct CharacterGeometry {
+        // Defaults are set in `makeBillGeometry()` rather than inline —
+        // the statics are MainActor-isolated and struct default values
+        // evaluate in a nonisolated context.
+        var windowSize: NSSize
+        var hitRegion: CGRect
+        var bodyAnchorY: CGFloat
+        /// Where the character's rig sits horizontally, as a fraction of
+        /// window width. A pack group (Sans + Papyrus + Toriel…) shifts
+        /// the primary right so everyone fits.
+        var primaryXFraction: CGFloat
+        /// Companion rigs left→right: one x-fraction per companion.
+        var companionFractions: [CGFloat]
+
+        @MainActor static func bill() -> CharacterGeometry {
+            CharacterGeometry(
+                windowSize: baseWindowSize,
+                hitRegion: baseHitRegion,
+                bodyAnchorY: baseBodyAnchorY,
+                primaryXFraction: 0.5,
+                companionFractions: []
+            )
+        }
+    }
+
+    private var geometry = CharacterWindowController.billFallback
+
+    /// Nonisolated mirror of `CharacterGeometry.bill()` — the stored
+    /// property needs an initial value before MainActor init runs.
+    private static let billFallback = CharacterGeometry(
+        windowSize: NSSize(width: 260, height: 250),
+        hitRegion: CGRect(x: 60, y: 25, width: 140, height: 195),
+        bodyAnchorY: 110,
+        primaryXFraction: 0.5,
+        companionFractions: []
+    )
+
+    /// The companion rigs currently sharing the window, left→right.
+    private(set) var companionControllers: [CompanionController] = []
+
+    /// Which characters appear beside `definition` — the user's persisted
+    /// selection (any subset of the pack), falling back to the pack's
+    /// default pair when nothing is selected. Companions from other packs
+    /// and the primary itself are filtered out.
+    private func resolveCompanions(for definition: CharacterDefinition) -> [CharacterDefinition] {
+        guard !definition.isBill else { return [] }
+        let chosen = preferences.activeCompanionIDs
+            .map(CharacterRoster.character)
+            .filter { $0.packID == definition.packID && $0.id != definition.id }
+        if !chosen.isEmpty { return chosen }
+        if let fallback = definition.companionID {
+            let companion = CharacterRoster.character(fallback)
+            return companion.packID == definition.packID ? [companion] : []
+        }
+        return []
+    }
+
+    /// Window calibration for a character and its companions, computed
+    /// from the shared-canvas sizes everyone actually renders at. Same
+    /// rules as Bill's hand-tuned constants: the window is barely bigger
+    /// than the sprites, the hit region wraps the primary's visible body,
+    /// the anchor pins every rig a fixed lift above the floor, and the
+    /// bark headroom stays universal (`barkWindowHeight`).
+    private static func geometry(
+        for definition: CharacterDefinition,
+        companions: [CharacterDefinition]
+    ) -> CharacterGeometry {
+        guard !definition.isBill else { return .bill() }
+        func displaySize(_ d: CharacterDefinition) -> (w: CGFloat, h: CGFloat) {
+            (d.canvasSize.width * d.displayScale, d.canvasSize.height * d.displayScale)
+        }
+        let primary = displaySize(definition)
+        let compSizes = companions.map(displaySize)
+        let margin: CGFloat = 40
+        let gap: CGFloat = 45
+        let windowW = max(
+            200,
+            margin + compSizes.reduce(0) { $0 + $1.w } + CGFloat(companions.count) * gap
+                + primary.w + margin
+        )
+        let tallest = ([primary.h] + compSizes.map { $0.h }).max() ?? primary.h
+        let windowH = max(170, tallest + 55)
+        let bodyAnchorY = 16 + tallest / 2
+
+        // Left→right: companions first, primary on the right end.
+        var fractions: [CGFloat] = []
+        var cursor: CGFloat = margin
+        for size in compSizes {
+            cursor += size.w / 2
+            fractions.append(cursor / windowW)
+            cursor += size.w / 2 + gap
+        }
+        let primaryFraction = 1 - (primary.w / 2 + margin) / windowW
+
+        let hitW = min(primary.w * 0.95, windowW - 24)
+        let hitH = primary.h * 0.95
+        var g = Self.billFallback
+        g.windowSize = NSSize(width: windowW, height: windowH)
+        g.hitRegion = CGRect(
+            x: windowW * primaryFraction - hitW / 2,
+            y: 12,
+            width: hitW,
+            height: hitH
+        )
+        g.bodyAnchorY = bodyAnchorY
+        g.primaryXFraction = primaryFraction
+        g.companionFractions = fractions
+        return g
+    }
 
     /// Full rate, used while a real clip, a bark, or a roaming beat is running.
     private static let activeFramesPerSecond = 30
@@ -165,20 +282,36 @@ final class CharacterWindowController: NSObject {
             guard let self,
                   let screen = self.panel.screen ?? NSScreen.main
             else { return }
-            // Bill's actual body frame on screen, NOT the character window
-            // frame — the window grows to 700pt for barking, so its top is
-            // ~480pt above his hat. Computing from the known rig geometry:
-            // body half-width ≈ 112pt, hat top ≈ 215pt above the window
-            // bottom (rig at y=110 + half body height 105), feet ≈ 5pt.
+            // The character's actual body frame on screen, NOT the character
+            // window frame — the window grows to 700pt for barking, so its top
+            // is hundreds of points above their hat. Bill's calibration
+            // (112/215) is the default; pack characters compute theirs from
+            // the shared-canvas size and display scale.
             let scale = self.preferences.characterScale
             let frame = self.panel.frame
+            let definition = self.characterEngine.character
+            let displayW: CGFloat
+            let displayH: CGFloat
+            if definition.isBill {
+                displayW = 224
+                displayH = 215
+            } else {
+                displayW = definition.canvasSize.width * definition.displayScale
+                displayH = definition.canvasSize.height * definition.displayScale
+            }
+            let centerX = frame.minX + frame.width * self.geometry.primaryXFraction
             let billBody = CGRect(
-                x: frame.midX - 112 * scale,
+                x: centerX - displayW / 2 * scale,
                 y: frame.minY + 5 * scale,
-                width: 224 * scale,
-                height: 215 * scale
+                width: displayW * scale,
+                height: displayH * scale
             )
             self.barkPanelController.show(text: text, near: billBody, on: screen)
+            // Companion banter hook — at most ONE companion quips back, so
+            // a full party never turns into a shouting match.
+            if let responder = self.companionControllers.randomElement() {
+                responder.primaryBarked()
+            }
         }
         characterEngine.stateMachine.onBarkPanelReposition = { [weak self] billFrame in
             guard let self,
@@ -242,8 +375,8 @@ final class CharacterWindowController: NSObject {
         guard expanded != isPanelExpanded else { return }
         isPanelExpanded = expanded
         let scale = preferences.characterScale
-        let height = (expanded ? Self.barkWindowHeight : Self.baseWindowSize.height) * scale
-        let width = Self.baseWindowSize.width * scale
+        let height = (expanded ? Self.barkWindowHeight : geometry.windowSize.height) * scale
+        let width = geometry.windowSize.width * scale
         let origin = panel.frame.origin
         panel.setFrame(NSRect(x: origin.x, y: origin.y, width: width, height: height), display: false)
         hitView.frame = NSRect(origin: .zero, size: NSSize(width: width, height: height))
@@ -254,13 +387,13 @@ final class CharacterWindowController: NSObject {
     /// controller's feet inset must shift with it or the sim thinks Bill
     /// teleported.
     private func applyCharacterScale(_ scale: CGFloat, keepingCurrentPosition: Bool) {
-        let baseHeight = isPanelExpanded ? Self.barkWindowHeight : Self.baseWindowSize.height
-        let newSize = NSSize(width: Self.baseWindowSize.width * scale, height: baseHeight * scale)
+        let baseHeight = isPanelExpanded ? Self.barkWindowHeight : geometry.windowSize.height
+        let newSize = NSSize(width: geometry.windowSize.width * scale, height: baseHeight * scale)
         let newHitRegion = CGRect(
-            x: Self.baseHitRegion.minX * scale,
-            y: Self.baseHitRegion.minY * scale,
-            width: Self.baseHitRegion.width * scale,
-            height: Self.baseHitRegion.height * scale
+            x: geometry.hitRegion.minX * scale,
+            y: geometry.hitRegion.minY * scale,
+            width: geometry.hitRegion.width * scale,
+            height: geometry.hitRegion.height * scale
         )
         var newOrigin: NSPoint
         if keepingCurrentPosition {
@@ -297,8 +430,64 @@ final class CharacterWindowController: NSObject {
         panel.setFrame(NSRect(origin: newOrigin, size: newSize), display: true)
         hitView.frame = NSRect(origin: .zero, size: newSize)
         hitView.hitRegion = newHitRegion
-        characterEngine.rig.root.position = CGPoint(x: newSize.width / 2, y: Self.baseBodyAnchorY * scale)
+        characterEngine.rig.root.position = CGPoint(
+            x: newSize.width * geometry.primaryXFraction,
+            y: geometry.bodyAnchorY * scale
+        )
         characterEngine.rig.root.setScale(scale)
+        for (index, companion) in companionControllers.enumerated() {
+            let fraction = geometry.companionFractions.indices.contains(index)
+                ? geometry.companionFractions[index]
+                : 0.2
+            companion.rig.root.position = CGPoint(
+                x: newSize.width * fraction,
+                y: geometry.bodyAnchorY * scale * 0.99
+            )
+            companion.rig.root.setScale(scale)
+        }
+    }
+
+    // MARK: - Character switching
+
+    /// Menu-bar/Settings character switching: adopts the definition in the
+    /// engine, resizes the window around the new silhouette plus whichever
+    /// companions the user selected, and reloads the dialogue voice — all
+    /// without a restart.
+    func applyCharacter(_ definition: CharacterDefinition) {
+        characterEngine.adopt(definition)
+        let companions = resolveCompanions(for: definition)
+        geometry = Self.geometry(for: definition, companions: companions)
+
+        // Companion swap: tear the old rigs out of the scene, build the new
+        // ones, let them settle.
+        for old in companionControllers {
+            old.detach()
+        }
+        companionControllers = []
+        for companion in companions {
+            let controller = CompanionController(
+                definition: companion,
+                barkSink: { [weak self] text in self?.characterEngine.bark(text, importance: .always) }
+            )
+            companionControllers.append(controller)
+            controller.attach(to: sceneIfAvailable)
+        }
+
+        // Dialogue voice swap — Bill's pools (authored + generated +
+        // personalized) are stashed inside the library and restored when
+        // he returns.
+        DialogueLibrary.shared.activate(character: definition)
+
+        applyCharacterScale(preferences.characterScale, keepingCurrentPosition: true)
+
+        // The roaming controller caches the desktop's window topology against
+        // the panel's frame; a resized window needs it recomputed or the sim
+        // clamps to stale bounds.
+        roaming?.invalidateTopology()
+    }
+
+    private var sceneIfAvailable: SKScene? {
+        hitView.scene
     }
 
     /// Bill *is* the chat interface now: right-click → "Talk" opens a small
@@ -357,6 +546,15 @@ final class CharacterWindowController: NSObject {
         }
         Task { @MainActor [weak self] in
             guard let self else { return }
+            // Warm up the WebView FIRST — checkSignedIn() creates the page
+            // model object, but a WebPage doesn't actually load or execute
+            // anything until a real WebView renders it. Without this,
+            // checkSignedIn() always failed because the page was never
+            // visible to WebKit (the "setup doesn't even work" report).
+            self.warmUpChatEngine?()
+            self.setChatEngineMounted?(true)
+            // Give the page a moment to start loading before checking.
+            try? await Task.sleep(nanoseconds: 2_000_000_000)
             guard await self.chatBridge.checkSignedIn() else {
                 self.personalizationEngine.requireLogin()
                 return
@@ -684,6 +882,9 @@ final class CharacterWindowController: NSObject {
     /// path, since this is meant to run invisibly in the background either
     /// way.
     func refreshDialogueNow() {
+        // The refresh prompts write Bill's persona; a pack character's
+        // authored pools must not be overwritten by Bill-voiced output.
+        guard characterEngine.character.isBill else { return }
         performDialogueRefresh(trigger: "menu: Refresh Bill's Context Now")
     }
 
