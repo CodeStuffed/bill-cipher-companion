@@ -47,6 +47,11 @@ struct AnimationBrowserView: NSViewRepresentable {
 
         /// The character's families, read from the shipped manifest.
         private var families: [(name: String, count: Int)] {
+            // Bill previews through his own catalog — his families are the
+            // sprite-sheet groups, listed by their catalog names.
+            if characterID == "bill" {
+                return BillFamilyList.all.map { ($0, 1) }
+            }
             guard let url = Bundle.module.url(forResource: "packs_manifest", withExtension: "json", subdirectory: "Packs"),
                   let data = try? Data(contentsOf: url),
                   let manifest = try? JSONDecoder().decode([String: ManifestEntry].self, from: data),
@@ -66,13 +71,6 @@ struct AnimationBrowserView: NSViewRepresentable {
             builtFor = characterID
             list.arrangedSubviews.forEach { $0.removeFromSuperview() }
             let fams = families
-            if fams.isEmpty {
-                let label = NSTextField(labelWithString: "Bill's classic 68 animations are managed in the Test Triggers tab.")
-                label.font = .systemFont(ofSize: NSFont.smallSystemFontSize)
-                label.textColor = .secondaryLabelColor
-                list.addArrangedSubview(label)
-                return
-            }
             for family in fams {
                 let row = makeRow(family: family)
                 list.addArrangedSubview(row)
@@ -187,13 +185,18 @@ final class FamilyPreviewScene: SKScene {
         backgroundColor = .clear
         scaleMode = .resizeFill
         let definition = CharacterRoster.character(characterID)
-        guard !definition.isBill else {
-            let label = SKLabelNode(text: "Bill: use Test Triggers")
-            label.fontSize = 9
-            label.fontName = "Menlo-Bold"
-            label.fontColor = NSColor.secondaryLabelColor
-            label.position = CGPoint(x: size.width / 2, y: size.height / 2)
-            addChild(label)
+        if definition.isBill {
+            // Bill renders straight from his sprite catalog by family name.
+            let frames = BillFamilyFrames.frames(family)
+            guard !frames.isEmpty else { return }
+            let body = SKSpriteNode(texture: frames[0])
+            body.setScale(min(100 / frames[0].size().width, 140 / frames[0].size().height))
+            body.position = CGPoint(x: size.width / 2, y: size.height / 2)
+            addChild(body)
+            if frames.count > 1 {
+                body.run(SKAction.repeatForever(
+                    SKAction.animate(with: frames, timePerFrame: 0.15, resize: false, restore: false)))
+            }
             return
         }
         let catalog = CharacterSpriteCatalog(definition: definition)
@@ -214,4 +217,47 @@ final class FamilyPreviewScene: SKScene {
     }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) not supported") }
+}
+
+/// Bill's sprite families (the `BillSpriteCatalog` groups), named.
+@MainActor
+enum BillFamilyList {
+    static let all = [
+        "idle", "walk", "annoyed", "happy", "confused", "heating", "charging",
+        "surprised", "poked", "dazed", "sleeping", "thinking", "coding", "talking",
+        "smug", "snap", "focused", "channeling", "celebrating", "curious", "cane",
+        "powersurge", "powersurgeclose", "portalring", "zodiac", "summonritual",
+        "zodiacrage", "prismdance", "zodiaccrimson", "summonbuild", "summonhold",
+        "ghost", "glitch", "shadowa", "shadowb", "meltdown",
+        "trickster", "darkworld", "hollowed", "cultleader", "spooked", "scanning",
+        "sneaking", "glitching", "charged", "transferring", "summoning", "sculpting",
+        "kinship", "fractaling", "presenting", "guilty", "dreading", "grooving",
+        "dispatching", "ambushed", "stressed", "watched", "flinching", "huffy",
+        "pushingcode", "browsingstore", "dancing",
+        "canetwist", "hookcane", "conjuring", "tumbling", "dashtarget",
+        "grumpeyes", "ziparound", "rampaging",
+    ]
+}
+
+
+@MainActor
+enum BillFamilyFrames {
+    private static var cache: [String: [SKTexture]] = [:]
+
+    static func frames(_ family: String) -> [SKTexture] {
+        if let cached = cache[family] { return cached }
+        var textures: [SKTexture] = []
+        var i = 1
+        while true {
+            let name = String(format: "bill_%@_%02d", family, i)
+            guard let url = Bundle.module.url(forResource: name, withExtension: "png", subdirectory: "Sprites"),
+                  let image = NSImage(contentsOf: url) else { break }
+            let texture = SKTexture(image: image)
+            texture.filteringMode = .nearest
+            textures.append(texture)
+            i += 1
+        }
+        cache[family] = textures
+        return textures
+    }
 }

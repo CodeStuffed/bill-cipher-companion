@@ -268,18 +268,30 @@ struct SettingsView: View {
 
             card("Animation selector") {
                 VStack(alignment: .leading, spacing: 6) {
-                    Text("Unchecked animations never play automatically — idle beats, reactions, everything. (Test buttons still work.)")
+                    Text("Click an animation to enable or disable it — disabled ones are greyed out and never play automatically.")
                         .font(.caption)
                         .foregroundColor(.secondary)
                     ScrollView {
-                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 6)], spacing: 4) {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 118), spacing: 8)], spacing: 8) {
                             ForEach(BillState.allCases, id: \.self) { state in
-                                Toggle(state.rawValue, isOn: stateEnabledBinding(state.rawValue))
-                                    .font(.system(size: 10))
+                                StateSelectorTile(
+                                    state: state,
+                                    isEnabled: !preferences.disabledStateIDs.contains(state.rawValue),
+                                    onToggle: { enabled in
+                                        var current = preferences.disabledStateIDs
+                                        if enabled {
+                                            current.remove(state.rawValue)
+                                        } else {
+                                            current.insert(state.rawValue)
+                                        }
+                                        preferences.disabledStateIDs = current
+                                    }
+                                )
                             }
                         }
+                        .padding(.vertical, 4)
                     }
-                    .frame(height: 300)
+                    .frame(height: 340)
                     HStack {
                         Button("Enable all") {
                             preferences.disabledStateIDs = []
