@@ -3,3 +3,6 @@
 *.xcuserstate
 .DS_Store
 Bill.app/
+
+# Windows publish artifacts
+build-assets/win-publish/
