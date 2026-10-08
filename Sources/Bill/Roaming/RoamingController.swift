@@ -398,6 +398,20 @@ final class RoamingController {
     private func pickGoal(on screen: NSScreen, panel: NSPanel) -> Goal? {
         let visible = screen.visibleFrame
 
+        // Grounded characters (Undertale, OneShot — see
+        // `CharacterDefinition.prefersGroundedRoaming`) stay on the floor:
+        // plain left/right strolls, no window-leaping, no climbing, no
+        // minimize pranks. If one somehow ends up elevated (a window it
+        // stood on closed), the only goal is walking back down.
+        if characterEngine.character.prefersGroundedRoaming {
+            if sim.feet.y > visible.minY + 40 {
+                return .ground(x: CGFloat.random(in: visible.minX + 80...visible.maxX - 80))
+            }
+            let span = CGFloat.random(in: 160...460) * (Bool.random() ? 1 : -1)
+            let x = min(max(sim.feet.x + span, visible.minX + 40), visible.maxX - 40)
+            return .stroll(x: x)
+        }
+
         // The prank: leap onto a non-frontmost window's minimize button and
         // actually press it. Gated hard — enabled in Settings, Accessibility
         // granted, a real cooldown so it stays a surprise rather than a

@@ -39,6 +39,16 @@ MAPPINGS = {
         "ghost": ("undertale/sans", "shadow-left", 0, 3),
         "dining": ("undertale/sans", "icecream-unused", 0, 10),
     },
+    "sansdt": {
+        # Battle strip rows: head expression cycles from the Deltarune-style
+        # battle sheet. row01 = the idle head bob, row03 = talk flap.
+        "idle": ("undertale/sans-battle", "row01", 0, 8),
+        "talking": ("undertale/sans-battle", "row03", 0, 12),
+        "happy": ("undertale/sans-battle", "row05", 0, 8),
+        "surprised": ("undertale/sans-battle", "row07", 0, 8),
+        "annoyed": ("undertale/sans-battle", "row02", 0, 8),
+        "dazed": ("undertale/sans-battle", "row13", 0, 8),
+    },
     "papyrus": {
         "idle": ("undertale/papyrus", "row01", 0, 4),
         "walking": ("undertale/papyrus", "row02", 0, 4),
@@ -195,7 +205,7 @@ MAPPINGS = {
 PACK_OF = {
     "sans": "undertale", "papyrus": "undertale", "toriel": "undertale", "undyne": "undertale",
     "frisk": "undertale", "flowey": "undertale", "temmie": "undertale", "monsterkid": "undertale",
-    "annoyingdog": "undertale", "niko": "oneshot", "nikodt": "oneshot", "knight": "hollowknight", "hornet": "hollowknight",
+    "annoyingdog": "undertale", "sansdt": "undertale", "niko": "oneshot", "nikodt": "oneshot", "knight": "hollowknight", "hornet": "hollowknight",
     "kris": "deltarune", "ralsei": "deltarune", "susie": "deltarune",
 }
 

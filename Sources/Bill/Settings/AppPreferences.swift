@@ -27,6 +27,7 @@ final class AppPreferences: ObservableObject {
         static let weatherAnnounceMinutes = "billWeatherAnnounceMinutes"
         static let perAppAnimations = "billPerAppAnimations"
         static let darkModeChrome = "billDarkModeChrome"
+        static let alwaysOnTop = "billAlwaysOnTop"
         static let activeCharacter = "billActiveCharacterID"
         static let activeCompanions = "billActiveCompanionIDs"
     }
@@ -34,6 +35,14 @@ final class AppPreferences: ObservableObject {
     /// The character currently on screen — "bill" (default) or any id from
     /// `CharacterRoster`. Persisted so a relaunch brings the same character
     /// back; menu-bar switching keeps it live.
+    /// When on (default) the character floats above app windows — the
+    /// classic companion look. When off, the window drops to the normal
+    /// level: apps cover the character, so they can wander behind windows
+    /// and *hide* — they peek back out when the frontmost app moves.
+    @Published var isAlwaysOnTop: Bool {
+        didSet { UserDefaults.standard.set(isAlwaysOnTop, forKey: Keys.alwaysOnTop) }
+    }
+
     @Published var activeCharacterID: String {
         didSet { UserDefaults.standard.set(activeCharacterID, forKey: Keys.activeCharacter) }
     }
@@ -243,6 +252,7 @@ final class AppPreferences: ObservableObject {
         )
         perAppAnimations = defaults.dictionary(forKey: Keys.perAppAnimations) as? [String: String] ?? [:]
         isDarkModeChrome = (defaults.object(forKey: Keys.darkModeChrome) as? Bool) ?? false
+        isAlwaysOnTop = (defaults.object(forKey: Keys.alwaysOnTop) as? Bool) ?? true
         activeCharacterID = defaults.string(forKey: Keys.activeCharacter) ?? "bill"
         activeCompanionIDs = defaults.stringArray(forKey: Keys.activeCompanions) ?? []
         let disabledRaw = defaults.stringArray(forKey: Keys.disabledCategories) ?? []

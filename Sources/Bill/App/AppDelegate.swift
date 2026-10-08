@@ -7,7 +7,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     let chatBridge = ChatBridge()
     private let systemMonitor = SystemMonitor()
     private let weatherMonitor = WeatherMonitor()
-    private let preferences = AppPreferences()
+    /// Exposed read-only for the menu controller (window-layer toggle).
+    private(set) var preferences = AppPreferences()
     private let memoryStore = MemoryStore()
     let studyMode = StudyMode()
     private var habitNagger: HabitNagger?

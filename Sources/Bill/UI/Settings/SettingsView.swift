@@ -110,6 +110,13 @@ struct SettingsView: View {
         VStack(alignment: .leading, spacing: 24) {
             sectionHeader("Appearance", subtitle: "How Bill looks on your desktop")
 
+            card("Window layer") {
+                Toggle("Stay above app windows", isOn: $preferences.isAlwaysOnTop)
+                Text("Off = apps can cover your companion. They wander behind windows, hide, and stroll back out.")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+
             card("Character") {
                 HStack {
                     Text("Bill's size")

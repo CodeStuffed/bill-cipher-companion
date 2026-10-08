@@ -25,6 +25,20 @@
    "dining": 10
   }
  },
+ "sansdt": {
+  "canvas": [
+   29,
+   30
+  ],
+  "families": {
+   "idle": 8,
+   "talking": 12,
+   "happy": 8,
+   "surprised": 8,
+   "annoyed": 8,
+   "dazed": 8
+  }
+ },
  "papyrus": {
   "canvas": [
    27,

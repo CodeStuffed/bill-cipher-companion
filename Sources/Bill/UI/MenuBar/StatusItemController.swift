@@ -79,6 +79,16 @@ final class StatusItemController: NSObject {
 
         menu.addItem(.separator())
 
+        // Hides behind app windows when off — the "they can hide!" control.
+        let layerItem = NSMenuItem(
+            title: "Stay Above Windows",
+            action: #selector(toggleAlwaysOnTop),
+            keyEquivalent: ""
+        )
+        layerItem.target = self
+        layerItem.state = appDelegate?.preferences.isAlwaysOnTop == true ? .on : .off
+        menu.addItem(layerItem)
+
         let weatherTestItem = NSMenuItem(title: "Test Weather Now", action: #selector(testWeather), keyEquivalent: "")
         weatherTestItem.target = self
         menu.addItem(weatherTestItem)
@@ -179,6 +189,10 @@ final class StatusItemController: NSObject {
             }
         }
         return submenu
+    }
+
+    @objc private func toggleAlwaysOnTop() {
+        appDelegate?.preferences.isAlwaysOnTop.toggle()
     }
 
     @objc private func switchCharacter(_ sender: NSMenuItem) {

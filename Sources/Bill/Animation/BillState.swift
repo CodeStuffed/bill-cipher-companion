@@ -248,12 +248,12 @@ enum BillState: String, CaseIterable, Sendable {
     /// Rare, dramatic beats reserved for `CharacterEngine`'s low-probability
     /// idle roll rather than any normal reaction path.
     static let rareEasterEggs: [BillState] = [
-        .powerSurge, .zodiacVision, .summonRitual, .ghostPale, .glitchForm,
+        .ghostPale, .glitchForm, .prismDance,
         .caneTwist, .hookCane, .conjuring, .tumbling, .dashTarget, .grumpEyes, .zipAround,
-        .ritualBuildup, .prismDance,
-        // The red-chaos family (shadowHands, meltdown, zodiacRage,
-        // zodiacCrimson) is deliberately NOT in the idle rotation — the
-        // explicit "red cloud keeps appearing while I'm just sitting here"
-        // report. Reachable only via per-app assignment in Settings.
+        // Everything big and dramatic — the red shooting cloud, the zodiac
+        // wheel, the portals, the summoning rituals — is deliberately OUT of
+        // the idle rotation per the repeated "it still appears while I'm
+        // just sitting here" reports. Those states stay reachable through
+        // per-app assignment in Settings only.
     ]
 }

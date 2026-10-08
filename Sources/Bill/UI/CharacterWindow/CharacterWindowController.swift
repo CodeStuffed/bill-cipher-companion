@@ -118,6 +118,14 @@ final class CharacterWindowController: NSObject {
 
     private var geometry = CharacterWindowController.billFallback
 
+    /// Companion windows float above apps by default; turning the toggle
+    /// off drops the panel to the normal level so real windows can cover
+    /// the character — they hide behind apps and reappear when the front
+    /// app moves or they stroll out from behind it.
+    func applyWindowLevel() {
+        panel.level = preferences.isAlwaysOnTop ? .floating : .normal
+    }
+
     /// Nonisolated mirror of `CharacterGeometry.bill()` — the stored
     /// property needs an initial value before MainActor init runs.
     private static let billFallback = CharacterGeometry(
@@ -236,6 +244,7 @@ final class CharacterWindowController: NSObject {
         panel.backgroundColor = .clear
         panel.hasShadow = false
         panel.level = .floating
+        applyWindowLevel()
         panel.collectionBehavior = [.canJoinAllSpaces, .stationary, .fullScreenAuxiliary]
         panel.isMovableByWindowBackground = false
         // `BillHitTestView`'s own hitTest only decides which view *within
