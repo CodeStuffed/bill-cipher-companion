@@ -72,14 +72,16 @@ MAPPINGS = {
         "attack": ("undertale/undyne", "row35", 0, 6),
     },
     "frisk": {
-        "idle": ("undertale/frisk", "row03", 0, 4),
-        "walking": ("undertale/frisk", "row02", 0, 4),
+        "idle": ("undertale/frisk", "row12", 0, 4),
+        "walking": ("undertale/frisk", "row11", 0, 4),
         "talking": ("undertale/frisk", "row09", 0, 4),
-        "happy": ("undertale/frisk", "row07", 0, 6),
-        "surprised": ("undertale/frisk", "row12", 0, 4),
+        "happy": ("undertale/frisk", "row07", 0, 4),
+        "surprised": ("undertale/frisk", "row10", 0, 4),
     },
     "flowey": {
-        "idle": ("undertale/flowey", "talk", 0, 2),
+        # "talk" holds two identical default-face boxes — idle plays the
+        # real 9-frame face-morph cycle so Flowey actually moves on his own.
+        "idle": ("undertale/flowey", "face-grow", 0, 9),
         "talking": ("undertale/flowey", "talk", 0, 2),
         "happy": ("undertale/flowey", "face-grow", 0, 2),
         "annoyed": ("undertale/flowey", "shrink", 0, 2),
@@ -88,35 +90,43 @@ MAPPINGS = {
         "evil": ("undertale/flowey", "face-grow", 0, 4),
     },
     "temmie": {
-        "idle": ("undertale/temmie", "idle-talk", 0, 4),
-        "walking": ("undertale/temmie", "walk-unused", 0, 4),
-        "talking": ("undertale/temmie", "hoi-talk", 0, 4),
-        "happy": ("undertale/temmie", "hoi", 0, 8),
-        "surprised": ("undertale/temmie", "feeling-watched", 0, 1),
+        # Flood-fill extraction rows (purple no longer eats tEM's fur):
+        # row01=idle-talk(4), row02=hoi(5), row03=hoi-talk(2), row04/05=walk.
+        "idle": ("undertale/temmie", "row01", 0, 4),
+        "happy": ("undertale/temmie", "row02", 0, 4),
+        "talking": ("undertale/temmie", "row03", 0, 2),
+        "walking": ("undertale/temmie", "row04", 0, 4),
+        "surprised": ("undertale/temmie", "row06", 0, 1),
     },
     "monsterkid": {
+        # row01 is the verified period-4 walk cycle — the later rows mix
+        # facing directions (the "sometimes flipped" frames).
         "idle": ("undertale/monsterkid", "row1-l4", 0, 4),
-        "walking": ("undertale/monsterkid", "row02", 0, 8),
+        "walking": ("undertale/monsterkid", "row01", 0, 8),
         "talking": ("undertale/monsterkid", "row04", 0, 4),
-        "happy": ("undertale/monsterkid", "row03", 0, 4),
+        "happy": ("undertale/monsterkid", "row07", 0, 4),
         "surprised": ("undertale/monsterkid", "row05", 0, 4),
         "goner": ("undertale/monsterkid", "row1-l424", 0, 2),
     },
     "annoyingdog": {
-        "idle": ("undertale/annoyingdog", "row01", 0, 2),
-        "walking": ("undertale/annoyingdog", "row21", 0, 4),
-        "talking": ("undertale/annoyingdog", "row10", 0, 3),
-        "happy": ("undertale/annoyingdog", "row03", 0, 3),
-        "sleeping": ("undertale/annoyingdog", "row19", 0, 2),
+        "idle": ("undertale/annoyingdog", "row01", 0, 1),
+        "walking": ("undertale/annoyingdog", "row10", 0, 4),
+        "talking": ("undertale/annoyingdog", "row03", 0, 2),
+        "happy": ("undertale/annoyingdog", "row03", 2, 2),
+        "sleeping": ("undertale/annoyingdog", "row05", 0, 1),
     },
     "niko": {
-        "idle": ("oneshot/niko", "row01", 0, 4),
-        "walking": ("oneshot/niko", "row01", 4, 4),
-        "talking": ("oneshot/niko", "row03", 0, 4),
-        "happy": ("oneshot/niko", "row05", 0, 4),
-        "sad": ("oneshot/niko", "row07", 0, 4),
-        "surprised": ("oneshot/niko", "row09", 0, 4),
-        "walkup": ("oneshot/niko", "row02", 0, 4),
+        # Eye-verified: each ROW is one DIRECTION of the 3-frame walk cycle.
+        # row01=left, row02=right, row03=down(front), row05=up(back),
+        # row07=expressive poses. Walking plays the left cycle; the
+        # wander controller's xScale flip mirrors it for rightward moves.
+        "idle": ("oneshot/niko", "row03", 0, 3),
+        "walking": ("oneshot/niko", "row01", 0, 3),
+        "walkup": ("oneshot/niko", "row05", 0, 3),
+        "talking": ("oneshot/niko", "row07", 0, 3),
+        "happy": ("oneshot/niko", "row07", 3, 3),
+        "sad": ("oneshot/niko", "row07", 9, 3),
+        "surprised": ("oneshot/niko", "row09", 0, 3),
     },
     "nikodt": {
         # Each row is an 8-frame cycle (repeated 3x in the sheet). Slice the
@@ -160,20 +170,23 @@ MAPPINGS = {
         "celebrating": ("deltarune/kris", "hug-raise", 0, 4),
     },
     "ralsei": {
+        # Full-body rows only (23x43 class); the 17x18 rows are head
+        # closeups that read as glitched partial sprites on the desktop.
         "idle": ("deltarune/ralsei", "row03", 0, 4),
-        "walking": ("deltarune/ralsei", "row02", 0, 4),
-        "talking": ("deltarune/ralsei", "row05", 0, 4),
-        "happy": ("deltarune/ralsei", "row04", 0, 4),
-        "annoyed": ("deltarune/ralsei", "row06", 0, 4),
-        "surprised": ("deltarune/ralsei", "row09", 0, 4),
-        "sad": ("deltarune/ralsei", "row01", 0, 2),
+        "walking": ("deltarune/ralsei", "row05", 0, 4),
+        "talking": ("deltarune/ralsei", "row04", 0, 4),
+        "happy": ("deltarune/ralsei", "row09", 0, 4),
+        "annoyed": ("deltarune/ralsei", "row11", 0, 4),
+        "surprised": ("deltarune/ralsei", "row10", 0, 4),
+        "sad": ("deltarune/ralsei", "row06", 0, 4),
     },
     "susie": {
+        # Flood-fill rows — her purple hair survived extraction this time.
         "idle": ("deltarune/susie", "row01", 0, 4),
         "walking": ("deltarune/susie", "row03", 0, 6),
-        "talking": ("deltarune/susie", "row07", 0, 6),
-        "happy": ("deltarune/susie", "row04", 0, 4),
-        "annoyed": ("deltarune/susie", "row05", 0, 4),
+        "talking": ("deltarune/susie", "row04", 0, 4),
+        "happy": ("deltarune/susie", "row05", 0, 4),
+        "annoyed": ("deltarune/susie", "row07", 0, 4),
         "surprised": ("deltarune/susie", "row08", 0, 4),
         "laugh": ("deltarune/susie", "row09", 0, 4),
     },
@@ -199,15 +212,24 @@ def load_family(char, family, spec):
         return []
     files = sorted(matches[0].glob("*.png"))
     picked = files[start:start + count]
-    frames = []
+    raw = []
     for f in picked:
         a = np.asarray(Image.open(str(f)).convert("RGBA"))
         al = a[:, :, 3] > 10
         ys, xs = np.where(al)
         if len(ys) == 0:
-            continue
-        frames.append(a[ys.min():ys.max() + 1, xs.min():xs.max() + 1])
-    return frames
+            continue  # blank frame — never ship an invisible flash
+        raw.append(a[ys.min():ys.max() + 1, xs.min():xs.max() + 1])
+    if len(raw) >= 4:
+        # Glitch filter: drop partial sprites (head-only fragments, torn
+        # crops) whose content is far shorter than the family's middle
+        # height — Ralsei's "only her head exists" frames. 0.5 keeps
+        # legitimately short poses (the Knight's crouch reads ~0.7x) while
+        # killing half-height fragments.
+        heights = sorted(f.shape[0] for f in raw)
+        median_h = heights[len(heights) // 2]
+        raw = [f for f in raw if f.shape[0] >= 0.5 * median_h]
+    return raw
 
 
 def main():

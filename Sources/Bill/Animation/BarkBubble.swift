@@ -389,11 +389,11 @@ enum BarkBubble {
     /// text or host a view centered within it.
     @discardableResult
     static func drawLayeredBorder(_ ctx: CGContext, bodyRect: CGRect, cornerRadius: Int, borderThickness: Int, accentThickness: Int, accentColor: NSColor) -> CGRect {
-        fillPixelRoundedRect(ctx, rect: bodyRect, radius: cornerRadius, color: BillPalette.black)
+        fillPixelRoundedRect(ctx, rect: bodyRect, radius: cornerRadius, color: BubbleTheme.current.border)
         let accentRect = bodyRect.insetBy(dx: CGFloat(borderThickness), dy: CGFloat(borderThickness))
         fillPixelRoundedRect(ctx, rect: accentRect, radius: max(0, cornerRadius - borderThickness), color: accentColor)
         let fillRect = accentRect.insetBy(dx: CGFloat(accentThickness), dy: CGFloat(accentThickness))
-        fillPixelRoundedRect(ctx, rect: fillRect, radius: max(0, cornerRadius - borderThickness - accentThickness), color: NSColor(calibratedWhite: 0.98, alpha: 1))
+        fillPixelRoundedRect(ctx, rect: fillRect, radius: max(0, cornerRadius - borderThickness - accentThickness), color: BubbleTheme.current.fill)
         return fillRect
     }
 }

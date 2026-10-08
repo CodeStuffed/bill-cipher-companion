@@ -2,7 +2,7 @@
  "idle": {
   "any": [
    "Yo!! What's up?!",
-   "Man, I wish Undyne was here. She'd LOVE this spot.",
+   "Man, I wish Undyne was here.",
    "Yo, this is so cool! Standing here! With no arms!"
   ],
   "morning": [],
@@ -12,7 +12,7 @@
  },
  "poked": {
   "any": [
-   "Yo!! Haha, that tickles! I think! I can't really feel my sides!",
+   "Yo!! Haha, that tickles! I think!",
    "Whoa!! Careful! I fall over super easy!"
   ],
   "morning": [],
@@ -49,8 +49,7 @@
  },
  "appLaunchGeneric": {
   "any": [
-   "Yo!! {app}!! Is it cool?! It's probably cool!!",
-   "Whoa!! {app}!! My mom won't let me use that one!!"
+   "Yo!! {app}!! Is it cool?! It's probably cool!!"
   ],
   "morning": [],
   "midday": [],
@@ -66,18 +65,18 @@
   "afternoon": [],
   "night": []
  },
- "weather.rain": {
+ "weather.snow": {
   "any": [
-   "Yo, rain!! I can't hold an umbrella!! This is GREAT!!"
+   "SNOW?! YO!! I'm basically a snowman with no arms ALREADY!!"
   ],
   "morning": [],
   "midday": [],
   "afternoon": [],
   "night": []
  },
- "weather.snow": {
+ "weather.rain": {
   "any": [
-   "SNOW?! YO!! Snowmen!! I'm basically a snowman with no arms ALREADY!!"
+   "Yo, rain!! I can't hold an umbrella!! This is GREAT!!"
   ],
   "morning": [],
   "midday": [],

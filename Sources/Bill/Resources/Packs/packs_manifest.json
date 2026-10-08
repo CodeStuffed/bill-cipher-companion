@@ -69,22 +69,22 @@
    "idle": 4,
    "walking": 6,
    "talking": 4,
-   "happy": 5,
+   "happy": 4,
    "annoyed": 3,
    "surprised": 4,
-   "attack": 6
+   "attack": 5
   }
  },
  "frisk": {
   "canvas": [
-   23,
+   21,
    29
   ],
   "families": {
    "idle": 4,
    "walking": 4,
    "talking": 4,
-   "happy": 6,
+   "happy": 4,
    "surprised": 4
   }
  },
@@ -94,7 +94,7 @@
    33
   ],
   "families": {
-   "idle": 2,
+   "idle": 9,
    "talking": 2,
    "happy": 2,
    "annoyed": 2,
@@ -110,9 +110,9 @@
   ],
   "families": {
    "idle": 4,
-   "walking": 4,
+   "happy": 4,
    "talking": 2,
-   "happy": 5,
+   "walking": 4,
    "surprised": 1
   }
  },
@@ -138,24 +138,24 @@
   "families": {
    "idle": 1,
    "walking": 4,
-   "talking": 3,
-   "happy": 3,
+   "talking": 2,
+   "happy": 2,
    "sleeping": 1
   }
  },
  "niko": {
   "canvas": [
-   21,
+   20,
    29
   ],
   "families": {
-   "idle": 4,
-   "walking": 4,
-   "talking": 4,
-   "happy": 4,
-   "sad": 4,
-   "surprised": 4,
-   "walkup": 4
+   "idle": 3,
+   "walking": 3,
+   "walkup": 3,
+   "talking": 3,
+   "happy": 3,
+   "sad": 3,
+   "surprised": 3
   }
  },
  "nikodt": {
@@ -222,7 +222,7 @@
  },
  "ralsei": {
   "canvas": [
-   24,
+   44,
    43
   ],
   "families": {
@@ -232,19 +232,19 @@
    "happy": 4,
    "annoyed": 4,
    "surprised": 4,
-   "sad": 2
+   "sad": 4
   }
  },
  "susie": {
   "canvas": [
-   58,
-   47
+   40,
+   44
   ],
   "families": {
    "idle": 4,
    "walking": 6,
-   "talking": 6,
-   "happy": 4,
+   "talking": 4,
+   "happy": 3,
    "annoyed": 4,
    "surprised": 4,
    "laugh": 4

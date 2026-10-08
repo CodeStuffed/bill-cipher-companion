@@ -96,9 +96,6 @@ struct CharacterAnimationLibrary {
         "monsterkid": [
             .powerSurge: "goner", .zodiacVision: "goner", .ghostPale: "goner",
         ],
-        "sans": [
-            .grooving: "dining", .ghostPale: "ghost",
-        ],
     ]
 
     // MARK: - Clip building

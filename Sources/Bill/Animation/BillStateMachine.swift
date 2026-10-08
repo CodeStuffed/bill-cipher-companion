@@ -25,6 +25,10 @@ final class BillStateMachine {
     /// Pack characters map idle-variety beats onto their own families;
     /// `nil` falls back to the Bill defaults.
     private var idleVariantProvider: ((AnimationClipLibrary.IdleVariant) -> AnimationClip?)?
+    /// Bill's FX particles (steam, sparkles, confetti) are Bill's palette —
+    /// raining yellow confetti over Sans reads as a colour glitch. Pack
+    /// characters play their states clean.
+    var areFXEnabled = true
 
     private var barkQueue: [String] = []
     private var isBarkShowing = false
@@ -88,6 +92,12 @@ final class BillStateMachine {
         // be silently lost, leaving the view paused despite the bob action
         // technically running. `CharacterEngine.start()` — called once
         // everything is connected — starts it instead.
+    }
+
+    /// True when `texture` is Bill's own rest frame — the FX gate. Texture
+    /// identity is the one thing that survives every provider swap.
+    private func isBillCharacter(_ texture: SKTexture) -> Bool {
+        texture === BillSpriteCatalog.restTexture
     }
 
     /// Swaps the character underneath a live state machine — the mechanism
@@ -459,7 +469,9 @@ final class BillStateMachine {
         // that can request a state.
         onClipStarted?(state)
         equipProp(AnimationClipLibrary.prop(for: state))
-        applyFX(AnimationClipLibrary.fx(for: state))
+        if areFXEnabled {
+            applyFX(AnimationClipLibrary.fx(for: state))
+        }
         let clip = clipProvider(state)
         holdWork?.cancel()
         holdWork = nil

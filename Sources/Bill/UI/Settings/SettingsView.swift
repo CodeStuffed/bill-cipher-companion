@@ -460,6 +460,14 @@ struct SettingsView: View {
                     : preferences.previewCharacterID)
             }
 
+            card("Not available yet") {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Toriel & Undyne — too hard to rip cleanly. Their robes and hair share colors with the sprite-sheet background, which eats holes in their sprites. They'll return once the extraction can tell background from body.")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+            }
+
             if !currentCredit.isEmpty {
                 card("Sprite credit") {
                     Text(currentCredit)

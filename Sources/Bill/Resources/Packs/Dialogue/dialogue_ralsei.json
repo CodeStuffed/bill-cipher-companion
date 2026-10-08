@@ -49,8 +49,7 @@
  },
  "appLaunchGeneric": {
   "any": [
-   "{app}! Are you being careful in there? I'll just... watch from here. Supportively!",
-   "Ooh, {app}! Is this a... adventure-preparing activity?"
+   "{app}! Are you being careful in there? I'll just... watch from here. Supportively!"
   ],
   "morning": [],
   "midday": [],
@@ -86,7 +85,7 @@
  },
  "userReturned": {
   "any": [
-   "You're back!! I kept everything exactly the same! Except I moved one pillow. It was crooked. Sorry!"
+   "You're back!! I kept everything exactly the same! Except one pillow. It was crooked. Sorry!"
   ],
   "morning": [],
   "midday": [],

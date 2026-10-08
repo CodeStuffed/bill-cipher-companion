@@ -62,30 +62,18 @@ enum CharacterRoster {
     static let sans = CharacterDefinition(
         id: "sans", displayName: "Sans", packID: "undertale", packName: "Undertale",
         spritePrefix: "sans", canvasSize: CGSize(width: 40, height: 37), displayScale: 3.8,
-        dialogueResource: "dialogue_sans", companionID: "papyrus",
+        dialogueResource: "dialogue_sans", companionID: nil,
         credit: "Undertale sprites ripped by asym — spriters-resource.com (The Spriters Resource)"
     )
     static let papyrus = CharacterDefinition(
         id: "papyrus", displayName: "Papyrus", packID: "undertale", packName: "Undertale",
         spritePrefix: "papyrus", canvasSize: CGSize(width: 27, height: 43), displayScale: 3.9,
-        dialogueResource: "dialogue_papyrus", companionID: "sans",
-        credit: "Undertale sprites ripped by asym — spriters-resource.com"
-    )
-    static let toriel = CharacterDefinition(
-        id: "toriel", displayName: "Toriel", packID: "undertale", packName: "Undertale",
-        spritePrefix: "toriel", canvasSize: CGSize(width: 51, height: 55), displayScale: 3.1,
-        dialogueResource: "dialogue_toriel", companionID: nil,
-        credit: "Undertale sprites ripped by asym — spriters-resource.com"
-    )
-    static let undyne = CharacterDefinition(
-        id: "undyne", displayName: "Undyne", packID: "undertale", packName: "Undertale",
-        spritePrefix: "undyne", canvasSize: CGSize(width: 34, height: 55), displayScale: 3.0,
-        dialogueResource: "dialogue_undyne", companionID: nil,
+        dialogueResource: "dialogue_papyrus", companionID: nil,
         credit: "Undertale sprites ripped by asym — spriters-resource.com"
     )
     static let frisk = CharacterDefinition(
         id: "frisk", displayName: "Frisk", packID: "undertale", packName: "Undertale",
-        spritePrefix: "frisk", canvasSize: CGSize(width: 23, height: 29), displayScale: 3.8,
+        spritePrefix: "frisk", canvasSize: CGSize(width: 21, height: 29), displayScale: 3.8,
         dialogueResource: "dialogue_frisk", companionID: nil,
         credit: "Undertale sprites ripped by asym — spriters-resource.com"
     )
@@ -118,7 +106,7 @@ enum CharacterRoster {
 
     static let niko = CharacterDefinition(
         id: "niko", displayName: "Niko", packID: "oneshot", packName: "OneShot",
-        spritePrefix: "niko", canvasSize: CGSize(width: 21, height: 29), displayScale: 3.8,
+        spritePrefix: "niko", canvasSize: CGSize(width: 20, height: 29), displayScale: 3.8,
         dialogueResource: "dialogue_niko", companionID: nil,
         credit: "OneShot sprites ripped by accuratejaney — spriters-resource.com"
     )
@@ -134,7 +122,7 @@ enum CharacterRoster {
     static let knight = CharacterDefinition(
         id: "knight", displayName: "The Knight", packID: "hollowknight", packName: "Hollow Knight",
         spritePrefix: "knight", canvasSize: CGSize(width: 170, height: 170), displayScale: 1.4,
-        dialogueResource: "dialogue_knight", companionID: "hornet",
+        dialogueResource: "dialogue_knight", companionID: nil,
         credit: "Hollow Knight sprites from the community atlas rips — spriters-resource.com"
     )
     static let hornet = CharacterDefinition(
@@ -149,18 +137,18 @@ enum CharacterRoster {
     static let kris = CharacterDefinition(
         id: "kris", displayName: "Kris", packID: "deltarune", packName: "Deltarune",
         spritePrefix: "kris", canvasSize: CGSize(width: 54, height: 47), displayScale: 3.2,
-        dialogueResource: "dialogue_kris", companionID: "ralsei",
+        dialogueResource: "dialogue_kris", companionID: nil,
         credit: "Deltarune sprites ripped by asym, Eli101gamer, KoolTimYT, MrDoubleA, Sissel, Yuti, Bubbled — spriters-resource.com"
     )
     static let ralsei = CharacterDefinition(
         id: "ralsei", displayName: "Ralsei", packID: "deltarune", packName: "Deltarune",
-        spritePrefix: "ralsei", canvasSize: CGSize(width: 24, height: 43), displayScale: 3.3,
+        spritePrefix: "ralsei", canvasSize: CGSize(width: 44, height: 43), displayScale: 3.3,
         dialogueResource: "dialogue_ralsei", companionID: nil,
         credit: "Deltarune sprites ripped by asym, Luxandre, Sissel, TattleameliaMLG — spriters-resource.com"
     )
     static let susie = CharacterDefinition(
         id: "susie", displayName: "Susie", packID: "deltarune", packName: "Deltarune",
-        spritePrefix: "susie", canvasSize: CGSize(width: 58, height: 47), displayScale: 3.2,
+        spritePrefix: "susie", canvasSize: CGSize(width: 40, height: 44), displayScale: 3.2,
         dialogueResource: "dialogue_susie", companionID: nil,
         credit: "Deltarune sprites ripped by asym, Sissel, TattleameliaMLG — spriters-resource.com"
     )
@@ -168,7 +156,7 @@ enum CharacterRoster {
     /// Menu/display order.
     static let all: [CharacterDefinition] = [
         bill,
-        sans, papyrus, toriel, undyne, frisk, flowey, temmie, monsterkid, annoyingdog,
+        sans, papyrus, frisk, flowey, temmie, monsterkid, annoyingdog,
         niko, nikodt,
         knight, hornet,
         kris, ralsei, susie,

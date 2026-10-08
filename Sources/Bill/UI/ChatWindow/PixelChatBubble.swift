@@ -30,10 +30,10 @@ final class PixelCloseButton: NSView {
         ctx.setFillColor(NSColor.black.cgColor)
         ctx.fill(bounds)
         let inner = bounds.insetBy(dx: 2, dy: 2)
-        ctx.setFillColor((isHovering ? NSColor(calibratedRed: 0.85, green: 0.25, blue: 0.2, alpha: 1) : NSColor(calibratedWhite: 0.98, alpha: 1)).cgColor)
+        ctx.setFillColor((isHovering ? NSColor(calibratedRed: 0.85, green: 0.25, blue: 0.2, alpha: 1) : BubbleTheme.current.fill).cgColor)
         ctx.fill(inner)
 
-        ctx.setFillColor(isHovering ? NSColor.white.cgColor : NSColor.black.cgColor)
+        ctx.setFillColor(isHovering ? NSColor.white.cgColor : BubbleTheme.current.border.cgColor)
         let step: CGFloat = max(1, inner.width / 6)
         var rects: [CGRect] = []
         let count = 4

@@ -1,10 +1,10 @@
 {
  "idle": {
   "any": [
-   "NYEH HEH HEH! IT IS I, THE GREAT PAPYRUS!",
-   "I AM STANDING HERE, BEING EXCELLENT. AS USUAL.",
-   "SOME MIGHT CALL THIS IDLE. I CALL IT... STRATEGIC POSE HOLDING!",
-   "I SHOULD WATER MY SPAGHETTI PLANT. ...DOES SPAGHETTI GROW ON PLANTS? I'LL LOOK IT UP."
+   "NYEH HEH HEH!",
+   "IT IS I, THE GREAT PAPYRUS!",
+   "I AM THE BEST AT STANDING STILL. WATCH!",
+   "I SHOULD WATER MY SPAGHETTI PLANT."
   ],
   "morning": [],
   "midday": [],
@@ -24,7 +24,7 @@
  },
  "poked.annoyed": {
   "any": [
-   "HUMAN! POKING THE GREAT PAPYRUS IS A PRIVILEGE, NOT A RIGHT!",
+   "HUMAN! POKING THE GREAT PAPYRUS IS A PRIVILEGE!",
    "I AM STARTING TO FEEL LIKE A BUTTON."
   ],
   "morning": [],
@@ -34,8 +34,8 @@
  },
  "poked.furious": {
   "any": [
-   "THAT'S IT! YOU'RE GOING ON... THE LIST! IT'S MORE OF A PARCHMENT, ACTUALLY.",
-   "EVEN MY PATIENCE HAS LIMITS, AND IT IS A VERY HIGH QUALITY PATIENCE."
+   "THAT'S IT! YOU'RE GOING ON... THE LIST!",
+   "EVEN MY PATIENCE HAS LIMITS. AND IT IS EXCELLENT PATIENCE."
   ],
   "morning": [],
   "midday": [],
@@ -45,27 +45,7 @@
  "clock.morning": {
   "any": [
    "GOOD MORNING! I ALREADY MADE BREAKFAST SPAGHETTI!",
-   "A NEW DAY! A NEW PUZZLE! A NEW OPPORTUNITY TO BE AMAZING!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "clock.midday": {
-  "any": [
-   "IT IS THE MIDDAY! TIME FOR MY MID-MIDDAY SNACK!",
-   "HALF THE DAY IS GONE! I HAVE ACCOMPLISHED 400% OF MY GOALS!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "clock.afternoon": {
-  "any": [
-   "AFTERNOON! THE PERFECT TIME FOR JAPES!",
-   "I COULD TRAIN. OR NAP. OR TRAIN WHILE NAPPING!"
+   "A NEW DAY! A NEW PUZZLE!"
   ],
   "morning": [],
   "midday": [],
@@ -75,7 +55,7 @@
  "clock.night": {
   "any": [
    "IT IS NIGHT! THE PERFECT TIME TO... DO THE SAME THINGS, BUT DARKER!",
-   "GOODNIGHT, HUMAN! SLEEP WELL! I'LL BE HERE! BEING GREAT! QUIETLY!"
+   "GOODNIGHT, HUMAN! I'LL BE HERE! BEING GREAT! QUIETLY!"
   ],
   "morning": [],
   "midday": [],
@@ -85,8 +65,7 @@
  "appLaunchGeneric": {
   "any": [
    "AH! {app}! IS IT A PUZZLE? I LOVE PUZZLES!",
-   "{app}! I DON'T KNOW WHAT THAT IS, BUT I SUPPORT IT!",
-   "THE HUMAN IS USING {app}! EVERYTHING IS PROCEEDING ACCORDING TO PLAN!"
+   "{app}! I DON'T KNOW WHAT THAT IS, BUT I SUPPORT IT!"
   ],
   "morning": [],
   "midday": [],
@@ -95,7 +74,7 @@
  },
  "coding": {
   "any": [
-   "CODING! IT'S LIKE MAKING PUZZLES FOR COMPUTERS! I RESPECT IT!",
+   "CODING! IT'S LIKE MAKING PUZZLES FOR COMPUTERS!",
    "I DON'T KNOW WHAT A SEMICOLON IS, BUT IT SEEMS VERY IMPORTANT TO YOU!"
   ],
   "morning": [],
@@ -113,18 +92,9 @@
   "afternoon": [],
   "night": []
  },
- "browsing": {
+ "batteryLow": {
   "any": [
-   "SCROLLING! I TOO ENJOY LOOKING AT THINGS!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "music": {
-  "any": [
-   "MUSIC! I ALSO MAKE MUSIC! WITH MY BONES! ...IT'S MOSTLY CLACKING!"
+   "LOW POWER! LIKE ME AFTER 12 PUZZLES! THAT'S A LOT OF PUZZLES!"
   ],
   "morning": [],
   "midday": [],
@@ -134,15 +104,6 @@
  "batteryCharging": {
   "any": [
    "CHARGING! LIKE UNDYNE'S SPECIAL ATTACK! GLOWS AND EVERYTHING!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "batteryLow": {
-  "any": [
-   "LOW POWER! LIKE ME AFTER 12 PUZZLES! THAT'S A LOT OF PUZZLES!"
   ],
   "morning": [],
   "midday": [],
@@ -159,45 +120,9 @@
   "afternoon": [],
   "night": []
  },
- "gettingSleepy": {
-  "any": [
-   "SLEEPY? I'LL SING YOU A LULLABY! I ONLY KNOW ONE! IT'S THE BONE SONG!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "networkLost": {
-  "any": [
-   "THE INTERNET LEFT! WAS IT SOMETHING WE SAID?!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "networkRestored": {
-  "any": [
-   "THE INTERNET RETURNED! IT MISSED US! I KNEW IT!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "weather.rain": {
-  "any": [
-   "RAIN! FREE WATER FOR MY SPAGHETTI PLANT! ...THAT I DON'T HAVE! BUT IF I DID!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
  "weather.snow": {
   "any": [
-   "SNOW!!! THIS IS THE BEST WEATHER! SNOWMEN! SNOWPUZZLES! SNOWPAPYRUS!"
+   "SNOW!!! THIS IS THE BEST WEATHER! SNOWPAPYRUS!!"
   ],
   "morning": [],
   "midday": [],
@@ -213,37 +138,9 @@
   "afternoon": [],
   "night": []
  },
- "weather.clear": {
+ "weather.rain": {
   "any": [
-   "CLEAR SKIES! PERFECT PUZZLE-SETTING WEATHER!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "hollowed": {
-  "any": [
-   "BUGS? WITH SWORDS? I ALREADY LIKE THIS ONE!",
-   "THAT KNIGHT IS VERY COOL. NOT AS COOL AS ME. BUT CLOSE!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "darkWorld": {
-  "any": [
-   "A DARK WORLD! IS IT FULL OF PUZZLES?! I'M PACKING MY BAGS!!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "trickster": {
-  "any": [
-   "UNDERTALE! I'M IN THIS ONE! ...WAIT. AM I THE COMIC RELIEF? ...I'M THE COMIC RELIEF."
+   "RAIN! FREE WATER FOR MY SPAGHETTI PLANT!"
   ],
   "morning": [],
   "midday": [],
@@ -259,27 +156,27 @@
   "afternoon": [],
   "night": []
  },
- "guilty": {
-  "any": [
-   "LANGUAGE PRACTICE! ONE DAY WE'LL TALK IN ITALIAN! THEN I CAN ORDER SPAGHETTI PROPERLY!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
  "dancing": {
   "any": [
-   "DANCING! I'M AN EXCELLENT DANCER! I TOOK LESSONS! FROM A SKELETON! ME!"
+   "DANCING! I'M AN EXCELLENT DANCER! I TOOK LESSONS! FROM ME!"
   ],
   "morning": [],
   "midday": [],
   "afternoon": [],
   "night": []
  },
- "dispatching": {
+ "hollowed": {
   "any": [
-   "MAIL! HAVE YOU TRIED SHOUTING YOUR MESSAGES INSTEAD? VERY RELIABLE!"
+   "BUGS? WITH SWORDS? I ALREADY LIKE THIS ONE!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trickster": {
+  "any": [
+   "UNDERTALE! I'M IN THIS ONE! ...WAIT. AM I THE COMIC RELIEF? ...I'M THE COMIC RELIEF."
   ],
   "morning": [],
   "midday": [],

@@ -881,16 +881,21 @@ final class RoamingController {
     /// rightward move Bill stayed mirrored through idle and every subsequent
     /// clip until he happened to move left again. Facing is now restored to
     /// left whenever a beat ends.
+    ///
+    /// The scale factor is the ACTIVE character's — hardcoding Bill's 1.9
+    /// here crushed every pack character to half width (x 1.9 × y 3.8 = the
+    /// "squashed" report): the flip must multiply the same displayScale the
+    /// rig was built with, or the horizontal axis diverges from vertical.
     private func updateFacing(_ dx: CGFloat) {
         let want: CGFloat = dx > 0 ? -1 : 1
         guard want != facing else { return }
         facing = want
-        characterEngine.rig.bodyNode.xScale = want * BillRigNode.displayScale
+        characterEngine.rig.bodyNode.xScale = want * characterEngine.character.displayScale
     }
 
     func resetFacing() {
         facing = 1
-        characterEngine.rig.bodyNode.xScale = BillRigNode.displayScale
+        characterEngine.rig.bodyNode.xScale = characterEngine.character.displayScale
     }
 
     // MARK: - Panel <-> simulation

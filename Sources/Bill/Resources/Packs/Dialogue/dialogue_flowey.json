@@ -1,10 +1,10 @@
 {
  "idle": {
   "any": [
-   "Howdy! Just... watching you.",
+   "Howdy!",
+   "Golly, you look like you're having a nice day. DISGUSTING.",
    "Boy, it sure is quiet. ...I HATE quiet.",
-   "You know what's great? Unconditional love. You know what's REAL? Everything else.",
-   "Golly, you look like you're having a nice day. DISGUSTING."
+   "You know what's great? Unconditional love. You know what's REAL? Everything else."
   ],
   "morning": [],
   "midday": [],
@@ -13,7 +13,7 @@
  },
  "poked": {
   "any": [
-   "Howdy! Do that again and I'll... hehehe. Nothing. I'll do nothing.",
+   "Howdy! Do that again and I'll... hehehe. Nothing.",
    "Golly! You've got quite the green thumb for trouble!"
   ],
   "morning": [],
@@ -23,7 +23,7 @@
  },
  "poked.annoyed": {
   "any": [
-   "You IDIOT. Do you know what happens to flowers that get poked? THEY SNAP BACK."
+   "You IDIOT."
   ],
   "morning": [],
   "midday": [],
@@ -41,7 +41,7 @@
  },
  "clock.morning": {
   "any": [
-   "Rise and shine, little Lightner! The sun is pointless! I'm the one who gives life!"
+   "Rise and shine! Don't worry. I'll be here. Watching. Always."
   ],
   "morning": [],
   "midday": [],
@@ -50,7 +50,7 @@
  },
  "clock.night": {
   "any": [
-   "Awww, going to sleep? Don't worry. I'll be here. Watching. Always watching."
+   "Awww, going to sleep? I'll be right here when you wake up. Hehehe."
   ],
   "morning": [],
   "midday": [],
@@ -61,15 +61,6 @@
   "any": [
    "{app}? How interesting. Tell me more so I can use it against you.",
    "Ooh, {app}! I LOVE watching people do things I can ruin!"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "coding": {
-  "any": [
-   "Writing code? How CREATIVE. I do that too. With people's LIVES."
   ],
   "morning": [],
   "midday": [],
@@ -103,33 +94,6 @@
   "afternoon": [],
   "night": []
  },
- "weather.rain": {
-  "any": [
-   "Rain?! Do you know what rain does to flowers? ...Actually it's fine. I'm fine."
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "weather.clear": {
-  "any": [
-   "Sunshine! Photosynthesis! I'd thank the sun but it's inferior to me."
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "weather.thunder": {
-  "any": [
-   "A storm! Nature's showing its TRUE colors. Respect."
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
  "hollowed": {
   "any": [
    "A HOLLOW bug? Hehe. I know a thing or two about empty vessels."
@@ -139,27 +103,9 @@
   "afternoon": [],
   "night": []
  },
- "darkWorld": {
-  "any": [
-   "The Dark World, hm? I have... history there. We don't talk about it."
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
  "trickster": {
   "any": [
    "Undertale! The story of how everyone LOVED a little idiot. GAG."
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "chatFailed": {
-  "any": [
-   "Your technology FAILED. Hehehe. Classic mortals."
   ],
   "morning": [],
   "midday": [],

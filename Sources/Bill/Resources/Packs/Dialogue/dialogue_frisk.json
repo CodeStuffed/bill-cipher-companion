@@ -1,8 +1,8 @@
 {
  "idle": {
   "any": [
-   "* You wave at yourself. It's a quiet day.",
    "* ...",
+   "* You wave at yourself. It's a quiet day.",
    "* You feel a gentle warmth. Like pie, or friendship."
   ],
   "morning": [],
@@ -14,15 +14,6 @@
   "any": [
    "* You are poked. You remain determined.",
    "* Ouch. (You do not say ouch. But you feel it.)"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "poked.annoyed": {
-  "any": [
-   "* You give a Look. It is a very determined Look."
   ],
   "morning": [],
   "midday": [],
@@ -59,7 +50,7 @@
  },
  "appLaunchGeneric": {
   "any": [
-   "* You open {app}. It opens.",
+   "* You open {app}.",
    "* {app}. You nod."
   ],
   "morning": [],
@@ -69,8 +60,7 @@
  },
  "coding": {
   "any": [
-   "* You type. You hope it works.",
-   "* You fix the bug. You feel powerful."
+   "* You type. You hope it works."
   ],
   "morning": [],
   "midday": [],
@@ -118,31 +108,6 @@
   "any": [
    "* You catch a snowflake on your sleeve."
   ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "weather.clear": {
-  "any": [
-   "* You look at the sky. It looks back."
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "gettingSleepy": {
-  "any": [
-   "* You yawn. Stealthily. (You failed.)"
-  ],
-  "morning": [],
-  "midday": [],
-  "afternoon": [],
-  "night": []
- },
- "banter.respond": {
-  "any": [],
   "morning": [],
   "midday": [],
   "afternoon": [],
