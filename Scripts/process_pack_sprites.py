@@ -60,27 +60,6 @@ MAPPINGS = {
         "confused": ("undertale/papyrus", "row04", 0, 2),
         "back": ("undertale/papyrus", "row04", 0, 4),
     },
-    "toriel": {
-        "idle": ("undertale/toriel", "row01", 0, 3),
-        "walking": ("undertale/toriel", "row03", 0, 4),
-        "talking": ("undertale/toriel", "row04", 0, 4),
-        "happy": ("undertale/toriel", "handhold", 0, 3),
-        "annoyed": ("undertale/toriel", "row09", 0, 3),
-        "surprised": ("undertale/toriel", "row08", 0, 3),
-        "sleeping": ("undertale/toriel", "chair-sleep", 0, 2),
-        "coding": ("undertale/toriel", "chair-talk", 0, 4),
-        "gaming": ("undertale/toriel", "chair-getup", 0, 4),
-        "celebrating": ("undertale/toriel", "unused", 0, 4),
-    },
-    "undyne": {
-        "idle": ("undertale/undyne", "armor", 0, 4),
-        "walking": ("undertale/undyne", "row16-l189", 0, 6),
-        "talking": ("undertale/undyne", "nohelmet", 0, 4),
-        "happy": ("undertale/undyne", "row21", 0, 5),
-        "annoyed": ("undertale/undyne", "noarmor", 0, 3),
-        "surprised": ("undertale/undyne", "row15", 0, 4),
-        "attack": ("undertale/undyne", "row35", 0, 6),
-    },
     "frisk": {
         "idle": ("undertale/frisk", "row12", 0, 4),
         "walking": ("undertale/frisk", "row11", 0, 4),
@@ -242,12 +221,45 @@ def load_family(char, family, spec):
     return raw
 
 
+def available_rows(char):
+    """Every extraction row for this character, as (row_name, frame_paths)."""
+    pack = PACK_OF[char]
+    base = SRC / pack / char
+    rows = {}
+    if base.exists():
+        for sec in sorted(base.iterdir()):
+            if not sec.is_dir():
+                continue
+            files = sorted(sec.glob("*.png"))
+            if files:
+                rows[sec.name] = files
+    return rows
+
+
 def main():
     manifest = {}
     for char, families in MAPPINGS.items():
         pack = PACK_OF[char]
         out_dir = DST / pack / "Sprites"
         out_dir.mkdir(parents=True, exist_ok=True)
+
+        # Claimed rows: everything a core family already slices from.
+        claimed = {spec[1].split(" ")[0] for spec in families.values()}
+        # Auto-wire every remaining row as an "x" family so the entire
+        # sheet is playable — 16 frames per family keeps beats snappy on
+        # the giant battle rows.
+        rows = available_rows(char)
+        extras = 0
+        for row_name, files in sorted(rows.items()):
+            if row_name in claimed:
+                continue
+            if len(families) > 40 and not row_name.startswith("row"):
+                continue  # curated sections already serve this character
+            families[f"x{extras + 1:02d}"] = (f"{pack}/{char}", row_name, 0, min(16, len(files)))
+            extras += 1
+            if extras >= 48:
+                break
+
         # collect all families first
         all_frames = {}
         for family, spec in families.items():
@@ -257,10 +269,26 @@ def main():
         if not all_frames:
             print(f"{char}: NO FRAMES, skipped")
             continue
-        # shared canvas = max bbox across all included frames
+        # Shared canvas: sized by the CORE families, plus any auto-extra
+        # that fits within 1.45x of them. Oversized cutscene strips are
+        # dropped entirely — a 114px-wide strip on a 40px body is how the
+        # canvas ballooned and every core sprite ended up squashed-small.
+        core = {k: v for k, v in all_frames.items() if not k.startswith("x")}
+        core_w = max(f.shape[1] for frs in core.values() for f in frs)
+        core_h = max(f.shape[0] for frs in core.values() for f in frs)
+        dropped = []
+        for name in list(all_frames.keys()):
+            if name.startswith("x"):
+                fw = max(f.shape[1] for f in all_frames[name])
+                fh = max(f.shape[0] for f in all_frames[name])
+                if fw > core_w * 1.45 or fh > core_h * 1.45:
+                    dropped.append(name)
+                    del all_frames[name]
         maxw = max(f.shape[1] for frs in all_frames.values() for f in frs)
         maxh = max(f.shape[0] for frs in all_frames.values() for f in frs)
         char_man = {"canvas": [maxw, maxh], "families": {}}
+        if dropped:
+            print(f"  {char}: dropped {len(dropped)} oversized extras (>{core_w * 1.45:.0f}x{core_h * 1.45:.0f})")
         for family, frames in all_frames.items():
             char_man["families"][family] = len(frames)
             for n, f in enumerate(frames, 1):

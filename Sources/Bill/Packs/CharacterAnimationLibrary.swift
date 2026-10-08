@@ -98,6 +98,60 @@ struct CharacterAnimationLibrary {
         ],
     ]
 
+    // MARK: - Full-sheet extras
+
+    /// The states that spread across the character's "x" families — every
+    /// reaction, flourish and egg gets its OWN sheet animation instead of
+    /// piling onto happy/annoyed/surprised. This is the "you never used all
+    /// the animations" fix: a character with 48 wired rows plays 48
+    /// distinct beats.
+    private static let extraStates: [BillState] = [
+        .trickster, .darkWorld, .hollowed, .cultLeader, .scanning,
+        .sneaking, .glitching, .charged, .transferring, .summoning,
+        .sculpting, .kinship, .fractaling, .presenting, .guilty,
+        .dreading, .grooving, .dispatching, .ambushed, .stressed,
+        .watched, .flinching, .huffy, .pushingCode, .browsingStore, .dancing,
+        .caneTwist, .hookCane, .conjuring, .tumbling, .dashTarget,
+        .grumpEyes, .zipAround, .celebrating, .confused, .dazed, .smug,
+        .focused, .heatingUp, .channeling, .powerSurge, .zodiacVision,
+        .summonRitual, .ritualBuildup, .ghostPale, .glitchForm, .prismDance,
+        .rampaging,
+    ]
+
+    /// How many "x" families this character ships — probed by file
+    /// existence, never by loading textures (48 families × 16 frames of
+    /// Knight art would be ~100MB if the probe decoded them all).
+    static func extraFamilyCount(definition: CharacterDefinition) -> Int {
+        var count = 0
+        for n in 1...60 {
+            let name = String(format: "%@_x%02d_01", definition.spritePrefix, n)
+            guard Bundle.module.url(
+                forResource: name,
+                withExtension: "png",
+                subdirectory: "Packs/\(definition.packID)/Sprites"
+            ) != nil else { break }
+            count = n
+        }
+        return count
+    }
+
+    /// The distinct extra family for `state`, or `nil` when this character
+    /// has none (or the family it maps to is empty). Cyclic assignment —
+    /// every state in `extraStates` lands on a different row.
+    private func extraFamily(for state: BillState) -> String? {
+        let count = Self.extraFamilyCount(definition: catalog.definition)
+        guard count > 0 else { return nil }
+        guard let index = Self.extraStates.firstIndex(of: state) else { return nil }
+        for probe in 0..<count {
+            let n = (index + probe) % count + 1
+            let family = String(format: "x%02d", n)
+            if !catalog.frames(family).isEmpty {
+                return family
+            }
+        }
+        return nil
+    }
+
     // MARK: - Clip building
 
     func clip(for state: BillState) -> AnimationClip {
@@ -107,6 +161,12 @@ struct CharacterAnimationLibrary {
         if let special = Self.specialsByCharacter[id]?[state],
            !catalog.frames(special).isEmpty {
             return clip(for: state, family: special)
+        }
+
+        // Full-sheet extras: reaction/egg states each claim their own row
+        // before falling back to the shared ladder.
+        if let extra = extraFamily(for: state) {
+            return clip(for: state, family: extra)
         }
 
         // Generic ladder with per-family fallbacks.
