@@ -75,21 +75,24 @@ struct StatePreviewTexture: NSViewRepresentable {
             guard let frames = BillStatePreviewFrames.frames(for: state), let first = frames.first else {
                 return placeholderGlyph
             }
-            return first
+            return Self.image(from: first)
         }
         let catalog = CharacterSpriteCatalog(definition: definition)
         let library = CharacterAnimationLibrary(catalog: catalog)
         let clip = library.clip(for: state)
         guard let texture = clip.textures.first else { return placeholderGlyph }
-        let image = NSImage(size: texture.size())
-        image.lockFocus()
-        texture.draw(in: NSRect(origin: .zero, size: texture.size()))
-        image.unlockFocus()
-        return image
+        return Self.image(from: texture)
+    }
+
+    /// SKTexture → NSImage via the texture's underlying CGImage.
+    private static func image(from texture: SKTexture) -> NSImage? {
+        let cg = texture.cgImage()
+        return NSImage(cgImage: cg, size: NSSize(width: cg.width, height: cg.height))
     }
 
     private var placeholderGlyph: NSImage {
         NSImage(systemSymbolName: "questionmark.square.dashed", accessibilityDescription: nil)
+            ?? NSImage()
     }
 }
 
