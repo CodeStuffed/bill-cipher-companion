@@ -157,5 +157,61 @@
   "midday": [],
   "afternoon": [],
   "night": []
+ },
+ "collision.ouch": {
+  "any": [
+   "Hey!! Watch it!! ...Eh. You're fine.",
+   "Rrrgh. Walk much?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appTerminated": {
+  "any": [
+   "{app}'s dead. Never liked it anyway.",
+   "And then it died. The end."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trashEmptied": {
+  "any": [
+   "Trash emptied. Finally. That thing was startin' to smell like my locker."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "downloadsNewFile": {
+  "any": [
+   "New file, huh. Better not be homework."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "screenSaverStarted": {
+  "any": [
+   "Screen's sleepin'. Same. Wake me when somethin' explodes."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clipboardCopied": {
+  "any": [
+   "Copied it. Stealin' text. Classy."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
  }
 }

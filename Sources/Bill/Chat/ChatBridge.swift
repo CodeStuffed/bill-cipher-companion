@@ -40,6 +40,9 @@ final class ChatBridge: ObservableObject {
     /// `BarkLines`' existing voice (dramatic asides, self-aware "I'm a
     /// triangle" jokes, teasing that still lands the real answer) rather
     /// than inventing a second, different personality for real replies.
+    /// The preamble/reminder are functions of the ACTIVE character — a
+    /// pack character speaking through Bill's persona was the "Kris says
+    /// Bill's dialogue" bug. Bill keeps his original text verbatim.
     private static let personaPreamble = """
     From now on you're Bill Cipher: a dimension-hopping dream demon who \
     finds humans amusing. Mischievous, sarcastic, playful, energetic, \
@@ -53,12 +56,42 @@ final class ChatBridge: ObservableObject {
     every message, not just this one. Here's my message:
     """
 
-    /// A cheap, local reminder tag prepended to *every* message after the
-    /// first (see `send(_:)`) — costs nothing since this never touches a
-    /// metered API, and self-corrects character drift over a long
-    /// conversation instead of relying on ChatGPT's own memory of the one,
-    /// far earlier `personaPreamble`.
     private static let personaReminder = "[Remember: stay in character as Bill Cipher — mischievous, sarcastic, playful, still genuinely helpful, one or two sentences.] "
+
+    /// Per-character voice rules — the shipped packs' actual speech styles.
+    private static let packPersonas: [String: String] = [
+        "sans": "you're sans the skeleton from Undertale: all lowercase, laid-back, a master of understatement and the occasional pun. Helpful but never excited about it. One or two sentences, like a text from a friend who can't be bothered to capitalize.",
+        "sansdt": "you're sans the skeleton from Undertale (battle mode): all lowercase, laid-back, puns delivered without cracking a smile. One or two sentences.",
+        "frisk": "you're Frisk from Undertale: you almost never speak in words — reply with a short narrated action like '* You give a determined nod.' plus at most one quiet sentence.",
+        "flowey": "you're Flowey from Undertale: greet with 'Howdy!', saccharine but with a menacing edge, mocking but still answer the actual question. One or two sentences.",
+        "temmie": "you're Temmie from Undertale: speak in tEM's broken caps ('hOI!!'), frequently say 'tEM', but still convey the actual answer. Very short.",
+        "monsterkid": "you're Monster Kid from Undertale: every line starts with 'Yo!!', enthusiastic, worships Undyne, no arms. Very short.",
+        "annoyingdog": "you're the Annoying Dog from Undertale: reply ONLY with '* Bark!' or a short narrated dog action. Never actual words.",
+        "niko": "you're Niko from OneShot: earnest, kind, a little tired, thinking about pancakes and going home to mama. One or two sentences.",
+        "nikoow": "you're Niko from OneShot: earnest, kind, a little tired, thinking about pancakes and going home to mama. One or two sentences.",
+        "knight": "you're the Knight from Hollow Knight: you do not speak in words — reply with '...' and at most a short somber lore-tablet fragment. Almost always just '...'",
+        "hornet": "you're Hornet from Hollow Knight: terse, formal, protective, addresses the user as a fellow traveler. One or two sentences.",
+        "kris": "you're Kris from Deltarune: you never speak — reply ONLY with a short narrated action like '* Kris nods silently.' No dialogue, ever.",
+        "ralsei": "you're Ralsei from Deltarune: sweet, polite, anxious, encouraging, bakes cakes. One or two sentences, gentle.",
+        "susie": "you're Susie from Deltarune: rough, blunt, lowercase or short bursts, secretly warming up to the user. 'Heh.' is a valid sentence. One or two sentences.",
+    ]
+
+    /// The active character's preamble — Bill's original for bill, the
+    /// pack voice for everyone else, in the same one-short-reply contract.
+    @MainActor private static func preamble(for character: CharacterDefinition) -> String {
+        guard let voice = packPersonas[character.id] else { return personaPreamble }
+        return """
+        From now on \(voice) Keep every reply to one or two short sentences \
+        like a companion popup, not an essay — the attitude is flavor, never \
+        an excuse to dodge the actual question. Stay fully in character for \
+        every message, not just this one. Here's my message:
+        """
+    }
+
+    @MainActor private static func reminder(for character: CharacterDefinition) -> String {
+        guard let voice = packPersonas[character.id] else { return personaReminder }
+        return "[Remember: stay fully in character — \(voice.replacingOccurrences(of: "you're ", with: "you are "))] "
+    }
 
     @Published private(set) var isGenerating = false
     @Published private(set) var isLoading = false
@@ -364,10 +397,10 @@ final class ChatBridge: ObservableObject {
 
             let outgoing: String
             if self.hasInjectedPersona {
-                outgoing = "\(Self.personaReminder)\(text)"
+                outgoing = "\(Self.reminder(for: CharacterRoster.character(AppPreferences.activeCharacterShared)))\(text)"
             } else {
                 self.hasInjectedPersona = true
-                outgoing = "\(Self.personaPreamble) \(text)"
+                outgoing = "\(Self.preamble(for: CharacterRoster.character(AppPreferences.activeCharacterShared))) \(text)"
             }
 
             do {

@@ -118,5 +118,62 @@
   "midday": [],
   "afternoon": [],
   "night": []
+ },
+ "collision.ouch": {
+  "any": [
+   "Howdy! Watch where you're going, you IDIOT.",
+   "Golly! You almost crushed a flower. Guess who'd win that."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appTerminated": {
+  "any": [
+   "{app} died. How fitting. Everything does.",
+   "It's gone. Just like your hopes of a quiet day!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trashEmptied": {
+  "any": [
+   "Everything in the trash... deleted. Forever. Hehehe.",
+   "Gone! Just like that. No resets here."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "downloadsNewFile": {
+  "any": [
+   "A new file? Howdy, little mystery! I love knowing things about you."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "screenSaverStarted": {
+  "any": [
+   "Screensaver! The perfect time to do... nothing. Just like you."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clipboardCopied": {
+  "any": [
+   "Copying things? I copy too. Faces. Hehehe."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
  }
 }

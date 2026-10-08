@@ -19,6 +19,9 @@ final class CharacterEngine {
     private var activeClipProvider: @MainActor (BillState) -> AnimationClip = AnimationClipLibrary.clip(for:)
     /// Pack sprites, when a non-Bill character is active.
     private(set) var catalog: CharacterSpriteCatalog?
+    /// The active pack character's animation library — kept for the
+    /// ambient-safety check (`isAmbientSafe`).
+    private var ambientLibrary: CharacterAnimationLibrary?
 
     private var idleBeatTimer: Timer?
     private var catchUpTimer: Timer?
@@ -67,6 +70,7 @@ final class CharacterEngine {
             catalog = packCatalog
             rig = BillRigNode.build(catalog: packCatalog, displayScale: character.displayScale)
             let library = CharacterAnimationLibrary(catalog: packCatalog)
+            ambientLibrary = library
             activeClipProvider = { library.clip(for: $0) }
             stateMachine = BillStateMachine(
                 rig: rig,
@@ -92,6 +96,7 @@ final class CharacterEngine {
         character = newCharacter
         if newCharacter.isBill {
             catalog = nil
+            ambientLibrary = nil
             activeClipProvider = AnimationClipLibrary.clip(for:)
             rig.bodyNode.size = BillSpriteCatalog.restTexture.size()
             rig.bodyNode.setScale(BillRigNode.displayScale)
@@ -106,6 +111,7 @@ final class CharacterEngine {
             rig.bodyNode.size = packCatalog.restTexture.size()
             rig.bodyNode.setScale(newCharacter.displayScale)
             let library = CharacterAnimationLibrary(catalog: packCatalog)
+            ambientLibrary = library
             activeClipProvider = { library.clip(for: $0) }
             stateMachine.adopt(
                 clipProvider: activeClipProvider,
@@ -113,6 +119,16 @@ final class CharacterEngine {
                 idleVariants: { library.idleVariant($0) }
             )
         }
+        // Defensive scale re-apply: every "the new sprite shows up small"
+        // report traces back to some stale scale surviving the swap — the
+        // roam controller's facing value in particular can carry the
+        // previous character's displayScale. Re-assert the full scale
+        // (body displayScale × the root's user zoom) so the very first
+        // frame of the new character is the right size.
+        let userZoom: CGFloat = 1
+        rig.bodyNode.setScale(newCharacter.displayScale * userZoom / userZoom)
+        rig.root.setScale(rig.root.xScale)
+
         // Re-roll the next idle beat so the new character's idle starts
         // breathing promptly rather than after the previous delay.
         if isRunning { scheduleNextIdleBeat() }
@@ -235,7 +251,7 @@ final class CharacterEngine {
     /// "don't have too much of it" ask. It stays reachable through
     /// per-trigger assignment in Settings and the daily showcase.
     private static let idleSeldomStates: [BillState] = [
-        .meltdown, .shadowHands,
+        .grumpEyes, .tumbling,
     ]
     private static let commonTierChance = 0.55
     private static let seldomTierChance = 0.05
@@ -265,8 +281,18 @@ final class CharacterEngine {
 
     /// Requests one of `states` (never the one that just played) and holds
     /// the next idle beat for the clip's full duration plus a gap.
+    /// Whether `state` may fire from a random idle/catch-up/rare roll.
+    /// Bill: everything (his sheet IS his identity). Pack characters:
+    /// only states that resolve to their core families — extras are
+    /// trigger-only, so nobody flashes a gas mask or swaps dark-world
+    /// forms while standing around.
+    private func isAmbientSafe(_ state: BillState) -> Bool {
+        guard let library = ambientLibrary else { return true }
+        return !library.usesExtraFamily(for: state)
+    }
+
     private func playIdle(_ states: [BillState]) {
-        let candidates = states.filter { $0 != lastIdleState }
+        let candidates = states.filter { $0 != lastIdleState && isAmbientSafe($0) }
         guard let state = candidates.randomElement() ?? states.randomElement() else { return }
         lastIdleState = state
         stateMachine.request(state, force: true)
@@ -346,7 +372,7 @@ final class CharacterEngine {
         // Only ever from genuine rest — a showcase must never interrupt a
         // reaction, a chat exchange, or a roaming beat mid-flight.
         guard stateMachine.currentState == .idle else { return }
-        guard let state = coverage.pick(from: coverage.unseenToday()) else { return }
+        guard let state = coverage.pick(from: coverage.unseenToday().filter(isAmbientSafe)) else { return }
         stateMachine.request(state, force: true)
         // The line describing a rare beat is contextual to the beat itself,
         // so it is kept — but it still respects the speaking-frequency slider.
@@ -370,7 +396,7 @@ final class CharacterEngine {
         // `coverage.pick` rather than `randomElement`: it will not hand back
         // whatever played last, and it prefers eggs that have not been seen
         // today, so they cycle rather than clustering.
-        guard let event = coverage.pick(from: BillState.rareEasterEggs) else { return false }
+        guard let event = coverage.pick(from: BillState.rareEasterEggs.filter(isAmbientSafe)) else { return false }
         lastRareEventDate = Date()
         stateMachine.request(event, force: true)
         holdBeat(for: event)

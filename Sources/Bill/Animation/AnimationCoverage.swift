@@ -46,6 +46,11 @@ final class AnimationCoverage {
         /// "red shooting cloud" should NEVER appear in any random rotation
         /// or showcase sweep, per the explicit ask.
         .rampaging,
+        /// The whole red/dramatic family is OUT of the daily showcase too
+        /// ("red animation still there!" — the catch-up sweep was the last
+        /// path still surfacing them). Settings per-app assignment only.
+        .zodiacRage, .zodiacCrimson, .zodiacVision, .powerSurge,
+        .shadowHands, .meltdown, .summonRitual, .ritualBuildup,
     ]
 
     /// Everything the daily sweep is responsible for getting on screen.

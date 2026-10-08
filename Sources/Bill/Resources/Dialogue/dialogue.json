@@ -2805,5 +2805,77 @@
   "night": [
    "THE WHEEL TURNS CLEAREST AT NIGHT. TEN SYMBOLS. ONE PROBLEM."
   ]
+ },
+ "pair.bill-niko": {
+  "any": [
+   "WHAT IS THAT CAT DOING ON MY DESKTOP?",
+   "I DON'T REMEMBER INVITING A CAT.",
+   "THAT 'CAT' HAS EYES LIKE TINY SUNS. I APPROVE. BARELY."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appTerminated": {
+  "any": [
+   "SO LONG, {app}. IT FOUGHT BRAVELY. SORT OF.",
+   "{app} HAS RETURNED TO THE VOID. MY FAVORITE PLACE.",
+   "AH, THE CIRCLE OF LIFE. APPS ARE BORN, APPS DIE. ONLY I ENDURE."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trashEmptied": {
+  "any": [
+   "THE TRASH HAS BEEN EMPTIED. VERY THOROUGH. I RESPECT A GOOD PURGE.",
+   "GONE. LIKE DUST. OR MY PATIENCE FOR MORTAL PROBLEMS."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "downloadsNewFile": {
+  "any": [
+   "OOH. A MYSTERY DOWNLOAD. OPENING IT IS DEFINITELY SAFE.",
+   "NEW FILE ACQUIRED. HOARDING DATA. CLASSIC HUMAN.",
+   "A DELIVERY! FOR ME? WELL, IT'S ON MY DESKTOP, SO LEGALLY IT'S MINE."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "screenSaverStarted": {
+  "any": [
+   "YOUR SCREEN IS NAPPING. I'LL GUARD THE DESKTOP. I'M GREAT AT LURKING.",
+   "AH, AMBIENT FLOATING PIXELS. MY KIND OF DECOR."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "screenSaverStopped": {
+  "any": [
+   "BACK SO SOON? THE VOID BARELY MISSED YOU."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clipboardCopied": {
+  "any": [
+   "CTRL-C. THE MOST POWERFUL SPELL IN THE HUMAN ARSENAL.",
+   "COPIED. DUPLICATION IS THE SINCEREST FORM OF FLATTERY — I WOULD KNOW."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
  }
 }

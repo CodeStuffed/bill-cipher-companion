@@ -193,6 +193,7 @@ final class StatusItemController: NSObject {
 
     @objc private func toggleAlwaysOnTop() {
         appDelegate?.preferences.isAlwaysOnTop.toggle()
+        buildMenu()
     }
 
     @objc private func switchCharacter(_ sender: NSMenuItem) {

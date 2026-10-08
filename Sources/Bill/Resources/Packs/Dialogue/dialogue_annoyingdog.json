@@ -111,5 +111,61 @@
   "midday": [],
   "afternoon": [],
   "night": []
+ },
+ "collision.ouch": {
+  "any": [
+   "* The dog barks in mild offense.",
+   "* Bark! (Personal space.)"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appTerminated": {
+  "any": [
+   "* The dog watches {app} disappear. It has already forgotten.",
+   "* Bark."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trashEmptied": {
+  "any": [
+   "* The dog considers the empty trash can. It climbs in."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "downloadsNewFile": {
+  "any": [
+   "* The dog sniffs the new download. It is now a dog file."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "screenSaverStarted": {
+  "any": [
+   "* The dog is asleep. The screensaver is redundant."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clipboardCopied": {
+  "any": [
+   "* The dog sits on the clipboard. It is copied now."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
  }
 }

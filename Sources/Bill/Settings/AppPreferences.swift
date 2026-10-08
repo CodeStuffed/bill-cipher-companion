@@ -28,6 +28,8 @@ final class AppPreferences: ObservableObject {
         static let perAppAnimations = "billPerAppAnimations"
         static let darkModeChrome = "billDarkModeChrome"
         static let alwaysOnTop = "billAlwaysOnTop"
+        static let customFamilyMap = "billCustomFamilyMap"
+        static let mutedCompanions = "billMutedCompanions"
         static let activeCharacter = "billActiveCharacterID"
         static let activeCompanions = "billActiveCompanionIDs"
     }
@@ -52,6 +54,20 @@ final class AppPreferences: ObservableObject {
     /// only 2, or one"). IDs outside the active pack are ignored at build
     /// time. When empty, a pack's default pair applies (Sans→Papyrus,
     /// Knight→Hornet, Kris→Ralsei).
+    /// State → sprite-family override for the active pack character
+    /// ("use the Hornet jump whenever music plays"). Keyed by
+    /// `BillState.rawValue`, value is a family name from the character's
+    /// sheet. Applied on top of the automatic ladder.
+    /// Companions that don't speak ("who talks" control) — their beats
+    /// animate but never bark.
+    @Published var mutedCompanionIDs: Set<String> {
+        didSet { UserDefaults.standard.set(Array(mutedCompanionIDs), forKey: Keys.mutedCompanions) }
+    }
+
+    @Published var customFamilyMap: [String: String] {
+        didSet { UserDefaults.standard.set(customFamilyMap, forKey: Keys.customFamilyMap) }
+    }
+
     @Published var activeCompanionIDs: [String] {
         didSet { UserDefaults.standard.set(activeCompanionIDs, forKey: Keys.activeCompanions) }
     }
@@ -191,6 +207,21 @@ final class AppPreferences: ObservableObject {
     /// whenever the preference changes.
     static var isDarkModeChromeShared: Bool = false
 
+    /// The active character id, mirrored for non-observable contexts (the
+    /// chat bridge's persona picker). Set at launch and on every switch.
+    static var activeCharacterShared: String = "bill"
+
+    /// The state→family assignment table, mirrored for the animation
+    /// library (which reads it on every clip build).
+    static var customFamilyMapShared: [String: String] = [:]
+
+    /// Muted companions, mirrored for the companion controllers.
+    static var mutedCompanionsShared: Set<String> = []
+
+    @MainActor static func isMutedCompanionShared(_ id: String) -> Bool {
+        mutedCompanionsShared.contains(id)
+    }
+
     /// Dark mode for the pixel chrome (chat frame, bark panel borders) —
     /// when on, the pixel borders use a darker ink fill so Bill's
     /// chat window doesn't look like a bright rectangle floating in a
@@ -255,6 +286,8 @@ final class AppPreferences: ObservableObject {
         isAlwaysOnTop = (defaults.object(forKey: Keys.alwaysOnTop) as? Bool) ?? true
         activeCharacterID = defaults.string(forKey: Keys.activeCharacter) ?? "bill"
         activeCompanionIDs = defaults.stringArray(forKey: Keys.activeCompanions) ?? []
+        customFamilyMap = defaults.dictionary(forKey: Keys.customFamilyMap) as? [String: String] ?? [:]
+        mutedCompanionIDs = Set(defaults.stringArray(forKey: Keys.mutedCompanions) ?? [])
         let disabledRaw = defaults.stringArray(forKey: Keys.disabledCategories) ?? []
         disabledCategories = Set(disabledRaw.compactMap(AppCategory.init(rawValue:)))
         let storedScale = (defaults.object(forKey: Keys.characterScale) as? Double) ?? 1.0

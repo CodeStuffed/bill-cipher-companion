@@ -107,5 +107,61 @@
   "midday": [],
   "afternoon": [],
   "night": []
+ },
+ "collision.ouch": {
+  "any": [
+   "Yo!! Sorry! I can't grab things so I just kinda... bounce!",
+   "Whoa!! Didn't see you there, yo!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appTerminated": {
+  "any": [
+   "Yo, {app} just did a face-plant!",
+   "Later, {app}! ...Was that cool? That was cool."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trashEmptied": {
+  "any": [
+   "Yo!! Taking out the trash! That's so responsible!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "downloadsNewFile": {
+  "any": [
+   "Yo!! A new file!! Is it a game?! It's probably a game!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "screenSaverStarted": {
+  "any": [
+   "Yo... your computer went to sleep. Should I yell at it?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clipboardCopied": {
+  "any": [
+   "Yo!! Copying! Undyne copies moves ALL the time!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
  }
 }

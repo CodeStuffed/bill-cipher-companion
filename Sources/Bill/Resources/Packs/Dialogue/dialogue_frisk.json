@@ -112,5 +112,61 @@
   "midday": [],
   "afternoon": [],
   "night": []
+ },
+ "collision.ouch": {
+  "any": [
+   "* You bump into someone. You apologize silently.",
+   "* You steady yourself. You remain determined."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appTerminated": {
+  "any": [
+   "* {app} fades away.",
+   "* You wave goodbye to {app}."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trashEmptied": {
+  "any": [
+   "* The trash is empty now. You feel tidy."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "downloadsNewFile": {
+  "any": [
+   "* A new file appears. You look at it curiously."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "screenSaverStarted": {
+  "any": [
+   "* The screen goes dark and drifts. You watch, quietly."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clipboardCopied": {
+  "any": [
+   "* You copy something. It's saved for later."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
  }
 }

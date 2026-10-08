@@ -105,6 +105,11 @@ final class CompanionController {
     private func fireBeat() {
         defer { scheduleNextBeat() }
         guard stateMachine.currentState == .idle else { return }
+        // Collision banter: when this companion's rig overlaps another rig
+        // in the same window, they both react — a surprised beat plus a
+        // character-voiced "ouch" exchange. Cooldown keeps a tangled
+        // window from becoming a shouting match.
+        if checkCollisions() { return }
         let candidates = Self.beatStates.filter { $0 != lastBeat }
         guard let state = candidates.randomElement() else { return }
         lastBeat = state
@@ -113,10 +118,44 @@ final class CompanionController {
         // A move is sometimes worth a word — its own voice, from its own
         // pools, through the shared bark panel.
         if Double.random(in: 0..<1) < 0.35,
+           !AppPreferences.isMutedCompanionShared(definition.id),
            let key = DialogueKey(rawValue: state.rawValue),
            let line = voice.line(key) {
             barkSink(line)
         }
+    }
+
+    // MARK: - Collisions
+
+    private var lastOuchAt: Date?
+    private static let ouchCooldown: TimeInterval = 20
+
+    /// Rigs near enough to "bump". Returns true when a collision fired so
+    /// the caller skips the normal beat.
+    private func checkCollisions() -> Bool {
+        guard let last = lastOuchAt,
+              Date().timeIntervalSince(last) > Self.ouchCooldown else {
+            lastOuchAt = lastOuchAt ?? Date()
+            return false
+        }
+        guard let scene = rig.root.scene else { return false }
+        let myFrame = rig.root.calculateAccumulatedFrame()
+        var bumped: SKNode?
+        for child in scene.children
+        where child !== rig.root && (child.name == "characterRoot" || child.name == "companionRoot") {
+            if myFrame.insetBy(dx: -8, dy: -4).intersects(child.calculateAccumulatedFrame()) {
+                bumped = child
+                break
+            }
+        }
+        guard bumped != nil else { return false }
+        lastOuchAt = Date()
+        stateMachine.request(.surprised, force: true)
+        if !AppPreferences.isMutedCompanionShared(definition.id),
+           let line = voice.line("collision.ouch") ?? voice.line("poked") {
+            barkSink(line)
+        }
+        return true
     }
 
     // MARK: - Banter
@@ -135,7 +174,11 @@ final class CompanionController {
             return
         }
         guard Double.random(in: 0..<1) < 0.22 else { return }
-        guard let line = voice.line("banter.respond") else { return }
+        // Pair-specific banter first ("what's that cat doing there?" /
+        // "I'm not a cat!!") — the cross-pack exchange tables.
+        let pairKey = "pair.\(AppPreferences.activeCharacterShared)-\(definition.id)"
+        guard !AppPreferences.isMutedCompanionShared(definition.id) else { return }
+        guard let line = voice.line(pairKey) ?? voice.line("banter.respond") else { return }
         respondedToBarkAt = Date()
         // Face its partner: a small reaction beat, then the quip.
         stateMachine.request(.talking, force: true)

@@ -256,5 +256,67 @@
   "midday": [],
   "afternoon": [],
   "night": []
+ },
+ "collision.ouch": {
+  "any": [
+   "heh. watch it, buddy.",
+   "hey. i'm walkin' here.",
+   "careful. this jacket's dry clean only. i don't have a jacket. still."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appTerminated": {
+  "any": [
+   "so long, {app}. it fought bravely. sorta.",
+   "{app} quit. everything ends eventually. that's the joke.",
+   "welp. there it goes."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trashEmptied": {
+  "any": [
+   "the trash has been emptied. very thorough. i respect the cleanup.",
+   "gone. like dust. or my motivation."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "downloadsNewFile": {
+  "any": [
+   "ooh. a mystery download. opening it is definitely safe.",
+   "new file acquired. hoarding data. classic human."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "screenSaverStarted": {
+  "any": [
+   "screensaver, huh? i'll guard your desk. i'm great at standing still. i don't even have legs.",
+   "your computer's napping. smart. i'd join but i don't sleep. technically."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clipboardCopied": {
+  "any": [
+   "copied to the clipboard. the art of duplication. i know a guy who does that with universes.",
+   "ctrl-c. the most powerful spell in the human arsenal."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
  }
 }

@@ -152,10 +152,29 @@ struct CharacterAnimationLibrary {
         return nil
     }
 
+    /// True when this state would play one of the auto-wired sheet "x"
+    /// rows — outfit variants (Niko's gas mask), dark-world forms
+    /// (Ralsei/Susie/Kris), flip rows (Monster Kid). Ambient idle beats
+    /// refuse those (`CharacterEngine.isAmbientSafe`): extras fire on real
+    /// triggers only, never in the random rotation, so nobody shape-shifts
+    /// while just standing around.
+    func usesExtraFamily(for state: BillState) -> Bool {
+        extraFamily(for: state) != nil
+    }
+
     // MARK: - Clip building
 
     func clip(for state: BillState) -> AnimationClip {
         let id = catalog.definition.id
+
+        // User assignment from the Settings animations browser wins over
+        // everything — "this reaction plays THAT row" is the whole point
+        // of the assign-to-trigger UI.
+        if let chosen = AppPreferences.customFamilyMapShared[state.rawValue],
+           !chosen.isEmpty,
+           !catalog.frames(chosen).isEmpty {
+            return clip(for: state, family: chosen)
+        }
 
         // Character specials first.
         if let special = Self.specialsByCharacter[id]?[state],

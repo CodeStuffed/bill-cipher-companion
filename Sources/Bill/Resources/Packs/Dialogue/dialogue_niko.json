@@ -191,5 +191,92 @@
   "midday": [],
   "afternoon": [],
   "night": []
+ },
+ "collision.ouch": {
+  "any": [
+   "Ah! S-sorry! I didn't see you there!",
+   "Ow... s-sorry, mama says I'm clumsy..."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appTerminated": {
+  "any": [
+   "Oh... {app} went away. Bye bye, {app}!",
+   "It's gone... like my flashlight battery. Almost."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "trashEmptied": {
+  "any": [
+   "You cleaned the trash! That's so responsible, like mama!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "downloadsNewFile": {
+  "any": [
+   "A new file! ...It's not a pancake recipe, is it?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "screenSaverStarted": {
+  "any": [
+   "Your computer is resting! I like resting! Almost as much as pancakes!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "clipboardCopied": {
+  "any": [
+   "You copied it! I'll remember what it was! ...I already forgot."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "cat.react": {
+  "any": [
+   "I'm NOT a cat!!",
+   "I'm not a cat!! I'm a person! ...Kind of!!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "pair.bill-niko": {
+  "any": [
+   "I'm NOT a cat!! I'm a person! ...Kind of!!",
+   "A cat?? A CAT?! Take that back!!",
+   "I'm NOT a cat!! ...Do you have any pancakes, though?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "pair.niko-bill": {
+  "any": [
+   "That triangle is FLOATING. Is that normal here?",
+   "Your friend the triangle is very... triangular."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
  }
 }

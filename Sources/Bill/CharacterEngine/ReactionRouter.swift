@@ -80,6 +80,12 @@ final class ReactionRouter {
     private static let volumeStates: [BillState] = [
         .dancing, .grooving, .happy, .flinching, .surprised, .caneFlourish, .kinship,
     ]
+    private static let appQuitStates: [BillState] = [.confused, .smug, .dazed, .grumpEyes, .smug]
+    private static let trashStates: [BillState] = [.celebrating, .happy, .grooving, .smug]
+    private static let downloadStates: [BillState] = [.surprised, .conjuring, .presenting, .smug]
+    private static let saverStates: [BillState] = [.sleeping, .dazed, .smug, .thinking]
+    private static let clipboardStates: [BillState] = [.smug, .trickster, .presenting, .smug]
+
     private static let networkDownStates: [BillState] = [
         .confused, .glitchForm, .spooked, .dazed, .glitching, .ambushed,
     ]
@@ -137,6 +143,25 @@ final class ReactionRouter {
         case .cpuHot:
             characterEngine.request(.heatingUp)
             speak(["cpuHot"])
+
+        case .appTerminated(let name):
+            play(Self.appQuitStates, keys: ["appTerminated"], substitutions: ["app": name])
+
+        case .trashEmptied:
+            play(Self.trashStates, keys: ["trashEmptied"])
+
+        case .downloadsNewFile(let name):
+            play(Self.downloadStates, keys: ["downloadsNewFile"], substitutions: ["app": name])
+
+        case .screenSaverChanged(let active):
+            if active {
+                play(Self.saverStates, keys: ["screenSaverStarted"])
+            } else {
+                play(Self.saverStates, keys: ["screenSaverStopped"])
+            }
+
+        case .clipboardCopied:
+            play(Self.clipboardStates, keys: ["clipboardCopied"])
 
         case .cpuNormal:
             characterEngine.request(.idle)

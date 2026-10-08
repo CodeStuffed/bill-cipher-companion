@@ -123,7 +123,14 @@ final class CharacterWindowController: NSObject {
     /// the character — they hide behind apps and reappear when the front
     /// app moves or they stroll out from behind it.
     func applyWindowLevel() {
-        panel.level = preferences.isAlwaysOnTop ? .floating : .normal
+        let newLevel: NSWindow.Level = preferences.isAlwaysOnTop ? .floating : .normal
+        guard panel.level != newLevel else { return }
+        panel.level = newLevel
+        // A bare level change on an already-ordered borderless panel can be
+        // ignored by the window server until the window re-orders — toggle
+        // ordering to make the layer change visibly take effect.
+        panel.orderOut(nil)
+        panel.orderFrontRegardless()
     }
 
     /// Nonisolated mirror of `CharacterGeometry.bill()` — the stored
@@ -145,15 +152,13 @@ final class CharacterWindowController: NSObject {
     /// and the primary itself are filtered out.
     private func resolveCompanions(for definition: CharacterDefinition) -> [CharacterDefinition] {
         guard !definition.isBill else { return [] }
+        // Cross-pack parties are allowed — any character beside any other,
+        // because Bill noticing Niko ("what's that cat doing here?") is
+        // half the fun. No defaults: only explicitly selected companions.
         let chosen = preferences.activeCompanionIDs
             .map(CharacterRoster.character)
-            .filter { $0.packID == definition.packID && $0.id != definition.id }
-        if !chosen.isEmpty { return chosen }
-        if let fallback = definition.companionID {
-            let companion = CharacterRoster.character(fallback)
-            return companion.packID == definition.packID ? [companion] : []
-        }
-        return []
+            .filter { $0.id != definition.id && !$0.isBill }
+        return chosen
     }
 
     /// Window calibration for a character and its companions, computed

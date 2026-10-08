@@ -1,3 +1,4 @@
+import AppKit
 import Foundation
 
 /// Aggregates every underlying monitor into one `SystemEvent` callback.
@@ -44,6 +45,11 @@ final class SystemMonitor {
     private static let volumeMarkTolerance = 4
 
     func start() {
+        observeAppLifecycle()
+        observeTrashAndSaver()
+        watchDownloads()
+        watchClipboard()
+
         appActivity.onAppActivated = { [weak self] bundleID, name, category, pid in
             self?.onEvent?(.appActivated(bundleID: bundleID, name: name, category: category, pid: pid))
         }
@@ -182,5 +188,97 @@ final class SystemMonitor {
         guard isIdle != wasIdle else { return }
         wasIdle = isIdle
         onEvent?(isIdle ? .userIdle : .userReturned)
+    }
+
+
+    // MARK: - The new trigger set ("more triggers that actually trigger")
+
+    /// App quit, trash emptied, screensaver on/off — all free
+    /// NSWorkspace notifications.
+    private func observeAppLifecycle() {
+        NSWorkspace.shared.notificationCenter.addObserver(
+            forName: NSWorkspace.didTerminateApplicationNotification,
+            object: nil, queue: .main
+        ) { [weak self] note in
+            let info = note.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication
+            let name = info?.localizedName ?? ""
+            let isRegular = info?.activationPolicy == .regular
+            Task { @MainActor in
+                guard let self, isRegular, !name.isEmpty else { return }
+                self.onEvent?(.appTerminated(name: name))
+            }
+        }
+    }
+
+    private var lastTrashCount = -1
+
+    /// The trash has no public "emptied" notification on modern macOS —
+    /// poll its count on the same cheap cadence as the Downloads watcher.
+    private func observeTrashAndSaver() {
+        let trashPath = FileManager.default.homeDirectoryForCurrentUser
+            .appendingPathComponent(".Trash", isDirectory: true).path
+        lastTrashCount = (try? FileManager.default.contentsOfDirectory(atPath: trashPath))?.count ?? -1
+        Timer.scheduledTimer(withTimeInterval: 12, repeats: true) { [weak self] _ in
+            Task { @MainActor in
+                guard let self else { return }
+                guard let count = (try? FileManager.default.contentsOfDirectory(atPath: trashPath))?.count else { return }
+                if self.lastTrashCount > 0 && count == 0 {
+                    self.onEvent?(.trashEmptied)
+                }
+                self.lastTrashCount = count
+            }
+        }
+        NSWorkspace.shared.notificationCenter.addObserver(
+            forName: NSWorkspace.screensDidSleepNotification,
+            object: nil, queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in self?.onEvent?(.screenSaverChanged(active: true)) }
+        }
+        NSWorkspace.shared.notificationCenter.addObserver(
+            forName: NSWorkspace.screensDidWakeNotification,
+            object: nil, queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in self?.onEvent?(.screenSaverChanged(active: false)) }
+        }
+    }
+
+    /// New files in ~/Downloads, polled cheaply every 10s — the download
+    /// the user just made is a real event worth a reaction.
+    private var knownDownloads: Set<String> = []
+    private func watchDownloads() {
+        let dir = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Downloads")
+        if let names = try? FileManager.default.contentsOfDirectory(atPath: dir.path) {
+            knownDownloads = Set(names.filter { !$0.hasPrefix(".") })
+        }
+        Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { [weak self] _ in
+            Task { @MainActor in
+                guard let self else { return }
+                let dir = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Downloads")
+                guard let names = try? FileManager.default.contentsOfDirectory(atPath: dir.path) else { return }
+                let visible = Set(names.filter { !$0.hasPrefix(".") })
+                let fresh = visible.subtracting(self.knownDownloads)
+                self.knownDownloads = visible
+                if let first = fresh.first, fresh.count == 1 {
+                    self.onEvent?(.downloadsNewFile(name: (first as NSString).deletingPathExtension))
+                } else if !fresh.isEmpty {
+                    self.onEvent?(.downloadsNewFile(name: "\(fresh.count) files"))
+                }
+            }
+        }
+    }
+
+    /// Clipboard copies — changeCount polling, the standard trick.
+    private var lastChangeCount = -1
+    private func watchClipboard() {
+        lastChangeCount = NSPasteboard.general.changeCount
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { [weak self] _ in
+            Task { @MainActor in
+                guard let self else { return }
+                let count = NSPasteboard.general.changeCount
+                guard count != self.lastChangeCount else { return }
+                self.lastChangeCount = count
+                self.onEvent?(.clipboardCopied)
+            }
+        }
     }
 }

@@ -30,6 +30,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let definition = CharacterRoster.character(id)
         preferences.activeCharacterID = definition.id
         BubbleTheme.packID = definition.packID
+        AppPreferences.activeCharacterShared = definition.id
         characterWindowController.applyCharacter(definition)
         statusItemController.buildMenu()
     }
@@ -41,6 +42,17 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let activeCharacter = CharacterRoster.character(preferences.activeCharacterID)
         characterEngine = CharacterEngine(character: activeCharacter)
         BubbleTheme.packID = activeCharacter.packID
+        AppPreferences.activeCharacterShared = activeCharacter.id
+        AppPreferences.customFamilyMapShared = preferences.customFamilyMap
+        AppPreferences.mutedCompanionsShared = preferences.mutedCompanionIDs
+        preferences.$mutedCompanionIDs
+            .removeDuplicates()
+            .sink { AppPreferences.mutedCompanionsShared = $0 }
+            .store(in: &cancellables)
+        preferences.$customFamilyMap
+            .removeDuplicates()
+            .sink { AppPreferences.customFamilyMapShared = $0 }
+            .store(in: &cancellables)
 
         // Decode the dialogue library before anything can ask it for a line.
         // A few milliseconds for ~750 short strings, and every bark path

@@ -40,14 +40,15 @@ MAPPINGS = {
         "dining": ("undertale/sans", "icecream-unused", 0, 10),
     },
     "sansdt": {
-        # Battle strip rows: head expression cycles from the Deltarune-style
-        # battle sheet. row01 = the idle head bob, row03 = talk flap.
+        # Battle strip rows — visible-expression rows only. Rows 06-08 are
+        # the sheet's full-black dramatic frames (dropped by the black-frame
+        # filter); 09-12 carry the actual expression beats.
         "idle": ("undertale/sans-battle", "row01", 0, 8),
         "talking": ("undertale/sans-battle", "row03", 0, 12),
-        "happy": ("undertale/sans-battle", "row05", 0, 8),
-        "surprised": ("undertale/sans-battle", "row07", 0, 8),
+        "happy": ("undertale/sans-battle", "row09", 0, 8),
+        "surprised": ("undertale/sans-battle", "row11", 0, 8),
         "annoyed": ("undertale/sans-battle", "row02", 0, 8),
-        "dazed": ("undertale/sans-battle", "row13", 0, 8),
+        "dazed": ("undertale/sans-battle", "row12", 0, 8),
     },
     "papyrus": {
         "idle": ("undertale/papyrus", "row01", 0, 4),
@@ -104,11 +105,7 @@ MAPPINGS = {
         "happy": ("undertale/annoyingdog", "row03", 2, 2),
         "sleeping": ("undertale/annoyingdog", "row05", 0, 1),
     },
-    "niko": {
-        # Eye-verified: each ROW is one DIRECTION of the 3-frame walk cycle.
-        # row01=left, row02=right, row03=down(front), row05=up(back),
-        # row07=expressive poses. Walking plays the left cycle; the
-        # wander controller's xScale flip mirrors it for rightward moves.
+    "nikoow": {
         "idle": ("oneshot/niko", "row03", 0, 3),
         "walking": ("oneshot/niko", "row01", 0, 3),
         "walkup": ("oneshot/niko", "row05", 0, 3),
@@ -117,17 +114,18 @@ MAPPINGS = {
         "sad": ("oneshot/niko", "row07", 9, 3),
         "surprised": ("oneshot/niko", "row09", 0, 3),
     },
-    "nikodt": {
-        # Each row is an 8-frame cycle (repeated 3x in the sheet). Slice the
-        # FULL first cycle for every family — half-cycle slices were what made
-        # this character look "really messed" before.
-        "idle": ("oneshot/niko-deltarune", "row01", 0, 1),
+    "niko": {
+        # The DEFAULT Niko is the battle-style sheet now (user preference),
+        # re-extracted with flood-fill so no purple eats the colors. Each
+        # row is one 8-frame pose cycle (repeated 3x on the sheet).
+        "idle": ("oneshot/niko-deltarune", "row01", 0, 8),
         "walking": ("oneshot/niko-deltarune", "row01", 0, 8),
         "talking": ("oneshot/niko-deltarune", "row02", 0, 8),
         "happy": ("oneshot/niko-deltarune", "row03", 0, 8),
         "sad": ("oneshot/niko-deltarune", "row04", 0, 8),
         "surprised": ("oneshot/niko-deltarune", "row05", 0, 8),
     },
+
     "knight": {
         "idle": ("hollowknight/knight", "row01", 0, 4),
         "walking": ("hollowknight/knight", "row03", 0, 7),
@@ -184,7 +182,7 @@ MAPPINGS = {
 PACK_OF = {
     "sans": "undertale", "papyrus": "undertale", "toriel": "undertale", "undyne": "undertale",
     "frisk": "undertale", "flowey": "undertale", "temmie": "undertale", "monsterkid": "undertale",
-    "annoyingdog": "undertale", "sansdt": "undertale", "niko": "oneshot", "nikodt": "oneshot", "knight": "hollowknight", "hornet": "hollowknight",
+    "annoyingdog": "undertale", "sansdt": "undertale", "niko": "oneshot", "nikoow": "oneshot", "knight": "hollowknight", "hornet": "hollowknight",
     "kris": "deltarune", "ralsei": "deltarune", "susie": "deltarune",
 }
 
@@ -210,14 +208,29 @@ def load_family(char, family, spec):
             continue  # blank frame — never ship an invisible flash
         raw.append(a[ys.min():ys.max() + 1, xs.min():xs.max() + 1])
     if len(raw) >= 4:
-        # Glitch filter: drop partial sprites (head-only fragments, torn
-        # crops) whose content is far shorter than the family's middle
-        # height — Ralsei's "only her head exists" frames. 0.5 keeps
-        # legitimately short poses (the Knight's crouch reads ~0.7x) while
-        # killing half-height fragments.
+        # Quality filter, per frame vs the family's medians — three real
+        # bug classes this kills:
+        #  - half-body crops ("sans clips half his body repeatedly"):
+        #    torn row splits whose content is far narrower/shorter than
+        #    their siblings
+        #  - black/blank frames (Monster Kid's flip rows)
+        #  - tiny fragments (the dog's weird small sprite)
+        widths = sorted(f.shape[1] for f in raw)
         heights = sorted(f.shape[0] for f in raw)
+        median_w = widths[len(widths) // 2]
         median_h = heights[len(heights) // 2]
-        raw = [f for f in raw if f.shape[0] >= 0.5 * median_h]
+        kept = []
+        for f in raw:
+            if f.shape[1] < 0.6 * median_w or f.shape[0] < 0.55 * median_h:
+                continue  # torn crop / fragment
+            al = f[:, :, 3] > 10
+            if not al.any():
+                continue  # blank
+            lum = 0.299*f[:,:,0] + 0.587*f[:,:,1] + 0.114*f[:,:,2]
+            if lum[al].mean() < 35:
+                continue  # near-solid-black frame
+            kept.append(f)
+        raw = kept if kept else raw  # never return nothing
     return raw
 
 
@@ -257,7 +270,7 @@ def main():
                 continue  # curated sections already serve this character
             families[f"x{extras + 1:02d}"] = (f"{pack}/{char}", row_name, 0, min(16, len(files)))
             extras += 1
-            if extras >= 48:
+            if extras >= 64:
                 break
 
         # collect all families first
@@ -282,8 +295,26 @@ def main():
                 fw = max(f.shape[1] for f in all_frames[name])
                 fh = max(f.shape[0] for f in all_frames[name])
                 if fw > core_w * 1.45 or fh > core_h * 1.45:
-                    dropped.append(name)
-                    del all_frames[name]
+                    # Integer downscale (clean nearest steps) until the row
+                    # fits 1.45x the core canvas — full-sheet coverage
+                    # without ballooning the shared canvas or squashing
+                    # every core sprite.
+                    factor = 2
+                    while factor <= 8:
+                        if fw // factor <= core_w * 1.45 and fh // factor <= core_h * 1.45:
+                            break
+                        factor += 1
+                    if factor > 8:
+                        dropped.append(name)
+                        del all_frames[name]
+                        continue
+                    from PIL import Image as _I
+                    scaled = []
+                    for f in all_frames[name]:
+                        img = _I.fromarray(f)
+                        img = img.resize((f.shape[1] // factor, f.shape[0] // factor), _I.NEAREST)
+                        scaled.append(np.asarray(img))
+                    all_frames[name] = scaled
         maxw = max(f.shape[1] for frs in all_frames.values() for f in frs)
         maxh = max(f.shape[0] for frs in all_frames.values() for f in frs)
         char_man = {"canvas": [maxw, maxh], "families": {}}

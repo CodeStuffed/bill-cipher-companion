@@ -71,6 +71,17 @@ enum SystemEvent: Sendable {
     /// four reasons (first pull, condition change, user's periodic
     /// interval, forced test).
     case weatherChanged(WeatherSnapshot, WeatherMonitor.ReportReason)
+    // The "more triggers that actually trigger" set:
+    /// An app fully quit (not just deactivated).
+    case appTerminated(name: String)
+    /// The user emptied the Finder trash.
+    case trashEmptied
+    /// A new file landed in ~/Downloads.
+    case downloadsNewFile(name: String)
+    /// The screensaver started / stopped.
+    case screenSaverChanged(active: Bool)
+    /// The pasteboard gained new content the user copied.
+    case clipboardCopied
 }
 
 /// Coarse link quality. Deliberately four wide tiers rather than a number:

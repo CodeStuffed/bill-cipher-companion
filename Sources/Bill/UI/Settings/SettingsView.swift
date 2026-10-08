@@ -244,7 +244,15 @@ struct SettingsView: View {
 
     private var animationsDetail: some View {
         VStack(alignment: .leading, spacing: 24) {
-            sectionHeader("Animations", subtitle: "Pacing and per-trigger overrides")
+            sectionHeader("Animations", subtitle: "Every animation on the sheet — preview it, assign it to any trigger")
+
+            card("Animation browser") {
+                AnimationBrowserView(
+                    characterID: preferences.activeCharacterID,
+                    customFamilyMap: $preferences.customFamilyMap
+                )
+                .frame(height: 360)
+            }
 
             card("Idle pacing") {
                 HStack {
@@ -443,16 +451,22 @@ struct SettingsView: View {
                     Text("Show alongside " + CharacterRoster.character(preferences.activeCharacterID).displayName)
                         .foregroundColor(.secondary)
                     let packCharacters = CharacterRoster.all.filter {
-                        $0.packID == CharacterRoster.character(preferences.activeCharacterID).packID
-                            && !$0.isBill
-                            && $0.id != preferences.activeCharacterID
+                        !$0.isBill && $0.id != preferences.activeCharacterID
                     }
                     if packCharacters.isEmpty {
                         Text("This character flies solo.")
                             .foregroundColor(.secondary)
                     } else {
                         ForEach(packCharacters) { companion in
-                            Toggle(companion.displayName, isOn: companionBinding(companion.id))
+                            HStack {
+                                Toggle(companion.displayName, isOn: companionBinding(companion.id))
+                                if preferences.activeCompanionIDs.contains(companion.id) {
+                                    Toggle("", isOn: muteBinding(companion.id))
+                                        .help("Mute: this companion animates but never speaks")
+                                        .frame(width: 60)
+                                    Text("mute").font(.caption2).foregroundColor(.secondary)
+                                }
+                            }
                         }
                         Text("Leave everything unchecked to use the pack's default pair.")
                             .font(.caption)
@@ -528,6 +542,21 @@ struct SettingsView: View {
         .overlay(
             RoundedRectangle(cornerRadius: 6)
                 .strokeBorder(preferences.activeCharacterID == character.id ? Color.accentColor : Color.clear, lineWidth: 2)
+        )
+    }
+
+    private func muteBinding(_ id: String) -> Binding<Bool> {
+        Binding(
+            get: { !preferences.mutedCompanionIDs.contains(id) },
+            set: { canTalk in
+                var current = preferences.mutedCompanionIDs
+                if canTalk {
+                    current.remove(id)
+                } else {
+                    current.insert(id)
+                }
+                preferences.mutedCompanionIDs = current
+            }
         )
     }
 

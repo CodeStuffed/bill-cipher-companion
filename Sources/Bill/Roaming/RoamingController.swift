@@ -121,7 +121,7 @@ final class RoamingController {
 
     /// Notices windows moving into Bill (and surfaces moving under him).
     private func checkContacts() {
-        guard let panel, !isSuspended, preferences.isRoamingEnabled else { return }
+        guard let panel, !isSuspended, preferences.isRoamingEnabled, !characterEngine.character.prefersStationary else { return }
         guard let screen = screenForBill() else { return }
         let scale = preferences.characterScale
         let feet = feetPosition(panel: panel)
@@ -240,7 +240,7 @@ final class RoamingController {
     /// reads as dropping him rather than as him hovering until the simulation
     /// next happens to look.
     func dropIfUnsupported() {
-        guard let panel, !isSuspended, preferences.isRoamingEnabled, tick == nil else { return }
+        guard let panel, !isSuspended, preferences.isRoamingEnabled, !characterEngine.character.prefersStationary, tick == nil else { return }
         guard let screen = screenForBill() else { return }
         buildWorld(on: screen, panel: panel)
         let feet = feetPosition(panel: panel)
@@ -269,7 +269,7 @@ final class RoamingController {
     /// Mode confronts a blocked app.
     @discardableResult
     func goToApp(pid: pid_t) -> Bool {
-        guard !isSuspended, preferences.isRoamingEnabled else { return false }
+        guard !isSuspended, preferences.isRoamingEnabled, !characterEngine.character.prefersStationary else { return false }
         guard let panel, let target = WindowTopology.frontmostPlatform(
             ownedBy: pid, excludingWindowNumber: panel.windowNumber
         ) else { return false }
@@ -305,7 +305,7 @@ final class RoamingController {
 
     private func beginBeat(goal explicitGoal: Goal?) {
         guard let panel else { return }
-        guard preferences.isRoamingEnabled else { log("BAIL roaming disabled"); scheduleNextBeat(); return }
+        guard preferences.isRoamingEnabled, !characterEngine.character.prefersStationary else { log("BAIL roaming disabled"); scheduleNextBeat(); return }
         // Only start from genuine rest — never yank Bill out of a reaction,
         // a rare Easter egg, or a chat exchange.
         if explicitGoal == nil {
