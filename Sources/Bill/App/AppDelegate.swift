@@ -45,9 +45,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         AppPreferences.activeCharacterShared = activeCharacter.id
         AppPreferences.customFamilyMapShared = preferences.customFamilyMap
         AppPreferences.mutedCompanionsShared = preferences.mutedCompanionIDs
+        AppPreferences.disabledStatesShared = preferences.disabledStateIDs
         preferences.$mutedCompanionIDs
             .removeDuplicates()
             .sink { AppPreferences.mutedCompanionsShared = $0 }
+            .store(in: &cancellables)
+        preferences.$disabledStateIDs
+            .removeDuplicates()
+            .sink { AppPreferences.disabledStatesShared = $0 }
             .store(in: &cancellables)
         preferences.$customFamilyMap
             .removeDuplicates()
@@ -416,8 +421,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         "deal.offer": [.caneFlourish, .smug],
         "cipher.message": [.scanning],
         "userReturned": [.watched, .smug, .presenting],
-        "clock.morning": [.presenting, .dispatching, .watched, .smug, .zodiacVision],
-        "clock.night": [.presenting, .dispatching, .watched, .smug, .zodiacVision],
+        "clock.morning": [.presenting, .dispatching, .watched, .smug, .caneTwist],
+        "clock.night": [.presenting, .dispatching, .watched, .smug, .caneTwist],
     ]
 
     func openQuotesManager() {

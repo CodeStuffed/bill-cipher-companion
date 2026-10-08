@@ -93,7 +93,7 @@ final class StudyMode {
         offences.removeAll()
         announce?(
             [completed ? "study.end" : "study.cancelled"],
-            completed ? [.celebrating, .happy, .dancing, .powerSurge] : [.dreading, .guilty, .grumpEyes],
+            completed ? [.celebrating, .happy, .dancing, .grooving] : [.dreading, .guilty, .grumpEyes],
             [:]
         )
         onStateChanged?()
@@ -141,7 +141,7 @@ final class StudyMode {
 
         let states: [BillState] = offence == 1 ? [.watched, .grumpEyes, .huffy]
                                : offence == 2 ? [.annoyed, .dreading, .stressed]
-                                              : [.meltdown, .shadowHands, .cultLeader, .tumbling]
+                                              : [.huffy, .grumpEyes, .cultLeader, .tumbling]
         announce?(DialogueKey.studyBlocked(offence: offence), states, ["app": name])
 
         // First offence is a warning only.

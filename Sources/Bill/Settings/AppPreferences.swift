@@ -30,6 +30,7 @@ final class AppPreferences: ObservableObject {
         static let alwaysOnTop = "billAlwaysOnTop"
         static let customFamilyMap = "billCustomFamilyMap"
         static let mutedCompanions = "billMutedCompanions"
+        static let disabledStates = "billDisabledStates"
         static let activeCharacter = "billActiveCharacterID"
         static let activeCompanions = "billActiveCompanionIDs"
     }
@@ -58,6 +59,13 @@ final class AppPreferences: ObservableObject {
     /// ("use the Hornet jump whenever music plays"). Keyed by
     /// `BillState.rawValue`, value is a family name from the character's
     /// sheet. Applied on top of the automatic ladder.
+    /// The animation SELECTOR/DESELECTOR: states unchecked here never play
+    /// from any automatic path (idle beats, rare eggs, showcase, reaction
+    /// pools). Manually-triggered test buttons still work.
+    @Published var disabledStateIDs: Set<String> {
+        didSet { UserDefaults.standard.set(Array(disabledStateIDs), forKey: Keys.disabledStates) }
+    }
+
     /// Companions that don't speak ("who talks" control) — their beats
     /// animate but never bark.
     @Published var mutedCompanionIDs: Set<String> {
@@ -218,6 +226,13 @@ final class AppPreferences: ObservableObject {
     /// Muted companions, mirrored for the companion controllers.
     static var mutedCompanionsShared: Set<String> = []
 
+    /// The user-deselected states, mirrored for the engine's ambient gates.
+    static var disabledStatesShared: Set<String> = []
+
+    @MainActor static func isStateDisabledShared(_ raw: String) -> Bool {
+        disabledStatesShared.contains(raw)
+    }
+
     @MainActor static func isMutedCompanionShared(_ id: String) -> Bool {
         mutedCompanionsShared.contains(id)
     }
@@ -288,6 +303,7 @@ final class AppPreferences: ObservableObject {
         activeCompanionIDs = defaults.stringArray(forKey: Keys.activeCompanions) ?? []
         customFamilyMap = defaults.dictionary(forKey: Keys.customFamilyMap) as? [String: String] ?? [:]
         mutedCompanionIDs = Set(defaults.stringArray(forKey: Keys.mutedCompanions) ?? [])
+        disabledStateIDs = Set(defaults.stringArray(forKey: Keys.disabledStates) ?? [])
         let disabledRaw = defaults.stringArray(forKey: Keys.disabledCategories) ?? []
         disabledCategories = Set(disabledRaw.compactMap(AppCategory.init(rawValue:)))
         let storedScale = (defaults.object(forKey: Keys.characterScale) as? Double) ?? 1.0

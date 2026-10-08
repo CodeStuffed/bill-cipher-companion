@@ -266,6 +266,35 @@ struct SettingsView: View {
                 }
             }
 
+            card("Animation selector") {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Unchecked animations never play automatically — idle beats, reactions, everything. (Test buttons still work.)")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    ScrollView {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 6)], spacing: 4) {
+                            ForEach(BillState.allCases, id: \.self) { state in
+                                Toggle(state.rawValue, isOn: stateEnabledBinding(state.rawValue))
+                                    .font(.system(size: 10))
+                            }
+                        }
+                    }
+                    .frame(height: 300)
+                    HStack {
+                        Button("Enable all") {
+                            preferences.disabledStateIDs = []
+                        }
+                        Button("Disable all rare & dramatic") {
+                            preferences.disabledStateIDs = Set([
+                                "powerSurge", "zodiacVision", "summonRitual", "ritualBuildup",
+                                "zodiacRage", "prismDance", "zodiacCrimson", "ghostPale",
+                                "glitchForm", "shadowHands", "meltdown", "rampaging",
+                            ])
+                        }
+                    }
+                }
+            }
+
             card("Per-trigger animations") {
                 ForEach(Self.animationTriggers, id: \.key) { trigger in
                     Picker(trigger.label, selection: animationBinding(for: trigger.key)) {
@@ -542,6 +571,21 @@ struct SettingsView: View {
         .overlay(
             RoundedRectangle(cornerRadius: 6)
                 .strokeBorder(preferences.activeCharacterID == character.id ? Color.accentColor : Color.clear, lineWidth: 2)
+        )
+    }
+
+    private func stateEnabledBinding(_ raw: String) -> Binding<Bool> {
+        Binding(
+            get: { !preferences.disabledStateIDs.contains(raw) },
+            set: { enabled in
+                var current = preferences.disabledStateIDs
+                if enabled {
+                    current.remove(raw)
+                } else {
+                    current.insert(raw)
+                }
+                preferences.disabledStateIDs = current
+            }
         )
     }
 

@@ -282,11 +282,11 @@ final class CharacterEngine {
     /// Requests one of `states` (never the one that just played) and holds
     /// the next idle beat for the clip's full duration plus a gap.
     /// Whether `state` may fire from a random idle/catch-up/rare roll.
-    /// Bill: everything (his sheet IS his identity). Pack characters:
-    /// only states that resolve to their core families — extras are
-    /// trigger-only, so nobody flashes a gas mask or swaps dark-world
-    /// forms while standing around.
+    /// Two gates: the Settings deselector (unchecked states never play
+    /// automatically, for anyone), and the pack-character extras rule
+    /// (ambient stays on core families so nobody shape-shifts randomly).
     private func isAmbientSafe(_ state: BillState) -> Bool {
+        if AppPreferences.isStateDisabledShared(state.rawValue) { return false }
         guard let library = ambientLibrary else { return true }
         return !library.usesExtraFamily(for: state)
     }

@@ -75,7 +75,7 @@ final class ReactionRouter {
         // pool — it is the one state whose *only* real-world trigger is this
         // event, and the coverage sweep deliberately never showcases it
         // (standing in a charging pose while unplugged reads as a bug).
-        .charging, .charged, .celebrating, .happy, .powerSurge, .transferring,
+        .charging, .charged, .celebrating, .happy, .kinship, .transferring,
     ]
     private static let volumeStates: [BillState] = [
         .dancing, .grooving, .happy, .flinching, .surprised, .caneFlourish, .kinship,
@@ -93,7 +93,7 @@ final class ReactionRouter {
         .celebrating, .happy, .charged, .zipAround, .fractaling,
     ]
     private static let clockStates: [BillState] = [
-        .presenting, .dispatching, .watched, .smug, .zodiacVision, .caneTwist,
+        .presenting, .dispatching, .watched, .smug, .prismDance, .caneTwist,
         .hookCane, .focused, .scanning, .conjuring,
     ]
     private static let insightStates: [BillState] = [
@@ -219,7 +219,7 @@ final class ReactionRouter {
 
     private static let weatherBarkCooldown: TimeInterval = 10 * 60
     private static let weatherStates: [BillState] = [
-        .watched, .scanning, .smug, .caneTwist, .presenting, .zodiacVision, .conjuring,
+        .watched, .scanning, .smug, .caneTwist, .presenting, .prismDance, .conjuring,
     ]
 
     private var idleStartDate: Date?
@@ -530,9 +530,12 @@ final class ReactionRouter {
             .compactMap { self.preferences.customAnimationMap[$0] }
             .compactMap(BillState.init(rawValue:))
             .first
-        if let override {
+        // The Settings deselector also gates reaction pools — an unchecked
+        // animation never plays automatically, even as an app reaction.
+        let allowed = states.filter { !AppPreferences.isStateDisabledShared($0.rawValue) }
+        if let override, !AppPreferences.isStateDisabledShared(override.rawValue) {
             characterEngine.request(override, force: true)
-        } else if let state = characterEngine.coverage.pick(from: states) {
+        } else if let state = characterEngine.coverage.pick(from: allowed) {
             characterEngine.request(state, force: true)
         }
         speak(keys, substitutions: substitutions, importance: importance)
