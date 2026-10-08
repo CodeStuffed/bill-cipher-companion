@@ -146,6 +146,62 @@ final class CharacterWindowController: NSObject {
     /// The companion rigs currently sharing the window, left→right.
     private(set) var companionControllers: [CompanionController] = []
 
+    /// Real-time collision monitor — ticks at 60Hz via the same `.common`
+    /// run-loop mode as the roaming sim, checking every visible rig against
+    /// every other. NOT tied to anyone's beat timer: contact the moment it
+    /// happens, not up to 40 seconds later.
+    private var collisionTimer: Timer?
+    private var lastCollisionBarkAt: Date?
+    private static let collisionBarkCooldown: TimeInterval = 15
+
+    private func startCollisionMonitoring() {
+        collisionTimer?.invalidate()
+        let timer = Timer(timeInterval: 1.0 / 30.0, repeats: true) { [weak self] _ in
+            Task { @MainActor in self?.checkRealTimeCollisions() }
+        }
+        RunLoop.main.add(timer, forMode: .common)
+        collisionTimer = timer
+    }
+
+    private func checkRealTimeCollisions() {
+        guard companionControllers.count >= 1 || (companionControllers.isEmpty == false)
+        else { return }
+        guard let last = lastCollisionBarkAt,
+              Date().timeIntervalSince(last) > Self.collisionBarkCooldown else { return }
+
+        // Every rig root in the scene: primary + companions.
+        var rigs: [(id: String, root: SKNode, frame: CGRect)] = []
+        if let scene = hitView.scene {
+            for child in scene.children where child.name == "characterRoot" || child.name == "companionRoot" {
+                let id = child.name == "characterRoot" ? characterEngine.character.id : "companion"
+                rigs.append((id, child, child.calculateAccumulatedFrame()))
+            }
+        }
+        guard rigs.count >= 2 else { return }
+
+        // Pairwise overlap test with a small tolerance — pixel-perfect
+        // bbox intersection reads as touching clothes.
+        for i in 0..<rigs.count {
+            for j in (i + 1)..<rigs.count {
+                let a = rigs[i].frame.insetBy(dx: -3, dy: -2)
+                let b = rigs[j].frame
+                guard a.intersects(b) else { continue }
+                lastCollisionBarkAt = Date()
+                // Both react: surprised beat + a character-voiced ouch.
+                characterEngine.request(.surprised, force: true)
+                if let line = DialogueLibrary.shared.line("collision.ouch")
+                    ?? DialogueLibrary.shared.line("poked") {
+                    characterEngine.bark(line, importance: .always)
+                }
+                // One companion quips back on the primary's bark path.
+                if let responder = companionControllers.randomElement() {
+                    responder.primaryBarked()
+                }
+                return
+            }
+        }
+    }
+
     /// Which characters appear beside `definition` — the user's persisted
     /// selection (any subset of the pack), falling back to the pack's
     /// default pair when nothing is selected. Companions from other packs
@@ -837,6 +893,7 @@ final class CharacterWindowController: NSObject {
     func show() {
         panel.orderFrontRegardless()
         startRoaming()
+        startCollisionMonitoring()
         startClickThroughTracking()
         scheduleDialogueRefreshCheck()
     }

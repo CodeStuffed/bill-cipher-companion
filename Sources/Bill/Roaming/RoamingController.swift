@@ -395,6 +395,21 @@ final class RoamingController {
             }
     }
 
+    /// True when every app window above the character's spot covers it —
+    /// the "currently hiding" test. Cheap: one topology pass, containment
+    /// against the character's body column.
+    private func isOccluded(feet: CGPoint) -> Bool {
+        let bodyColumn = CGRect(x: feet.x - 30, y: feet.y, width: 60, height: 180)
+        let coverers = WindowTopology
+            .platforms(excludingWindowNumber: panel.windowNumber, fresh: false)
+            .filter { $0.ownerPID != NSWorkspace.shared.frontmostApplication?.processIdentifier }
+        guard !coverers.isEmpty else { return false }
+        // Occluded when the union of covering rects contains the body
+        // column's horizontal span at every height — approximated: the
+        // single widest coverer contains the column.
+        return coverers.contains { $0.rect.contains(bodyColumn) }
+    }
+
     private func pickGoal(on screen: NSScreen, panel: NSPanel) -> Goal? {
         let visible = screen.visibleFrame
 
@@ -407,7 +422,14 @@ final class RoamingController {
             if sim.feet.y > visible.minY + 40 {
                 return .ground(x: CGFloat.random(in: visible.minX + 80...visible.maxX - 80))
             }
-            let span = CGFloat.random(in: 160...460) * (Bool.random() ? 1 : -1)
+            var span = CGFloat.random(in: 160...460) * (Bool.random() ? 1 : -1)
+            // Hide-and-seek polish: when apps can cover the character
+            // (the layer toggle is off), a stroll that ends fully occluded
+            // flips direction next goal so they wander back out and PEEK
+            // rather than vanishing for good.
+            if !preferences.isAlwaysOnTop, isOccluded(feet: sim.feet) {
+                span = -span
+            }
             let x = min(max(sim.feet.x + span, visible.minX + 40), visible.maxX - 40)
             return .stroll(x: x)
         }
@@ -937,6 +959,12 @@ final class RoamingController {
             x: sim.feet.x - Self.centerInsetX * s,
             y: sim.feet.y - Self.feetInsetY * s
         )
+        // The "push windows" feature: while walking grounded, probe for an
+        // app window underfoot to nudge aside (see `WindowPusher`).
+        if case .approach = step, sim.isGrounded {
+            WindowPusher.maybePush(panel: panel, at: sim.feet)
+        }
+
         // Direct `setFrameOrigin`, deliberately NOT `animator().setFrameOrigin`
         // — the animator proxy silently no-ops for window origins (a real,
         // previously-shipped bug), and an interpolated move would fight the

@@ -31,6 +31,7 @@ final class AppPreferences: ObservableObject {
         static let customFamilyMap = "billCustomFamilyMap"
         static let mutedCompanions = "billMutedCompanions"
         static let disabledStates = "billDisabledStates"
+        static let windowPushing = "billWindowPushing"
         static let activeCharacter = "billActiveCharacterID"
         static let activeCompanions = "billActiveCompanionIDs"
     }
@@ -59,6 +60,13 @@ final class AppPreferences: ObservableObject {
     /// ("use the Hornet jump whenever music plays"). Keyed by
     /// `BillState.rawValue`, value is a family name from the character's
     /// sheet. Applied on top of the automatic ladder.
+    /// The character can physically push app windows around during
+    /// roaming — a nudge sideways when it walks into one. Requires the
+    /// Accessibility permission; silently inactive without it.
+    @Published var isWindowPushingEnabled: Bool {
+        didSet { UserDefaults.standard.set(isWindowPushingEnabled, forKey: Keys.windowPushing) }
+    }
+
     /// The animation SELECTOR/DESELECTOR: states unchecked here never play
     /// from any automatic path (idle beats, rare eggs, showcase, reaction
     /// pools). Manually-triggered test buttons still work.
@@ -304,6 +312,7 @@ final class AppPreferences: ObservableObject {
         customFamilyMap = defaults.dictionary(forKey: Keys.customFamilyMap) as? [String: String] ?? [:]
         mutedCompanionIDs = Set(defaults.stringArray(forKey: Keys.mutedCompanions) ?? [])
         disabledStateIDs = Set(defaults.stringArray(forKey: Keys.disabledStates) ?? [])
+        isWindowPushingEnabled = (defaults.object(forKey: Keys.windowPushing) as? Bool) ?? false
         let disabledRaw = defaults.stringArray(forKey: Keys.disabledCategories) ?? []
         disabledCategories = Set(disabledRaw.compactMap(AppCategory.init(rawValue:)))
         let storedScale = (defaults.object(forKey: Keys.characterScale) as? Double) ?? 1.0

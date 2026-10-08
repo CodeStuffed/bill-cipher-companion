@@ -110,6 +110,13 @@ struct SettingsView: View {
         VStack(alignment: .leading, spacing: 24) {
             sectionHeader("Appearance", subtitle: "How Bill looks on your desktop")
 
+            card("Window mischief") {
+                Toggle("Push windows aside while walking", isOn: $preferences.isWindowPushingEnabled)
+                Text("When enabled, your companion physically nudges app windows it bumps into. Requires the Accessibility permission; never touches the window you're actively using.")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+
             card("Window layer") {
                 Toggle("Stay above app windows", isOn: $preferences.isAlwaysOnTop)
                 Text("Off = apps can cover your companion. They wander behind windows, hide, and stroll back out.")
