@@ -43,8 +43,8 @@ struct CharacterDefinition: Identifiable, Sendable, Hashable {
     init(
         id: String, displayName: String, packID: String, packName: String,
         spritePrefix: String, canvasSize: CGSize, displayScale: CGFloat,
-        dialogueResource: String?, prefersGroundedRoaming: Bool = false,
-        companionID: String? = nil, credit: String
+        dialogueResource: String?, companionID: String? = nil,
+        prefersGroundedRoaming: Bool = false, credit: String
     ) {
         self.id = id
         self.displayName = displayName
@@ -54,8 +54,8 @@ struct CharacterDefinition: Identifiable, Sendable, Hashable {
         self.canvasSize = canvasSize
         self.displayScale = displayScale
         self.dialogueResource = dialogueResource
-        self.prefersGroundedRoaming = prefersGroundedRoaming
         self.companionID = companionID
+        self.prefersGroundedRoaming = prefersGroundedRoaming
         self.credit = credit
     }
 
