@@ -138,7 +138,7 @@ enum CharacterRoster {
     static let sansdt = CharacterDefinition(
         id: "sansdt", displayName: "Sans (Battle)", packID: "undertale", packName: "Undertale",
         spritePrefix: "sansdt", canvasSize: CGSize(width: 29, height: 30), displayScale: 6.2,
-        dialogueResource: "dialogue_sans", prefersGroundedRoaming: true, companionID: nil,
+        dialogueResource: "dialogue_sans", companionID: nil, prefersGroundedRoaming: true,
         credit: "Custom Deltarune battle-style Sans by askywalker — spriters-resource.com"
     )
 
