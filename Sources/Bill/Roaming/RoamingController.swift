@@ -399,6 +399,7 @@ final class RoamingController {
     /// the "currently hiding" test. Cheap: one topology pass, containment
     /// against the character's body column.
     private func isOccluded(feet: CGPoint) -> Bool {
+        guard let panel else { return false }
         let bodyColumn = CGRect(x: feet.x - 30, y: feet.y, width: 60, height: 180)
         let coverers = WindowTopology
             .platforms(excludingWindowNumber: panel.windowNumber, fresh: false)
