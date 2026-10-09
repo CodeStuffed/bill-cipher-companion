@@ -4,6 +4,7 @@
    40,
    37
   ],
+  "idle_h": 30,
   "families": {
    "idle": 4,
    "walking": 4,
@@ -53,6 +54,7 @@
    23,
    30
   ],
+  "idle_h": 30,
   "families": {
    "idle": 8,
    "talking": 12,
@@ -67,6 +69,7 @@
    27,
    43
   ],
+  "idle_h": 43,
   "families": {
    "idle": 4,
    "walking": 4,
@@ -86,6 +89,7 @@
    29,
    29
   ],
+  "idle_h": 29,
   "families": {
    "idle": 4,
    "walking": 4,
@@ -107,6 +111,7 @@
    25,
    33
   ],
+  "idle_h": 32,
   "families": {
    "idle": 9,
    "talking": 2,
@@ -129,6 +134,7 @@
    35,
    28
   ],
+  "idle_h": 26,
   "families": {
    "idle": 4,
    "happy": 4,
@@ -144,6 +150,7 @@
    30,
    28
   ],
+  "idle_h": 28,
   "families": {
    "idle": 4,
    "walking": 6,
@@ -163,6 +170,7 @@
    29,
    33
   ],
+  "idle_h": 23,
   "families": {
    "idle": 1,
    "walking": 4,
@@ -194,6 +202,7 @@
    20,
    29
   ],
+  "idle_h": 29,
   "families": {
    "idle": 3,
    "walking": 3,
@@ -209,6 +218,7 @@
    26,
    39
   ],
+  "idle_h": 29,
   "families": {
    "idle": 8,
    "walking": 8,
@@ -231,6 +241,7 @@
    179,
    199
   ],
+  "idle_h": 132,
   "families": {
    "idle": 4,
    "walking": 7,
@@ -294,6 +305,7 @@
    221,
    215
   ],
+  "idle_h": 214,
   "families": {
    "idle": 2,
    "walking": 6,
@@ -320,6 +332,7 @@
    73,
    61
   ],
+  "idle_h": 38,
   "families": {
    "idle": 4,
    "walking": 4,
@@ -400,6 +413,7 @@
    62,
    53
   ],
+  "idle_h": 43,
   "families": {
    "idle": 4,
    "walking": 4,
@@ -479,6 +493,7 @@
    57,
    62
   ],
+  "idle_h": 44,
   "families": {
    "idle": 4,
    "walking": 6,

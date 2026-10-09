@@ -35,9 +35,9 @@ enum WindowPusher {
         else { return }
 
         // Cooldown per window.
-        if let last = recentlyPushed[target.windowNumber],
+        if let last = recentlyPushed[CGWindowID(target.windowNumber)],
             Date().timeIntervalSince(last) < pushCooldown { return }
-        recentlyPushed[target.windowNumber] = Date()
+        recentlyPushed[CGWindowID(target.windowNumber)] = Date()
         if recentlyPushed.count > 16 {
             recentlyPushed = Dictionary(
                 recentlyPushed.filter { Date().timeIntervalSince($0.value) < pushCooldown },
@@ -47,7 +47,7 @@ enum WindowPusher {
 
         // Direction: away from where the character is walking toward.
         let pushRight = feet.x < target.rect.midX
-        animatePush(windowNumber: target.id, by: pushRight ? pushDistance : -pushDistance)
+        animatePush(windowNumber: CGWindowID(target.windowNumber), by: pushRight ? pushDistance : -pushDistance)
     }
 
     /// Smooth push: ~8 small `AXSetAttributeValue` steps over 0.2s — a slide,
@@ -55,12 +55,7 @@ enum WindowPusher {
     /// (fullscreen, some system windows).
     private static func animatePush(windowNumber: CGWindowID, by dx: CGFloat) {
         // Resolve the AX window for this CGWindowID.
-        let systemWide = AXUIElementCreateSystemWide()
-        var windowRef: CFTypeRef?
-        let nsWindow = CGWindowIDToAXWindow(windowNumber)
-        guard nsWindow != nil else { return }
-        windowRef = nsWindow
-        guard let axWindow = windowRef else { return }
+        guard let axWindow = AXWindowIDToAXWindow(windowNumber) else { return }
 
         var originValue: CFTypeRef?
         guard AXUIElementCopyAttributeValue(axWindow, kAXPositionAttribute as CFString, &originValue) == .success,

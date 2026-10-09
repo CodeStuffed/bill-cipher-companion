@@ -549,6 +549,13 @@ final class CharacterWindowController: NSObject {
         DialogueLibrary.shared.activate(character: definition)
 
         applyCharacterScale(preferences.characterScale, keepingCurrentPosition: true)
+        // The sim's scale drives walk speed and jump arcs in "body size"
+        // units — it must match the active character's display height or a
+        // 6.2x-scale Sans walks at Bill-speed (72pt/s of tiny steps, reading
+        // as standing still while shuffling).
+        if let roaming = roaming {
+            roaming.characterScale = newCharacter.displayScale * preferences.characterScale
+        }
 
         // The roaming controller caches the desktop's window topology against
         // the panel's frame; a resized window needs it recomputed or the sim

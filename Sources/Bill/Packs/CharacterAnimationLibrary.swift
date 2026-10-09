@@ -268,9 +268,14 @@ struct CharacterAnimationLibrary {
                     ]],
                     loop: .loop)
             case .walking, .running:
+                // Undertale's walk cycles are 2 unique poses (contact/pass)
+                // repeated — at Bill's 0.16s they strobe; at amble pace they
+                // read as his unhurried shuffle. Running keeps the urgency.
+                let uniqueCount = Set(frames.map(\, ObjectIdentifier.init)).count
+                let isShuffle = uniqueCount <= 2 && frames.count >= 2
                 return AnimationClip(
-                    textures: frames,
-                    frameDuration: state == .running ? fast : 0.16,
+                    textures: isShuffle ? Array(frames.prefix(2)) : frames,
+                    frameDuration: state == .running ? fast : (isShuffle ? 0.22 : 0.16),
                     transform: [.body: [
                         PoseKeyframe(duration: 0.32, offset: CGVector(dx: 0, dy: 3), timing: .easeInEaseOut),
                         PoseKeyframe(duration: 0.32, offset: .zero, timing: .easeInEaseOut),

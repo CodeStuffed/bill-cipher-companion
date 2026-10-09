@@ -46,6 +46,14 @@ final class RoamingController {
     }
 
     private let sim = GravitySimulator()
+
+    /// The character's display scale — the sim sizes its walk speed and
+    /// jump arcs in body-size units, so this must match whoever is on
+    /// screen. Set by `CharacterWindowController` on every character switch.
+    var characterScale: CGFloat {
+        get { sim.scale }
+        set { sim.scale = newValue }
+    }
     private weak var panel: NSPanel?
     private let characterEngine: CharacterEngine
     private let preferences: AppPreferences

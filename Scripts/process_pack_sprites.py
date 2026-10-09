@@ -315,9 +315,28 @@ def main():
                         img = img.resize((f.shape[1] // factor, f.shape[0] // factor), _I.NEAREST)
                         scaled.append(np.asarray(img))
                     all_frames[name] = scaled
+        # Canvas = the CORE families' union only — the sprite's natural
+        # size. Oversized extras were already downscaled into that box
+        # above, so nothing can inflate it further.
         maxw = max(f.shape[1] for frs in all_frames.values() for f in frs)
         maxh = max(f.shape[0] for frs in all_frames.values() for f in frs)
-        char_man = {"canvas": [maxw, maxh], "families": {}}
+        maxw = min(maxw, core_w * 1.45)
+        maxh = min(maxh, core_h * 1.45)
+        # The character's VISIBLE height = the idle family's content height
+        # (not the canvas — attack/wide families inflate the canvas but
+        # shouldn't shrink the resting sprite).
+        idle_frames = all_frames.get("idle", [])
+        idle_h = max((f.shape[0] for f in idle_frames), default=maxh)
+        # strip any empty top margin from idle content measurement
+        idle_content_h = 0
+        for f in idle_frames:
+            al = f[:, :, 3] > 10
+            ys = np.where(al.any(axis=1))[0]
+            if len(ys):
+                idle_content_h = max(idle_content_h, ys.max() - ys.min() + 1)
+        if idle_content_h == 0:
+            idle_content_h = maxh
+        char_man = {"canvas": [int(maxw), int(maxh)], "idle_h": int(idle_content_h), "families": {}}
         if dropped:
             print(f"  {char}: dropped {len(dropped)} oversized extras (>{core_w * 1.45:.0f}x{core_h * 1.45:.0f})")
         for family, frames in all_frames.items():
