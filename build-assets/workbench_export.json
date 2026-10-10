@@ -1,0 +1,9992 @@
+{
+ "": {
+  "walk backwards": {
+   "frames": [
+    {
+     "x": 255,
+     "y": 7,
+     "w": 25,
+     "h": 44
+    },
+    {
+     "x": 285,
+     "y": 8,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 315,
+     "y": 7,
+     "w": 25,
+     "h": 44
+    },
+    {
+     "x": 345,
+     "y": 8,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 380,
+     "y": 7,
+     "w": 25,
+     "h": 44
+    },
+    {
+     "x": 410,
+     "y": 8,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 440,
+     "y": 7,
+     "w": 25,
+     "h": 44
+    },
+    {
+     "x": 470,
+     "y": 8,
+     "w": 25,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "right walk": {
+   "frames": [
+    {
+     "x": 27,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 27,
+     "y": 35,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 27,
+     "y": 65,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 27,
+     "y": 97,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "forward walk": {
+   "frames": [
+    {
+     "x": 49,
+     "y": 3,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 49,
+     "y": 34,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 49,
+     "y": 65,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 49,
+     "y": 96,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "left walk": {
+   "frames": [
+    {
+     "x": 73,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 73,
+     "y": 35,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 73,
+     "y": 65,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 73,
+     "y": 97,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "light walk backwards": {
+   "frames": [
+    {
+     "x": 97,
+     "y": 3,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 97,
+     "y": 34,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 97,
+     "y": 65,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 97,
+     "y": 96,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "light right walk": {
+   "frames": [
+    {
+     "x": 121,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 121,
+     "y": 35,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 121,
+     "y": 65,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 121,
+     "y": 97,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "light left walk": {
+   "frames": [
+    {
+     "x": 167,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 167,
+     "y": 35,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 167,
+     "y": 65,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 167,
+     "y": 97,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark walk backwards": {
+   "frames": [
+    {
+     "x": 194,
+     "y": 3,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 194,
+     "y": 34,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 194,
+     "y": 65,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 194,
+     "y": 96,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark walk right": {
+   "frames": [
+    {
+     "x": 218,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 218,
+     "y": 35,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 218,
+     "y": 65,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 218,
+     "y": 97,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark walk left": {
+   "frames": [
+    {
+     "x": 264,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 264,
+     "y": 35,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 264,
+     "y": 65,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 264,
+     "y": 97,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark light walk backwards": {
+   "frames": [
+    {
+     "x": 288,
+     "y": 3,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 288,
+     "y": 34,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 288,
+     "y": 65,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 288,
+     "y": 96,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark light walk right": {
+   "frames": [
+    {
+     "x": 312,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 312,
+     "y": 35,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 312,
+     "y": 65,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 312,
+     "y": 97,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark light walk forward": {
+   "frames": [
+    {
+     "x": 334,
+     "y": 3,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 334,
+     "y": 34,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 334,
+     "y": 65,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 334,
+     "y": 96,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark light walk left": {
+   "frames": [
+    {
+     "x": 358,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 358,
+     "y": 35,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 358,
+     "y": 65,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 358,
+     "y": 97,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "black walk backwards": {
+   "frames": [
+    {
+     "x": 385,
+     "y": 3,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 385,
+     "y": 34,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 385,
+     "y": 65,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 385,
+     "y": 96,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "black right walk": {
+   "frames": [
+    {
+     "x": 409,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 409,
+     "y": 35,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 409,
+     "y": 65,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 409,
+     "y": 97,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "black forward walk": {
+   "frames": [
+    {
+     "x": 431,
+     "y": 3,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 431,
+     "y": 34,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 431,
+     "y": 65,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 431,
+     "y": 96,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "black left walk": {
+   "frames": [
+    {
+     "x": 455,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 455,
+     "y": 35,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 455,
+     "y": 65,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 455,
+     "y": 97,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "black light walk backwards": {
+   "frames": [
+    {
+     "x": 479,
+     "y": 130,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 479,
+     "y": 161,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 479,
+     "y": 192,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 479,
+     "y": 223,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "black light walk right": {
+   "frames": [
+    {
+     "x": 503,
+     "y": 130,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 503,
+     "y": 162,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 503,
+     "y": 192,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 503,
+     "y": 224,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "black light walk forward": {
+   "frames": [
+    {
+     "x": 525,
+     "y": 130,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 525,
+     "y": 161,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 525,
+     "y": 192,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 525,
+     "y": 223,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "black light walk left": {
+   "frames": [
+    {
+     "x": 549,
+     "y": 130,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 549,
+     "y": 162,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 549,
+     "y": 192,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 549,
+     "y": 224,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "mask walk backwards": {
+   "frames": [
+    {
+     "x": 3,
+     "y": 130,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 3,
+     "y": 161,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 3,
+     "y": 192,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 3,
+     "y": 223,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "mask walk right": {
+   "frames": [
+    {
+     "x": 27,
+     "y": 130,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 27,
+     "y": 162,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 27,
+     "y": 192,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 27,
+     "y": 224,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "mask walk forward": {
+   "frames": [
+    {
+     "x": 49,
+     "y": 130,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 49,
+     "y": 161,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 49,
+     "y": 192,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 49,
+     "y": 223,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "mask walk left": {
+   "frames": [
+    {
+     "x": 73,
+     "y": 130,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 73,
+     "y": 162,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 73,
+     "y": 192,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 73,
+     "y": 224,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "mask light walk backwards": {
+   "frames": [
+    {
+     "x": 97,
+     "y": 130,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 97,
+     "y": 161,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 97,
+     "y": 192,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 97,
+     "y": 223,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "mask light walk right": {
+   "frames": [
+    {
+     "x": 121,
+     "y": 130,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 121,
+     "y": 162,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 121,
+     "y": 192,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 121,
+     "y": 224,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "mask light walk forward": {
+   "frames": [
+    {
+     "x": 143,
+     "y": 130,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 143,
+     "y": 161,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 143,
+     "y": 192,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 143,
+     "y": 223,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "mask light walk left": {
+   "frames": [
+    {
+     "x": 167,
+     "y": 130,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 167,
+     "y": 162,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 167,
+     "y": 192,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 167,
+     "y": 224,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark mask walk backwards": {
+   "frames": [
+    {
+     "x": 194,
+     "y": 130,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 194,
+     "y": 161,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 194,
+     "y": 192,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 194,
+     "y": 223,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark mask walk right": {
+   "frames": [
+    {
+     "x": 218,
+     "y": 130,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 218,
+     "y": 162,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 218,
+     "y": 192,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 218,
+     "y": 224,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark mask walk forward": {
+   "frames": [
+    {
+     "x": 240,
+     "y": 130,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 240,
+     "y": 161,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 240,
+     "y": 192,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 240,
+     "y": 223,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark light mask walk backwards": {
+   "frames": [
+    {
+     "x": 288,
+     "y": 130,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 288,
+     "y": 161,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 288,
+     "y": 192,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 288,
+     "y": 223,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark light mask walk right": {
+   "frames": [
+    {
+     "x": 312,
+     "y": 130,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 312,
+     "y": 162,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 312,
+     "y": 192,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 312,
+     "y": 224,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark light mask walk forwards": {
+   "frames": [
+    {
+     "x": 334,
+     "y": 130,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 334,
+     "y": 161,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 334,
+     "y": 192,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 334,
+     "y": 223,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "dark light mask walk left": {
+   "frames": [
+    {
+     "x": 358,
+     "y": 130,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 358,
+     "y": 162,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 358,
+     "y": 192,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 358,
+     "y": 224,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "black mask walk back": {
+   "frames": [
+    {
+     "x": 385,
+     "y": 130,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 385,
+     "y": 161,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 385,
+     "y": 192,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 385,
+     "y": 223,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "black mask walk right": {
+   "frames": [
+    {
+     "x": 409,
+     "y": 130,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 409,
+     "y": 162,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 409,
+     "y": 192,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 409,
+     "y": 224,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "black mask walk forwards": {
+   "frames": [
+    {
+     "x": 431,
+     "y": 130,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 431,
+     "y": 161,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 431,
+     "y": 192,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 431,
+     "y": 223,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "black mask walk left": {
+   "frames": [
+    {
+     "x": 455,
+     "y": 130,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 455,
+     "y": 162,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 455,
+     "y": 192,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 455,
+     "y": 224,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "no mask black light walk backwards": {
+   "frames": [
+    {
+     "x": 479,
+     "y": 3,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 479,
+     "y": 34,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 479,
+     "y": 65,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 479,
+     "y": 96,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "no mask black light walk right": {
+   "frames": [
+    {
+     "x": 503,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 503,
+     "y": 35,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 503,
+     "y": 65,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 503,
+     "y": 97,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "no mask black light walk left": {
+   "frames": [
+    {
+     "x": 549,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 549,
+     "y": 35,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 549,
+     "y": 65,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 549,
+     "y": 97,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "spin": {
+   "frames": [
+    {
+     "x": 3,
+     "y": 257,
+     "w": 21,
+     "h": 30
+    },
+    {
+     "x": 27,
+     "y": 257,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 49,
+     "y": 257,
+     "w": 21,
+     "h": 27
+    },
+    {
+     "x": 73,
+     "y": 257,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "spin 2": {
+   "frames": [
+    {
+     "x": 3,
+     "y": 294,
+     "w": 21,
+     "h": 30
+    },
+    {
+     "x": 27,
+     "y": 294,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 49,
+     "y": 294,
+     "w": 21,
+     "h": 27
+    },
+    {
+     "x": 73,
+     "y": 294,
+     "w": 19,
+     "h": 28
+    },
+    {
+     "x": 98,
+     "y": 294,
+     "w": 22,
+     "h": 32
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "save 1": {
+   "frames": [
+    {
+     "x": 168,
+     "y": 262,
+     "w": 25,
+     "h": 37
+    },
+    {
+     "x": 195,
+     "y": 262,
+     "w": 25,
+     "h": 37
+    },
+    {
+     "x": 222,
+     "y": 256,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 249,
+     "y": 256,
+     "w": 25,
+     "h": 43
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "save 2": {
+   "frames": [
+    {
+     "x": 168,
+     "y": 310,
+     "w": 25,
+     "h": 37
+    },
+    {
+     "x": 195,
+     "y": 310,
+     "w": 25,
+     "h": 37
+    },
+    {
+     "x": 222,
+     "y": 304,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 249,
+     "y": 304,
+     "w": 25,
+     "h": 43
+    }
+   ],
+   "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png"
+  },
+  "walk left": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 158,
+     "w": 29,
+     "h": 26
+    },
+    {
+     "x": 38,
+     "y": 159,
+     "w": 29,
+     "h": 25
+    },
+    {
+     "x": 72,
+     "y": 158,
+     "w": 29,
+     "h": 26
+    },
+    {
+     "x": 106,
+     "y": 159,
+     "w": 29,
+     "h": 25
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Temmie.png"
+  },
+  "walk back": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 6,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 39,
+     "y": 7,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 70,
+     "y": 6,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 103,
+     "y": 7,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 139,
+     "y": 6,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 171,
+     "y": 6,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 208,
+     "y": 6,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 241,
+     "y": 7,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 272,
+     "y": 6,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 305,
+     "y": 7,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 341,
+     "y": 6,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 373,
+     "y": 6,
+     "w": 25,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Papyrus.png"
+  },
+  "walk right": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 188,
+     "w": 29,
+     "h": 26
+    },
+    {
+     "x": 38,
+     "y": 189,
+     "w": 29,
+     "h": 25
+    },
+    {
+     "x": 106,
+     "y": 189,
+     "w": 29,
+     "h": 25
+    },
+    {
+     "x": 72,
+     "y": 188,
+     "w": 29,
+     "h": 26
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Temmie.png"
+  },
+  "walk forward": {
+   "frames": [
+    {
+     "x": 7,
+     "y": 156,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 31,
+     "y": 157,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 55,
+     "y": 156,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 79,
+     "y": 157,
+     "w": 19,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "darkw walk back": {
+   "frames": [
+    {
+     "x": 103,
+     "y": 24,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 127,
+     "y": 25,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 151,
+     "y": 24,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 175,
+     "y": 25,
+     "w": 19,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "darkw walk left": {
+   "frames": [
+    {
+     "x": 103,
+     "y": 68,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 127,
+     "y": 69,
+     "w": 19,
+     "h": 36
+    },
+    {
+     "x": 151,
+     "y": 68,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 175,
+     "y": 69,
+     "w": 19,
+     "h": 36
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "darkw walk right": {
+   "frames": [
+    {
+     "x": 103,
+     "y": 112,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 127,
+     "y": 113,
+     "w": 19,
+     "h": 36
+    },
+    {
+     "x": 151,
+     "y": 112,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 175,
+     "y": 113,
+     "w": 19,
+     "h": 36
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "darkw walk forward": {
+   "frames": [
+    {
+     "x": 103,
+     "y": 156,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 127,
+     "y": 157,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 151,
+     "y": 156,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 175,
+     "y": 157,
+     "w": 19,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "white walk back": {
+   "frames": [
+    {
+     "x": 199,
+     "y": 156,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 247,
+     "y": 156,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 223,
+     "y": 157,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 271,
+     "y": 157,
+     "w": 19,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "white walk left": {
+   "frames": [
+    {
+     "x": 199,
+     "y": 68,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 223,
+     "y": 69,
+     "w": 19,
+     "h": 36
+    },
+    {
+     "x": 247,
+     "y": 68,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 271,
+     "y": 69,
+     "w": 19,
+     "h": 36
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "white walk right": {
+   "frames": [
+    {
+     "x": 199,
+     "y": 112,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 223,
+     "y": 113,
+     "w": 19,
+     "h": 36
+    },
+    {
+     "x": 247,
+     "y": 112,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 271,
+     "y": 113,
+     "w": 19,
+     "h": 36
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "redoutline walk back": {
+   "frames": [
+    {
+     "x": 295,
+     "y": 23,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 321,
+     "y": 24,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 347,
+     "y": 23,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 373,
+     "y": 24,
+     "w": 21,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "redoutline walk left": {
+   "frames": [
+    {
+     "x": 295,
+     "y": 67,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 321,
+     "y": 68,
+     "w": 21,
+     "h": 38
+    },
+    {
+     "x": 347,
+     "y": 67,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 373,
+     "y": 68,
+     "w": 21,
+     "h": 38
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "redoutline walk right": {
+   "frames": [
+    {
+     "x": 295,
+     "y": 111,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 321,
+     "y": 112,
+     "w": 21,
+     "h": 38
+    },
+    {
+     "x": 347,
+     "y": 111,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 373,
+     "y": 112,
+     "w": 21,
+     "h": 38
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "redoutline walk forward": {
+   "frames": [
+    {
+     "x": 295,
+     "y": 155,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 321,
+     "y": 156,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 347,
+     "y": 155,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 373,
+     "y": 156,
+     "w": 21,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "battle idle": {
+   "frames": [
+    {
+     "x": 10,
+     "y": 502,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 65,
+     "y": 502,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 120,
+     "y": 502,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 176,
+     "y": 502,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 231,
+     "y": 502,
+     "w": 25,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "battle attack/intro": {
+   "frames": [
+    {
+     "x": 8,
+     "y": 287,
+     "w": 28,
+     "h": 43
+    },
+    {
+     "x": 77,
+     "y": 289,
+     "w": 44,
+     "h": 47
+    },
+    {
+     "x": 145,
+     "y": 291,
+     "w": 44,
+     "h": 45
+    },
+    {
+     "x": 213,
+     "y": 298,
+     "w": 26,
+     "h": 39
+    },
+    {
+     "x": 281,
+     "y": 298,
+     "w": 26,
+     "h": 39
+    },
+    {
+     "x": 349,
+     "y": 297,
+     "w": 24,
+     "h": 39
+    },
+    {
+     "x": 420,
+     "y": 297,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 488,
+     "y": 297,
+     "w": 19,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "battle prepare": {
+   "frames": [
+    {
+     "x": 12,
+     "y": 364,
+     "w": 29,
+     "h": 36
+    },
+    {
+     "x": 80,
+     "y": 364,
+     "w": 30,
+     "h": 36
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "battle ACT": {
+   "frames": [
+    {
+     "x": 12,
+     "y": 427,
+     "w": 30,
+     "h": 37
+    },
+    {
+     "x": 80,
+     "y": 428,
+     "w": 40,
+     "h": 36
+    },
+    {
+     "x": 149,
+     "y": 427,
+     "w": 36,
+     "h": 37
+    },
+    {
+     "x": 217,
+     "y": 427,
+     "w": 36,
+     "h": 37
+    },
+    {
+     "x": 285,
+     "y": 427,
+     "w": 36,
+     "h": 37
+    },
+    {
+     "x": 353,
+     "y": 427,
+     "w": 36,
+     "h": 37
+    },
+    {
+     "x": 421,
+     "y": 427,
+     "w": 36,
+     "h": 37
+    },
+    {
+     "x": 489,
+     "y": 427,
+     "w": 36,
+     "h": 37
+    },
+    {
+     "x": 555,
+     "y": 428,
+     "w": 27,
+     "h": 36
+    },
+    {
+     "x": 622,
+     "y": 427,
+     "w": 35,
+     "h": 37
+    },
+    {
+     "x": 689,
+     "y": 427,
+     "w": 34,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "battle item": {
+   "frames": [
+    {
+     "x": 12,
+     "y": 492,
+     "w": 22,
+     "h": 36
+    },
+    {
+     "x": 80,
+     "y": 491,
+     "w": 22,
+     "h": 37
+    },
+    {
+     "x": 149,
+     "y": 491,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 217,
+     "y": 492,
+     "w": 31,
+     "h": 36
+    },
+    {
+     "x": 285,
+     "y": 492,
+     "w": 31,
+     "h": 36
+    },
+    {
+     "x": 353,
+     "y": 492,
+     "w": 31,
+     "h": 36
+    },
+    {
+     "x": 421,
+     "y": 492,
+     "w": 31,
+     "h": 36
+    },
+    {
+     "x": 489,
+     "y": 492,
+     "w": 31,
+     "h": 36
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "battle defend": {
+   "frames": [
+    {
+     "x": 9,
+     "y": 554,
+     "w": 33,
+     "h": 37
+    },
+    {
+     "x": 47,
+     "y": 551,
+     "w": 28,
+     "h": 40
+    },
+    {
+     "x": 87,
+     "y": 555,
+     "w": 31,
+     "h": 36
+    },
+    {
+     "x": 128,
+     "y": 555,
+     "w": 29,
+     "h": 36
+    },
+    {
+     "x": 169,
+     "y": 555,
+     "w": 28,
+     "h": 36
+    },
+    {
+     "x": 209,
+     "y": 555,
+     "w": 28,
+     "h": 36
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "battle END": {
+   "frames": [
+    {
+     "x": 7,
+     "y": 610,
+     "w": 34,
+     "h": 37
+    },
+    {
+     "x": 46,
+     "y": 610,
+     "w": 34,
+     "h": 37
+    },
+    {
+     "x": 88,
+     "y": 610,
+     "w": 28,
+     "h": 37
+    },
+    {
+     "x": 130,
+     "y": 611,
+     "w": 21,
+     "h": 36
+    },
+    {
+     "x": 171,
+     "y": 612,
+     "w": 19,
+     "h": 35
+    },
+    {
+     "x": 209,
+     "y": 611,
+     "w": 18,
+     "h": 36
+    },
+    {
+     "x": 247,
+     "y": 610,
+     "w": 18,
+     "h": 37
+    },
+    {
+     "x": 284,
+     "y": 610,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 322,
+     "y": 610,
+     "w": 19,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "downed": {
+   "frames": [
+    {
+     "x": 223,
+     "y": 370,
+     "w": 32,
+     "h": 31
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "hurt": {
+   "frames": [
+    {
+     "x": 151,
+     "y": 363,
+     "w": 33,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "enter fall intro dark world": {
+   "frames": [
+    {
+     "x": 12,
+     "y": 764,
+     "w": 19,
+     "h": 36
+    },
+    {
+     "x": 46,
+     "y": 763,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 80,
+     "y": 763,
+     "w": 18,
+     "h": 37
+    },
+    {
+     "x": 114,
+     "y": 764,
+     "w": 19,
+     "h": 36
+    },
+    {
+     "x": 151,
+     "y": 763,
+     "w": 18,
+     "h": 37
+    },
+    {
+     "x": 185,
+     "y": 764,
+     "w": 18,
+     "h": 36
+    },
+    {
+     "x": 216,
+     "y": 764,
+     "w": 20,
+     "h": 36
+    },
+    {
+     "x": 250,
+     "y": 764,
+     "w": 19,
+     "h": 36
+    },
+    {
+     "x": 284,
+     "y": 764,
+     "w": 19,
+     "h": 36
+    },
+    {
+     "x": 318,
+     "y": 763,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 353,
+     "y": 763,
+     "w": 18,
+     "h": 37
+    },
+    {
+     "x": 386,
+     "y": 764,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 455,
+     "y": 763,
+     "w": 18,
+     "h": 38
+    },
+    {
+     "x": 420,
+     "y": 763,
+     "w": 19,
+     "h": 38
+    },
+    {
+     "x": 13,
+     "y": 821,
+     "w": 18,
+     "h": 35
+    },
+    {
+     "x": 47,
+     "y": 821,
+     "w": 18,
+     "h": 35
+    },
+    {
+     "x": 81,
+     "y": 820,
+     "w": 18,
+     "h": 36
+    },
+    {
+     "x": 115,
+     "y": 819,
+     "w": 18,
+     "h": 38
+    },
+    {
+     "x": 148,
+     "y": 821,
+     "w": 19,
+     "h": 38
+    },
+    {
+     "x": 180,
+     "y": 827,
+     "w": 23,
+     "h": 30
+    },
+    {
+     "x": 212,
+     "y": 840,
+     "w": 20,
+     "h": 21
+    },
+    {
+     "x": 241,
+     "y": 841,
+     "w": 21,
+     "h": 20
+    },
+    {
+     "x": 271,
+     "y": 841,
+     "w": 20,
+     "h": 21
+    },
+    {
+     "x": 300,
+     "y": 840,
+     "w": 21,
+     "h": 20
+    },
+    {
+     "x": 329,
+     "y": 832,
+     "w": 23,
+     "h": 29
+    },
+    {
+     "x": 364,
+     "y": 831,
+     "w": 20,
+     "h": 30
+    },
+    {
+     "x": 399,
+     "y": 824,
+     "w": 19,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "teacup ride": {
+   "frames": [
+    {
+     "x": 10,
+     "y": 2434,
+     "w": 39,
+     "h": 42
+    },
+    {
+     "x": 59,
+     "y": 2436,
+     "w": 34,
+     "h": 41
+    },
+    {
+     "x": 103,
+     "y": 2439,
+     "w": 39,
+     "h": 37
+    },
+    {
+     "x": 157,
+     "y": 2436,
+     "w": 34,
+     "h": 40
+    },
+    {
+     "x": 206,
+     "y": 2434,
+     "w": 39,
+     "h": 42
+    },
+    {
+     "x": 255,
+     "y": 2436,
+     "w": 34,
+     "h": 41
+    },
+    {
+     "x": 299,
+     "y": 2439,
+     "w": 39,
+     "h": 37
+    },
+    {
+     "x": 353,
+     "y": 2436,
+     "w": 34,
+     "h": 40
+    },
+    {
+     "x": 402,
+     "y": 2434,
+     "w": 39,
+     "h": 42
+    },
+    {
+     "x": 451,
+     "y": 2434,
+     "w": 34,
+     "h": 43
+    },
+    {
+     "x": 495,
+     "y": 2434,
+     "w": 39,
+     "h": 42
+    },
+    {
+     "x": 549,
+     "y": 2434,
+     "w": 34,
+     "h": 42
+    },
+    {
+     "x": 594,
+     "y": 2434,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 622,
+     "y": 2434,
+     "w": 21,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "reveal sowrd": {
+   "frames": [
+    {
+     "x": 15,
+     "y": 1100,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 88,
+     "y": 1101,
+     "w": 24,
+     "h": 36
+    },
+    {
+     "x": 163,
+     "y": 1100,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 233,
+     "y": 1101,
+     "w": 18,
+     "h": 36
+    },
+    {
+     "x": 303,
+     "y": 1101,
+     "w": 18,
+     "h": 36
+    },
+    {
+     "x": 366,
+     "y": 1091,
+     "w": 32,
+     "h": 46
+    },
+    {
+     "x": 433,
+     "y": 1094,
+     "w": 31,
+     "h": 43
+    },
+    {
+     "x": 506,
+     "y": 1096,
+     "w": 32,
+     "h": 41
+    },
+    {
+     "x": 580,
+     "y": 1100,
+     "w": 35,
+     "h": 37
+    },
+    {
+     "x": 651,
+     "y": 1100,
+     "w": 34,
+     "h": 37
+    },
+    {
+     "x": 722,
+     "y": 1100,
+     "w": 34,
+     "h": 37
+    },
+    {
+     "x": 793,
+     "y": 1100,
+     "w": 34,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "pirroute": {
+   "frames": [
+    {
+     "x": 178,
+     "y": 1187,
+     "w": 25,
+     "h": 38
+    },
+    {
+     "x": 221,
+     "y": 1187,
+     "w": 20,
+     "h": 38
+    },
+    {
+     "x": 262,
+     "y": 1187,
+     "w": 20,
+     "h": 38
+    },
+    {
+     "x": 308,
+     "y": 1187,
+     "w": 21,
+     "h": 38
+    },
+    {
+     "x": 350,
+     "y": 1187,
+     "w": 20,
+     "h": 38
+    },
+    {
+     "x": 391,
+     "y": 1187,
+     "w": 21,
+     "h": 38
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "jiggle": {
+   "frames": [
+    {
+     "x": 9,
+     "y": 1251,
+     "w": 21,
+     "h": 44
+    },
+    {
+     "x": 37,
+     "y": 1251,
+     "w": 22,
+     "h": 44
+    },
+    {
+     "x": 66,
+     "y": 1251,
+     "w": 21,
+     "h": 44
+    },
+    {
+     "x": 94,
+     "y": 1251,
+     "w": 24,
+     "h": 44
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "dance": {
+   "frames": [
+    {
+     "x": 8,
+     "y": 2975,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 38,
+     "y": 2979,
+     "w": 23,
+     "h": 38
+    },
+    {
+     "x": 72,
+     "y": 2977,
+     "w": 23,
+     "h": 40
+    },
+    {
+     "x": 104,
+     "y": 2979,
+     "w": 23,
+     "h": 38
+    },
+    {
+     "x": 139,
+     "y": 2975,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 175,
+     "y": 2979,
+     "w": 23,
+     "h": 38
+    },
+    {
+     "x": 207,
+     "y": 2977,
+     "w": 23,
+     "h": 40
+    },
+    {
+     "x": 241,
+     "y": 2979,
+     "w": 23,
+     "h": 38
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "get back up": {
+   "frames": [
+    {
+     "x": 9,
+     "y": 2003,
+     "w": 49,
+     "h": 21
+    },
+    {
+     "x": 66,
+     "y": 1995,
+     "w": 32,
+     "h": 31
+    },
+    {
+     "x": 103,
+     "y": 1994,
+     "w": 23,
+     "h": 31
+    },
+    {
+     "x": 133,
+     "y": 1988,
+     "w": 19,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "ending 1": {
+   "frames": [
+    {
+     "x": 7,
+     "y": 2426,
+     "w": 36,
+     "h": 16
+    },
+    {
+     "x": 50,
+     "y": 2422,
+     "w": 30,
+     "h": 20
+    },
+    {
+     "x": 92,
+     "y": 2421,
+     "w": 29,
+     "h": 21
+    },
+    {
+     "x": 8,
+     "y": 2448,
+     "w": 21,
+     "h": 33
+    },
+    {
+     "x": 34,
+     "y": 2449,
+     "w": 21,
+     "h": 32
+    },
+    {
+     "x": 89,
+     "y": 2449,
+     "w": 21,
+     "h": 32
+    },
+    {
+     "x": 61,
+     "y": 2448,
+     "w": 21,
+     "h": 33
+    },
+    {
+     "x": 8,
+     "y": 2487,
+     "w": 20,
+     "h": 33
+    },
+    {
+     "x": 35,
+     "y": 2488,
+     "w": 21,
+     "h": 32
+    },
+    {
+     "x": 62,
+     "y": 2487,
+     "w": 20,
+     "h": 33
+    },
+    {
+     "x": 88,
+     "y": 2488,
+     "w": 21,
+     "h": 32
+    },
+    {
+     "x": 7,
+     "y": 2526,
+     "w": 21,
+     "h": 33
+    },
+    {
+     "x": 41,
+     "y": 2526,
+     "w": 21,
+     "h": 33
+    },
+    {
+     "x": 75,
+     "y": 2526,
+     "w": 21,
+     "h": 33
+    },
+    {
+     "x": 109,
+     "y": 2526,
+     "w": 23,
+     "h": 33
+    },
+    {
+     "x": 143,
+     "y": 2526,
+     "w": 27,
+     "h": 33
+    },
+    {
+     "x": 177,
+     "y": 2526,
+     "w": 27,
+     "h": 33
+    },
+    {
+     "x": 211,
+     "y": 2526,
+     "w": 27,
+     "h": 33
+    },
+    {
+     "x": 245,
+     "y": 2526,
+     "w": 27,
+     "h": 33
+    },
+    {
+     "x": 279,
+     "y": 2526,
+     "w": 27,
+     "h": 33
+    },
+    {
+     "x": 313,
+     "y": 2526,
+     "w": 27,
+     "h": 33
+    },
+    {
+     "x": 347,
+     "y": 2526,
+     "w": 28,
+     "h": 33
+    },
+    {
+     "x": 381,
+     "y": 2526,
+     "w": 27,
+     "h": 33
+    },
+    {
+     "x": 415,
+     "y": 2526,
+     "w": 28,
+     "h": 33
+    },
+    {
+     "x": 449,
+     "y": 2526,
+     "w": 27,
+     "h": 33
+    },
+    {
+     "x": 483,
+     "y": 2526,
+     "w": 28,
+     "h": 33
+    },
+    {
+     "x": 517,
+     "y": 2526,
+     "w": 28,
+     "h": 33
+    },
+    {
+     "x": 551,
+     "y": 2526,
+     "w": 28,
+     "h": 33
+    },
+    {
+     "x": 14,
+     "y": 2565,
+     "w": 28,
+     "h": 33
+    },
+    {
+     "x": 55,
+     "y": 2565,
+     "w": 28,
+     "h": 33
+    },
+    {
+     "x": 96,
+     "y": 2565,
+     "w": 28,
+     "h": 33
+    },
+    {
+     "x": 130,
+     "y": 2564,
+     "w": 35,
+     "h": 34
+    },
+    {
+     "x": 172,
+     "y": 2566,
+     "w": 29,
+     "h": 32
+    },
+    {
+     "x": 213,
+     "y": 2566,
+     "w": 29,
+     "h": 32
+    },
+    {
+     "x": 254,
+     "y": 2566,
+     "w": 29,
+     "h": 32
+    },
+    {
+     "x": 295,
+     "y": 2566,
+     "w": 29,
+     "h": 32
+    },
+    {
+     "x": 336,
+     "y": 2566,
+     "w": 29,
+     "h": 32
+    },
+    {
+     "x": 377,
+     "y": 2566,
+     "w": 29,
+     "h": 32
+    },
+    {
+     "x": 418,
+     "y": 2566,
+     "w": 29,
+     "h": 32
+    },
+    {
+     "x": 8,
+     "y": 2606,
+     "w": 29,
+     "h": 31
+    },
+    {
+     "x": 49,
+     "y": 2605,
+     "w": 29,
+     "h": 32
+    },
+    {
+     "x": 8,
+     "y": 2645,
+     "w": 29,
+     "h": 31
+    },
+    {
+     "x": 53,
+     "y": 2645,
+     "w": 29,
+     "h": 31
+    },
+    {
+     "x": 104,
+     "y": 2643,
+     "w": 32,
+     "h": 33
+    },
+    {
+     "x": 149,
+     "y": 2643,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 194,
+     "y": 2643,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 239,
+     "y": 2643,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 284,
+     "y": 2643,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 329,
+     "y": 2643,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 61,
+     "y": 2682,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 14,
+     "y": 2682,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 108,
+     "y": 2682,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 155,
+     "y": 2682,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 202,
+     "y": 2682,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 249,
+     "y": 2682,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 7,
+     "y": 2721,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 45,
+     "y": 2722,
+     "w": 31,
+     "h": 32
+    },
+    {
+     "x": 19,
+     "y": 2768,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 133,
+     "y": 2764,
+     "w": 24,
+     "h": 37
+    },
+    {
+     "x": 247,
+     "y": 2763,
+     "w": 24,
+     "h": 38
+    },
+    {
+     "x": 361,
+     "y": 2768,
+     "w": 22,
+     "h": 33
+    },
+    {
+     "x": 475,
+     "y": 2768,
+     "w": 22,
+     "h": 33
+    },
+    {
+     "x": 589,
+     "y": 2768,
+     "w": 22,
+     "h": 33
+    },
+    {
+     "x": 703,
+     "y": 2768,
+     "w": 22,
+     "h": 33
+    },
+    {
+     "x": 817,
+     "y": 2768,
+     "w": 22,
+     "h": 33
+    },
+    {
+     "x": 931,
+     "y": 2768,
+     "w": 22,
+     "h": 33
+    },
+    {
+     "x": 1045,
+     "y": 2769,
+     "w": 22,
+     "h": 32
+    },
+    {
+     "x": 23,
+     "y": 2818,
+     "w": 20,
+     "h": 33
+    },
+    {
+     "x": 65,
+     "y": 2818,
+     "w": 20,
+     "h": 33
+    },
+    {
+     "x": 107,
+     "y": 2818,
+     "w": 20,
+     "h": 33
+    },
+    {
+     "x": 149,
+     "y": 2818,
+     "w": 20,
+     "h": 33
+    },
+    {
+     "x": 186,
+     "y": 2818,
+     "w": 25,
+     "h": 33
+    },
+    {
+     "x": 225,
+     "y": 2818,
+     "w": 28,
+     "h": 33
+    },
+    {
+     "x": 267,
+     "y": 2818,
+     "w": 28,
+     "h": 33
+    },
+    {
+     "x": 308,
+     "y": 2818,
+     "w": 29,
+     "h": 33
+    },
+    {
+     "x": 349,
+     "y": 2818,
+     "w": 30,
+     "h": 33
+    },
+    {
+     "x": 391,
+     "y": 2818,
+     "w": 30,
+     "h": 33
+    },
+    {
+     "x": 432,
+     "y": 2818,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 474,
+     "y": 2818,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 516,
+     "y": 2818,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 558,
+     "y": 2818,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 600,
+     "y": 2818,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 642,
+     "y": 2818,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 684,
+     "y": 2818,
+     "w": 31,
+     "h": 33
+    },
+    {
+     "x": 726,
+     "y": 2818,
+     "w": 31,
+     "h": 33
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "ending 2": {
+   "frames": [
+    {
+     "x": 19,
+     "y": 2887,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 59,
+     "y": 2887,
+     "w": 22,
+     "h": 37
+    },
+    {
+     "x": 104,
+     "y": 2898,
+     "w": 25,
+     "h": 26
+    },
+    {
+     "x": 154,
+     "y": 2899,
+     "w": 22,
+     "h": 25
+    },
+    {
+     "x": 201,
+     "y": 2899,
+     "w": 22,
+     "h": 25
+    },
+    {
+     "x": 248,
+     "y": 2899,
+     "w": 22,
+     "h": 25
+    },
+    {
+     "x": 295,
+     "y": 2899,
+     "w": 25,
+     "h": 25
+    },
+    {
+     "x": 342,
+     "y": 2899,
+     "w": 26,
+     "h": 25
+    },
+    {
+     "x": 389,
+     "y": 2899,
+     "w": 27,
+     "h": 25
+    },
+    {
+     "x": 442,
+     "y": 2898,
+     "w": 26,
+     "h": 25
+    },
+    {
+     "x": 490,
+     "y": 2897,
+     "w": 26,
+     "h": 25
+    },
+    {
+     "x": 524,
+     "y": 2899,
+     "w": 34,
+     "h": 25
+    },
+    {
+     "x": 571,
+     "y": 2899,
+     "w": 28,
+     "h": 25
+    },
+    {
+     "x": 619,
+     "y": 2899,
+     "w": 27,
+     "h": 25
+    },
+    {
+     "x": 669,
+     "y": 2901,
+     "w": 24,
+     "h": 23
+    },
+    {
+     "x": 717,
+     "y": 2901,
+     "w": 23,
+     "h": 23
+    },
+    {
+     "x": 765,
+     "y": 2901,
+     "w": 22,
+     "h": 23
+    },
+    {
+     "x": 807,
+     "y": 2899,
+     "w": 27,
+     "h": 25
+    },
+    {
+     "x": 855,
+     "y": 2900,
+     "w": 26,
+     "h": 24
+    },
+    {
+     "x": 905,
+     "y": 2901,
+     "w": 23,
+     "h": 23
+    },
+    {
+     "x": 952,
+     "y": 2901,
+     "w": 23,
+     "h": 23
+    },
+    {
+     "x": 999,
+     "y": 2901,
+     "w": 23,
+     "h": 23
+    },
+    {
+     "x": 1047,
+     "y": 2902,
+     "w": 22,
+     "h": 22
+    },
+    {
+     "x": 1094,
+     "y": 2902,
+     "w": 22,
+     "h": 22
+    },
+    {
+     "x": 1141,
+     "y": 2900,
+     "w": 22,
+     "h": 24
+    },
+    {
+     "x": 13,
+     "y": 2941,
+     "w": 25,
+     "h": 25
+    },
+    {
+     "x": 60,
+     "y": 2941,
+     "w": 26,
+     "h": 25
+    },
+    {
+     "x": 108,
+     "y": 2941,
+     "w": 26,
+     "h": 25
+    },
+    {
+     "x": 160,
+     "y": 2941,
+     "w": 26,
+     "h": 25
+    },
+    {
+     "x": 208,
+     "y": 2941,
+     "w": 26,
+     "h": 25
+    },
+    {
+     "x": 245,
+     "y": 2943,
+     "w": 25,
+     "h": 23
+    },
+    {
+     "x": 295,
+     "y": 2941,
+     "w": 22,
+     "h": 25
+    },
+    {
+     "x": 342,
+     "y": 2942,
+     "w": 22,
+     "h": 24
+    },
+    {
+     "x": 389,
+     "y": 2940,
+     "w": 21,
+     "h": 26
+    },
+    {
+     "x": 437,
+     "y": 2933,
+     "w": 20,
+     "h": 33
+    },
+    {
+     "x": 8,
+     "y": 2971,
+     "w": 18,
+     "h": 35
+    },
+    {
+     "x": 31,
+     "y": 2973,
+     "w": 18,
+     "h": 33
+    },
+    {
+     "x": 23,
+     "y": 3043,
+     "w": 18,
+     "h": 35
+    },
+    {
+     "x": 88,
+     "y": 3043,
+     "w": 18,
+     "h": 35
+    },
+    {
+     "x": 152,
+     "y": 3043,
+     "w": 19,
+     "h": 35
+    },
+    {
+     "x": 216,
+     "y": 3043,
+     "w": 20,
+     "h": 35
+    },
+    {
+     "x": 281,
+     "y": 3044,
+     "w": 20,
+     "h": 34
+    },
+    {
+     "x": 348,
+     "y": 3042,
+     "w": 18,
+     "h": 36
+    },
+    {
+     "x": 413,
+     "y": 3040,
+     "w": 18,
+     "h": 38
+    },
+    {
+     "x": 475,
+     "y": 3045,
+     "w": 19,
+     "h": 33
+    },
+    {
+     "x": 539,
+     "y": 3045,
+     "w": 20,
+     "h": 33
+    },
+    {
+     "x": 596,
+     "y": 3041,
+     "w": 28,
+     "h": 34
+    },
+    {
+     "x": 660,
+     "y": 3046,
+     "w": 30,
+     "h": 22
+    },
+    {
+     "x": 725,
+     "y": 3047,
+     "w": 29,
+     "h": 20
+    },
+    {
+     "x": 797,
+     "y": 3047,
+     "w": 16,
+     "h": 19
+    },
+    {
+     "x": 862,
+     "y": 3047,
+     "w": 11,
+     "h": 18
+    },
+    {
+     "x": 927,
+     "y": 3051,
+     "w": 8,
+     "h": 15
+    },
+    {
+     "x": 84,
+     "y": 3134,
+     "w": 9,
+     "h": 6
+    },
+    {
+     "x": 148,
+     "y": 3128,
+     "w": 10,
+     "h": 12
+    },
+    {
+     "x": 212,
+     "y": 3120,
+     "w": 13,
+     "h": 20
+    },
+    {
+     "x": 277,
+     "y": 3122,
+     "w": 16,
+     "h": 18
+    },
+    {
+     "x": 343,
+     "y": 3125,
+     "w": 17,
+     "h": 15
+    },
+    {
+     "x": 407,
+     "y": 3125,
+     "w": 18,
+     "h": 15
+    },
+    {
+     "x": 474,
+     "y": 3117,
+     "w": 16,
+     "h": 23
+    },
+    {
+     "x": 539,
+     "y": 3118,
+     "w": 17,
+     "h": 22
+    },
+    {
+     "x": 7,
+     "y": 3165,
+     "w": 24,
+     "h": 31
+    },
+    {
+     "x": 42,
+     "y": 3178,
+     "w": 22,
+     "h": 24
+    },
+    {
+     "x": 89,
+     "y": 3176,
+     "w": 21,
+     "h": 26
+    },
+    {
+     "x": 137,
+     "y": 3169,
+     "w": 20,
+     "h": 33
+    },
+    {
+     "x": 19,
+     "y": 3207,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 65,
+     "y": 3207,
+     "w": 20,
+     "h": 37
+    },
+    {
+     "x": 111,
+     "y": 3207,
+     "w": 22,
+     "h": 37
+    },
+    {
+     "x": 160,
+     "y": 3207,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 203,
+     "y": 3207,
+     "w": 26,
+     "h": 37
+    },
+    {
+     "x": 250,
+     "y": 3207,
+     "w": 26,
+     "h": 37
+    },
+    {
+     "x": 297,
+     "y": 3207,
+     "w": 26,
+     "h": 37
+    },
+    {
+     "x": 19,
+     "y": 3249,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 66,
+     "y": 3249,
+     "w": 19,
+     "h": 37
+    },
+    {
+     "x": 13,
+     "y": 3291,
+     "w": 21,
+     "h": 34
+    },
+    {
+     "x": 48,
+     "y": 3297,
+     "w": 34,
+     "h": 28
+    },
+    {
+     "x": 90,
+     "y": 3297,
+     "w": 30,
+     "h": 28
+    },
+    {
+     "x": 132,
+     "y": 3297,
+     "w": 29,
+     "h": 28
+    },
+    {
+     "x": 173,
+     "y": 3297,
+     "w": 29,
+     "h": 28
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png"
+  },
+  "dark prince appearing": {
+   "frames": [
+    {
+     "x": 10,
+     "y": 16,
+     "w": 17,
+     "h": 18
+    },
+    {
+     "x": 43,
+     "y": 15,
+     "w": 17,
+     "h": 18
+    },
+    {
+     "x": 10,
+     "y": 65,
+     "w": 17,
+     "h": 18
+    },
+    {
+     "x": 40,
+     "y": 55,
+     "w": 22,
+     "h": 28
+    },
+    {
+     "x": 73,
+     "y": 55,
+     "w": 23,
+     "h": 32
+    },
+    {
+     "x": 106,
+     "y": 55,
+     "w": 23,
+     "h": 39
+    },
+    {
+     "x": 139,
+     "y": 55,
+     "w": 23,
+     "h": 39
+    },
+    {
+     "x": 172,
+     "y": 55,
+     "w": 23,
+     "h": 43
+    },
+    {
+     "x": 205,
+     "y": 55,
+     "w": 23,
+     "h": 43
+    },
+    {
+     "x": 238,
+     "y": 55,
+     "w": 23,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "wakl forward": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 250,
+     "w": 23,
+     "h": 43
+    },
+    {
+     "x": 33,
+     "y": 251,
+     "w": 23,
+     "h": 43
+    },
+    {
+     "x": 61,
+     "y": 250,
+     "w": 23,
+     "h": 43
+    },
+    {
+     "x": 89,
+     "y": 251,
+     "w": 23,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "walk forward w/blush": {
+   "frames": [
+    {
+     "x": 122,
+     "y": 103,
+     "w": 23,
+     "h": 43
+    },
+    {
+     "x": 150,
+     "y": 104,
+     "w": 23,
+     "h": 43
+    },
+    {
+     "x": 178,
+     "y": 103,
+     "w": 23,
+     "h": 43
+    },
+    {
+     "x": 206,
+     "y": 104,
+     "w": 23,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "walk left with blush": {
+   "frames": [
+    {
+     "x": 123,
+     "y": 152,
+     "w": 21,
+     "h": 43
+    },
+    {
+     "x": 151,
+     "y": 153,
+     "w": 21,
+     "h": 42
+    },
+    {
+     "x": 179,
+     "y": 152,
+     "w": 21,
+     "h": 43
+    },
+    {
+     "x": 207,
+     "y": 153,
+     "w": 21,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "walk right with blush": {
+   "frames": [
+    {
+     "x": 123,
+     "y": 201,
+     "w": 21,
+     "h": 43
+    },
+    {
+     "x": 151,
+     "y": 202,
+     "w": 21,
+     "h": 42
+    },
+    {
+     "x": 179,
+     "y": 201,
+     "w": 21,
+     "h": 43
+    },
+    {
+     "x": 207,
+     "y": 202,
+     "w": 21,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "scared and fall": {
+   "frames": [
+    {
+     "x": 12,
+     "y": 310,
+     "w": 30,
+     "h": 34
+    },
+    {
+     "x": 49,
+     "y": 314,
+     "w": 29,
+     "h": 28
+    },
+    {
+     "x": 83,
+     "y": 319,
+     "w": 43,
+     "h": 22
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "sit": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 182,
+     "w": 22,
+     "h": 19
+    },
+    {
+     "x": 25,
+     "y": 182,
+     "w": 20,
+     "h": 19
+    },
+    {
+     "x": 2,
+     "y": 204,
+     "w": 25,
+     "h": 13
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "turn": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 400,
+     "w": 21,
+     "h": 43
+    },
+    {
+     "x": 32,
+     "y": 400,
+     "w": 22,
+     "h": 43
+    },
+    {
+     "x": 59,
+     "y": 400,
+     "w": 22,
+     "h": 43
+    },
+    {
+     "x": 86,
+     "y": 400,
+     "w": 22,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "prepare battle": {
+   "frames": [
+    {
+     "x": 9,
+     "y": 450,
+     "w": 21,
+     "h": 43
+    },
+    {
+     "x": 82,
+     "y": 451,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 158,
+     "y": 451,
+     "w": 29,
+     "h": 42
+    },
+    {
+     "x": 232,
+     "y": 451,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 301,
+     "y": 452,
+     "w": 27,
+     "h": 41
+    },
+    {
+     "x": 375,
+     "y": 448,
+     "w": 29,
+     "h": 45
+    },
+    {
+     "x": 449,
+     "y": 448,
+     "w": 29,
+     "h": 45
+    },
+    {
+     "x": 526,
+     "y": 449,
+     "w": 24,
+     "h": 44
+    },
+    {
+     "x": 598,
+     "y": 450,
+     "w": 26,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "battle idle + shocked, face left": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 552,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 36,
+     "y": 552,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 67,
+     "y": 552,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 98,
+     "y": 552,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 160,
+     "y": 552,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 129,
+     "y": 552,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 192,
+     "y": 565,
+     "w": 30,
+     "h": 32
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "bow": {
+   "frames": [
+    {
+     "x": 10,
+     "y": 603,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 11,
+     "y": 655,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 89,
+     "y": 667,
+     "w": 40,
+     "h": 30
+    },
+    {
+     "x": 163,
+     "y": 669,
+     "w": 40,
+     "h": 28
+    },
+    {
+     "x": 237,
+     "y": 669,
+     "w": 40,
+     "h": 28
+    },
+    {
+     "x": 311,
+     "y": 669,
+     "w": 40,
+     "h": 28
+    },
+    {
+     "x": 385,
+     "y": 669,
+     "w": 40,
+     "h": 28
+    },
+    {
+     "x": 459,
+     "y": 669,
+     "w": 40,
+     "h": 28
+    },
+    {
+     "x": 533,
+     "y": 669,
+     "w": 40,
+     "h": 28
+    },
+    {
+     "x": 607,
+     "y": 667,
+     "w": 40,
+     "h": 30
+    },
+    {
+     "x": 677,
+     "y": 654,
+     "w": 24,
+     "h": 43
+    },
+    {
+     "x": 748,
+     "y": 654,
+     "w": 24,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "attack": {
+   "frames": [
+    {
+     "x": 9,
+     "y": 708,
+     "w": 31,
+     "h": 42
+    },
+    {
+     "x": 10,
+     "y": 761,
+     "w": 69,
+     "h": 42
+    },
+    {
+     "x": 93,
+     "y": 761,
+     "w": 67,
+     "h": 42
+    },
+    {
+     "x": 175,
+     "y": 761,
+     "w": 67,
+     "h": 42
+    },
+    {
+     "x": 260,
+     "y": 760,
+     "w": 44,
+     "h": 43
+    },
+    {
+     "x": 341,
+     "y": 759,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 424,
+     "y": 759,
+     "w": 26,
+     "h": 44
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "defend": {
+   "frames": [
+    {
+     "x": 26,
+     "y": 886,
+     "w": 41,
+     "h": 55
+    },
+    {
+     "x": 113,
+     "y": 885,
+     "w": 42,
+     "h": 56
+    },
+    {
+     "x": 200,
+     "y": 887,
+     "w": 42,
+     "h": 54
+    },
+    {
+     "x": 287,
+     "y": 888,
+     "w": 41,
+     "h": 53
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "use item": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 925,
+     "w": 31,
+     "h": 42
+    },
+    {
+     "x": 9,
+     "y": 975,
+     "w": 28,
+     "h": 52
+    },
+    {
+     "x": 88,
+     "y": 974,
+     "w": 28,
+     "h": 53
+    },
+    {
+     "x": 167,
+     "y": 974,
+     "w": 28,
+     "h": 53
+    },
+    {
+     "x": 246,
+     "y": 974,
+     "w": 28,
+     "h": 53
+    },
+    {
+     "x": 325,
+     "y": 974,
+     "w": 28,
+     "h": 53
+    },
+    {
+     "x": 404,
+     "y": 974,
+     "w": 28,
+     "h": 53
+    },
+    {
+     "x": 483,
+     "y": 975,
+     "w": 28,
+     "h": 52
+    },
+    {
+     "x": 558,
+     "y": 984,
+     "w": 32,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "yarn ball": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 3022,
+     "w": 48,
+     "h": 43
+    },
+    {
+     "x": 58,
+     "y": 3022,
+     "w": 52,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "heal prayer": {
+   "frames": [
+    {
+     "x": 14,
+     "y": 3148,
+     "w": 33,
+     "h": 45
+    },
+    {
+     "x": 94,
+     "y": 3151,
+     "w": 36,
+     "h": 42
+    },
+    {
+     "x": 176,
+     "y": 3154,
+     "w": 37,
+     "h": 39
+    },
+    {
+     "x": 263,
+     "y": 3150,
+     "w": 33,
+     "h": 43
+    },
+    {
+     "x": 14,
+     "y": 3200,
+     "w": 33,
+     "h": 45
+    },
+    {
+     "x": 89,
+     "y": 3208,
+     "w": 43,
+     "h": 37
+    },
+    {
+     "x": 171,
+     "y": 3207,
+     "w": 42,
+     "h": 38
+    },
+    {
+     "x": 264,
+     "y": 3202,
+     "w": 32,
+     "h": 42
+    },
+    {
+     "x": 348,
+     "y": 3203,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 429,
+     "y": 3204,
+     "w": 33,
+     "h": 40
+    },
+    {
+     "x": 512,
+     "y": 3204,
+     "w": 33,
+     "h": 40
+    },
+    {
+     "x": 595,
+     "y": 3204,
+     "w": 33,
+     "h": 40
+    },
+    {
+     "x": 678,
+     "y": 3204,
+     "w": 33,
+     "h": 40
+    },
+    {
+     "x": 762,
+     "y": 3202,
+     "w": 27,
+     "h": 42
+    },
+    {
+     "x": 845,
+     "y": 3204,
+     "w": 27,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "ending scene": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 3256,
+     "w": 27,
+     "h": 40
+    },
+    {
+     "x": 80,
+     "y": 3256,
+     "w": 25,
+     "h": 40
+    },
+    {
+     "x": 155,
+     "y": 3256,
+     "w": 27,
+     "h": 40
+    },
+    {
+     "x": 229,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 303,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 377,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 451,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 525,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 599,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 673,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 747,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 821,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 895,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 969,
+     "y": 3256,
+     "w": 25,
+     "h": 40
+    },
+    {
+     "x": 1042,
+     "y": 3256,
+     "w": 25,
+     "h": 40
+    },
+    {
+     "x": 1117,
+     "y": 3257,
+     "w": 26,
+     "h": 39
+    },
+    {
+     "x": 1194,
+     "y": 3258,
+     "w": 22,
+     "h": 38
+    },
+    {
+     "x": 1267,
+     "y": 3256,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 1338,
+     "y": 3254,
+     "w": 20,
+     "h": 40
+    },
+    {
+     "x": 1411,
+     "y": 3253,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 1485,
+     "y": 3253,
+     "w": 19,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "walk backwards no face": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 7,
+     "w": 25,
+     "h": 44
+    },
+    {
+     "x": 35,
+     "y": 8,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 65,
+     "y": 7,
+     "w": 25,
+     "h": 44
+    },
+    {
+     "x": 95,
+     "y": 8,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 130,
+     "y": 7,
+     "w": 25,
+     "h": 44
+    },
+    {
+     "x": 160,
+     "y": 8,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 190,
+     "y": 7,
+     "w": 25,
+     "h": 44
+    },
+    {
+     "x": 220,
+     "y": 8,
+     "w": 25,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "walk left no face": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 58,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 35,
+     "y": 59,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 65,
+     "y": 58,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 95,
+     "y": 59,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 130,
+     "y": 58,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 160,
+     "y": 59,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 190,
+     "y": 58,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 220,
+     "y": 59,
+     "w": 25,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "walk right no face": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 109,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 35,
+     "y": 110,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 65,
+     "y": 109,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 95,
+     "y": 110,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 130,
+     "y": 109,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 160,
+     "y": 110,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 190,
+     "y": 109,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 220,
+     "y": 110,
+     "w": 25,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "walk forward no face": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 160,
+     "w": 25,
+     "h": 44
+    },
+    {
+     "x": 35,
+     "y": 161,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 65,
+     "y": 160,
+     "w": 25,
+     "h": 44
+    },
+    {
+     "x": 95,
+     "y": 161,
+     "w": 25,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "walk back dark": {
+   "frames": [
+    {
+     "x": 505,
+     "y": 7,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 536,
+     "y": 8,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 567,
+     "y": 7,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 598,
+     "y": 8,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 634,
+     "y": 7,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 665,
+     "y": 8,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 696,
+     "y": 7,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 727,
+     "y": 8,
+     "w": 25,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "walk left dark": {
+   "frames": [
+    {
+     "x": 505,
+     "y": 58,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 535,
+     "y": 59,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 565,
+     "y": 58,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 595,
+     "y": 59,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 634,
+     "y": 58,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 664,
+     "y": 59,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 694,
+     "y": 58,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 724,
+     "y": 59,
+     "w": 25,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "walk right dark": {
+   "frames": [
+    {
+     "x": 505,
+     "y": 109,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 535,
+     "y": 110,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 565,
+     "y": 109,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 595,
+     "y": 110,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 634,
+     "y": 109,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 664,
+     "y": 110,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 694,
+     "y": 109,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 724,
+     "y": 110,
+     "w": 25,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "walk up dark": {
+   "frames": [
+    {
+     "x": 505,
+     "y": 160,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 537,
+     "y": 161,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 567,
+     "y": 160,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 599,
+     "y": 161,
+     "w": 25,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "walk down dark face": {
+   "frames": [
+    {
+     "x": 763,
+     "y": 8,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 794,
+     "y": 9,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 825,
+     "y": 8,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 856,
+     "y": 9,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 892,
+     "y": 8,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 923,
+     "y": 9,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 954,
+     "y": 8,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 985,
+     "y": 9,
+     "w": 25,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "walk left dark face": {
+   "frames": [
+    {
+     "x": 763,
+     "y": 59,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 793,
+     "y": 60,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 823,
+     "y": 59,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 853,
+     "y": 60,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 892,
+     "y": 59,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 922,
+     "y": 60,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 952,
+     "y": 59,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 982,
+     "y": 60,
+     "w": 25,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "walk right dark face": {
+   "frames": [
+    {
+     "x": 763,
+     "y": 110,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 793,
+     "y": 111,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 823,
+     "y": 110,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 853,
+     "y": 111,
+     "w": 25,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "eat chalk": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 262,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 44,
+     "y": 262,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 83,
+     "y": 262,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 122,
+     "y": 262,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 161,
+     "y": 262,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 200,
+     "y": 262,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 239,
+     "y": 262,
+     "w": 28,
+     "h": 43
+    },
+    {
+     "x": 278,
+     "y": 262,
+     "w": 27,
+     "h": 43
+    },
+    {
+     "x": 317,
+     "y": 262,
+     "w": 27,
+     "h": 43
+    },
+    {
+     "x": 356,
+     "y": 262,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 395,
+     "y": 262,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 434,
+     "y": 262,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 473,
+     "y": 262,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 512,
+     "y": 262,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 551,
+     "y": 261,
+     "w": 25,
+     "h": 44
+    },
+    {
+     "x": 590,
+     "y": 261,
+     "w": 25,
+     "h": 44
+    },
+    {
+     "x": 629,
+     "y": 265,
+     "w": 26,
+     "h": 40
+    },
+    {
+     "x": 668,
+     "y": 264,
+     "w": 26,
+     "h": 41
+    },
+    {
+     "x": 707,
+     "y": 264,
+     "w": 26,
+     "h": 41
+    },
+    {
+     "x": 746,
+     "y": 262,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 785,
+     "y": 262,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 824,
+     "y": 262,
+     "w": 25,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "laugh": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 2053,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 34,
+     "y": 2054,
+     "w": 21,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "battle intro": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 608,
+     "w": 53,
+     "h": 41
+    },
+    {
+     "x": 65,
+     "y": 608,
+     "w": 53,
+     "h": 41
+    },
+    {
+     "x": 124,
+     "y": 608,
+     "w": 53,
+     "h": 41
+    },
+    {
+     "x": 183,
+     "y": 608,
+     "w": 53,
+     "h": 41
+    },
+    {
+     "x": 242,
+     "y": 608,
+     "w": 53,
+     "h": 41
+    },
+    {
+     "x": 301,
+     "y": 608,
+     "w": 53,
+     "h": 41
+    },
+    {
+     "x": 360,
+     "y": 608,
+     "w": 53,
+     "h": 41
+    },
+    {
+     "x": 419,
+     "y": 608,
+     "w": 53,
+     "h": 41
+    },
+    {
+     "x": 497,
+     "y": 608,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 556,
+     "y": 608,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 615,
+     "y": 608,
+     "w": 32,
+     "h": 41
+    },
+    {
+     "x": 674,
+     "y": 608,
+     "w": 32,
+     "h": 41
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "hit": {
+   "frames": [
+    {
+     "x": 18,
+     "y": 661,
+     "w": 86,
+     "h": 65
+    },
+    {
+     "x": 136,
+     "y": 686,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 244,
+     "y": 693,
+     "w": 60,
+     "h": 33
+    },
+    {
+     "x": 351,
+     "y": 693,
+     "w": 61,
+     "h": 33
+    },
+    {
+     "x": 450,
+     "y": 661,
+     "w": 86,
+     "h": 65
+    },
+    {
+     "x": 568,
+     "y": 686,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 676,
+     "y": 693,
+     "w": 60,
+     "h": 33
+    },
+    {
+     "x": 783,
+     "y": 693,
+     "w": 61,
+     "h": 33
+    },
+    {
+     "x": 892,
+     "y": 672,
+     "w": 49,
+     "h": 51
+    },
+    {
+     "x": 1000,
+     "y": 673,
+     "w": 48,
+     "h": 50
+    },
+    {
+     "x": 1108,
+     "y": 693,
+     "w": 37,
+     "h": 30
+    },
+    {
+     "x": 1215,
+     "y": 693,
+     "w": 37,
+     "h": 30
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "act": {
+   "frames": [
+    {
+     "x": 30,
+     "y": 755,
+     "w": 27,
+     "h": 44
+    },
+    {
+     "x": 138,
+     "y": 755,
+     "w": 28,
+     "h": 44
+    },
+    {
+     "x": 247,
+     "y": 755,
+     "w": 28,
+     "h": 44
+    },
+    {
+     "x": 357,
+     "y": 756,
+     "w": 37,
+     "h": 43
+    },
+    {
+     "x": 465,
+     "y": 756,
+     "w": 37,
+     "h": 43
+    },
+    {
+     "x": 573,
+     "y": 756,
+     "w": 37,
+     "h": 43
+    },
+    {
+     "x": 681,
+     "y": 756,
+     "w": 37,
+     "h": 43
+    },
+    {
+     "x": 789,
+     "y": 756,
+     "w": 37,
+     "h": 43
+    },
+    {
+     "x": 897,
+     "y": 756,
+     "w": 37,
+     "h": 43
+    },
+    {
+     "x": 1003,
+     "y": 755,
+     "w": 28,
+     "h": 44
+    },
+    {
+     "x": 1110,
+     "y": 755,
+     "w": 28,
+     "h": 44
+    },
+    {
+     "x": 1196,
+     "y": 757,
+     "w": 53,
+     "h": 41
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "spin hit": {
+   "frames": [
+    {
+     "x": 28,
+     "y": 1067,
+     "w": 53,
+     "h": 41
+    },
+    {
+     "x": 178,
+     "y": 1070,
+     "w": 32,
+     "h": 38
+    },
+    {
+     "x": 275,
+     "y": 1071,
+     "w": 62,
+     "h": 37
+    },
+    {
+     "x": 409,
+     "y": 1069,
+     "w": 57,
+     "h": 40
+    },
+    {
+     "x": 537,
+     "y": 1069,
+     "w": 57,
+     "h": 40
+    },
+    {
+     "x": 665,
+     "y": 1069,
+     "w": 57,
+     "h": 40
+    },
+    {
+     "x": 807,
+     "y": 1032,
+     "w": 71,
+     "h": 70
+    },
+    {
+     "x": 1060,
+     "y": 1045,
+     "w": 44,
+     "h": 59
+    },
+    {
+     "x": 1188,
+     "y": 1045,
+     "w": 44,
+     "h": 59
+    },
+    {
+     "x": 1313,
+     "y": 1054,
+     "w": 46,
+     "h": 53
+    },
+    {
+     "x": 1436,
+     "y": 1073,
+     "w": 49,
+     "h": 37
+    },
+    {
+     "x": 1565,
+     "y": 1072,
+     "w": 48,
+     "h": 38
+    },
+    {
+     "x": 1693,
+     "y": 1072,
+     "w": 48,
+     "h": 38
+    },
+    {
+     "x": 1821,
+     "y": 1072,
+     "w": 48,
+     "h": 38
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "kick ahead": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 1780,
+     "w": 30,
+     "h": 41
+    },
+    {
+     "x": 41,
+     "y": 1780,
+     "w": 30,
+     "h": 41
+    },
+    {
+     "x": 78,
+     "y": 1777,
+     "w": 30,
+     "h": 44
+    },
+    {
+     "x": 114,
+     "y": 1777,
+     "w": 30,
+     "h": 44
+    },
+    {
+     "x": 150,
+     "y": 1778,
+     "w": 30,
+     "h": 43
+    },
+    {
+     "x": 186,
+     "y": 1778,
+     "w": 30,
+     "h": 43
+    },
+    {
+     "x": 221,
+     "y": 1774,
+     "w": 37,
+     "h": 47
+    },
+    {
+     "x": 263,
+     "y": 1775,
+     "w": 37,
+     "h": 46
+    },
+    {
+     "x": 311,
+     "y": 1772,
+     "w": 27,
+     "h": 49
+    },
+    {
+     "x": 351,
+     "y": 1777,
+     "w": 31,
+     "h": 44
+    },
+    {
+     "x": 393,
+     "y": 1776,
+     "w": 28,
+     "h": 45
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "sitting": {
+   "frames": [
+    {
+     "x": 11,
+     "y": 1971,
+     "w": 20,
+     "h": 44
+    },
+    {
+     "x": 39,
+     "y": 1971,
+     "w": 21,
+     "h": 44
+    },
+    {
+     "x": 67,
+     "y": 1972,
+     "w": 24,
+     "h": 43
+    },
+    {
+     "x": 98,
+     "y": 1972,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 129,
+     "y": 1972,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 166,
+     "y": 1971,
+     "w": 20,
+     "h": 44
+    },
+    {
+     "x": 191,
+     "y": 1972,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 228,
+     "y": 1971,
+     "w": 20,
+     "h": 44
+    },
+    {
+     "x": 253,
+     "y": 1972,
+     "w": 26,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "fall to dark world": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 2068,
+     "w": 25,
+     "h": 39
+    },
+    {
+     "x": 35,
+     "y": 2066,
+     "w": 25,
+     "h": 38
+    },
+    {
+     "x": 65,
+     "y": 2068,
+     "w": 25,
+     "h": 39
+    },
+    {
+     "x": 95,
+     "y": 2066,
+     "w": 25,
+     "h": 38
+    },
+    {
+     "x": 8,
+     "y": 2113,
+     "w": 29,
+     "h": 51
+    },
+    {
+     "x": 47,
+     "y": 2117,
+     "w": 29,
+     "h": 47
+    },
+    {
+     "x": 86,
+     "y": 2114,
+     "w": 29,
+     "h": 50
+    },
+    {
+     "x": 125,
+     "y": 2113,
+     "w": 29,
+     "h": 51
+    },
+    {
+     "x": 163,
+     "y": 2113,
+     "w": 32,
+     "h": 51
+    },
+    {
+     "x": 201,
+     "y": 2113,
+     "w": 27,
+     "h": 51
+    },
+    {
+     "x": 240,
+     "y": 2113,
+     "w": 29,
+     "h": 51
+    },
+    {
+     "x": 280,
+     "y": 2113,
+     "w": 29,
+     "h": 51
+    },
+    {
+     "x": 317,
+     "y": 2113,
+     "w": 29,
+     "h": 51
+    },
+    {
+     "x": 351,
+     "y": 2115,
+     "w": 29,
+     "h": 49
+    },
+    {
+     "x": 385,
+     "y": 2113,
+     "w": 29,
+     "h": 51
+    },
+    {
+     "x": 419,
+     "y": 2113,
+     "w": 29,
+     "h": 51
+    },
+    {
+     "x": 453,
+     "y": 2115,
+     "w": 29,
+     "h": 49
+    },
+    {
+     "x": 487,
+     "y": 2113,
+     "w": 29,
+     "h": 51
+    },
+    {
+     "x": 6,
+     "y": 2172,
+     "w": 28,
+     "h": 51
+    },
+    {
+     "x": 40,
+     "y": 2174,
+     "w": 28,
+     "h": 49
+    },
+    {
+     "x": 74,
+     "y": 2172,
+     "w": 28,
+     "h": 51
+    },
+    {
+     "x": 111,
+     "y": 2171,
+     "w": 28,
+     "h": 52
+    },
+    {
+     "x": 148,
+     "y": 2170,
+     "w": 31,
+     "h": 51
+    },
+    {
+     "x": 192,
+     "y": 2176,
+     "w": 26,
+     "h": 37
+    },
+    {
+     "x": 230,
+     "y": 2194,
+     "w": 28,
+     "h": 28
+    },
+    {
+     "x": 265,
+     "y": 2195,
+     "w": 28,
+     "h": 28
+    },
+    {
+     "x": 300,
+     "y": 2194,
+     "w": 27,
+     "h": 28
+    },
+    {
+     "x": 333,
+     "y": 2193,
+     "w": 28,
+     "h": 28
+    },
+    {
+     "x": 370,
+     "y": 2187,
+     "w": 28,
+     "h": 33
+    },
+    {
+     "x": 411,
+     "y": 2186,
+     "w": 28,
+     "h": 34
+    },
+    {
+     "x": 453,
+     "y": 2177,
+     "w": 26,
+     "h": 43
+    },
+    {
+     "x": 10,
+     "y": 2237,
+     "w": 25,
+     "h": 46
+    },
+    {
+     "x": 50,
+     "y": 2237,
+     "w": 25,
+     "h": 46
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "rude buster": {
+   "frames": [
+    {
+     "x": 25,
+     "y": 956,
+     "w": 42,
+     "h": 67
+    },
+    {
+     "x": 112,
+     "y": 951,
+     "w": 49,
+     "h": 72
+    },
+    {
+     "x": 199,
+     "y": 951,
+     "w": 42,
+     "h": 72
+    },
+    {
+     "x": 286,
+     "y": 956,
+     "w": 42,
+     "h": 67
+    },
+    {
+     "x": 460,
+     "y": 979,
+     "w": 34,
+     "h": 44
+    },
+    {
+     "x": 529,
+     "y": 983,
+     "w": 50,
+     "h": 40
+    },
+    {
+     "x": 615,
+     "y": 982,
+     "w": 53,
+     "h": 41
+    },
+    {
+     "x": 702,
+     "y": 982,
+     "w": 53,
+     "h": 41
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "point and talk": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 2348,
+     "w": 27,
+     "h": 55
+    },
+    {
+     "x": 37,
+     "y": 2348,
+     "w": 27,
+     "h": 55
+    },
+    {
+     "x": 69,
+     "y": 2350,
+     "w": 29,
+     "h": 53
+    },
+    {
+     "x": 103,
+     "y": 2359,
+     "w": 27,
+     "h": 44
+    },
+    {
+     "x": 135,
+     "y": 2358,
+     "w": 27,
+     "h": 45
+    },
+    {
+     "x": 200,
+     "y": 2358,
+     "w": 36,
+     "h": 45
+    },
+    {
+     "x": 167,
+     "y": 2359,
+     "w": 28,
+     "h": 44
+    },
+    {
+     "x": 241,
+     "y": 2360,
+     "w": 36,
+     "h": 43
+    },
+    {
+     "x": 282,
+     "y": 2363,
+     "w": 41,
+     "h": 38
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "dancing": {
+   "frames": [
+    {
+     "x": 9,
+     "y": 2460,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 43,
+     "y": 2461,
+     "w": 27,
+     "h": 42
+    },
+    {
+     "x": 78,
+     "y": 2460,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 111,
+     "y": 2460,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 145,
+     "y": 2461,
+     "w": 27,
+     "h": 42
+    },
+    {
+     "x": 182,
+     "y": 2460,
+     "w": 25,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "turn evil": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 53,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 95,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 137,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 179,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 268,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 226,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 310,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 357,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 399,
+     "y": 2518,
+     "w": 35,
+     "h": 41
+    },
+    {
+     "x": 441,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 488,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 530,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 572,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 614,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 656,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 698,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 740,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 782,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 824,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 866,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 908,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 950,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 992,
+     "y": 2518,
+     "w": 36,
+     "h": 41
+    },
+    {
+     "x": 1034,
+     "y": 2518,
+     "w": 34,
+     "h": 41
+    },
+    {
+     "x": 1081,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 1123,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 1165,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 1207,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 1249,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 1333,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 1291,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 1375,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 1417,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 1459,
+     "y": 2518,
+     "w": 31,
+     "h": 41
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "eat candy": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 2626,
+     "w": 30,
+     "h": 46
+    },
+    {
+     "x": 47,
+     "y": 2629,
+     "w": 29,
+     "h": 43
+    },
+    {
+     "x": 87,
+     "y": 2629,
+     "w": 30,
+     "h": 43
+    },
+    {
+     "x": 128,
+     "y": 2629,
+     "w": 30,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "confident walk": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 2680,
+     "w": 21,
+     "h": 45
+    },
+    {
+     "x": 38,
+     "y": 2681,
+     "w": 28,
+     "h": 44
+    },
+    {
+     "x": 71,
+     "y": 2680,
+     "w": 21,
+     "h": 45
+    },
+    {
+     "x": 104,
+     "y": 2681,
+     "w": 28,
+     "h": 44
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "projectile (right facing": {
+   "frames": [
+    {
+     "x": 12,
+     "y": 2796,
+     "w": 53,
+     "h": 41
+    },
+    {
+     "x": 78,
+     "y": 2796,
+     "w": 52,
+     "h": 41
+    },
+    {
+     "x": 143,
+     "y": 2797,
+     "w": 52,
+     "h": 40
+    },
+    {
+     "x": 226,
+     "y": 2789,
+     "w": 31,
+     "h": 48
+    },
+    {
+     "x": 291,
+     "y": 2789,
+     "w": 31,
+     "h": 48
+    },
+    {
+     "x": 356,
+     "y": 2794,
+     "w": 31,
+     "h": 43
+    },
+    {
+     "x": 421,
+     "y": 2794,
+     "w": 31,
+     "h": 43
+    },
+    {
+     "x": 488,
+     "y": 2794,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 27,
+     "y": 2862,
+     "w": 29,
+     "h": 38
+    },
+    {
+     "x": 83,
+     "y": 2863,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 141,
+     "y": 2863,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 200,
+     "y": 2863,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 259,
+     "y": 2863,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 318,
+     "y": 2863,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 377,
+     "y": 2863,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 436,
+     "y": 2863,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 495,
+     "y": 2863,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 554,
+     "y": 2863,
+     "w": 33,
+     "h": 37
+    },
+    {
+     "x": 606,
+     "y": 2863,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 665,
+     "y": 2863,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 725,
+     "y": 2863,
+     "w": 36,
+     "h": 37
+    },
+    {
+     "x": 783,
+     "y": 2863,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 842,
+     "y": 2863,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 902,
+     "y": 2863,
+     "w": 36,
+     "h": 37
+    },
+    {
+     "x": 960,
+     "y": 2863,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 1019,
+     "y": 2863,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 1079,
+     "y": 2863,
+     "w": 36,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "projectile (left facing": {
+   "frames": [
+    {
+     "x": 8,
+     "y": 2924,
+     "w": 29,
+     "h": 38
+    },
+    {
+     "x": 68,
+     "y": 2925,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 128,
+     "y": 2925,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 187,
+     "y": 2925,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 246,
+     "y": 2925,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 305,
+     "y": 2925,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 364,
+     "y": 2925,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 423,
+     "y": 2925,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 482,
+     "y": 2925,
+     "w": 31,
+     "h": 37
+    },
+    {
+     "x": 539,
+     "y": 2925,
+     "w": 33,
+     "h": 37
+    },
+    {
+     "x": 601,
+     "y": 2925,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 660,
+     "y": 2925,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 719,
+     "y": 2925,
+     "w": 36,
+     "h": 37
+    },
+    {
+     "x": 778,
+     "y": 2925,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 837,
+     "y": 2925,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 896,
+     "y": 2925,
+     "w": 36,
+     "h": 37
+    },
+    {
+     "x": 955,
+     "y": 2925,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 1014,
+     "y": 2925,
+     "w": 37,
+     "h": 37
+    },
+    {
+     "x": 1073,
+     "y": 2925,
+     "w": 36,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png"
+  },
+  "french": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 2,
+     "w": 20,
+     "h": 23
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "christams": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 26,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "plant": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 54,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 23,
+     "y": 55,
+     "w": 20,
+     "h": 25
+    },
+    {
+     "x": 44,
+     "y": 54,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 65,
+     "y": 55,
+     "w": 20,
+     "h": 25
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "happy dog": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 85,
+     "w": 28,
+     "h": 15
+    },
+    {
+     "x": 31,
+     "y": 83,
+     "w": 27,
+     "h": 17
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "defualt": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 101,
+     "w": 20,
+     "h": 19
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "sleepy": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 123,
+     "w": 20,
+     "h": 18
+    },
+    {
+     "x": 23,
+     "y": 123,
+     "w": 20,
+     "h": 18
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "happy": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 142,
+     "w": 20,
+     "h": 19
+    },
+    {
+     "x": 23,
+     "y": 142,
+     "w": 20,
+     "h": 19
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "happy 2": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 162,
+     "w": 20,
+     "h": 19
+    },
+    {
+     "x": 23,
+     "y": 162,
+     "w": 20,
+     "h": 19
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "walk": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 182,
+     "w": 22,
+     "h": 19
+    },
+    {
+     "x": 25,
+     "y": 182,
+     "w": 20,
+     "h": 19
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "tail fire walk": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 220,
+     "w": 21,
+     "h": 19
+    },
+    {
+     "x": 24,
+     "y": 220,
+     "w": 21,
+     "h": 19
+    },
+    {
+     "x": 46,
+     "y": 220,
+     "w": 21,
+     "h": 19
+    },
+    {
+     "x": 68,
+     "y": 220,
+     "w": 21,
+     "h": 19
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "sleeep": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 241,
+     "w": 27,
+     "h": 12
+    },
+    {
+     "x": 30,
+     "y": 242,
+     "w": 26,
+     "h": 11
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "tail fire sleep": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 257,
+     "w": 27,
+     "h": 12
+    },
+    {
+     "x": 30,
+     "y": 258,
+     "w": 27,
+     "h": 11
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "furry tail sleep": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 257,
+     "w": 27,
+     "h": 12
+    },
+    {
+     "x": 30,
+     "y": 258,
+     "w": 27,
+     "h": 11
+    },
+    {
+     "x": 2,
+     "y": 272,
+     "w": 27,
+     "h": 12
+    },
+    {
+     "x": 30,
+     "y": 273,
+     "w": 27,
+     "h": 11
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "sleep bark": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 285,
+     "w": 26,
+     "h": 11
+    },
+    {
+     "x": 29,
+     "y": 285,
+     "w": 26,
+     "h": 11
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "eat bone": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 301,
+     "w": 30,
+     "h": 15
+    },
+    {
+     "x": 33,
+     "y": 302,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 64,
+     "y": 303,
+     "w": 30,
+     "h": 13
+    },
+    {
+     "x": 95,
+     "y": 302,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 126,
+     "y": 303,
+     "w": 30,
+     "h": 13
+    },
+    {
+     "x": 157,
+     "y": 302,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 188,
+     "y": 303,
+     "w": 30,
+     "h": 13
+    },
+    {
+     "x": 219,
+     "y": 302,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 2,
+     "y": 323,
+     "w": 31,
+     "h": 13
+    },
+    {
+     "x": 35,
+     "y": 323,
+     "w": 31,
+     "h": 13
+    },
+    {
+     "x": 2,
+     "y": 342,
+     "w": 32,
+     "h": 14
+    },
+    {
+     "x": 35,
+     "y": 342,
+     "w": 32,
+     "h": 14
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "variation transformations": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 378,
+     "w": 27,
+     "h": 19
+    },
+    {
+     "x": 30,
+     "y": 378,
+     "w": 29,
+     "h": 19
+    },
+    {
+     "x": 2,
+     "y": 399,
+     "w": 24,
+     "h": 19
+    },
+    {
+     "x": 27,
+     "y": 399,
+     "w": 22,
+     "h": 19
+    },
+    {
+     "x": 2,
+     "y": 420,
+     "w": 24,
+     "h": 20
+    },
+    {
+     "x": 27,
+     "y": 420,
+     "w": 24,
+     "h": 20
+    },
+    {
+     "x": 2,
+     "y": 443,
+     "w": 21,
+     "h": 22
+    },
+    {
+     "x": 24,
+     "y": 442,
+     "w": 23,
+     "h": 23
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "spin on rope": {
+   "frames": [
+    {
+     "x": 2,
+     "y": 467,
+     "w": 20,
+     "h": 83
+    },
+    {
+     "x": 23,
+     "y": 467,
+     "w": 20,
+     "h": 83
+    },
+    {
+     "x": 44,
+     "y": 467,
+     "w": 21,
+     "h": 83
+    },
+    {
+     "x": 66,
+     "y": 467,
+     "w": 21,
+     "h": 83
+    },
+    {
+     "x": 88,
+     "y": 467,
+     "w": 21,
+     "h": 83
+    },
+    {
+     "x": 110,
+     "y": 467,
+     "w": 21,
+     "h": 83
+    },
+    {
+     "x": 132,
+     "y": 467,
+     "w": 21,
+     "h": 83
+    },
+    {
+     "x": 154,
+     "y": 467,
+     "w": 21,
+     "h": 83
+    },
+    {
+     "x": 176,
+     "y": 467,
+     "w": 21,
+     "h": 83
+    },
+    {
+     "x": 198,
+     "y": 467,
+     "w": 20,
+     "h": 83
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png"
+  },
+  "talking": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 21,
+     "w": 21,
+     "h": 21
+    },
+    {
+     "x": 31,
+     "y": 21,
+     "w": 21,
+     "h": 21
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Flowey.png"
+  },
+  "face grow": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 71,
+     "w": 21,
+     "h": 21
+    },
+    {
+     "x": 31,
+     "y": 71,
+     "w": 21,
+     "h": 21
+    },
+    {
+     "x": 58,
+     "y": 68,
+     "w": 21,
+     "h": 24
+    },
+    {
+     "x": 84,
+     "y": 66,
+     "w": 23,
+     "h": 26
+    },
+    {
+     "x": 110,
+     "y": 63,
+     "w": 25,
+     "h": 29
+    },
+    {
+     "x": 137,
+     "y": 61,
+     "w": 25,
+     "h": 31
+    },
+    {
+     "x": 166,
+     "y": 61,
+     "w": 22,
+     "h": 31
+    },
+    {
+     "x": 192,
+     "y": 60,
+     "w": 24,
+     "h": 32
+    },
+    {
+     "x": 219,
+     "y": 60,
+     "w": 23,
+     "h": 32
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Flowey.png"
+  },
+  "face laugh": {
+   "frames": [
+    {
+     "x": 3,
+     "y": 110,
+     "w": 23,
+     "h": 32
+    },
+    {
+     "x": 30,
+     "y": 110,
+     "w": 23,
+     "h": 32
+    },
+    {
+     "x": 57,
+     "y": 109,
+     "w": 23,
+     "h": 33
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Flowey.png"
+  },
+  "face shrink": {
+   "frames": [
+    {
+     "x": 3,
+     "y": 160,
+     "w": 23,
+     "h": 32
+    },
+    {
+     "x": 30,
+     "y": 160,
+     "w": 24,
+     "h": 32
+    },
+    {
+     "x": 58,
+     "y": 161,
+     "w": 22,
+     "h": 31
+    },
+    {
+     "x": 83,
+     "y": 161,
+     "w": 25,
+     "h": 31
+    },
+    {
+     "x": 110,
+     "y": 163,
+     "w": 25,
+     "h": 29
+    },
+    {
+     "x": 138,
+     "y": 166,
+     "w": 23,
+     "h": 26
+    },
+    {
+     "x": 166,
+     "y": 168,
+     "w": 21,
+     "h": 24
+    },
+    {
+     "x": 193,
+     "y": 171,
+     "w": 21,
+     "h": 21
+    },
+    {
+     "x": 220,
+     "y": 171,
+     "w": 21,
+     "h": 21
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Flowey.png"
+  },
+  "sink": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 213,
+     "w": 21,
+     "h": 21
+    },
+    {
+     "x": 31,
+     "y": 213,
+     "w": 21,
+     "h": 21
+    },
+    {
+     "x": 58,
+     "y": 211,
+     "w": 21,
+     "h": 23
+    },
+    {
+     "x": 85,
+     "y": 215,
+     "w": 21,
+     "h": 19
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Flowey.png"
+  },
+  "empty": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 255,
+     "w": 21,
+     "h": 21
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Flowey.png"
+  },
+  "forward": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 117,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 30,
+     "y": 118,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 54,
+     "y": 117,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 78,
+     "y": 118,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 104,
+     "y": 117,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 128,
+     "y": 116,
+     "w": 19,
+     "h": 28
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Monster Kid.png"
+  },
+  "right face fall stand left face fall": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 150,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 61,
+     "y": 149,
+     "w": 21,
+     "h": 27
+    },
+    {
+     "x": 117,
+     "y": 162,
+     "w": 29,
+     "h": 14
+    },
+    {
+     "x": 170,
+     "y": 162,
+     "w": 29,
+     "h": 14
+    },
+    {
+     "x": 221,
+     "y": 162,
+     "w": 29,
+     "h": 14
+    },
+    {
+     "x": 270,
+     "y": 162,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 319,
+     "y": 162,
+     "w": 31,
+     "h": 14
+    },
+    {
+     "x": 370,
+     "y": 162,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 420,
+     "y": 162,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 471,
+     "y": 162,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 20,
+     "y": 192,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 71,
+     "y": 192,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 120,
+     "y": 192,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 171,
+     "y": 192,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 211,
+     "y": 179,
+     "w": 22,
+     "h": 26
+    },
+    {
+     "x": 261,
+     "y": 181,
+     "w": 26,
+     "h": 23
+    },
+    {
+     "x": 318,
+     "y": 181,
+     "w": 20,
+     "h": 25
+    },
+    {
+     "x": 416,
+     "y": 179,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 467,
+     "y": 179,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 30,
+     "y": 212,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 74,
+     "y": 211,
+     "w": 21,
+     "h": 27
+    },
+    {
+     "x": 110,
+     "y": 224,
+     "w": 29,
+     "h": 14
+    },
+    {
+     "x": 157,
+     "y": 224,
+     "w": 29,
+     "h": 14
+    },
+    {
+     "x": 206,
+     "y": 224,
+     "w": 29,
+     "h": 14
+    },
+    {
+     "x": 256,
+     "y": 224,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 306,
+     "y": 224,
+     "w": 31,
+     "h": 14
+    },
+    {
+     "x": 356,
+     "y": 224,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 406,
+     "y": 224,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 455,
+     "y": 224,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 6,
+     "y": 254,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 55,
+     "y": 254,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 106,
+     "y": 254,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 155,
+     "y": 254,
+     "w": 30,
+     "h": 14
+    },
+    {
+     "x": 223,
+     "y": 241,
+     "w": 22,
+     "h": 26
+    },
+    {
+     "x": 269,
+     "y": 243,
+     "w": 26,
+     "h": 23
+    },
+    {
+     "x": 318,
+     "y": 243,
+     "w": 20,
+     "h": 25
+    },
+    {
+     "x": 366,
+     "y": 244,
+     "w": 20,
+     "h": 24
+    },
+    {
+     "x": 420,
+     "y": 241,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 469,
+     "y": 241,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 30,
+     "y": 274,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 81,
+     "y": 273,
+     "w": 21,
+     "h": 27
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Monster Kid.png"
+  },
+  "walk up": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 153,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 38,
+     "y": 154,
+     "w": 25,
+     "h": 41
+    },
+    {
+     "x": 70,
+     "y": 153,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 102,
+     "y": 154,
+     "w": 25,
+     "h": 41
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Papyrus.png"
+  },
+  "silly": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 349,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 38,
+     "y": 349,
+     "w": 26,
+     "h": 42
+    },
+    {
+     "x": 75,
+     "y": 349,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 117,
+     "y": 349,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 159,
+     "y": 349,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 201,
+     "y": 349,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 243,
+     "y": 349,
+     "w": 36,
+     "h": 42
+    },
+    {
+     "x": 285,
+     "y": 349,
+     "w": 33,
+     "h": 42
+    },
+    {
+     "x": 333,
+     "y": 348,
+     "w": 15,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Papyrus.png"
+  },
+  "admiration": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 251,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 38,
+     "y": 251,
+     "w": 26,
+     "h": 42
+    },
+    {
+     "x": 70,
+     "y": 251,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 102,
+     "y": 251,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 134,
+     "y": 251,
+     "w": 26,
+     "h": 42
+    },
+    {
+     "x": 171,
+     "y": 251,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 202,
+     "y": 251,
+     "w": 26,
+     "h": 42
+    },
+    {
+     "x": 235,
+     "y": 251,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 267,
+     "y": 251,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 298,
+     "y": 251,
+     "w": 26,
+     "h": 42
+    },
+    {
+     "x": 336,
+     "y": 251,
+     "w": 25,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Papyrus.png"
+  },
+  "down": {
+   "frames": [
+    {
+     "x": 3,
+     "y": 4,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 26,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 49,
+     "y": 4,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 72,
+     "y": 3,
+     "w": 19,
+     "h": 29
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png"
+  },
+  "left": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 37,
+     "w": 17,
+     "h": 29
+    },
+    {
+     "x": 27,
+     "y": 38,
+     "w": 17,
+     "h": 28
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png"
+  },
+  "right": {
+   "frames": [
+    {
+     "x": 50,
+     "y": 37,
+     "w": 17,
+     "h": 29
+    },
+    {
+     "x": 73,
+     "y": 38,
+     "w": 17,
+     "h": 28
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png"
+  },
+  "up": {
+   "frames": [
+    {
+     "x": 3,
+     "y": 70,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 26,
+     "y": 69,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 49,
+     "y": 70,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 72,
+     "y": 69,
+     "w": 19,
+     "h": 29
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png"
+  },
+  "shrug": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 275,
+     "w": 23,
+     "h": 30
+    },
+    {
+     "x": 31,
+     "y": 275,
+     "w": 31,
+     "h": 30
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png"
+  },
+  "trombone": {
+   "frames": [
+    {
+     "x": 3,
+     "y": 325,
+     "w": 33,
+     "h": 30
+    },
+    {
+     "x": 43,
+     "y": 325,
+     "w": 37,
+     "h": 30
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png"
+  },
+  "stool and ocmb": {
+   "frames": [
+    {
+     "x": 3,
+     "y": 376,
+     "w": 23,
+     "h": 37
+    },
+    {
+     "x": 29,
+     "y": 376,
+     "w": 23,
+     "h": 37
+    },
+    {
+     "x": 3,
+     "y": 432,
+     "w": 24,
+     "h": 37
+    },
+    {
+     "x": 30,
+     "y": 432,
+     "w": 24,
+     "h": 37
+    },
+    {
+     "x": 57,
+     "y": 432,
+     "w": 24,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png"
+  },
+  "stool chup": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 488,
+     "w": 29,
+     "h": 37
+    },
+    {
+     "x": 36,
+     "y": 488,
+     "w": 30,
+     "h": 37
+    },
+    {
+     "x": 69,
+     "y": 488,
+     "w": 30,
+     "h": 37
+    },
+    {
+     "x": 102,
+     "y": 488,
+     "w": 30,
+     "h": 37
+    },
+    {
+     "x": 135,
+     "y": 488,
+     "w": 30,
+     "h": 37
+    },
+    {
+     "x": 168,
+     "y": 488,
+     "w": 30,
+     "h": 37
+    },
+    {
+     "x": 202,
+     "y": 488,
+     "w": 29,
+     "h": 37
+    },
+    {
+     "x": 235,
+     "y": 488,
+     "w": 29,
+     "h": 37
+    },
+    {
+     "x": 268,
+     "y": 488,
+     "w": 29,
+     "h": 37
+    },
+    {
+     "x": 300,
+     "y": 488,
+     "w": 30,
+     "h": 37
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png"
+  },
+  "sleep": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 601,
+     "w": 23,
+     "h": 30
+    },
+    {
+     "x": 32,
+     "y": 602,
+     "w": 23,
+     "h": 29
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png"
+  },
+  "trike and wink": {
+   "frames": [
+    {
+     "x": 7,
+     "y": 652,
+     "w": 25,
+     "h": 36
+    },
+    {
+     "x": 39,
+     "y": 652,
+     "w": 25,
+     "h": 36
+    },
+    {
+     "x": 74,
+     "y": 652,
+     "w": 25,
+     "h": 36
+    },
+    {
+     "x": 106,
+     "y": 652,
+     "w": 25,
+     "h": 36
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png"
+  },
+  "talk": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 20,
+     "w": 29,
+     "h": 26
+    },
+    {
+     "x": 38,
+     "y": 20,
+     "w": 29,
+     "h": 26
+    },
+    {
+     "x": 72,
+     "y": 20,
+     "w": 29,
+     "h": 26
+    },
+    {
+     "x": 106,
+     "y": 20,
+     "w": 29,
+     "h": 26
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Temmie.png"
+  },
+  "hOIVS": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 66,
+     "w": 29,
+     "h": 26
+    },
+    {
+     "x": 37,
+     "y": 66,
+     "w": 29,
+     "h": 26
+    },
+    {
+     "x": 70,
+     "y": 66,
+     "w": 29,
+     "h": 26
+    },
+    {
+     "x": 103,
+     "y": 66,
+     "w": 29,
+     "h": 26
+    },
+    {
+     "x": 136,
+     "y": 66,
+     "w": 29,
+     "h": 26
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Temmie.png"
+  },
+  "feeling of bein watched": {
+   "frames": [
+    {
+     "x": 4,
+     "y": 234,
+     "w": 39,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Temmie.png"
+  },
+  "chair": {
+   "frames": [
+    {
+     "x": 11,
+     "y": 601,
+     "w": 47,
+     "h": 52
+    },
+    {
+     "x": 76,
+     "y": 601,
+     "w": 47,
+     "h": 52
+    },
+    {
+     "x": 11,
+     "y": 682,
+     "w": 47,
+     "h": 52
+    },
+    {
+     "x": 76,
+     "y": 682,
+     "w": 47,
+     "h": 52
+    },
+    {
+     "x": 11,
+     "y": 763,
+     "w": 47,
+     "h": 52
+    },
+    {
+     "x": 76,
+     "y": 763,
+     "w": 47,
+     "h": 52
+    },
+    {
+     "x": 141,
+     "y": 682,
+     "w": 47,
+     "h": 52
+    },
+    {
+     "x": 206,
+     "y": 682,
+     "w": 47,
+     "h": 52
+    },
+    {
+     "x": 271,
+     "y": 682,
+     "w": 48,
+     "h": 52
+    },
+    {
+     "x": 336,
+     "y": 680,
+     "w": 47,
+     "h": 53
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Toriel.png"
+  },
+  "rain down": {
+   "frames": [
+    {
+     "x": 3,
+     "y": 103,
+     "w": 37,
+     "h": 40
+    },
+    {
+     "x": 43,
+     "y": 102,
+     "w": 37,
+     "h": 40
+    },
+    {
+     "x": 83,
+     "y": 103,
+     "w": 37,
+     "h": 40
+    },
+    {
+     "x": 123,
+     "y": 102,
+     "w": 37,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png"
+  },
+  "rain left": {
+   "frames": [
+    {
+     "x": 3,
+     "y": 147,
+     "w": 37,
+     "h": 40
+    },
+    {
+     "x": 43,
+     "y": 148,
+     "w": 37,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png"
+  },
+  "rain right": {
+   "frames": [
+    {
+     "x": 83,
+     "y": 147,
+     "w": 37,
+     "h": 40
+    },
+    {
+     "x": 123,
+     "y": 148,
+     "w": 37,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png"
+  },
+  "rain up": {
+   "frames": [
+    {
+     "x": 3,
+     "y": 191,
+     "w": 37,
+     "h": 40
+    },
+    {
+     "x": 43,
+     "y": 190,
+     "w": 37,
+     "h": 40
+    },
+    {
+     "x": 83,
+     "y": 191,
+     "w": 37,
+     "h": 40
+    },
+    {
+     "x": 123,
+     "y": 190,
+     "w": 37,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png"
+  },
+  "drop water": {
+   "frames": [
+    {
+     "x": 9,
+     "y": 235,
+     "w": 18,
+     "h": 29
+    },
+    {
+     "x": 35,
+     "y": 235,
+     "w": 19,
+     "h": 29
+    },
+    {
+     "x": 60,
+     "y": 235,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 87,
+     "y": 235,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 112,
+     "y": 235,
+     "w": 23,
+     "h": 29
+    },
+    {
+     "x": 139,
+     "y": 235,
+     "w": 23,
+     "h": 29
+    },
+    {
+     "x": 168,
+     "y": 235,
+     "w": 21,
+     "h": 29
+    },
+    {
+     "x": 195,
+     "y": 235,
+     "w": 21,
+     "h": 29
+    }
+   ],
+   "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png"
+  },
+  "sing": {
+   "frames": [
+    {
+     "x": 11,
+     "y": 1088,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 56,
+     "y": 1088,
+     "w": 25,
+     "h": 43
+    },
+    {
+     "x": 101,
+     "y": 1089,
+     "w": 25,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "heal": {
+   "frames": [
+    {
+     "x": 14,
+     "y": 1140,
+     "w": 33,
+     "h": 45
+    },
+    {
+     "x": 94,
+     "y": 1141,
+     "w": 36,
+     "h": 44
+    },
+    {
+     "x": 176,
+     "y": 1141,
+     "w": 37,
+     "h": 44
+    },
+    {
+     "x": 263,
+     "y": 1141,
+     "w": 33,
+     "h": 44
+    },
+    {
+     "x": 6,
+     "y": 1196,
+     "w": 43,
+     "h": 41
+    },
+    {
+     "x": 66,
+     "y": 1193,
+     "w": 42,
+     "h": 44
+    },
+    {
+     "x": 136,
+     "y": 1192,
+     "w": 32,
+     "h": 44
+    },
+    {
+     "x": 197,
+     "y": 1193,
+     "w": 32,
+     "h": 42
+    },
+    {
+     "x": 258,
+     "y": 1194,
+     "w": 32,
+     "h": 41
+    },
+    {
+     "x": 319,
+     "y": 1194,
+     "w": 32,
+     "h": 41
+    },
+    {
+     "x": 380,
+     "y": 1194,
+     "w": 32,
+     "h": 41
+    },
+    {
+     "x": 441,
+     "y": 1194,
+     "w": 32,
+     "h": 41
+    },
+    {
+     "x": 503,
+     "y": 1192,
+     "w": 27,
+     "h": 43
+    },
+    {
+     "x": 564,
+     "y": 1192,
+     "w": 26,
+     "h": 43
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "end battle": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 3256,
+     "w": 27,
+     "h": 40
+    },
+    {
+     "x": 80,
+     "y": 3256,
+     "w": 25,
+     "h": 40
+    },
+    {
+     "x": 155,
+     "y": 3256,
+     "w": 27,
+     "h": 40
+    },
+    {
+     "x": 229,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 303,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 377,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 451,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 525,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 599,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 673,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 747,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 821,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 895,
+     "y": 3256,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 969,
+     "y": 3256,
+     "w": 25,
+     "h": 40
+    },
+    {
+     "x": 1042,
+     "y": 3256,
+     "w": 25,
+     "h": 40
+    },
+    {
+     "x": 1117,
+     "y": 3257,
+     "w": 26,
+     "h": 39
+    },
+    {
+     "x": 1194,
+     "y": 3258,
+     "w": 22,
+     "h": 38
+    },
+    {
+     "x": 1267,
+     "y": 3256,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 1338,
+     "y": 3254,
+     "w": 20,
+     "h": 40
+    },
+    {
+     "x": 1411,
+     "y": 3253,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 1485,
+     "y": 3253,
+     "w": 19,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "reveal light prince": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 1352,
+     "w": 25,
+     "h": 39
+    },
+    {
+     "x": 35,
+     "y": 1353,
+     "w": 25,
+     "h": 38
+    },
+    {
+     "x": 6,
+     "y": 1402,
+     "w": 25,
+     "h": 39
+    },
+    {
+     "x": 39,
+     "y": 1403,
+     "w": 25,
+     "h": 38
+    },
+    {
+     "x": 71,
+     "y": 1405,
+     "w": 28,
+     "h": 36
+    },
+    {
+     "x": 104,
+     "y": 1404,
+     "w": 28,
+     "h": 37
+    },
+    {
+     "x": 138,
+     "y": 1402,
+     "w": 24,
+     "h": 39
+    },
+    {
+     "x": 171,
+     "y": 1401,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 204,
+     "y": 1401,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 237,
+     "y": 1401,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 270,
+     "y": 1401,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 303,
+     "y": 1401,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 336,
+     "y": 1401,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 369,
+     "y": 1401,
+     "w": 24,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "light walk down": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 1446,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 31,
+     "y": 1447,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 57,
+     "y": 1446,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 83,
+     "y": 1447,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 114,
+     "y": 1446,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 140,
+     "y": 1447,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 166,
+     "y": 1446,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 192,
+     "y": 1447,
+     "w": 21,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "light walk down blush": {
+   "frames": [
+    {
+     "x": 223,
+     "y": 1447,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 249,
+     "y": 1448,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 275,
+     "y": 1447,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 301,
+     "y": 1448,
+     "w": 21,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "butlet walk down": {
+   "frames": [
+    {
+     "x": 332,
+     "y": 1446,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 356,
+     "y": 1447,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 380,
+     "y": 1446,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 404,
+     "y": 1447,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 433,
+     "y": 1446,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 457,
+     "y": 1447,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 481,
+     "y": 1446,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 505,
+     "y": 1447,
+     "w": 19,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "light walk left": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 1492,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 29,
+     "y": 1493,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 53,
+     "y": 1492,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 77,
+     "y": 1493,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 106,
+     "y": 1492,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 130,
+     "y": 1493,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 154,
+     "y": 1492,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 178,
+     "y": 1493,
+     "w": 19,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "blush walk left": {
+   "frames": [
+    {
+     "x": 207,
+     "y": 1493,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 231,
+     "y": 1494,
+     "w": 19,
+     "h": 38
+    },
+    {
+     "x": 255,
+     "y": 1493,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 279,
+     "y": 1494,
+     "w": 19,
+     "h": 38
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "butler walk left": {
+   "frames": [
+    {
+     "x": 308,
+     "y": 1492,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 332,
+     "y": 1493,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 356,
+     "y": 1492,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 380,
+     "y": 1493,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 409,
+     "y": 1492,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 433,
+     "y": 1493,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 457,
+     "y": 1492,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 481,
+     "y": 1493,
+     "w": 19,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "light walk right": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 1537,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 29,
+     "y": 1538,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 53,
+     "y": 1537,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 77,
+     "y": 1538,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 106,
+     "y": 1537,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 130,
+     "y": 1538,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 154,
+     "y": 1537,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 178,
+     "y": 1538,
+     "w": 19,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "blush walk right": {
+   "frames": [
+    {
+     "x": 207,
+     "y": 1538,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 231,
+     "y": 1539,
+     "w": 19,
+     "h": 38
+    },
+    {
+     "x": 255,
+     "y": 1538,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 279,
+     "y": 1539,
+     "w": 19,
+     "h": 38
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "butler wakl right": {
+   "frames": [
+    {
+     "x": 308,
+     "y": 1537,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 332,
+     "y": 1538,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 356,
+     "y": 1537,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 380,
+     "y": 1538,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 409,
+     "y": 1537,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 433,
+     "y": 1538,
+     "w": 19,
+     "h": 39
+    },
+    {
+     "x": 457,
+     "y": 1537,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 481,
+     "y": 1538,
+     "w": 19,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "light walk up": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 1582,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 31,
+     "y": 1583,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 57,
+     "y": 1582,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 83,
+     "y": 1583,
+     "w": 21,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "butler walk up": {
+   "frames": [
+    {
+     "x": 114,
+     "y": 1582,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 138,
+     "y": 1583,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 162,
+     "y": 1582,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 186,
+     "y": 1583,
+     "w": 19,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "roll": {
+   "frames": [
+    {
+     "x": 8,
+     "y": 1634,
+     "w": 27,
+     "h": 40
+    },
+    {
+     "x": 43,
+     "y": 1629,
+     "w": 33,
+     "h": 40
+    },
+    {
+     "x": 82,
+     "y": 1632,
+     "w": 32,
+     "h": 37
+    },
+    {
+     "x": 126,
+     "y": 1642,
+     "w": 20,
+     "h": 20
+    },
+    {
+     "x": 164,
+     "y": 1642,
+     "w": 20,
+     "h": 20
+    },
+    {
+     "x": 12,
+     "y": 1694,
+     "w": 20,
+     "h": 20
+    },
+    {
+     "x": 50,
+     "y": 1694,
+     "w": 20,
+     "h": 20
+    },
+    {
+     "x": 88,
+     "y": 1694,
+     "w": 20,
+     "h": 20
+    },
+    {
+     "x": 126,
+     "y": 1694,
+     "w": 20,
+     "h": 20
+    },
+    {
+     "x": 5,
+     "y": 1741,
+     "w": 24,
+     "h": 31
+    },
+    {
+     "x": 36,
+     "y": 1740,
+     "w": 22,
+     "h": 32
+    },
+    {
+     "x": 67,
+     "y": 1732,
+     "w": 21,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "falling": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 1778,
+     "w": 26,
+     "h": 38
+    },
+    {
+     "x": 36,
+     "y": 1778,
+     "w": 26,
+     "h": 38
+    },
+    {
+     "x": 67,
+     "y": 1778,
+     "w": 26,
+     "h": 38
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "silly mvoes": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 1821,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 31,
+     "y": 1821,
+     "w": 31,
+     "h": 38
+    },
+    {
+     "x": 67,
+     "y": 1821,
+     "w": 31,
+     "h": 38
+    },
+    {
+     "x": 103,
+     "y": 1822,
+     "w": 32,
+     "h": 40
+    },
+    {
+     "x": 140,
+     "y": 1827,
+     "w": 30,
+     "h": 35
+    },
+    {
+     "x": 175,
+     "y": 1828,
+     "w": 34,
+     "h": 35
+    },
+    {
+     "x": 214,
+     "y": 1840,
+     "w": 37,
+     "h": 23
+    },
+    {
+     "x": 256,
+     "y": 1833,
+     "w": 47,
+     "h": 30
+    },
+    {
+     "x": 308,
+     "y": 1827,
+     "w": 41,
+     "h": 36
+    },
+    {
+     "x": 354,
+     "y": 1827,
+     "w": 41,
+     "h": 36
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "wave hi": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 1867,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 37,
+     "y": 1867,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 69,
+     "y": 1868,
+     "w": 24,
+     "h": 39
+    },
+    {
+     "x": 5,
+     "y": 1912,
+     "w": 26,
+     "h": 39
+    },
+    {
+     "x": 36,
+     "y": 1912,
+     "w": 24,
+     "h": 39
+    },
+    {
+     "x": 67,
+     "y": 1912,
+     "w": 21,
+     "h": 39
+    },
+    {
+     "x": 98,
+     "y": 1912,
+     "w": 24,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "cotten candy": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 1956,
+     "w": 29,
+     "h": 40
+    },
+    {
+     "x": 40,
+     "y": 1957,
+     "w": 29,
+     "h": 39
+    },
+    {
+     "x": 75,
+     "y": 1956,
+     "w": 29,
+     "h": 40
+    },
+    {
+     "x": 110,
+     "y": 1957,
+     "w": 29,
+     "h": 39
+    },
+    {
+     "x": 152,
+     "y": 1956,
+     "w": 32,
+     "h": 40
+    },
+    {
+     "x": 192,
+     "y": 1957,
+     "w": 32,
+     "h": 39
+    },
+    {
+     "x": 232,
+     "y": 1956,
+     "w": 32,
+     "h": 40
+    },
+    {
+     "x": 272,
+     "y": 1957,
+     "w": 32,
+     "h": 39
+    },
+    {
+     "x": 317,
+     "y": 1956,
+     "w": 32,
+     "h": 40
+    },
+    {
+     "x": 357,
+     "y": 1957,
+     "w": 32,
+     "h": 39
+    },
+    {
+     "x": 400,
+     "y": 1956,
+     "w": 29,
+     "h": 40
+    },
+    {
+     "x": 435,
+     "y": 1957,
+     "w": 29,
+     "h": 39
+    },
+    {
+     "x": 470,
+     "y": 1956,
+     "w": 29,
+     "h": 40
+    },
+    {
+     "x": 505,
+     "y": 1957,
+     "w": 29,
+     "h": 39
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "throw": {
+   "frames": [
+    {
+     "x": 17,
+     "y": 2007,
+     "w": 26,
+     "h": 41
+    },
+    {
+     "x": 66,
+     "y": 2007,
+     "w": 25,
+     "h": 41
+    },
+    {
+     "x": 115,
+     "y": 2007,
+     "w": 26,
+     "h": 40
+    },
+    {
+     "x": 152,
+     "y": 2002,
+     "w": 41,
+     "h": 44
+    },
+    {
+     "x": 201,
+     "y": 2010,
+     "w": 36,
+     "h": 36
+    },
+    {
+     "x": 250,
+     "y": 2010,
+     "w": 35,
+     "h": 36
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "no glasses": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 2099,
+     "w": 29,
+     "h": 37
+    },
+    {
+     "x": 41,
+     "y": 2100,
+     "w": 27,
+     "h": 36
+    },
+    {
+     "x": 73,
+     "y": 2098,
+     "w": 24,
+     "h": 38
+    },
+    {
+     "x": 112,
+     "y": 2096,
+     "w": 20,
+     "h": 40
+    },
+    {
+     "x": 147,
+     "y": 2095,
+     "w": 20,
+     "h": 41
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "fiddle with glasses": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 2141,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 34,
+     "y": 2141,
+     "w": 22,
+     "h": 40
+    },
+    {
+     "x": 62,
+     "y": 2141,
+     "w": 21,
+     "h": 40
+    },
+    {
+     "x": 90,
+     "y": 2141,
+     "w": 22,
+     "h": 40
+    },
+    {
+     "x": 6,
+     "y": 2188,
+     "w": 21,
+     "h": 38
+    },
+    {
+     "x": 34,
+     "y": 2188,
+     "w": 21,
+     "h": 38
+    },
+    {
+     "x": 64,
+     "y": 2186,
+     "w": 23,
+     "h": 44
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "spin scarf": {
+   "frames": [
+    {
+     "x": 7,
+     "y": 2549,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 82,
+     "y": 2549,
+     "w": 19,
+     "h": 40
+    },
+    {
+     "x": 156,
+     "y": 2548,
+     "w": 26,
+     "h": 41
+    },
+    {
+     "x": 232,
+     "y": 2549,
+     "w": 29,
+     "h": 40
+    },
+    {
+     "x": 303,
+     "y": 2549,
+     "w": 26,
+     "h": 40
+    },
+    {
+     "x": 375,
+     "y": 2547,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 449,
+     "y": 2546,
+     "w": 32,
+     "h": 43
+    },
+    {
+     "x": 523,
+     "y": 2546,
+     "w": 30,
+     "h": 43
+    },
+    {
+     "x": 600,
+     "y": 2547,
+     "w": 25,
+     "h": 42
+    },
+    {
+     "x": 672,
+     "y": 2549,
+     "w": 27,
+     "h": 40
+    },
+    {
+     "x": 746,
+     "y": 2549,
+     "w": 27,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "in battle light": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 2601,
+     "w": 27,
+     "h": 40
+    },
+    {
+     "x": 80,
+     "y": 2601,
+     "w": 27,
+     "h": 40
+    },
+    {
+     "x": 154,
+     "y": 2601,
+     "w": 27,
+     "h": 40
+    },
+    {
+     "x": 229,
+     "y": 2601,
+     "w": 25,
+     "h": 40
+    },
+    {
+     "x": 303,
+     "y": 2601,
+     "w": 26,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "light bow": {
+   "frames": [
+    {
+     "x": 11,
+     "y": 2654,
+     "w": 22,
+     "h": 39
+    },
+    {
+     "x": 85,
+     "y": 2655,
+     "w": 24,
+     "h": 38
+    },
+    {
+     "x": 162,
+     "y": 2666,
+     "w": 38,
+     "h": 27
+    },
+    {
+     "x": 310,
+     "y": 2667,
+     "w": 38,
+     "h": 26
+    },
+    {
+     "x": 236,
+     "y": 2667,
+     "w": 38,
+     "h": 26
+    },
+    {
+     "x": 384,
+     "y": 2667,
+     "w": 38,
+     "h": 26
+    },
+    {
+     "x": 458,
+     "y": 2667,
+     "w": 38,
+     "h": 26
+    },
+    {
+     "x": 532,
+     "y": 2667,
+     "w": 38,
+     "h": 26
+    },
+    {
+     "x": 606,
+     "y": 2667,
+     "w": 38,
+     "h": 26
+    },
+    {
+     "x": 680,
+     "y": 2666,
+     "w": 38,
+     "h": 27
+    },
+    {
+     "x": 751,
+     "y": 2655,
+     "w": 24,
+     "h": 38
+    },
+    {
+     "x": 822,
+     "y": 2653,
+     "w": 25,
+     "h": 40
+    },
+    {
+     "x": 894,
+     "y": 2653,
+     "w": 27,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "light attac": {
+   "frames": [
+    {
+     "x": 9,
+     "y": 2706,
+     "w": 32,
+     "h": 39
+    },
+    {
+     "x": 87,
+     "y": 2706,
+     "w": 36,
+     "h": 39
+    },
+    {
+     "x": 171,
+     "y": 2707,
+     "w": 34,
+     "h": 38
+    },
+    {
+     "x": 263,
+     "y": 2705,
+     "w": 24,
+     "h": 40
+    },
+    {
+     "x": 341,
+     "y": 2705,
+     "w": 65,
+     "h": 40
+    },
+    {
+     "x": 425,
+     "y": 2704,
+     "w": 44,
+     "h": 41
+    },
+    {
+     "x": 508,
+     "y": 2703,
+     "w": 27,
+     "h": 42
+    },
+    {
+     "x": 588,
+     "y": 2704,
+     "w": 27,
+     "h": 41
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "light defend": {
+   "frames": [
+    {
+     "x": 6,
+     "y": 2757,
+     "w": 27,
+     "h": 40
+    },
+    {
+     "x": 84,
+     "y": 2757,
+     "w": 38,
+     "h": 40
+    },
+    {
+     "x": 153,
+     "y": 2757,
+     "w": 38,
+     "h": 40
+    },
+    {
+     "x": 231,
+     "y": 2757,
+     "w": 29,
+     "h": 40
+    },
+    {
+     "x": 307,
+     "y": 2756,
+     "w": 21,
+     "h": 41
+    },
+    {
+     "x": 379,
+     "y": 2757,
+     "w": 25,
+     "h": 40
+    },
+    {
+     "x": 453,
+     "y": 2757,
+     "w": 25,
+     "h": 40
+    },
+    {
+     "x": 527,
+     "y": 2757,
+     "w": 25,
+     "h": 40
+    },
+    {
+     "x": 602,
+     "y": 2757,
+     "w": 24,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "use item light": {
+   "frames": [
+    {
+     "x": 12,
+     "y": 2929,
+     "w": 31,
+     "h": 40
+    },
+    {
+     "x": 91,
+     "y": 2929,
+     "w": 31,
+     "h": 40
+    },
+    {
+     "x": 170,
+     "y": 2929,
+     "w": 31,
+     "h": 40
+    },
+    {
+     "x": 249,
+     "y": 2929,
+     "w": 31,
+     "h": 40
+    },
+    {
+     "x": 328,
+     "y": 2929,
+     "w": 31,
+     "h": 40
+    },
+    {
+     "x": 408,
+     "y": 2929,
+     "w": 30,
+     "h": 40
+    },
+    {
+     "x": 487,
+     "y": 2929,
+     "w": 25,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "dance light": {
+   "frames": [
+    {
+     "x": 8,
+     "y": 2975,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 38,
+     "y": 2979,
+     "w": 23,
+     "h": 38
+    },
+    {
+     "x": 72,
+     "y": 2977,
+     "w": 23,
+     "h": 40
+    },
+    {
+     "x": 104,
+     "y": 2979,
+     "w": 23,
+     "h": 38
+    },
+    {
+     "x": 139,
+     "y": 2975,
+     "w": 23,
+     "h": 42
+    },
+    {
+     "x": 175,
+     "y": 2979,
+     "w": 23,
+     "h": 38
+    },
+    {
+     "x": 207,
+     "y": 2977,
+     "w": 23,
+     "h": 40
+    },
+    {
+     "x": 241,
+     "y": 2979,
+     "w": 23,
+     "h": 38
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "yarn ball light": {
+   "frames": [
+    {
+     "x": 5,
+     "y": 3022,
+     "w": 48,
+     "h": 43
+    },
+    {
+     "x": 58,
+     "y": 3022,
+     "w": 52,
+     "h": 42
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "healing light": {
+   "frames": [
+    {
+     "x": 14,
+     "y": 3148,
+     "w": 33,
+     "h": 45
+    },
+    {
+     "x": 94,
+     "y": 3151,
+     "w": 36,
+     "h": 42
+    },
+    {
+     "x": 176,
+     "y": 3154,
+     "w": 37,
+     "h": 39
+    },
+    {
+     "x": 263,
+     "y": 3150,
+     "w": 33,
+     "h": 43
+    },
+    {
+     "x": 14,
+     "y": 3200,
+     "w": 33,
+     "h": 45
+    },
+    {
+     "x": 89,
+     "y": 3208,
+     "w": 43,
+     "h": 37
+    },
+    {
+     "x": 171,
+     "y": 3207,
+     "w": 42,
+     "h": 38
+    },
+    {
+     "x": 264,
+     "y": 3202,
+     "w": 32,
+     "h": 42
+    },
+    {
+     "x": 348,
+     "y": 3203,
+     "w": 31,
+     "h": 41
+    },
+    {
+     "x": 429,
+     "y": 3204,
+     "w": 33,
+     "h": 40
+    },
+    {
+     "x": 512,
+     "y": 3204,
+     "w": 33,
+     "h": 40
+    },
+    {
+     "x": 595,
+     "y": 3204,
+     "w": 33,
+     "h": 40
+    },
+    {
+     "x": 678,
+     "y": 3204,
+     "w": 33,
+     "h": 40
+    },
+    {
+     "x": 762,
+     "y": 3202,
+     "w": 27,
+     "h": 42
+    },
+    {
+     "x": 845,
+     "y": 3204,
+     "w": 27,
+     "h": 40
+    }
+   ],
+   "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png"
+  },
+  "t": {
+   "frames": [
+    {
+     "x": 38,
+     "y": 62,
+     "w": 17,
+     "h": 21
+    },
+    {
+     "x": 56,
+     "y": 63,
+     "w": 17,
+     "h": 20
+    },
+    {
+     "x": 50,
+     "y": 33,
+     "w": 23,
+     "h": 18
+    }
+   ],
+   "sheet": "Custom _ Edited - Undertale Customs - Sans - Sans (Deltarune Battle-Style, Expanded).png"
+  }
+ }
+}

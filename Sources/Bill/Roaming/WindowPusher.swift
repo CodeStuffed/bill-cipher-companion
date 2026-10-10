@@ -59,7 +59,7 @@ enum WindowPusher {
 
         var originValue: CFTypeRef?
         guard AXUIElementCopyAttributeValue(axWindow, kAXPositionAttribute as CFString, &originValue) == .success,
-              let origin = originValue as? AXValue
+              let origin = unsafeBitCast(originValue, to: AXValue?.self)
         else { return }
         var point = CGPoint.zero
         guard AXValueGetValue(origin, .cgPoint, &point) else { return }
@@ -82,7 +82,7 @@ enum WindowPusher {
     }
 
     /// Map a CGWindowID to its AXUIElement by scanning the app's windows.
-    private static func AXWindowIDToAXWindow(_ id: CGWindowID) -> CFTypeRef? {
+    private static func AXWindowIDToAXWindow(_ id: CGWindowID) -> AXUIElement? {
         // Find the owning app via CGWindowList, then its AX windows.
         let options: CGWindowListOption = [.optionOnScreenOnly]
         guard let infoList = CGWindowListCopyWindowInfo(options, kCGNullWindowID) as? [[String: Any]] else {

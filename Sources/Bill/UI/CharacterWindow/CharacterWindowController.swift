@@ -554,7 +554,7 @@ final class CharacterWindowController: NSObject {
         // 6.2x-scale Sans walks at Bill-speed (72pt/s of tiny steps, reading
         // as standing still while shuffling).
         if let roaming = roaming {
-            roaming.characterScale = newCharacter.displayScale * preferences.characterScale
+            roaming.characterScale = definition.displayScale * preferences.characterScale
         }
 
         // The roaming controller caches the desktop's window topology against
