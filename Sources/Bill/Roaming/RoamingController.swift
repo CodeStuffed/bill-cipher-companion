@@ -968,12 +968,6 @@ final class RoamingController {
             x: sim.feet.x - Self.centerInsetX * s,
             y: sim.feet.y - Self.feetInsetY * s
         )
-        // The "push windows" feature: while walking grounded, probe for an
-        // app window underfoot to nudge aside (see `WindowPusher`).
-        if case .approach = step, sim.isGrounded {
-            WindowPusher.maybePush(panel: panel, at: sim.feet)
-        }
-
         // Direct `setFrameOrigin`, deliberately NOT `animator().setFrameOrigin`
         // — the animator proxy silently no-ops for window origins (a real,
         // previously-shipped bug), and an interpolated move would fight the
