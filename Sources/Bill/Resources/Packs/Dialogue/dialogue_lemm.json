@@ -1,0 +1,21 @@
+{
+ "idle": {
+  "any": [
+   "Relics! I buy relics! Ancient relics!",
+   "Your findings are worth good geo to me."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Careful with those relics!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

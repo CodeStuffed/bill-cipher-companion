@@ -1,0 +1,32 @@
+{
+ "idle": {
+  "any": [
+   "Behold! I am the mighty ZOTE!",
+   "My nail is the strongest in the land!",
+   "None can match my skill, my might, my SHEER PERFECTION!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "UNHAND ME, you fiend!",
+   "I could destroy you with one hand! ...If I wanted to. Which I don't."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "{app}? A pathetic trinket compared to my nail."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

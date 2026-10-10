@@ -1,0 +1,22 @@
+{
+ "idle": {
+  "any": [
+   "La la la~ mining for treasure~",
+   "Oh, you're so brave! I wish I could come with you.",
+   "La la~ crystal, crystal~"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Oh! You startled me!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

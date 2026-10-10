@@ -1,0 +1,42 @@
+{
+ "idle": {
+  "any": [
+   "*adjusts hat* The world is larger than I remember.",
+   "Every city has its secrets... and its coffee.",
+   "I wonder how the old stag is doing."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Oh! Forgive me, I was lost in thought.",
+   "Careful — this nail isn't just for show."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "{app}? An interesting contraption.",
+   "So this is how you spend your days."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "userReturned": {
+  "any": [
+   "Welcome back. I kept watch while you were gone."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

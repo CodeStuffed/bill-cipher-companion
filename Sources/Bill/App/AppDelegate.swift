@@ -15,6 +15,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     var awarenessMonitor: AwarenessMonitor!
     private var reactionRouter: ReactionRouter!
     private var statusItemController: StatusItemController!
+    private var enemySpawnController: EnemySpawnController?
     private var characterWindowController: CharacterWindowController!
     private var chatPanelController: ChatPanelController!
     private var settingsWindowController: SettingsWindowController!
@@ -148,6 +149,21 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             self?.dialogueRefreshLogWindowController.show()
         }
         dialogueRefreshLogWindowController = DialogueRefreshLogWindowController(characterWindowController: characterWindowController)
+        enemySpawnController = EnemySpawnController(characterEngine: characterEngine, preferences: preferences)
+        preferences.$isEnemySpawningEnabled
+            .removeDuplicates()
+            .sink { [weak self] enabled in
+                if enabled {
+                    self?.enemySpawnController?.startSpawningIfEnabled()
+                } else {
+                    self?.enemySpawnController?.stopSpawning()
+                }
+            }
+            .store(in: &cancellables)
+        if preferences.isEnemySpawningEnabled {
+            enemySpawnController?.startSpawningIfEnabled()
+        }
+
         statusItemController = StatusItemController(
             appDelegate: self,
             characterEngine: characterEngine,

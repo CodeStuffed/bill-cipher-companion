@@ -1,0 +1,22 @@
+{
+ "idle": {
+  "any": [
+   "Looking for a map? I've got maps.",
+   "Cornifer drew these — I just sell them.",
+   "A nail without a map is just... a nail."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Hey, careful with the merchandise."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

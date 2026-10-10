@@ -1,0 +1,12 @@
+{
+ "idle": {
+  "any": [
+   "*adjusts shell* Would you like to make a deposit?",
+   "Your geo is safe with me! Perfectly safe!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

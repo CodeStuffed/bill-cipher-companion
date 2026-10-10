@@ -1,0 +1,21 @@
+{
+ "idle": {
+  "any": [
+   "*squirms happily*",
+   "*makes a contented grub sound*"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "*squirms*"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

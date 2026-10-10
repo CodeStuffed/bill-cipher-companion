@@ -31,6 +31,7 @@ final class AppPreferences: ObservableObject {
         static let customFamilyMap = "billCustomFamilyMap"
         static let mutedCompanions = "billMutedCompanions"
         static let disabledStates = "billDisabledStates"
+        static let enemySpawning = "billEnemySpawning"
         static let windowPushing = "billWindowPushing"
         static let activeCharacter = "billActiveCharacterID"
         static let activeCompanions = "billActiveCompanionIDs"
@@ -65,6 +66,13 @@ final class AppPreferences: ObservableObject {
     /// pools). Manually-triggered test buttons still work.
     @Published var disabledStateIDs: Set<String> {
         didSet { UserDefaults.standard.set(Array(disabledStateIDs), forKey: Keys.disabledStates) }
+    }
+
+    /// Hollow Knight enemy spawning: when on, enemies from the extracted
+    /// pool periodically spawn as flying companions, collide with the
+    /// main character, and quip short lines. Cap: 6 simultaneous.
+    @Published var isEnemySpawningEnabled: Bool {
+        didSet { UserDefaults.standard.set(isEnemySpawningEnabled, forKey: Keys.enemySpawning) }
     }
 
     /// Companions that don't speak ("who talks" control) — their beats
@@ -305,6 +313,7 @@ final class AppPreferences: ObservableObject {
         customFamilyMap = defaults.dictionary(forKey: Keys.customFamilyMap) as? [String: String] ?? [:]
         mutedCompanionIDs = Set(defaults.stringArray(forKey: Keys.mutedCompanions) ?? [])
         disabledStateIDs = Set(defaults.stringArray(forKey: Keys.disabledStates) ?? [])
+        isEnemySpawningEnabled = (defaults.object(forKey: Keys.enemySpawning) as? Bool) ?? false
         let disabledRaw = defaults.stringArray(forKey: Keys.disabledCategories) ?? []
         disabledCategories = Set(disabledRaw.compactMap(AppCategory.init(rawValue:)))
         let storedScale = (defaults.object(forKey: Keys.characterScale) as? Double) ?? 1.0

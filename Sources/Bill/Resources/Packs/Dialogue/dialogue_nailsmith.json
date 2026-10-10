@@ -1,0 +1,21 @@
+{
+ "idle": {
+  "any": [
+   "*hammers metal* CLANG. CLANG.",
+   "A nail must be pure. Perfect. Like its wielder."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Careful! Centuries of work here!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

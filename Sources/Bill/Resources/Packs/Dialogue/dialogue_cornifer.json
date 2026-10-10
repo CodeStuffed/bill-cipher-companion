@@ -1,0 +1,33 @@
+{
+ "idle": {
+  "any": [
+   "Hmm hmm hmm~ la la la~",
+   "*scribbles on a map* Hmm... yes... here it is!",
+   "Oh! I seem to have dozed off again."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Hm? Oh! Did you need a map?",
+   "*startles* Wah! Don't sneak up!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "{app}? Let me mark that on my map.",
+   "Hmm hmm~ I'll chart this new territory."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

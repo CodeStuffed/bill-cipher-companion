@@ -1,0 +1,12 @@
+{
+ "idle": {
+  "any": [
+   "*flexes* The Colosseum awaits!",
+   "I've been training for the eternal ordeal!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

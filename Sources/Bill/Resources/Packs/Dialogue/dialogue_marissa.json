@@ -1,0 +1,12 @@
+{
+ "idle": {
+  "any": [
+   "*hums a gentle melody*",
+   "The theatre was beautiful once."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

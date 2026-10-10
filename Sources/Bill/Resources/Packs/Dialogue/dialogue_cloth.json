@@ -1,0 +1,22 @@
+{
+ "idle": {
+  "any": [
+   "*polishes nail* Ready for adventure!",
+   "When I'm stronger, I'll head to the Colosseum!",
+   "Hey! Want to train together?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Ha! Good hit! I felt that!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

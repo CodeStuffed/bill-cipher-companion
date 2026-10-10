@@ -1,0 +1,23 @@
+{
+ "idle": {
+  "any": [
+   "*reads a book* Oh, hello...",
+   "*blushes* I-I wasn't expecting company.",
+   "My knight in shining armor..."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Eep!",
+   "*hides behind book*"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

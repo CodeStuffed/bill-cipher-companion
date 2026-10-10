@@ -1,0 +1,12 @@
+{
+ "idle": {
+  "any": [
+   "*sighs* Another day in the ruins.",
+   "The surface... I wonder what it looks like now."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

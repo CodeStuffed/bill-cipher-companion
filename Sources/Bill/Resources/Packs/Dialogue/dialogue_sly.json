@@ -1,0 +1,22 @@
+{
+ "idle": {
+  "any": [
+   "Welcome to my shop! Everything must go!",
+   "I've got charms, nails, geo — you name it!",
+   "Buy something! Support local business!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Hey! This isn't a library!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

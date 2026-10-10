@@ -1,0 +1,21 @@
+{
+ "idle": {
+  "any": [
+   "*giggles* Looking for a charm, dearie?",
+   "I have the FINEST charms in all of Hallownest!"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "*giggles*"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

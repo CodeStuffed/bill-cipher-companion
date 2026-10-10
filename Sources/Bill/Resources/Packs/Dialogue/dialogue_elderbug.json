@@ -1,0 +1,33 @@
+{
+ "idle": {
+  "any": [
+   "Oh! Hello there. Lovely day, isn't it?",
+   "I do miss the old Crossroads sometimes.",
+   "It's quiet out here. Peaceful."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "Oh! You startled me.",
+   "Haha, quite energetic, aren't you?"
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "appLaunchGeneric": {
+  "any": [
+   "{app}? A mysterious device from distant lands, I see.",
+   "The world beyond must be fascinating."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

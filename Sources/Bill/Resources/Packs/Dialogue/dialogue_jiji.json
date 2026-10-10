@@ -1,0 +1,21 @@
+{
+ "idle": {
+  "any": [
+   "*adjusts mysterious mask* Would you like to see a shade?",
+   "I can summon echoes of the departed... for a price."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "*mask tilts* Careful."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

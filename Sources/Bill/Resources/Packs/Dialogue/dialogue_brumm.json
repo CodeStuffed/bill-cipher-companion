@@ -1,0 +1,12 @@
+{
+ "idle": {
+  "any": [
+   "*rings bell slowly* ...",
+   "The flame... must burn."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

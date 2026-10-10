@@ -1,0 +1,22 @@
+{
+ "idle": {
+  "any": [
+   "I have seen much in my long years.",
+   "The memories of dreams... they hold power.",
+   "You collect them well, little wanderer."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ },
+ "poked": {
+  "any": [
+   "*chuckles* Quite spirited."
+  ],
+  "morning": [],
+  "midday": [],
+  "afternoon": [],
+  "night": []
+ }
+}

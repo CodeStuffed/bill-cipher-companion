@@ -35,6 +35,13 @@ struct CharacterDefinition: Identifiable, Sendable, Hashable {
     let prefersGroundedRoaming: Bool
     /// A planted character — never roams at all (Flowey is a flower).
     let prefersStationary: Bool
+    /// True for Hollow Knight enemies spawned by the enemy toggle —
+    /// they can fly, collide with the main character, and have their
+    /// own short dialogue quips.
+    let isEnemy: Bool
+    /// True for Hollow Knight NPCs — they have fuller dialogue pools
+    /// than enemies but the same physics as the main character.
+    let isNPC: Bool
     /// The second character that appears alongside this one when the pack
     /// defines a pair (Sans brings Papyrus, the Knight brings Hornet).
     let companionID: String?
@@ -60,6 +67,8 @@ struct CharacterDefinition: Identifiable, Sendable, Hashable {
         self.companionID = companionID
         self.prefersGroundedRoaming = prefersGroundedRoaming
         self.prefersStationary = prefersStationary
+        self.isEnemy = false
+        self.isNPC = false
         self.credit = credit
     }
 

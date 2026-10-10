@@ -487,6 +487,13 @@ struct SettingsView: View {
                 }
             }
 
+            card("Hollow Knight enemies") {
+                Toggle("Spawn roaming enemies", isOn: $preferences.isEnemySpawningEnabled)
+                Text("When on, Hollow Knight enemies periodically appear as flying companions — they hover, bump into your character, and quip. Up to 6 at a time, each despawns after 5 minutes.")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+
             card("Companions") {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Show alongside " + CharacterRoster.character(preferences.activeCharacterID).displayName)
