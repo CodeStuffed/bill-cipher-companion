@@ -2,7 +2,7 @@
  "anims": {
   "0/walk backwards": {
    "name": "walk backwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -35,7 +35,7 @@
   },
   "0/right walk": {
    "name": "right walk",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -68,7 +68,7 @@
   },
   "0/forward walk": {
    "name": "forward walk",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -101,7 +101,7 @@
   },
   "0/left walk": {
    "name": "left walk",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -134,7 +134,7 @@
   },
   "0/light walk backwards": {
    "name": "light walk backwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -167,7 +167,7 @@
   },
   "0/light right walk": {
    "name": "light right walk",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -200,7 +200,7 @@
   },
   "0/light left walk": {
    "name": "light left walk",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -233,7 +233,7 @@
   },
   "0/dark walk backwards": {
    "name": "dark walk backwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -266,7 +266,7 @@
   },
   "0/dark walk right": {
    "name": "dark walk right",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -299,7 +299,7 @@
   },
   "0/dark walk left": {
    "name": "dark walk left",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -332,7 +332,7 @@
   },
   "0/dark light walk backwards": {
    "name": "dark light walk backwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -365,7 +365,7 @@
   },
   "0/dark light walk right": {
    "name": "dark light walk right",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -398,7 +398,7 @@
   },
   "0/dark light walk forward": {
    "name": "dark light walk forward",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -431,7 +431,7 @@
   },
   "0/dark light walk left": {
    "name": "dark light walk left",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -464,7 +464,7 @@
   },
   "0/black walk backwards": {
    "name": "black walk backwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -497,7 +497,7 @@
   },
   "0/black right walk": {
    "name": "black right walk",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -530,7 +530,7 @@
   },
   "0/black forward walk": {
    "name": "black forward walk",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -563,7 +563,7 @@
   },
   "0/black left walk": {
    "name": "black left walk",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -596,7 +596,7 @@
   },
   "0/black light walk backwards": {
    "name": "black light walk backwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -629,7 +629,7 @@
   },
   "0/black light walk right": {
    "name": "black light walk right",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -662,7 +662,7 @@
   },
   "0/black light walk forward": {
    "name": "black light walk forward",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -695,7 +695,7 @@
   },
   "0/black light walk left": {
    "name": "black light walk left",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -728,7 +728,7 @@
   },
   "0/mask walk backwards": {
    "name": "mask walk backwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -761,7 +761,7 @@
   },
   "0/mask walk right": {
    "name": "mask walk right",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -794,7 +794,7 @@
   },
   "0/mask walk forward": {
    "name": "mask walk forward",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -827,7 +827,7 @@
   },
   "0/mask walk left": {
    "name": "mask walk left",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -860,7 +860,7 @@
   },
   "0/mask light walk backwards": {
    "name": "mask light walk backwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -893,7 +893,7 @@
   },
   "0/mask light walk right": {
    "name": "mask light walk right",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -926,7 +926,7 @@
   },
   "0/mask light walk forward": {
    "name": "mask light walk forward",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -959,7 +959,7 @@
   },
   "0/mask light walk left": {
    "name": "mask light walk left",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -992,7 +992,7 @@
   },
   "0/dark mask walk backwards": {
    "name": "dark mask walk backwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1025,7 +1025,7 @@
   },
   "0/dark mask walk right": {
    "name": "dark mask walk right",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1058,7 +1058,7 @@
   },
   "0/dark mask walk forward": {
    "name": "dark mask walk forward",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1091,7 +1091,7 @@
   },
   "0/dark light mask walk backwards": {
    "name": "dark light mask walk backwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1124,7 +1124,7 @@
   },
   "0/dark light mask walk right": {
    "name": "dark light mask walk right",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1157,7 +1157,7 @@
   },
   "0/dark light mask walk forwards": {
    "name": "dark light mask walk forwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1190,7 +1190,7 @@
   },
   "0/dark light mask walk left": {
    "name": "dark light mask walk left",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1223,7 +1223,7 @@
   },
   "0/black mask walk back": {
    "name": "black mask walk back",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1256,7 +1256,7 @@
   },
   "0/black mask walk right": {
    "name": "black mask walk right",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1289,7 +1289,7 @@
   },
   "0/black mask walk forwards": {
    "name": "black mask walk forwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1322,7 +1322,7 @@
   },
   "0/black mask walk left": {
    "name": "black mask walk left",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1355,7 +1355,7 @@
   },
   "0/no mask black light walk backwards": {
    "name": "no mask black light walk backwards",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1388,7 +1388,7 @@
   },
   "0/no mask black light walk right": {
    "name": "no mask black light walk right",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1421,7 +1421,7 @@
   },
   "0/no mask black light walk left": {
    "name": "no mask black light walk left",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1454,7 +1454,7 @@
   },
   "0/spin": {
    "name": "spin",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1487,7 +1487,7 @@
   },
   "0/spin 2": {
    "name": "spin 2",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1526,7 +1526,7 @@
   },
   "0/save 1": {
    "name": "save 1",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1559,7 +1559,7 @@
   },
   "0/save 2": {
    "name": "save 2",
-   "character": "",
+   "character": "niko",
    "sheetIdx": 0,
    "sheet": "Custom _ Edited - OneShot Customs - Niko - Niko (Deltarune-Style).png",
    "sheetShort": "Niko (Deltarune-Style)",
@@ -1592,7 +1592,7 @@
   },
   "2/walk left": {
    "name": "walk left",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -1625,7 +1625,7 @@
   },
   "2/walk back": {
    "name": "walk back",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -1658,7 +1658,7 @@
   },
   "2/walk right": {
    "name": "walk right",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -1691,7 +1691,7 @@
   },
   "2/walk forward": {
    "name": "walk forward",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -1724,7 +1724,7 @@
   },
   "2/darkw walk back": {
    "name": "darkw walk back",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -1757,7 +1757,7 @@
   },
   "2/darkw walk left": {
    "name": "darkw walk left",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -1790,7 +1790,7 @@
   },
   "2/darkw walk right": {
    "name": "darkw walk right",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -1823,7 +1823,7 @@
   },
   "2/darkw walk forward": {
    "name": "darkw walk forward",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -1856,7 +1856,7 @@
   },
   "2/white walk back": {
    "name": "white walk back",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -1889,7 +1889,7 @@
   },
   "2/white walk left": {
    "name": "white walk left",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -1922,7 +1922,7 @@
   },
   "2/white walk right": {
    "name": "white walk right",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -1955,7 +1955,7 @@
   },
   "2/redoutline walk back": {
    "name": "redoutline walk back",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -1988,7 +1988,7 @@
   },
   "2/redoutline walk left": {
    "name": "redoutline walk left",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2021,7 +2021,7 @@
   },
   "2/redoutline walk right": {
    "name": "redoutline walk right",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2054,7 +2054,7 @@
   },
   "2/redoutline walk forward": {
    "name": "redoutline walk forward",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2087,7 +2087,7 @@
   },
   "2/battle idle": {
    "name": "battle idle",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2132,7 +2132,7 @@
   },
   "2/battle attack/intro": {
    "name": "battle attack/intro",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2189,7 +2189,7 @@
   },
   "2/battle prepare": {
    "name": "battle prepare",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2210,7 +2210,7 @@
   },
   "2/battle ACT": {
    "name": "battle ACT",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2285,7 +2285,7 @@
   },
   "2/battle item": {
    "name": "battle item",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2342,7 +2342,7 @@
   },
   "2/battle defend": {
    "name": "battle defend",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2387,7 +2387,7 @@
   },
   "2/battle END": {
    "name": "battle END",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2450,7 +2450,7 @@
   },
   "2/downed": {
    "name": "downed",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2465,7 +2465,7 @@
   },
   "2/hurt": {
    "name": "hurt",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2480,7 +2480,7 @@
   },
   "2/enter fall intro dark world": {
    "name": "enter fall intro dark world",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2651,7 +2651,7 @@
   },
   "2/teacup ride": {
    "name": "teacup ride",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2732,7 +2732,7 @@
   },
   "2/reveal sowrd": {
    "name": "reveal sowrd",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2813,7 +2813,7 @@
   },
   "2/pirroute": {
    "name": "pirroute",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2858,7 +2858,7 @@
   },
   "2/jiggle": {
    "name": "jiggle",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2891,7 +2891,7 @@
   },
   "2/dance": {
    "name": "dance",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2924,7 +2924,7 @@
   },
   "2/get back up": {
    "name": "get back up",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -2957,7 +2957,7 @@
   },
   "2/ending 1": {
    "name": "ending 1",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -3476,7 +3476,7 @@
   },
   "2/ending 2": {
    "name": "ending 2",
-   "character": "",
+   "character": "kris",
    "sheetIdx": 2,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png",
    "sheetShort": "Kris (Chapter 1 + 2)",
@@ -3953,7 +3953,7 @@
   },
   "3/dark prince appearing": {
    "name": "dark prince appearing",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4022,7 +4022,7 @@
   },
   "3/walk back": {
    "name": "walk back",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4055,7 +4055,7 @@
   },
   "3/walk left": {
    "name": "walk left",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4088,7 +4088,7 @@
   },
   "3/walk right": {
    "name": "walk right",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4121,7 +4121,7 @@
   },
   "3/wakl forward": {
    "name": "wakl forward",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4154,7 +4154,7 @@
   },
   "3/walk forward w/blush": {
    "name": "walk forward w/blush",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4187,7 +4187,7 @@
   },
   "3/walk left with blush": {
    "name": "walk left with blush",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4220,7 +4220,7 @@
   },
   "3/walk right with blush": {
    "name": "walk right with blush",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4253,7 +4253,7 @@
   },
   "3/scared and fall": {
    "name": "scared and fall",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4280,7 +4280,7 @@
   },
   "3/sit": {
    "name": "sit",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4313,7 +4313,7 @@
   },
   "3/turn": {
    "name": "turn",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4346,7 +4346,7 @@
   },
   "3/prepare battle": {
    "name": "prepare battle",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4409,7 +4409,7 @@
   },
   "3/battle idle": {
    "name": "battle idle",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4448,7 +4448,7 @@
   },
   "3/battle idle + shocked, face left": {
    "name": "battle idle + shocked, face left",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4499,7 +4499,7 @@
   },
   "3/bow": {
    "name": "bow",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4580,7 +4580,7 @@
   },
   "3/attack": {
    "name": "attack",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4631,7 +4631,7 @@
   },
   "3/defend": {
    "name": "defend",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4688,7 +4688,7 @@
   },
   "3/use item": {
    "name": "use item",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4751,7 +4751,7 @@
   },
   "3/dance": {
    "name": "dance",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4808,7 +4808,7 @@
   },
   "3/yarn ball": {
    "name": "yarn ball",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4829,7 +4829,7 @@
   },
   "3/heal prayer": {
    "name": "heal prayer",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -4928,7 +4928,7 @@
   },
   "3/ending scene": {
    "name": "ending scene",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -5063,7 +5063,7 @@
   },
   "4/walk backwards no face": {
    "name": "walk backwards no face",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5120,7 +5120,7 @@
   },
   "4/walk left no face": {
    "name": "walk left no face",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5177,7 +5177,7 @@
   },
   "4/walk right no face": {
    "name": "walk right no face",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5234,7 +5234,7 @@
   },
   "4/walk forward no face": {
    "name": "walk forward no face",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5267,7 +5267,7 @@
   },
   "4/walk backwards": {
    "name": "walk backwards",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5324,7 +5324,7 @@
   },
   "4/walk left": {
    "name": "walk left",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5381,7 +5381,7 @@
   },
   "4/walk right": {
    "name": "walk right",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5438,7 +5438,7 @@
   },
   "4/walk back dark": {
    "name": "walk back dark",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5495,7 +5495,7 @@
   },
   "4/walk left dark": {
    "name": "walk left dark",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5552,7 +5552,7 @@
   },
   "4/walk right dark": {
    "name": "walk right dark",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5609,7 +5609,7 @@
   },
   "4/walk up dark": {
    "name": "walk up dark",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5642,7 +5642,7 @@
   },
   "4/walk down dark face": {
    "name": "walk down dark face",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5699,7 +5699,7 @@
   },
   "4/walk left dark face": {
    "name": "walk left dark face",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5756,7 +5756,7 @@
   },
   "4/walk right dark face": {
    "name": "walk right dark face",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5789,7 +5789,7 @@
   },
   "4/eat chalk": {
    "name": "eat chalk",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5930,7 +5930,7 @@
   },
   "4/laugh": {
    "name": "laugh",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -5963,7 +5963,7 @@
   },
   "4/battle intro": {
    "name": "battle intro",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -6044,7 +6044,7 @@
   },
   "4/hit": {
    "name": "hit",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -6125,7 +6125,7 @@
   },
   "4/act": {
    "name": "act",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -6206,7 +6206,7 @@
   },
   "4/defend": {
    "name": "defend",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -6239,7 +6239,7 @@
   },
   "4/spin hit": {
    "name": "spin hit",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -6332,7 +6332,7 @@
   },
   "4/kick ahead": {
    "name": "kick ahead",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -6407,7 +6407,7 @@
   },
   "4/sitting": {
    "name": "sitting",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -6470,7 +6470,7 @@
   },
   "4/fall to dark world": {
    "name": "fall to dark world",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -6677,7 +6677,7 @@
   },
   "4/rude buster": {
    "name": "rude buster",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -6734,7 +6734,7 @@
   },
   "4/point and talk": {
    "name": "point and talk",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -6797,7 +6797,7 @@
   },
   "4/dancing": {
    "name": "dancing",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -6842,7 +6842,7 @@
   },
   "4/turn evil": {
    "name": "turn evil",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -7061,7 +7061,7 @@
   },
   "4/eat candy": {
    "name": "eat candy",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -7094,7 +7094,7 @@
   },
   "4/confident walk": {
    "name": "confident walk",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -7127,7 +7127,7 @@
   },
   "4/projectile (right facing": {
    "name": "projectile (right facing",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -7298,7 +7298,7 @@
   },
   "4/projectile (left facing": {
    "name": "projectile (left facing",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -7421,7 +7421,7 @@
   },
   "4/teacup ride": {
    "name": "teacup ride",
-   "character": "",
+   "character": "susie",
    "sheetIdx": 4,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Susie (Chapter 1 + 2).png",
    "sheetShort": "Susie (Chapter 1 + 2)",
@@ -7478,7 +7478,7 @@
   },
   "6/french": {
    "name": "french",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7493,7 +7493,7 @@
   },
   "6/christams": {
    "name": "christams",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7508,7 +7508,7 @@
   },
   "6/plant": {
    "name": "plant",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7541,7 +7541,7 @@
   },
   "6/happy dog": {
    "name": "happy dog",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7562,7 +7562,7 @@
   },
   "6/defualt": {
    "name": "defualt",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7577,7 +7577,7 @@
   },
   "6/sleepy": {
    "name": "sleepy",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7598,7 +7598,7 @@
   },
   "6/happy": {
    "name": "happy",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7619,7 +7619,7 @@
   },
   "6/happy 2": {
    "name": "happy 2",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7640,7 +7640,7 @@
   },
   "6/walk": {
    "name": "walk",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7661,7 +7661,7 @@
   },
   "6/sit": {
    "name": "sit",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7688,7 +7688,7 @@
   },
   "6/tail fire walk": {
    "name": "tail fire walk",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7721,7 +7721,7 @@
   },
   "6/sleeep": {
    "name": "sleeep",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7742,7 +7742,7 @@
   },
   "6/tail fire sleep": {
    "name": "tail fire sleep",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7763,7 +7763,7 @@
   },
   "6/furry tail sleep": {
    "name": "furry tail sleep",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7796,7 +7796,7 @@
   },
   "6/sleep bark": {
    "name": "sleep bark",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7817,7 +7817,7 @@
   },
   "6/eat bone": {
    "name": "eat bone",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7898,7 +7898,7 @@
   },
   "6/variation transformations": {
    "name": "variation transformations",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -7955,7 +7955,7 @@
   },
   "6/spin on rope": {
    "name": "spin on rope",
-   "character": "",
+   "character": "annoyingdog",
    "sheetIdx": 6,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Annoying Dog.png",
    "sheetShort": "Annoying Dog",
@@ -8024,7 +8024,7 @@
   },
   "7/talking": {
    "name": "talking",
-   "character": "",
+   "character": "flowey",
    "sheetIdx": 7,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Flowey.png",
    "sheetShort": "Flowey",
@@ -8045,7 +8045,7 @@
   },
   "7/face grow": {
    "name": "face grow",
-   "character": "",
+   "character": "flowey",
    "sheetIdx": 7,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Flowey.png",
    "sheetShort": "Flowey",
@@ -8108,7 +8108,7 @@
   },
   "7/face laugh": {
    "name": "face laugh",
-   "character": "",
+   "character": "flowey",
    "sheetIdx": 7,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Flowey.png",
    "sheetShort": "Flowey",
@@ -8135,7 +8135,7 @@
   },
   "7/face shrink": {
    "name": "face shrink",
-   "character": "",
+   "character": "flowey",
    "sheetIdx": 7,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Flowey.png",
    "sheetShort": "Flowey",
@@ -8198,7 +8198,7 @@
   },
   "7/sink": {
    "name": "sink",
-   "character": "",
+   "character": "flowey",
    "sheetIdx": 7,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Flowey.png",
    "sheetShort": "Flowey",
@@ -8231,7 +8231,7 @@
   },
   "7/empty": {
    "name": "empty",
-   "character": "",
+   "character": "flowey",
    "sheetIdx": 7,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Flowey.png",
    "sheetShort": "Flowey",
@@ -8246,7 +8246,7 @@
   },
   "8/walk back": {
    "name": "walk back",
-   "character": "",
+   "character": "monsterkid",
    "sheetIdx": 8,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Monster Kid.png",
    "sheetShort": "Monster Kid",
@@ -8291,7 +8291,7 @@
   },
   "8/walk left": {
    "name": "walk left",
-   "character": "",
+   "character": "monsterkid",
    "sheetIdx": 8,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Monster Kid.png",
    "sheetShort": "Monster Kid",
@@ -8336,7 +8336,7 @@
   },
   "8/walk right": {
    "name": "walk right",
-   "character": "",
+   "character": "monsterkid",
    "sheetIdx": 8,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Monster Kid.png",
    "sheetShort": "Monster Kid",
@@ -8381,7 +8381,7 @@
   },
   "8/forward": {
    "name": "forward",
-   "character": "",
+   "character": "monsterkid",
    "sheetIdx": 8,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Monster Kid.png",
    "sheetShort": "Monster Kid",
@@ -8426,7 +8426,7 @@
   },
   "8/right face fall stand left face fall": {
    "name": "right face fall stand left face fall",
-   "character": "",
+   "character": "monsterkid",
    "sheetIdx": 8,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Monster Kid.png",
    "sheetShort": "Monster Kid",
@@ -8681,7 +8681,7 @@
   },
   "9/walk back": {
    "name": "walk back",
-   "character": "",
+   "character": "papyrus",
    "sheetIdx": 9,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Papyrus.png",
    "sheetShort": "Papyrus",
@@ -8762,7 +8762,7 @@
   },
   "9/walk left": {
    "name": "walk left",
-   "character": "",
+   "character": "papyrus",
    "sheetIdx": 9,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Papyrus.png",
    "sheetShort": "Papyrus",
@@ -8843,7 +8843,7 @@
   },
   "9/walk up": {
    "name": "walk up",
-   "character": "",
+   "character": "papyrus",
    "sheetIdx": 9,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Papyrus.png",
    "sheetShort": "Papyrus",
@@ -8876,7 +8876,7 @@
   },
   "9/silly": {
    "name": "silly",
-   "character": "",
+   "character": "papyrus",
    "sheetIdx": 9,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Papyrus.png",
    "sheetShort": "Papyrus",
@@ -8939,7 +8939,7 @@
   },
   "9/admiration": {
    "name": "admiration",
-   "character": "",
+   "character": "papyrus",
    "sheetIdx": 9,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Papyrus.png",
    "sheetShort": "Papyrus",
@@ -9014,7 +9014,7 @@
   },
   "10/down": {
    "name": "down",
-   "character": "",
+   "character": "sans",
    "sheetIdx": 10,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png",
    "sheetShort": "Sans",
@@ -9047,7 +9047,7 @@
   },
   "10/left": {
    "name": "left",
-   "character": "",
+   "character": "sans",
    "sheetIdx": 10,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png",
    "sheetShort": "Sans",
@@ -9080,7 +9080,7 @@
   },
   "10/right": {
    "name": "right",
-   "character": "",
+   "character": "sans",
    "sheetIdx": 10,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png",
    "sheetShort": "Sans",
@@ -9113,7 +9113,7 @@
   },
   "10/up": {
    "name": "up",
-   "character": "",
+   "character": "sans",
    "sheetIdx": 10,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png",
    "sheetShort": "Sans",
@@ -9146,7 +9146,7 @@
   },
   "10/shrug": {
    "name": "shrug",
-   "character": "",
+   "character": "sans",
    "sheetIdx": 10,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png",
    "sheetShort": "Sans",
@@ -9167,7 +9167,7 @@
   },
   "10/trombone": {
    "name": "trombone",
-   "character": "",
+   "character": "sans",
    "sheetIdx": 10,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png",
    "sheetShort": "Sans",
@@ -9188,7 +9188,7 @@
   },
   "10/stool and ocmb": {
    "name": "stool and ocmb",
-   "character": "",
+   "character": "sans",
    "sheetIdx": 10,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png",
    "sheetShort": "Sans",
@@ -9227,7 +9227,7 @@
   },
   "10/stool chup": {
    "name": "stool chup",
-   "character": "",
+   "character": "sans",
    "sheetIdx": 10,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png",
    "sheetShort": "Sans",
@@ -9296,7 +9296,7 @@
   },
   "10/sleep": {
    "name": "sleep",
-   "character": "",
+   "character": "sans",
    "sheetIdx": 10,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png",
    "sheetShort": "Sans",
@@ -9317,7 +9317,7 @@
   },
   "10/trike and wink": {
    "name": "trike and wink",
-   "character": "",
+   "character": "sans",
    "sheetIdx": 10,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Sans.png",
    "sheetShort": "Sans",
@@ -9350,7 +9350,7 @@
   },
   "11/talk": {
    "name": "talk",
-   "character": "",
+   "character": "temmie",
    "sheetIdx": 11,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Temmie.png",
    "sheetShort": "Temmie",
@@ -9383,7 +9383,7 @@
   },
   "11/hOIVS": {
    "name": "hOIVS",
-   "character": "",
+   "character": "temmie",
    "sheetIdx": 11,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Temmie.png",
    "sheetShort": "Temmie",
@@ -9422,7 +9422,7 @@
   },
   "11/walk left": {
    "name": "walk left",
-   "character": "",
+   "character": "temmie",
    "sheetIdx": 11,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Temmie.png",
    "sheetShort": "Temmie",
@@ -9455,7 +9455,7 @@
   },
   "11/walk right": {
    "name": "walk right",
-   "character": "",
+   "character": "temmie",
    "sheetIdx": 11,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Temmie.png",
    "sheetShort": "Temmie",
@@ -9488,7 +9488,7 @@
   },
   "11/feeling of bein watched": {
    "name": "feeling of bein watched",
-   "character": "",
+   "character": "temmie",
    "sheetIdx": 11,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Temmie.png",
    "sheetShort": "Temmie",
@@ -9503,7 +9503,7 @@
   },
   "12/down": {
    "name": "down",
-   "character": "",
+   "character": "toriel",
    "sheetIdx": 12,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Toriel.png",
    "sheetShort": "Toriel",
@@ -9548,7 +9548,7 @@
   },
   "12/left": {
    "name": "left",
-   "character": "",
+   "character": "toriel",
    "sheetIdx": 12,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Toriel.png",
    "sheetShort": "Toriel",
@@ -9593,7 +9593,7 @@
   },
   "12/right": {
    "name": "right",
-   "character": "",
+   "character": "toriel",
    "sheetIdx": 12,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Toriel.png",
    "sheetShort": "Toriel",
@@ -9662,7 +9662,7 @@
   },
   "12/up": {
    "name": "up",
-   "character": "",
+   "character": "toriel",
    "sheetIdx": 12,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Toriel.png",
    "sheetShort": "Toriel",
@@ -9695,7 +9695,7 @@
   },
   "12/chair": {
    "name": "chair",
-   "character": "",
+   "character": "toriel",
    "sheetIdx": 12,
    "sheet": "PC _ Computer - Undertale - Non-Playable Characters - Toriel.png",
    "sheetShort": "Toriel",
@@ -9764,7 +9764,7 @@
   },
   "14/down": {
    "name": "down",
-   "character": "",
+   "character": "frisk",
    "sheetIdx": 14,
    "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png",
    "sheetShort": "Frisk",
@@ -9797,7 +9797,7 @@
   },
   "14/left": {
    "name": "left",
-   "character": "",
+   "character": "frisk",
    "sheetIdx": 14,
    "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png",
    "sheetShort": "Frisk",
@@ -9818,7 +9818,7 @@
   },
   "14/right": {
    "name": "right",
-   "character": "",
+   "character": "frisk",
    "sheetIdx": 14,
    "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png",
    "sheetShort": "Frisk",
@@ -9839,7 +9839,7 @@
   },
   "14/up": {
    "name": "up",
-   "character": "",
+   "character": "frisk",
    "sheetIdx": 14,
    "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png",
    "sheetShort": "Frisk",
@@ -9872,7 +9872,7 @@
   },
   "14/rain down": {
    "name": "rain down",
-   "character": "",
+   "character": "frisk",
    "sheetIdx": 14,
    "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png",
    "sheetShort": "Frisk",
@@ -9905,7 +9905,7 @@
   },
   "14/rain left": {
    "name": "rain left",
-   "character": "",
+   "character": "frisk",
    "sheetIdx": 14,
    "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png",
    "sheetShort": "Frisk",
@@ -9926,7 +9926,7 @@
   },
   "14/rain right": {
    "name": "rain right",
-   "character": "",
+   "character": "frisk",
    "sheetIdx": 14,
    "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png",
    "sheetShort": "Frisk",
@@ -9947,7 +9947,7 @@
   },
   "14/rain up": {
    "name": "rain up",
-   "character": "",
+   "character": "frisk",
    "sheetIdx": 14,
    "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png",
    "sheetShort": "Frisk",
@@ -9980,7 +9980,7 @@
   },
   "14/drop water": {
    "name": "drop water",
-   "character": "",
+   "character": "frisk",
    "sheetIdx": 14,
    "sheet": "PC _ Computer - Undertale - Playable Characters - Frisk.png",
    "sheetShort": "Frisk",
@@ -10037,7 +10037,7 @@
   },
   "3/sing": {
    "name": "sing",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10064,7 +10064,7 @@
   },
   "3/heal": {
    "name": "heal",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10157,7 +10157,7 @@
   },
   "3/end battle": {
    "name": "end battle",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10292,7 +10292,7 @@
   },
   "3/reveal light prince": {
    "name": "reveal light prince",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10385,7 +10385,7 @@
   },
   "3/light walk down": {
    "name": "light walk down",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10442,7 +10442,7 @@
   },
   "3/light walk down blush": {
    "name": "light walk down blush",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10475,7 +10475,7 @@
   },
   "3/butlet walk down": {
    "name": "butlet walk down",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10532,7 +10532,7 @@
   },
   "3/light walk left": {
    "name": "light walk left",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10589,7 +10589,7 @@
   },
   "3/blush walk left": {
    "name": "blush walk left",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10622,7 +10622,7 @@
   },
   "3/butler walk left": {
    "name": "butler walk left",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10679,7 +10679,7 @@
   },
   "3/light walk right": {
    "name": "light walk right",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10736,7 +10736,7 @@
   },
   "3/blush walk right": {
    "name": "blush walk right",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10769,7 +10769,7 @@
   },
   "3/butler wakl right": {
    "name": "butler wakl right",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10826,7 +10826,7 @@
   },
   "3/light walk up": {
    "name": "light walk up",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10859,7 +10859,7 @@
   },
   "3/butler walk up": {
    "name": "butler walk up",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10892,7 +10892,7 @@
   },
   "3/roll": {
    "name": "roll",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -10973,7 +10973,7 @@
   },
   "3/falling": {
    "name": "falling",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11000,7 +11000,7 @@
   },
   "3/silly mvoes": {
    "name": "silly mvoes",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11069,7 +11069,7 @@
   },
   "3/wave hi": {
    "name": "wave hi",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11120,7 +11120,7 @@
   },
   "3/cotten candy": {
    "name": "cotten candy",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11213,7 +11213,7 @@
   },
   "3/throw": {
    "name": "throw",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11258,7 +11258,7 @@
   },
   "3/laugh": {
    "name": "laugh",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11279,7 +11279,7 @@
   },
   "3/no glasses": {
    "name": "no glasses",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11318,7 +11318,7 @@
   },
   "3/fiddle with glasses": {
    "name": "fiddle with glasses",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11369,7 +11369,7 @@
   },
   "3/teacup ride": {
    "name": "teacup ride",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11462,7 +11462,7 @@
   },
   "3/spin scarf": {
    "name": "spin scarf",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11537,7 +11537,7 @@
   },
   "3/in battle light": {
    "name": "in battle light",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11576,7 +11576,7 @@
   },
   "3/light bow": {
    "name": "light bow",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11663,7 +11663,7 @@
   },
   "3/light attac": {
    "name": "light attac",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11720,7 +11720,7 @@
   },
   "3/light defend": {
    "name": "light defend",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11783,7 +11783,7 @@
   },
   "3/use item light": {
    "name": "use item light",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11834,7 +11834,7 @@
   },
   "3/dance light": {
    "name": "dance light",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11891,7 +11891,7 @@
   },
   "3/yarn ball light": {
    "name": "yarn ball light",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",
@@ -11912,7 +11912,7 @@
   },
   "3/healing light": {
    "name": "healing light",
-   "character": "",
+   "character": "ralsei",
    "sheetIdx": 3,
    "sheet": "PC _ Computer - Deltarune - Playable Characters - Ralsei (Chapter 1 + 2).png",
    "sheetShort": "Ralsei (Chapter 1 + 2)",

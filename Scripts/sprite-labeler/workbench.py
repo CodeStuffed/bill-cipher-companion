@@ -627,6 +627,14 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 s = sheet_list()[idx]
                 sheet_file = s["file"]
                 sheet_dir = s.get("dir", str(SHEETS))
+                # Always derive character from the sheet filename server-side
+                # — the JS autoCharacter may not have fired
+                if not character:
+                    parts = sheet_file.replace(".png", "").split(" - ")
+                    character = parts[-1].strip()
+                    if "(" in character:
+                        character = character.split("(")[0].strip()
+                    character = character.lower().replace(" ", "")
                 key = f"{character}/{name}" if character else f"{idx}/{name}"
                 short = sheet_file.split(" - ")[-1].replace(".png", "") if " - " in sheet_file else sheet_file.replace(".png", "")
                 wb = load_workbench()
@@ -643,7 +651,15 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 # AUTO-EXPORT: the export file updates on every save
                 export = {}
                 for k, a in wb.get("anims", {}).items():
-                    char = a.get("character", a.get("sheetShort", ""))
+                    char = a.get("character", "")
+                    if not char:
+                        # derive from sheet filename
+                        sf = a.get("sheet", "")
+                        parts = sf.replace(".png", "").split(" - ")
+                        char = parts[-1].strip()
+                        if "(" in char:
+                            char = char.split("(")[0].strip()
+                        char = char.lower().replace(" ", "")
                     export.setdefault(char, {})[a["name"]] = {
                         "frames": a["selection"],
                         "sheet": a["sheet"],
