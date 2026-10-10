@@ -137,9 +137,9 @@ extension CharacterDefinition {
             canvasSize: CGSize(width: 100, height: 100), // placeholder — updated at spawn
             displayScale: 1.0,
             dialogueResource: nil,
+            companionID: nil,
             prefersGroundedRoaming: false,
             prefersStationary: false,
-            companionID: nil,
             credit: "Hollow Knight enemy sprites from community rips"
         )
     }
