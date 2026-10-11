@@ -241,7 +241,7 @@ final class CharacterWindowController: NSObject {
                 + primary.w + margin
         )
         let tallest = ([primary.h] + compSizes.map { $0.h }).max() ?? primary.h
-        let windowH = max(170, tallest + 55)
+        let windowH = max(170, tallest + 12)
         let bodyAnchorY = 16 + tallest / 2
 
         // Left→right: companions first, primary on the right end.
