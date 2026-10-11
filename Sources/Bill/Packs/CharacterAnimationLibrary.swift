@@ -29,6 +29,86 @@ struct CharacterAnimationLibrary {
     /// The family a state should play, before existence checks. Specials
     /// are per-character families that exist in some packs; the fallback
     /// ladder keeps every state resolvable.
+    /// Resolves a state's intended family to whatever name this character
+    /// actually uses. The workbench-labeled characters named their
+    /// animations with game-natural names (down/left/right for directions,
+    /// battle-idle for combat, etc.) — this maps them back.
+    private func resolveFamily(_ requested: String) -> String? {
+        // Direct match
+        if !catalog.frames(requested).isEmpty { return requested }
+        // Alternative names the workbench labels commonly use
+        let alternatives: [String: [String]] = [
+            "idle": ["down", "default", "defualt", "idle-still", "idle_still",
+                     "battle-idle", "defualt", "forward", "forward-walk",
+                     "in-battle-light", "defualt"],
+            "walking": ["walk-left", "walk-right", "left-walk", "right-walk",
+                        "left", "right",
+                        "walk-forward", "forward-walk", "walk-back",
+                        "walk-backwards", "walk-up", "backwards-walk",
+                        "darkw-walk-left", "darkw-walk-right",
+                        "darkw-walk-forward", "darkw-walk-back",
+                        "white-walk-left", "white-walk-right",
+                        "white-walk-forward", "white-walk-back",
+                        "redoutline-walk-left", "redoutline-walk-right",
+                        "redoutline-walk-forward", "redoutline-walk-back",
+                        "light-walk-left", "light-walk-right",
+                        "light-walk-down", "light-walk-up",
+                        "light-walk-forward",
+                        "mask-walk-left", "mask-walk-right",
+                        "mask-walk-forward", "mask-walk-backwards",
+                        "dark-walk-left", "dark-walk-right",
+                        "dark-walk-backwards",
+                        "black-left-walk", "black-right-walk",
+                        "black-forward-walk",
+                        "black-mask-walk-left", "black-mask-walk-right",
+                        "dark-mask-walk-right", "dark-mask-walk-backwards",
+                        "dark-light-walk-left", "dark-light-walk-right",
+                        "dark-light-walk-backwards",
+                        "dark-light-mask-walk-left", "dark-light-mask-walk-right",
+                        "dark-light-mask-walk-backwards",
+                        "black-light-walk-left", "black-light-walk-right",
+                        "black-light-walk-backwards",
+                        "no-mask-black-light-walk-left", "no-mask-black-light-walk-right",
+                        "no-mask-black-light-walk-backwards",
+                        "mask-light-walk-left", "mask-light-walk-right",
+                        "mask-light-walk-backwards",
+                        "confident-walk", "walk", "tail-fire-walk",
+                        "butler-walk-left", "butler-wakl-right",
+                        "walk-left-dark", "walk-right-dark",
+                        "walk-back-dark",
+                        "walk-left-dark-face", "walk-right-dark-face",
+                        "walk-left-no-face", "walk-right-no-face",
+                        "walk-forward-no-face",
+                        "walk-backwards-no-face",
+                        "blush-walk-left", "blush-walk-right",
+                        "walk-left-with-blush", "walk-right-with-blush",
+                        "walk-forward-w-blush",
+                        "walk"],
+            "talking": ["talk", "battle-act", "act", "talk-fast",
+                        "point-and-talk", "talk-left", "talk-right"],
+            "running": ["run", "dash", "sprint", "tail-fire-walk"],
+            "sleeping": ["sleep", "furry-tail-sleep", "sit",
+                         "sleep-bark", "sleepy", "sleeep",
+                         "tail-fire-sleep", "sit"],
+            "happy": ["happy-dog", "happy-2", "happy", "dance", "dance-light",
+                      "eat-bone", "eat-candy"],
+            "surprised": ["battle-idle-shocked-face-left", "shocked",
+                          "surprised", "scared-and-fall", "battle-idle-shocked-face-left"],
+            "annoyed": ["stressed", "angry", "grumpEyes"],
+            "celebrating": ["dance", "dance-light", "pirroute", "bow",
+                            "light-bow", "spin-scarf", "wave-hi"],
+            "confused": ["battle-idle-shocked-face-left", "scared-and-fall"],
+            "dazed": ["shocked", "downed", "hurt", "hit"],
+            "poked": ["shocked", "battle-idle-shocked-face-left", "scared-and-fall"],
+        ]
+        if let alts = alternatives[requested] {
+            for alt in alts {
+                if !catalog.frames(alt).isEmpty { return alt }
+            }
+        }
+        return nil
+    }
+
     private func family(for state: BillState) -> String {
         switch state {
         case .idle: return "idle"
@@ -188,12 +268,17 @@ struct CharacterAnimationLibrary {
             return clip(for: state, family: extra)
         }
 
-        // Generic ladder with per-family fallbacks.
-        var family = family(for: state)
-        if catalog.frames(family).isEmpty {
-            family = fallbackFamily(for: state)
+        // Try the standard family name, then workbench-label alternatives,
+        // then the generic fallback.
+        let standard = family(for: state)
+        if let resolved = resolveFamily(standard) {
+            return clip(for: state, family: resolved)
         }
-        return clip(for: state, family: family)
+        if let fallback = resolveFamily(fallbackFamily(for: state)) {
+            return clip(for: state, family: fallback)
+        }
+        // Last resort: try the literal family name (might be empty → transform-only)
+        return clip(for: state, family: standard)
     }
 
     private func fallbackFamily(for state: BillState) -> String {

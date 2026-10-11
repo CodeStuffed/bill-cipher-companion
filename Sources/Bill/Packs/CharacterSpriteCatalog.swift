@@ -20,15 +20,51 @@ final class CharacterSpriteCatalog {
 
     init(definition: CharacterDefinition) {
         self.definition = definition
-        let idle = Self.load(definition: definition, family: "idle")
+        // Try "idle" first, then common workbench-label alternatives,
+        // then ANY family's first frame — a character with no visible
+        // rest texture is invisible on screen (the "characters don't
+        // show" bug: workbench labels used names like "down" for idle).
+        var restCandidates = ["idle", "idle_still", "idle-still", "down", "default", "defualt"]
+        var idle: [SKTexture] = []
+        for name in restCandidates {
+            idle = Self.load(definition: definition, family: name)
+            if !idle.isEmpty { break }
+        }
+        if idle.isEmpty {
+            // Try every family until we find any frames at all
+            for name in Self.allFamilyNames(definition: definition) {
+                idle = Self.load(definition: definition, family: name)
+                if !idle.isEmpty { break }
+            }
+        }
         if let first = idle.first {
             restTexture = first
         } else {
-            // No idle family at all (shouldn't happen for shipped packs) —
-            // a 1×1 transparent stand-in keeps the rig total.
+            print("CharacterSpriteCatalog: \(definition.id) has NO frames — invisible")
             restTexture = SKTexture(image: NSImage(size: NSSize(width: 1, height: 1)))
         }
         cache["idle"] = idle
+    }
+
+    /// Scans the bundle for every family this character ships with.
+    private static func allFamilyNames(definition: CharacterDefinition) -> [String] {
+        var names: [String] = []
+        guard let dirURL = Bundle.module.url(
+            forResource: "packs_manifest",
+            withExtension: "json",
+            subdirectory: "Packs"
+        ), let data = try? Data(contentsOf: dirURL),
+           let manifest = try? JSONDecoder().decode([String: ManifestInfo].self, from: data),
+           let info = manifest[definition.id]
+        else { return names }
+        return info.families.keys.sorted()
+    }
+
+    private struct ManifestInfo: Codable {
+        let canvas: [Int]
+        let idle_h: Int?
+        let families: [String: FamilyCount]
+        struct FamilyCount: Codable { let count: Int }
     }
 
     /// The frames of `family`, in order. Empty when the family is absent.

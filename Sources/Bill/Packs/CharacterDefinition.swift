@@ -141,6 +141,20 @@ enum CharacterRoster {
         credit: "Undertale sprites ripped by asym — spriters-resource.com"
     )
 
+
+    static let papyrus = CharacterDefinition(
+        id: "papyrus", displayName: "Papyrus", packID: "undertale", packName: "Undertale",
+        spritePrefix: "papyrus", canvasSize: CGSize(width: 36, height: 43), displayScale: 4.4,
+        dialogueResource: "dialogue_papyrus", companionID: nil, prefersGroundedRoaming: true,
+        credit: "Undertale sprites ripped by asym — spriters-resource.com"
+    )
+
+    static let toriel = CharacterDefinition(
+        id: "toriel", displayName: "Toriel", packID: "undertale", packName: "Undertale",
+        spritePrefix: "toriel", canvasSize: CGSize(width: 37, height: 53), displayScale: 3.6,
+        dialogueResource: "dialogue_toriel", companionID: nil, prefersGroundedRoaming: true,
+        credit: "Undertale sprites ripped by asym — spriters-resource.com"
+    )
     static let sansdt = CharacterDefinition(
         id: "sansdt", displayName: "Sans (Battle)", packID: "undertale", packName: "Undertale",
         spritePrefix: "sansdt", canvasSize: CGSize(width: 23, height: 30), displayScale: 6.2,
@@ -211,7 +225,7 @@ enum CharacterRoster {
     /// Menu/display order.
     static let all: [CharacterDefinition] = [
         bill,
-        sans, sansdt, frisk, flowey, temmie, monsterkid, annoyingdog,
+        sans, sansdt, papyrus, toriel, frisk, flowey, temmie, monsterkid, annoyingdog,
         niko, nikoow,
         knight, hornet,
         kris, ralsei, susie,

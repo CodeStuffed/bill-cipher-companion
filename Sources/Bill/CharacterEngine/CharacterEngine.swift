@@ -100,6 +100,7 @@ final class CharacterEngine {
             activeClipProvider = AnimationClipLibrary.clip(for:)
             rig.bodyNode.size = BillSpriteCatalog.restTexture.size()
             rig.bodyNode.setScale(BillRigNode.displayScale)
+
             stateMachine.adopt(
                 clipProvider: activeClipProvider,
                 restTexture: BillSpriteCatalog.restTexture,
