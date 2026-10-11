@@ -190,13 +190,13 @@ enum CharacterRoster {
 
     static let knight = CharacterDefinition(
         id: "knight", displayName: "The Knight", packID: "hollowknight", packName: "Hollow Knight",
-        spritePrefix: "knight", canvasSize: CGSize(width: 267, height: 137), displayScale: 1.4,
+        spritePrefix: "knight", canvasSize: CGSize(width: 84, height: 140), displayScale: 1.4,
         dialogueResource: "dialogue_knight", companionID: nil,
         credit: "Hollow Knight sprites from the community atlas rips — spriters-resource.com"
     )
     static let hornet = CharacterDefinition(
         id: "hornet", displayName: "Hornet", packID: "hollowknight", packName: "Hollow Knight",
-        spritePrefix: "hornet", canvasSize: CGSize(width: 216, height: 215), displayScale: 0.9,
+        spritePrefix: "hornet", canvasSize: CGSize(width: 253, height: 234), displayScale: 0.9,
         dialogueResource: "dialogue_hornet", companionID: nil,
         credit: "Hollow Knight sprites from the community atlas rips — spriters-resource.com"
     )

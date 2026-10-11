@@ -63,8 +63,7 @@ final class CharacterSpriteCatalog {
     private struct ManifestInfo: Codable {
         let canvas: [Int]
         let idle_h: Int?
-        let families: [String: FamilyCount]
-        struct FamilyCount: Codable { let count: Int }
+        let families: [String: Int]
     }
 
     /// The frames of `family`, in order. Empty when the family is absent.
