@@ -16,6 +16,10 @@ final class EnemySpawnController: NSObject {
     private var spawnTimers: [DispatchWorkItem] = []
     private let characterEngine: CharacterEngine
     private let preferences: AppPreferences
+    /// Attaches a spawned enemy to the primary window's scene and positions
+    /// it — injected by the AppDelegate so this controller stays decoupled
+    /// from the window layer.
+    var attachEnemy: ((CompanionController) -> Void)?
 
     /// Maximum simultaneous enemies — more than this would be chaos.
     static let maxEnemies = 6
@@ -88,8 +92,10 @@ final class EnemySpawnController: NSObject {
         // Pick a random enemy from the pool
         guard let (enemyId, quip) = Self.enemyPool.randomElement() else { return }
 
-        // Verify the enemy has sprites
-        let definition = CharacterDefinition.enemy(id: enemyId, quip: quip)
+        // The enemy must be a real roster entry with real geometry (the
+        // generated roster carries canvas/displayScale from the sprite
+        // scan) — the old placeholder factory produced 100×100 blanks.
+        let definition = CharacterRoster.character(enemyId)
         let catalog = CharacterSpriteCatalog(definition: definition)
         guard !catalog.frames("idle").isEmpty else { return }
 
@@ -100,10 +106,12 @@ final class EnemySpawnController: NSObject {
             }
         )
         enemies.append(enemy)
+        attachEnemy?(enemy)
+        characterEngine.bark(quip, importance: .always)
         NotificationCenter.default.post(
             name: .enemySpawned,
             object: nil,
-            userInfo: ["id": enemyId, "controller": enemy]
+            userInfo: ["id": enemyId, "controller": enemy, "quip": quip]
         )
 
         // Auto-despawn after the lifetime
@@ -121,26 +129,4 @@ final class EnemySpawnController: NSObject {
 
 extension Notification.Name {
     static let enemySpawned = Notification.Name("enemySpawned")
-}
-
-extension CharacterDefinition {
-    /// Factory for enemy definitions — enemies are lightweight,
-    /// auto-spawned, and have single-quip dialogue.
-    static func enemy(id: String, quip: String) -> CharacterDefinition {
-        CharacterDefinition(
-            id: id,
-            displayName: id.replacingOccurrences(of: "enemy_", with: "")
-                .replacingOccurrences(of: "_", with: " ").capitalized,
-            packID: "hollowknight",
-            packName: "Hollow Knight",
-            spritePrefix: id,
-            canvasSize: CGSize(width: 100, height: 100), // placeholder — updated at spawn
-            displayScale: 1.0,
-            dialogueResource: nil,
-            companionID: nil,
-            prefersGroundedRoaming: false,
-            prefersStationary: false,
-            credit: "Hollow Knight enemy sprites from community rips"
-        )
-    }
 }

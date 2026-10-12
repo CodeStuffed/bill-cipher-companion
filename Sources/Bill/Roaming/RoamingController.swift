@@ -27,10 +27,14 @@ final class RoamingController {
         /// Walk to the nearest edge of the current surface, look over it, and
         /// step off on purpose.
         case dropOff
-        /// Onto a window's traffic-light zone with prank intent: land on
-        /// the minimize button, play the press beat, and actually press it.
+        /// Onto a window's traffic-light zone with prank intent: land on the
+        /// minimize button, play the press beat, and actually press it.
         /// Rarest goal by far (see `minimizePrankChance`).
         case trafficLight(rect: CGRect)
+        /// Top-down mode (Undertale/OneShot style): stroll to a point
+        /// ANYWHERE on the screen — the desktop is the game world, the
+        /// character walks in all four directions with no gravity at all.
+        case walk2D(CGPoint)
     }
 
     /// The step of the plan currently being executed.
@@ -66,6 +70,23 @@ final class RoamingController {
     private var facing: CGFloat = -1
     private var isSuspended = false
     private var beatStartedAt = Date.distantPast
+
+    // MARK: - Top-down mode (Undertale/OneShot world)
+
+    /// True for grounded characters whose sheets carry all four
+    /// directional walk rows — the desktop becomes their top-down game
+    /// world: free (x, y) strolls, up/down/left/right families, zero
+    /// gravity. See `walk2D`.
+    private var isTopDown: Bool {
+        characterEngine.character.prefersGroundedRoaming
+            && (characterEngine.animationLibrary?.hasFourDirectionalWalk ?? false)
+    }
+    /// The point the top-down stroll is currently walking toward, in
+    /// screen coordinates (feet position).
+    private var walk2DTarget: CGPoint?
+    /// Feet position while in top-down mode (kept in panel-derived
+    /// coordinates via `feetPosition(panel:)` each tick).
+    private var topDownLegs = 0
 
     /// Emitted for anything worth speaking about. `CharacterWindowController`
     /// hooks this up to the bark path so dialogue tracks what Bill is
@@ -325,6 +346,16 @@ final class RoamingController {
         }
         guard let screen = screenForBill() else { log("BAIL no screen"); scheduleNextBeat(); return }
 
+        if isTopDown {
+            // Top-down mode ignores the sim completely.
+            walk2DTarget = nil
+            topDownLegs = 0
+            goal = nil
+            beatStartedAt = Date()
+            startTicking()
+            log("begin TOP-DOWN beat")
+            return
+        }
         buildWorld(on: screen, panel: panel)
         syncSimFromPanel(panel: panel, screen: screen)
         log("begin feet=(\(Int(sim.feet.x)),\(Int(sim.feet.y))) grounded=\(sim.isGrounded) solids=\(sim.solids.count) visible=\(screen.visibleFrame)")
@@ -352,6 +383,7 @@ final class RoamingController {
         case .ground(let x):    log("goal GROUND to x=\(Int(x))")
         case .platform(let r):  log("goal PLATFORM top=\(Int(r.maxY)) x=\(Int(r.minX))...\(Int(r.maxX))")
         case .trafficLight(let r): log("goal TRAFFIC LIGHT top=\(Int(r.maxY)) x=\(Int(r.minX)) (prank)")
+        case .walk2D(let p): log("goal WALK2D to (\(Int(p.x)),\(Int(p.y)))")
         }
         goal = chosen
         replanCount = 0
@@ -421,6 +453,19 @@ final class RoamingController {
 
     private func pickGoal(on screen: NSScreen, panel: NSPanel) -> Goal? {
         let visible = screen.visibleFrame
+
+        // Top-down world: any point on the screen (with margins so nobody
+        // walks into the menu bar or off-screen) — chained legs read as
+        // exploring rather than teleporting.
+        if isTopDown {
+            let margin: CGFloat = 70
+            let top: CGFloat = 0.86  // keep below the menu-bar zone
+            let point = CGPoint(
+                x: CGFloat.random(in: visible.minX + margin...visible.maxX - margin),
+                y: CGFloat.random(in: visible.minY + 50...visible.maxY * top)
+            )
+            return .walk2D(point)
+        }
 
         // Grounded characters (Undertale, OneShot — see
         // `CharacterDefinition.prefersGroundedRoaming`) stay on the floor:
@@ -541,6 +586,10 @@ final class RoamingController {
         switch goal {
         case .stroll(let x):
             step = .approach(x: x, running: abs(x - sim.feet.x) > 240)
+
+        case .walk2D:
+            // Driven by `stepTopDown`, never by the plan ladder.
+            step = .done
 
         case .dropOff:
             // Head for whichever end of this ledge is nearer, stopping just
@@ -718,6 +767,78 @@ final class RoamingController {
         tick = timer
     }
 
+    /// Top-down driver: moves the window toward `walk2DTarget` in a
+    /// straight line, playing the direction-matched walk family
+    /// (up = away, down = toward, left/right = sides). No gravity, no
+    /// sim, no window topology — the screen IS the world.
+    private func stepTopDown(panel: NSPanel) {
+        guard let screen = screenForBill() else { endBeat(); return }
+        let visible = screen.visibleFrame
+        let s = preferences.characterScale
+        let speed: CGFloat = 60 * preferences.characterScale
+
+        guard var target = walk2DTarget else {
+            // Arrived (or first tick): either chain another leg or settle.
+            topDownLegs += 1
+            if topDownLegs < Int.random(in: 2...4) {
+                let margin: CGFloat = 70
+                walk2DTarget = CGPoint(
+                    x: CGFloat.random(in: visible.minX + margin...visible.maxX - margin),
+                    y: CGFloat.random(in: visible.minY + 50...visible.maxY * 0.86)
+                )
+            } else {
+                applyState(.idle)
+                endBeat()
+            }
+            return
+        }
+
+        var feet = feetPosition(panel: panel)
+        let dx = target.x - feet.x
+        let dy = target.y - feet.y
+        let distance = hypot(dx, dy)
+        let stepDistance = speed * Self.tickInterval
+
+        if distance <= stepDistance || distance < 1 {
+            feet = target
+            walk2DTarget = nil
+        } else {
+            feet.x += dx / distance * stepDistance
+            feet.y += dy / distance * stepDistance
+        }
+
+        // Keep the feet on-screen.
+        feet.x = min(max(feet.x, visible.minX + 40), visible.maxX - 40)
+        feet.y = min(max(feet.y, visible.minY + 30), visible.maxY * 0.9)
+
+        // Direction-matched animation: dominant axis picks the family,
+        // `walkAxis`/`walkDirection` tell the library which row to play.
+        let library = characterEngine.animationLibrary
+        if distance > 1 {
+            if abs(dx) >= abs(dy) {
+                library?.walkAxis = .horizontal
+                updateFacing(dx)
+            } else {
+                library?.walkAxis = .vertical
+                // Screen Y grows UP: dy > 0 = moving up-screen = the AWAY
+                // family (up/back rows); dy < 0 = moving down-screen = the
+                // TOWARD family (down/front rows). "Up is up, down is down."
+                library?.walkDirection = dy > 0 ? -1 : 1
+                characterEngine.rig.bodyNode.xScale = characterEngine.character.displayScale
+            }
+            applyState(.walking)
+        } else {
+            library?.walkAxis = .horizontal
+            applyState(.idle)
+        }
+
+        let origin = NSPoint(
+            x: feet.x - Self.centerInsetX * s,
+            y: feet.y - Self.feetInsetY * s
+        )
+        panel.setFrameOrigin(origin)
+    }
+
     private func endBeat() {
         log("end feet=(\(Int(sim.feet.x)),\(Int(sim.feet.y)) grounded=\(sim.isGrounded)")
         tick?.invalidate(); tick = nil
@@ -739,6 +860,11 @@ final class RoamingController {
         if Date().timeIntervalSince(beatStartedAt) > Self.beatTimeout {
             onEvent?(.reachedGoal)
             endBeat()
+            return
+        }
+
+        if isTopDown {
+            stepTopDown(panel: panel)
             return
         }
 
@@ -935,11 +1061,22 @@ final class RoamingController {
         let want: CGFloat = dx > 0 ? -1 : 1
         guard want != facing else { return }
         facing = want
-        characterEngine.rig.bodyNode.xScale = want * characterEngine.character.displayScale
+        // The sheet's left/right rows are genuine art, not mirrors — the
+        // library picks them via walkDirection. Only Bill (whose sheet is
+        // authored left-facing single-sided) flips via xScale; pack
+        // characters NEVER auto-mirror. If a pack family needs flipping,
+        // the user labels it "Faces right (mirror)" in Settings.
+        characterEngine.animationLibrary?.walkDirection = dx > 0 ? 1 : -1
+        if characterEngine.character.isBill {
+            characterEngine.rig.bodyNode.xScale = want * characterEngine.character.displayScale
+        } else {
+            characterEngine.rig.bodyNode.xScale = characterEngine.character.displayScale
+        }
     }
 
     func resetFacing() {
         facing = 1
+        characterEngine.animationLibrary?.walkDirection = -1
         characterEngine.rig.bodyNode.xScale = characterEngine.character.displayScale
     }
 
@@ -955,7 +1092,23 @@ final class RoamingController {
     }
 
     private func syncSimFromPanel(panel: NSPanel, screen: NSScreen) {
-        let feet = feetPosition(panel: panel)
+        var feet = feetPosition(panel: panel)
+        // Grounded-roaming characters (Undertale/Deltarune/OneShot) never
+        // experience gravity: if the window isn't at the floor (spawned
+        // elevated, dock menu drag, etc.) snap BOTH the window and the sim
+        // to the floor plane so no falling can ever occur.
+        if characterEngine.character.prefersGroundedRoaming,
+           abs(feet.y - screen.visibleFrame.minY) > 2 {
+            let s = preferences.characterScale
+            feet = CGPoint(x: feet.x, y: screen.visibleFrame.minY)
+            let origin = NSPoint(
+                x: sim.feet.x - Self.centerInsetX * s,
+                y: feet.y - Self.feetInsetY * s
+            )
+            panel.setFrameOrigin(origin)
+            sim.place(feetAt: feet, grounded: true)
+            return
+        }
         // Grounded if he is already sitting on the floor or on a ledge.
         let onSurface = abs(feet.y - screen.visibleFrame.minY) < 2
             || sim.solids.contains { abs(feet.y - $0.rect.maxY) < 2 }

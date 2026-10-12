@@ -73,12 +73,82 @@ final class CompanionController {
         scene.addChild(rig.root)
         stateMachine.request(.idle)
         startBeats()
+        startWandering()
     }
 
     func detach() {
         stopBeats()
+        stopWandering()
         stateMachine.clearBarkQueue()
         rig.root.removeFromParent()
+    }
+
+    // MARK: - Wandering
+
+    private var wanderTimer: Timer?
+    private var isWandering = false
+    /// Companions are not statuary: every so often one strolls across its
+    /// share of the window — its own walk family, its own direction — then
+    /// settles back to idle. Only ever starts from genuine rest, so it can
+    /// never interrupt a reaction beat or banter, and it keeps clear of
+    /// the primary's spot so the window never becomes a shuffle pile.
+    private func startWandering() {
+        scheduleWander()
+    }
+
+    private func stopWandering() {
+        wanderTimer?.invalidate()
+        wanderTimer = nil
+        rig.root.removeAction(forKey: "wanderMove")
+        isWandering = false
+    }
+
+    private func scheduleWander() {
+        wanderTimer?.invalidate()
+        let delay = Double.random(in: 8...22)
+        wanderTimer = Timer.scheduledTimer(withTimeInterval: delay, repeats: false) { [weak self] _ in
+            Task { @MainActor in self?.wanderStep() }
+        }
+    }
+
+    private func wanderStep() {
+        defer { scheduleWander() }
+        guard !isWandering, stateMachine.currentState == .idle else { return }
+        guard let scene = rig.root.scene else { return }
+        let width = scene.frame.width
+        guard width > 220 else { return }
+
+        // Prefer a spot away from the primary (and from this companion's
+        // current position — a stroll of a few points reads as a twitch).
+        let primaryX = scene.children
+            .first { $0.name == "characterRoot" }?.position.x
+        var candidates = (0..<4).map { _ in
+            CGFloat.random(in: width * 0.12...width * 0.88)
+        }
+        if let px = primaryX {
+            candidates.sort { abs($0 - px) > abs($1 - px) }
+        }
+        guard let target = candidates.first else { return }
+        let dx = target - rig.root.position.x
+        guard abs(dx) > 50 else { return }
+
+        isWandering = true
+        // Directional walk rows are the sheet's own art — set the
+        // library's direction; the body is never mirrored (pack rule).
+        library.walkDirection = dx > 0 ? 1 : -1
+        stateMachine.request(.walking, force: true)
+
+        // Walk at the same visual pace as the primary's top-down strolls.
+        let duration = TimeInterval(abs(dx) / 60.0)
+        let move = SKAction.moveTo(x: target, duration: duration)
+        let settle = SKAction.run { [weak self] in
+            guard let self else { return }
+            self.isWandering = false
+            if self.stateMachine.currentState == .walking {
+                self.stateMachine.request(.idle)
+            }
+        }
+        rig.root.run(SKAction.sequence([move, settle]), withKey: "wanderMove")
     }
 
     // MARK: - Ambient beats

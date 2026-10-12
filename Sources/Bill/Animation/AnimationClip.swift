@@ -53,6 +53,11 @@ struct AnimationClip {
     var frameDuration: TimeInterval = 0.12
     var transform: [BillPart: [PoseKeyframe]] = [:]
     var loop: ClipLoopMode = .once
+    /// Play this family horizontally flipped — the Settings "Facing:
+    /// right (mirror)" label. The sign is applied when the clip starts
+    /// (see `BillStateMachine.play`); `false` leaves whatever facing
+    /// the roam controller last set.
+    var mirrored: Bool = false
 
     var singlePassDuration: TimeInterval {
         let textureDuration = textures.isEmpty ? 0 : Double(textures.count) * frameDuration

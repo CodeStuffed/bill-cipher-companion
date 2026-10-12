@@ -473,6 +473,12 @@ final class BillStateMachine {
             applyFX(AnimationClipLibrary.fx(for: state))
         }
         let clip = clipProvider(state)
+        // Per-family facing label from Settings: a family the user marked
+        // "right (mirror)" flips regardless of roam facing; anything else
+        // keeps the sign the roam controller last applied.
+        if clip.mirrored {
+            rig.bodyNode.xScale = -abs(rig.bodyNode.xScale)
+        }
         holdWork?.cancel()
         holdWork = nil
         if state.isContinuous {

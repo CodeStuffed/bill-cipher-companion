@@ -29,6 +29,9 @@ final class AppPreferences: ObservableObject {
         static let darkModeChrome = "billDarkModeChrome"
         static let alwaysOnTop = "billAlwaysOnTop"
         static let customFamilyMap = "billCustomFamilyMap"
+        static let familyFacingMap = "billFamilyFacingMap"
+        static let worldModeMap = "billWorldModeMap"
+        static let familyWorldMap = "billFamilyWorldMap"
         static let mutedCompanions = "billMutedCompanions"
         static let disabledStates = "billDisabledStates"
         static let enemySpawning = "billEnemySpawning"
@@ -83,6 +86,28 @@ final class AppPreferences: ObservableObject {
 
     @Published var customFamilyMap: [String: String] {
         didSet { UserDefaults.standard.set(customFamilyMap, forKey: Keys.customFamilyMap) }
+    }
+
+    /// Family → facing label ("left" / "right"), set from the animation
+    /// browser's per-row Facing picker. "right" on left-authored art
+    /// mirrors the family when it plays; "left" pins it un-mirrored;
+    /// absent = automatic (roaming direction / sheet's own art).
+    @Published var familyFacingMap: [String: String] {
+        didSet { UserDefaults.standard.set(familyFacingMap, forKey: Keys.familyFacingMap) }
+    }
+
+    /// Character id → "light" / "dark" world mode (Deltarune). The
+    /// animation library prefers mode-matching families (dark-world
+    /// walk cycles for dark mode, plain/light ones for light mode).
+    @Published var worldModeMap: [String: String] {
+        didSet { UserDefaults.standard.set(worldModeMap, forKey: Keys.worldModeMap) }
+    }
+
+    /// Family → "light" / "dark" world label, set per-row in the
+    /// animation browser — THE user-facing mapping of which sheet rows
+    /// belong to which world. Takes precedence over name heuristics.
+    @Published var familyWorldMap: [String: String] {
+        didSet { UserDefaults.standard.set(familyWorldMap, forKey: Keys.familyWorldMap) }
     }
 
     @Published var activeCompanionIDs: [String] {
@@ -231,6 +256,9 @@ final class AppPreferences: ObservableObject {
     /// The state→family assignment table, mirrored for the animation
     /// library (which reads it on every clip build).
     static var customFamilyMapShared: [String: String] = [:]
+    static var familyFacingMapShared: [String: String] = [:]
+    static var worldModeMapShared: [String: String] = [:]
+    static var familyWorldMapShared: [String: String] = [:]
 
     /// Muted companions, mirrored for the companion controllers.
     static var mutedCompanionsShared: Set<String> = []
@@ -311,6 +339,9 @@ final class AppPreferences: ObservableObject {
         activeCharacterID = defaults.string(forKey: Keys.activeCharacter) ?? "bill"
         activeCompanionIDs = defaults.stringArray(forKey: Keys.activeCompanions) ?? []
         customFamilyMap = defaults.dictionary(forKey: Keys.customFamilyMap) as? [String: String] ?? [:]
+        familyFacingMap = defaults.dictionary(forKey: Keys.familyFacingMap) as? [String: String] ?? [:]
+        worldModeMap = defaults.dictionary(forKey: Keys.worldModeMap) as? [String: String] ?? [:]
+        familyWorldMap = defaults.dictionary(forKey: Keys.familyWorldMap) as? [String: String] ?? [:]
         mutedCompanionIDs = Set(defaults.stringArray(forKey: Keys.mutedCompanions) ?? [])
         disabledStateIDs = Set(defaults.stringArray(forKey: Keys.disabledStates) ?? [])
         isEnemySpawningEnabled = (defaults.object(forKey: Keys.enemySpawning) as? Bool) ?? false

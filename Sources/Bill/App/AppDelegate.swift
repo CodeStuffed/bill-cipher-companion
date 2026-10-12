@@ -59,6 +59,21 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             .removeDuplicates()
             .sink { AppPreferences.customFamilyMapShared = $0 }
             .store(in: &cancellables)
+        AppPreferences.familyFacingMapShared = preferences.familyFacingMap
+        preferences.$familyFacingMap
+            .removeDuplicates()
+            .sink { AppPreferences.familyFacingMapShared = $0 }
+            .store(in: &cancellables)
+        AppPreferences.worldModeMapShared = preferences.worldModeMap
+        preferences.$worldModeMap
+            .removeDuplicates()
+            .sink { AppPreferences.worldModeMapShared = $0 }
+            .store(in: &cancellables)
+        AppPreferences.familyWorldMapShared = preferences.familyWorldMap
+        preferences.$familyWorldMap
+            .removeDuplicates()
+            .sink { AppPreferences.familyWorldMapShared = $0 }
+            .store(in: &cancellables)
 
         // Decode the dialogue library before anything can ask it for a line.
         // A few milliseconds for ~750 short strings, and every bark path
@@ -122,6 +137,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         settingsWindowController.onSwitchCharacter = { [weak self] id in
             self?.switchCharacter(to: id)
         }
+        settingsWindowController.onWorldModeChanged = { [weak self] in
+            self?.characterEngine.transitionWorld()
+        }
         settingsWindowController.onTestTrigger = { [weak self] keys, animationKey in
             guard let self else { return }
             // Fire the trigger live: request the assigned animation (or
@@ -150,6 +168,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         dialogueRefreshLogWindowController = DialogueRefreshLogWindowController(characterWindowController: characterWindowController)
         enemySpawnController = EnemySpawnController(characterEngine: characterEngine, preferences: preferences)
+        enemySpawnController?.attachEnemy = { [weak self] enemy in
+            self?.characterWindowController.attach(enemy: enemy)
+        }
         preferences.$isEnemySpawningEnabled
             .removeDuplicates()
             .sink { [weak self] enabled in

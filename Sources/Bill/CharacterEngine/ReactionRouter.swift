@@ -246,8 +246,12 @@ final class ReactionRouter {
         guard matched else { return false }
         lastIncognitoTriggerAt = Date()
         // The ONLY trigger for the red shooting cloud, per the explicit ask —
-        // no random rotation or showcase ever fires it.
-        characterEngine.request(.rampaging, force: true)
+        // no random rotation or showcase ever fires it. The Settings
+        // deselector is absolute: a disabled "rampaging" plays nothing,
+        // whoever asks.
+        if !AppPreferences.isStateDisabledShared("rampaging") {
+            characterEngine.request(.rampaging, force: true)
+        }
         speak(["incognito.search"], substitutions: ["app": appName], importance: .always)
         return true
     }

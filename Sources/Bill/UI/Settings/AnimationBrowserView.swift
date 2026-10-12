@@ -8,6 +8,8 @@ import SpriteKit
 struct AnimationBrowserView: NSViewRepresentable {
     let characterID: String
     @Binding var customFamilyMap: [String: String]
+    @Binding var familyFacingMap: [String: String]
+    @Binding var familyWorldMap: [String: String]
 
     func makeNSView(context: Context) -> NSScrollView {
         let scroll = NSScrollView()
@@ -31,18 +33,32 @@ struct AnimationBrowserView: NSViewRepresentable {
     }
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(characterID: characterID, binding: $customFamilyMap)
+        Coordinator(
+            characterID: characterID,
+            customBinding: $customFamilyMap,
+            facingBinding: $familyFacingMap,
+            worldBinding: $familyWorldMap
+        )
     }
 
     @MainActor
     final class Coordinator: NSObject {
         var characterID: String
-        var binding: Binding<[String: String]>
+        var customBinding: Binding<[String: String]>
+        var facingBinding: Binding<[String: String]>
+        var worldBinding: Binding<[String: String]>
         private var builtFor: String = ""
 
-        init(characterID: String, binding: Binding<[String: String]>) {
+        init(
+            characterID: String,
+            customBinding: Binding<[String: String]>,
+            facingBinding: Binding<[String: String]>,
+            worldBinding: Binding<[String: String]>
+        ) {
             self.characterID = characterID
-            self.binding = binding
+            self.customBinding = customBinding
+            self.facingBinding = facingBinding
+            self.worldBinding = worldBinding
         }
 
         /// The character's families, read from the shipped manifest.
@@ -57,13 +73,12 @@ struct AnimationBrowserView: NSViewRepresentable {
                   let manifest = try? JSONDecoder().decode([String: ManifestEntry].self, from: data),
                   let entry = manifest[characterID]
             else { return [] }
-            return entry.families.sorted { $0.key < $1.key }.map { (name: $0.key, count: $0.value.count) }
+            return entry.families.sorted { $0.key < $1.key }.map { (name: $0.key, count: $0.value) }
         }
 
         struct ManifestEntry: Codable {
-            struct FamiliesValue: Codable { let count: Int }
             let canvas: [Int]
-            let families: [String: FamiliesValue]
+            let families: [String: Int]
         }
 
         func rebuild(list: NSStackView) {
@@ -85,6 +100,7 @@ struct AnimationBrowserView: NSViewRepresentable {
         }
 
         private func makeRow(family: (name: String, count: Int)) -> NSView {
+            let facing = facingBinding.wrappedValue[family.name] ?? ""
             let container = NSView()
             container.translatesAutoresizingMaskIntoConstraints = false
 
@@ -113,6 +129,57 @@ struct AnimationBrowserView: NSViewRepresentable {
             assign.setContentHuggingPriority(.required, for: .horizontal)
             container.addSubview(assign)
 
+            // Facing label — "which way is this animation facing" so the
+            // app can mirror single-sided art correctly.
+            let facingMenu = NSMenu()
+            facingMenu.autoenablesItems = false
+            for (tag, title) in [(0, "Facing: auto"), (1, "Faces left"), (2, "Faces right (mirror)")] {
+                let item = NSMenuItem(
+                    title: title,
+                    action: #selector(setFacing(_:)),
+                    keyEquivalent: ""
+                )
+                item.target = self
+                item.tag = tag
+                item.representedObject = family.name
+                let current = facingBinding.wrappedValue[family.name] ?? ""
+                item.state = (tag == 0 && current.isEmpty)
+                    || (tag == 1 && current == "left")
+                    || (tag == 2 && current == "right") ? .on : .off
+                facingMenu.addItem(item)
+            }
+            let facingButton = NSPopUpButton()
+            facingButton.translatesAutoresizingMaskIntoConstraints = false
+            facingButton.menu = facingMenu
+            facingButton.setContentHuggingPriority(.required, for: .horizontal)
+            container.addSubview(facingButton)
+
+            // World label — "which world's art is this row": the explicit
+            // dark/light mapping for Deltarune-style sheets. The World-mode
+            // segment then switches between them (with the crossfade).
+            let worldMenu = NSMenu()
+            worldMenu.autoenablesItems = false
+            for (tag, title) in [(0, "World: auto"), (1, "Light world"), (2, "Dark world")] {
+                let item = NSMenuItem(
+                    title: title,
+                    action: #selector(setWorld(_:)),
+                    keyEquivalent: ""
+                )
+                item.target = self
+                item.tag = tag
+                item.representedObject = family.name
+                let currentWorld = worldBinding.wrappedValue[family.name] ?? ""
+                item.state = (tag == 0 && currentWorld.isEmpty)
+                    || (tag == 1 && currentWorld == "light")
+                    || (tag == 2 && currentWorld == "dark") ? .on : .off
+                worldMenu.addItem(item)
+            }
+            let worldButton = NSPopUpButton()
+            worldButton.translatesAutoresizingMaskIntoConstraints = false
+            worldButton.menu = worldMenu
+            worldButton.setContentHuggingPriority(.required, for: .horizontal)
+            container.addSubview(worldButton)
+
             NSLayoutConstraint.activate([
                 preview.leadingAnchor.constraint(equalTo: container.leadingAnchor),
                 preview.topAnchor.constraint(equalTo: container.topAnchor),
@@ -122,7 +189,11 @@ struct AnimationBrowserView: NSViewRepresentable {
                 label.centerYAnchor.constraint(equalTo: container.centerYAnchor),
                 assign.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: 12),
                 assign.centerYAnchor.constraint(equalTo: container.centerYAnchor),
-                container.trailingAnchor.constraint(greaterThanOrEqualTo: assign.trailingAnchor, constant: 8),
+                facingButton.leadingAnchor.constraint(equalTo: assign.trailingAnchor, constant: 12),
+                facingButton.centerYAnchor.constraint(equalTo: container.centerYAnchor),
+                worldButton.leadingAnchor.constraint(equalTo: facingButton.trailingAnchor, constant: 12),
+                worldButton.centerYAnchor.constraint(equalTo: container.centerYAnchor),
+                container.trailingAnchor.constraint(greaterThanOrEqualTo: worldButton.trailingAnchor, constant: 8),
             ])
             return container
         }
@@ -136,7 +207,7 @@ struct AnimationBrowserView: NSViewRepresentable {
             menu.addItem(title)
 
             // States already assigned to this family show a checkmark.
-            let assigned = binding.wrappedValue.filter { $0.value == family }.map(\.key)
+            let assigned = customBinding.wrappedValue.filter { $0.value == family }.map(\.key)
 
             for state in BillState.allCases {
                 let item = NSMenuItem(
@@ -156,17 +227,39 @@ struct AnimationBrowserView: NSViewRepresentable {
         @objc private func assignFamily(_ sender: NSMenuItem) {
             guard let info = sender.representedObject as? [String: String],
                   let family = info["family"], let state = info["state"] else { return }
-            var map = binding.wrappedValue
+            var map = customBinding.wrappedValue
             if map[state] == family {
                 map.removeValue(forKey: state)  // clicking again = unassign
             } else {
                 map[state] = family
             }
-            binding.wrappedValue = map
+            customBinding.wrappedValue = map
             // rebuild menus so checkmarks update
             if let window = NSApp.keyWindow {
                 (window.contentView as? NSHostingView<AnimationsTabRoot>)?.needsLayout = true
             }
+        }
+
+        @objc private func setFacing(_ sender: NSMenuItem) {
+            guard let family = sender.representedObject as? String else { return }
+            var map = facingBinding.wrappedValue
+            switch sender.tag {
+            case 1: map[family] = "left"
+            case 2: map[family] = "right"
+            default: map.removeValue(forKey: family)
+            }
+            facingBinding.wrappedValue = map
+        }
+
+        @objc private func setWorld(_ sender: NSMenuItem) {
+            guard let family = sender.representedObject as? String else { return }
+            var map = worldBinding.wrappedValue
+            switch sender.tag {
+            case 1: map[family] = "light"
+            case 2: map[family] = "dark"
+            default: map.removeValue(forKey: family)
+            }
+            worldBinding.wrappedValue = map
         }
     }
 }
@@ -205,6 +298,10 @@ final class FamilyPreviewScene: SKScene {
         let scale = min(100 / definition.canvasSize.width, 140 / definition.canvasSize.height)
         let body = SKSpriteNode(texture: frames[0])
         body.setScale(scale)
+        // Show the labeled facing — mirrored previews match desktop play.
+        if AppPreferences.familyFacingMapShared[family] == "right" {
+            body.xScale = -abs(body.xScale)
+        }
         body.position = CGPoint(x: size.width / 2, y: size.height / 2)
         addChild(body)
         if frames.count > 1 {

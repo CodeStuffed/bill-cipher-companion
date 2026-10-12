@@ -554,7 +554,11 @@ final class CharacterWindowController: NSObject {
         // 6.2x-scale Sans walks at Bill-speed (72pt/s of tiny steps, reading
         // as standing still while shuffling).
         if let roaming = roaming {
-            roaming.characterScale = definition.displayScale * preferences.characterScale
+            // Normalize to Bill's body-unit conversion: every character
+            // renders at the same visual height, so pt/s speeds and jump
+            // arcs must be identical across the roster (the Knight was
+            // visibly slow-marching at his 1.4x scale).
+            roaming.characterScale = BillRigNode.displayScale * preferences.characterScale
         }
 
         // The roaming controller caches the desktop's window topology against
@@ -566,6 +570,30 @@ final class CharacterWindowController: NSObject {
     private var sceneIfAvailable: SKScene? {
         hitView.scene
     }
+
+    /// Attaches a spawned Hollow Knight enemy to the shared scene and
+    /// positions it in its own slot along the floor — enemies are staged
+    /// in the same window as the character (the "invaders in the throne
+    /// room" reading) with slots spread so they don't pile on the
+    /// primary. The companion collision system ("ouch" banter) takes it
+    /// from there.
+    func attach(enemy: CompanionController) {
+        enemy.attach(to: sceneIfAvailable)
+        let scale = preferences.characterScale
+        let width = panel.frame.width
+        // Evenly spread slots, slightly jittered, always distinct from the
+        // primary's right-end slot.
+        let index = CGFloat(enemySpawnSlot % 5)
+        enemySpawnSlot += 1
+        let fraction = (0.12 + index * 0.15).truncatingRemainder(dividingBy: 0.85)
+            + CGFloat.random(in: -0.02...0.02)
+        enemy.rig.root.position = CGPoint(
+            x: width * max(0.06, min(0.9, fraction)),
+            y: geometry.bodyAnchorY * scale
+        )
+        enemy.rig.root.setScale(scale)
+    }
+    private var enemySpawnSlot = 0
 
     /// Bill *is* the chat interface now: right-click → "Talk" opens a small
     /// pixel speech bubble beside him, the typed message goes through the

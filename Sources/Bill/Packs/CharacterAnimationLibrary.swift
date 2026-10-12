@@ -17,8 +17,66 @@ import SpriteKit
 ///    Bill's 68 still reacts to EVERY trigger; the emotion just plays on
 ///    whatever pose fits.
 @MainActor
-struct CharacterAnimationLibrary {
+final class CharacterAnimationLibrary {
     let catalog: CharacterSpriteCatalog
+    /// Which screen axis a stroll is currently moving along — the
+    /// four-directional Undertale-style world plays "up"/"down" rows
+    /// on vertical legs instead of side walks.
+    enum WalkAxis { case horizontal, vertical }
+    var walkAxis: WalkAxis = .horizontal
+    /// The current horizontal walk direction (-1 = left, +1 = right).
+    /// Set by the roaming controller on direction changes so the
+    /// walking state can play the direction-correct animation
+    /// ("left" vs "right" are DIFFERENT frames on the sheet, not mirrors).
+    var walkDirection: Int = 1
+
+    /// True when the sheet has genuinely directional walk rows (separate
+    /// "left"/"right" art) — when set, walking right plays the sheet's own
+    /// right-facing frames rather than mirroring the left walk.
+    var hasDirectionalWalk: Bool {
+        let leftKeys = ["left", "walk-left", "left-walk", "black-left-walk"]
+        let rightKeys = ["right", "walk-right", "right-walk", "black-right-walk"]
+        let hasLeft = leftKeys.contains { !catalog.frames($0).isEmpty }
+        let hasRight = rightKeys.contains { !catalog.frames($0).isEmpty }
+        return hasLeft && hasRight
+    }
+
+    /// True when the sheet has all four directions' walk rows — the
+    /// character roams the desktop top-down (no gravity, four-way
+    /// strolls) rather than pacing the floor.
+    var hasFourDirectionalWalk: Bool {
+        guard hasDirectionalWalk else { return false }
+        let downKeys = ["down", "walk-forward", "forward-walk", "forward",
+                        "light-walk-down", "walk-down", "walk-down-dark-face"]
+        let upKeys = ["up", "walk-back", "backwards-walk", "walk-backwards",
+                      "butler-walk-up", "light-walk-up", "walk-up", "walk-up-dark",
+                      "walk-back-dark"]
+        let hasDown = downKeys.contains { !catalog.frames($0).isEmpty }
+        let hasUp = upKeys.contains { !catalog.frames($0).isEmpty }
+        return hasDown && hasUp
+    }
+
+    /// The family the `.showcasing` state is currently performing.
+    /// Set by the engine right before requesting the state — the clip
+    /// provider reads it, so an arbitrary sheet row can be played and
+    /// seen without inventing a BillState for each one.
+    var showcaseFamily: String?
+
+    /// Every family on the sheet — the "see all animations" catalog.
+    var allFamilies: [String] {
+        catalog.familyNames
+    }
+
+    /// Families the showcase beat may perform. Labeled walk VARIANTS are
+    /// included — for sheet-rich characters like Niko the walk combos ARE
+    /// the variety ("she has a variety of walking animations"). Only the
+    /// four core directionals and the rest pose are excluded (they belong
+    /// to actual movement).
+    var showcaseCandidates: [String] {
+        allFamilies.filter { fam in
+            !(["idle", "idle_still", "down", "left", "right", "up"].contains(fam))
+        }
+    }
 
     init(catalog: CharacterSpriteCatalog) {
         self.catalog = catalog
@@ -102,11 +160,52 @@ struct CharacterAnimationLibrary {
             "poked": ["shocked", "battle-idle-shocked-face-left", "scared-and-fall"],
         ]
         if let alts = alternatives[requested] {
-            for alt in alts {
+            for alt in modeOrdered(alts) {
                 if !catalog.frames(alt).isEmpty { return alt }
             }
         }
+        // World-mode variants of the requested name itself ("idle" exists
+        // as plain but the character is in dark mode → prefer a dark idle
+        // row when the sheet carries one).
+        for suffix in worldMode == "dark" ? ["-dark", "-in-battle-dark"] : ["-light", "-in-battle-light"] {
+            let variant = requested + suffix
+            if !catalog.frames(variant).isEmpty { return variant }
+        }
         return nil
+    }
+
+    /// The world mode the user picked for this character in Settings
+    /// ("light" / "dark"); Deltarune sheets carry both forms' rows.
+    private var worldMode: String? {
+        AppPreferences.worldModeMapShared[catalog.definition.id]
+    }
+
+    /// Prefers mode-matching variants: dark mode picks "dark*"/"*-dark"
+    /// families first, light mode picks "light*"/plain ones first.
+    private func modeOrdered(_ candidates: [String]) -> [String] {
+        guard let mode = worldMode else { return candidates }
+        let wantsDark = mode == "dark"
+        // Read the actor-isolated shared table ONCE, in the method body —
+        // the sorted predicate closure below is nonisolated and may only
+        // touch this captured local.
+        let worldLabels = AppPreferences.familyWorldMapShared
+        func rank(_ f: String) -> Int {
+            // The user's explicit per-family world label (Settings →
+            // Animations browser) outranks name-based guessing.
+            switch worldLabels[f] {
+            case "dark": return wantsDark ? 0 : 3
+            case "light": return wantsDark ? 3 : 0
+            default: break
+            }
+            let isDark = f.contains("dark") || f.hasPrefix("darkw")
+            let isLight = f.contains("light") && !isDark
+            return wantsDark ? (isDark ? 1 : (isLight ? 2 : 1))
+                             : (isLight ? 1 : (isDark ? 2 : 1))
+        }
+        let ranked = candidates.map { (family: $0, rank: rank($0)) }
+        return ranked
+            .sorted { $0.rank != $1.rank ? $0.rank < $1.rank : $0.family < $1.family }
+            .map(\.family)
     }
 
     private func family(for state: BillState) -> String {
@@ -144,6 +243,8 @@ struct CharacterAnimationLibrary {
              .dreading, .grooving, .dispatching, .stressed,
              .pushingCode, .browsingStore, .dancing:
             return "annoyed"
+        case .showcasing:
+            return "idle"
         }
     }
 
@@ -247,6 +348,12 @@ struct CharacterAnimationLibrary {
     func clip(for state: BillState) -> AnimationClip {
         let id = catalog.definition.id
 
+        // The showcase state plays whatever family the engine staged.
+        if state == .showcasing, let family = showcaseFamily,
+           !catalog.frames(family).isEmpty {
+            return clip(for: state, family: family)
+        }
+
         // User assignment from the Settings animations browser wins over
         // everything — "this reaction plays THAT row" is the whole point
         // of the assign-to-trigger UI.
@@ -289,7 +396,22 @@ struct CharacterAnimationLibrary {
         }
     }
 
+    /// The facing the user labeled for this family in Settings:
+    /// "right" mirrors left-authored art when it plays, "left" pins it
+    /// un-mirrored, absent = automatic.
+    private func facingLabel(for family: String) -> String? {
+        AppPreferences.familyFacingMapShared[family]
+    }
+
     private func clip(for state: BillState, family: String) -> AnimationClip {
+        var clip = buildClip(for: state, family: family)
+        if facingLabel(for: family) == "right" {
+            clip.mirrored = true
+        }
+        return clip
+    }
+
+    private func buildClip(for state: BillState, family: String) -> AnimationClip {
         let frames = catalog.frames(family)
         let isContinuous = state.isContinuous
         let fast: TimeInterval = 0.12
@@ -353,6 +475,59 @@ struct CharacterAnimationLibrary {
                     ]],
                     loop: .loop)
             case .walking, .running:
+                // Four-directional world: vertical legs play the sheet's
+                // own up (away) / down (toward) rows.
+                if state == .walking, walkAxis == .vertical {
+                    let verticalKeys = walkDirection > 0
+                        ? ["down", "walk-forward", "forward-walk", "forward",
+                           "light-walk-down", "walk-down", "walk-down-dark-face"]
+                        : ["up", "walk-back", "backwards-walk", "walk-backwards",
+                           "butler-walk-up", "light-walk-up", "walk-up", "walk-up-dark",
+                           "walk-back-dark"]
+                    for key in modeOrdered(verticalKeys) {
+                        if !catalog.frames(key).isEmpty {
+                            return AnimationClip(
+                                textures: catalog.frames(key),
+                                frameDuration: 0.16,
+                                transform: [.body: [
+                                    PoseKeyframe(duration: 0.32, offset: CGVector(dx: 0, dy: 3), timing: .easeInEaseOut),
+                                    PoseKeyframe(duration: 0.32, offset: .zero, timing: .easeInEaseOut),
+                                ]],
+                                loop: .loop)
+                        }
+                    }
+                }
+                // Directional walk: the sheet has SEPARATE left/right
+                // animation rows. If we're walking left and a "left"
+                // or "walk-left" family exists, play it; same for right.
+                // This is the user's explicit labeling — these are NOT
+                // mirrors, they are genuinely different sprite art.
+                let dir = walkDirection
+                let directionalKeys = dir < 0
+                    ? ["left", "walk-left", "walk_left", "black-left-walk",
+                       "dark-walk-left", "mask-walk-left", "black-mask-walk-left",
+                       "left-walk", "walk-left-dark", "dark-light-walk-left",
+                       "dark-light-mask-walk-left", "mask-light-walk-left",
+                       "no-mask-black-light-walk-left"]
+                    : ["right", "walk-right", "walk_right", "black-right-walk",
+                       "dark-walk-right", "mask-walk-right", "black-mask-walk-right",
+                       "right-walk", "walk-right-dark", "dark-light-walk-right",
+                       "dark-light-mask-walk-right", "mask-light-walk-right",
+                       "no-mask-black-light-walk-right"]
+                if state == .walking {
+                    for key in directionalKeys {
+                        if !catalog.frames(key).isEmpty {
+                            return AnimationClip(
+                                textures: catalog.frames(key),
+                                frameDuration: 0.16,
+                                transform: [.body: [
+                                    PoseKeyframe(duration: 0.32, offset: CGVector(dx: 0, dy: 3), timing: .easeInEaseOut),
+                                    PoseKeyframe(duration: 0.32, offset: .zero, timing: .easeInEaseOut),
+                                ]],
+                                loop: .loop)
+                        }
+                    }
+                }
                 // Undertale's walk cycles are 2 unique poses (contact/pass)
                 // repeated — at Bill's 0.16s they strobe; at amble pace they
                 // read as his unhurried shuffle. Running keeps the urgency.

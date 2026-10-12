@@ -51,48 +51,129 @@ struct StateSelectorTile: View {
     }
 }
 
-/// A static snapshot of the state's first frame — cheap enough to tile
-/// dozens of times (one live SKView per tile would be heavy).
+/// The tile's preview: static at rest, LIVE-ANIMATING while hovered —
+/// the whole sheet stays light (dozens of tiles) yet every animation
+/// can be seen moving ("I want to see the animation move too").
 struct StatePreviewTexture: NSViewRepresentable {
     let characterID: String
     let state: BillState
 
-    func makeNSView(context: Context) -> NSImageView {
-        let view = NSImageView()
-        view.imageScaling = .scaleProportionallyUpOrDown
-        view.image = renderFrame()
+    func makeNSView(context: Context) -> StatePreviewSKView {
+        let view = StatePreviewSKView()
+        view.configure(characterID: characterID, state: state)
         return view
     }
 
-    func updateNSView(_ view: NSImageView, context: Context) {
-        view.image = renderFrame()
+    func updateNSView(_ view: StatePreviewSKView, context: Context) {
+        view.configure(characterID: characterID, state: state)
+    }
+}
+
+/// NSView-hosted SKView that loops the state's real frame sequence while
+/// the cursor is over it (NSTrackingArea, no SwiftUI state needed).
+@MainActor
+final class StatePreviewSKView: NSView {
+    private let skView = SKView()
+    private var scene = SKScene()
+    private var bodyNode = SKSpriteNode()
+    private var frames: [SKTexture] = []
+    private var characterID = ""
+    private var state: BillState?
+    private var isAnimating = false
+
+    override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
+        skView.translatesAutoresizingMaskIntoConstraints = false
+        skView.allowsTransparency = true
+        skView.preferredFramesPerSecond = 15
+        addSubview(skView)
+        NSLayoutConstraint.activate([
+            skView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            skView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            skView.topAnchor.constraint(equalTo: topAnchor),
+            skView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
+        scene.backgroundColor = .clear
+        scene.scaleMode = .resizeFill
+        scene.addChild(bodyNode)
+        skView.presentScene(scene)
+        updateTrackingAreas()
     }
 
-    private func renderFrame() -> NSImage? {
+    required init?(coder: NSCoder) { fatalError("init(coder:) not supported") }
+
+    override func updateTrackingAreas() {
+        trackingAreas.forEach { removeTrackingArea($0) }
+        addTrackingArea(
+            NSTrackingArea(
+                rect: bounds,
+                options: [.mouseEnteredAndExited, .activeAlways],
+                owner: self,
+                userInfo: nil
+            )
+        )
+        super.updateTrackingAreas()
+    }
+
+    override func mouseEntered(with event: NSEvent) { startAnimation() }
+    override func mouseExited(with event: NSEvent) { stopAnimation() }
+
+    func configure(characterID: String, state: BillState) {
+        guard characterID != self.characterID || state != self.state else { return }
+        self.characterID = characterID
+        self.state = state
+        reload()
+    }
+
+    private func reload() {
+        guard let state else { return }
         let definition = CharacterRoster.character(characterID)
+        var textures: [SKTexture] = []
+        var mirrored = false
         if definition.isBill {
-            // Bill: render through his catalog — pick the state's first frame.
-            guard let frames = BillStatePreviewFrames.frames(for: state), let first = frames.first else {
-                return placeholderGlyph
-            }
-            return Self.image(from: first)
+            textures = BillStatePreviewFrames.frames(for: state) ?? []
+        } else {
+            let catalog = CharacterSpriteCatalog(definition: definition)
+            let library = CharacterAnimationLibrary(catalog: catalog)
+            let clip = library.clip(for: state)
+            textures = clip.textures
+            mirrored = clip.mirrored
         }
-        let catalog = CharacterSpriteCatalog(definition: definition)
-        let library = CharacterAnimationLibrary(catalog: catalog)
-        let clip = library.clip(for: state)
-        guard let texture = clip.textures.first else { return placeholderGlyph }
-        return Self.image(from: texture)
+        frames = textures
+        bodyNode.removeAllActions()
+        guard let first = textures.first else {
+            bodyNode.texture = nil
+            return
+        }
+        let size = bounds.size.width > 0
+            ? bounds.size : CGSize(width: 96, height: 84)
+        let scale = min((size.width - 10) / first.size().width,
+                        (size.height - 10) / first.size().height)
+        bodyNode.texture = first
+        bodyNode.size = first.size()
+        bodyNode.setScale(scale)
+        bodyNode.xScale = mirrored ? -abs(bodyNode.xScale) : abs(bodyNode.xScale)
+        bodyNode.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        isAnimating = false
     }
 
-    /// SKTexture → NSImage via the texture's underlying CGImage.
-    private static func image(from texture: SKTexture) -> NSImage? {
-        let cg = texture.cgImage()
-        return NSImage(cgImage: cg, size: NSSize(width: cg.width, height: cg.height))
+    private func startAnimation() {
+        guard !isAnimating, frames.count > 1 else { return }
+        isAnimating = true
+        bodyNode.run(
+            SKAction.repeatForever(
+                SKAction.animate(with: frames, timePerFrame: 0.15, resize: false, restore: false)
+            ),
+            withKey: "previewLoop"
+        )
     }
 
-    private var placeholderGlyph: NSImage {
-        NSImage(systemSymbolName: "questionmark.square.dashed", accessibilityDescription: nil)
-            ?? NSImage()
+    private func stopAnimation() {
+        isAnimating = false
+        bodyNode.removeAction(forKey: "previewLoop")
+        if let first = frames.first {
+            bodyNode.texture = first
+        }
     }
 }
 

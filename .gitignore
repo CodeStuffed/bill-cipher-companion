@@ -6,3 +6,8 @@ Bill.app/
 
 # Windows publish artifacts
 build-assets/win-publish/
+
+# Hollow Knight enemies/NPCs: row-sliced garbage frames, hidden from the
+# app and the repo until properly labeled in the Sprite Workbench.
+build-assets/hk_staging/
+build-assets/extracted/hollowknight/

@@ -46,6 +46,11 @@ final class CharacterSpriteCatalog {
         cache["idle"] = idle
     }
 
+    /// Every family this character ships with, from the manifest.
+    var familyNames: [String] {
+        Self.allFamilyNames(definition: definition)
+    }
+
     /// Scans the bundle for every family this character ships with.
     private static func allFamilyNames(definition: CharacterDefinition) -> [String] {
         var names: [String] = []

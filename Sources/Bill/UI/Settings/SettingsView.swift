@@ -15,6 +15,9 @@ struct SettingsView: View {
     /// Switches the on-screen character — AppDelegate wires this to
     /// `switchCharacter(to:)`.
     var onSwitchCharacter: ((_ id: String) -> Void)?
+    /// Deltarune world mode changed — AppDelegate wires this to the
+    /// engine's crossfade transition.
+    var onWorldModeChanged: (() -> Void)?
 
     enum Section: String, CaseIterable, Identifiable {
         case characters = "Characters"
@@ -242,16 +245,68 @@ struct SettingsView: View {
 
     // MARK: - Animations
 
-    private var animationsDetail: some View {
-        VStack(alignment: .leading, spacing: 24) {
+    /// True when the active character's sheet carries both world forms
+    /// (any family mentioning dark or light) — the Deltarune cast.
+    private var hasWorldVariants: Bool {
+        let id = preferences.activeCharacterID
+        struct Entry: Codable { let families: [String: Int] }
+        guard let url = Bundle.module.url(
+            forResource: "packs_manifest", withExtension: "json", subdirectory: "Packs"
+        ), let data = try? Data(contentsOf: url),
+              let manifest = try? JSONDecoder().decode([String: Entry].self, from: data),
+              let fams = manifest[id]?.families.keys
+        else { return false }
+        let hasDark = fams.contains { $0.contains("dark") }
+        let hasLight = fams.contains { $0.contains("light") }
+        return hasDark && hasLight
+    }
+
+    /// World-mode picker binding — persists and triggers the crossfade.
+    private var worldModeBinding: Binding<String> {
+        Binding(
+            get: { preferences.worldModeMap[preferences.activeCharacterID] ?? "light" },
+            set: { newValue in
+                var map = preferences.worldModeMap
+                let old = map[preferences.activeCharacterID] ?? "light"
+                map[preferences.activeCharacterID] = newValue
+                preferences.worldModeMap = map
+                if old != newValue {
+                    onWorldModeChanged?()
+                }
+            }
+        )
+    }
+
+    private var animationsDetail: some View {        VStack(alignment: .leading, spacing: 24) {
             sectionHeader("Animations", subtitle: "Every animation on the sheet — preview it, assign it to any trigger")
 
             card("Animation browser") {
                 AnimationBrowserView(
                     characterID: preferences.activeCharacterID,
-                    customFamilyMap: $preferences.customFamilyMap
+                    customFamilyMap: $preferences.customFamilyMap,
+                    familyFacingMap: $preferences.familyFacingMap,
+                    familyWorldMap: $preferences.familyWorldMap
                 )
                 .frame(height: 360)
+            }
+
+            // Deltarune (and any character carrying both forms' rows):
+            // pick which world's art plays — with a real transition, not
+            // a texture pop.
+            if hasWorldVariants {
+                card("World mode") {
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Which world's sprites to use — the character fades between worlds rather than popping.")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                        Picker("World", selection: worldModeBinding) {
+                            Text("Light world").tag("light")
+                            Text("Dark world").tag("dark")
+                        }
+                        .pickerStyle(.segmented)
+                        .frame(maxWidth: 320)
+                    }
+                }
             }
 
             card("Idle pacing") {
@@ -487,12 +542,10 @@ struct SettingsView: View {
                 }
             }
 
-            card("Hollow Knight enemies") {
-                Toggle("Spawn roaming enemies", isOn: $preferences.isEnemySpawningEnabled)
-                Text("When on, Hollow Knight enemies periodically appear as flying companions — they hover, bump into your character, and quip. Up to 6 at a time, each despawns after 5 minutes.")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
+            // "Hollow Knight enemies" card REMOVED: the row-sliced enemy
+            // sprites were garbage frames and are hidden from the roster
+            // until properly labeled in the Sprite Workbench. The spawn
+            // controller no-ops safely with an empty enemy roster.
 
             card("Companions") {
                 VStack(alignment: .leading, spacing: 8) {
@@ -505,17 +558,22 @@ struct SettingsView: View {
                         Text("This character flies solo.")
                             .foregroundColor(.secondary)
                     } else {
-                        ForEach(packCharacters) { companion in
-                            HStack {
-                                Toggle(companion.displayName, isOn: companionBinding(companion.id))
-                                if preferences.activeCompanionIDs.contains(companion.id) {
-                                    Toggle("", isOn: muteBinding(companion.id))
-                                        .help("Mute: this companion animates but never speaks")
-                                        .frame(width: 60)
-                                    Text("mute").font(.caption2).foregroundColor(.secondary)
+                        ScrollView {
+                            LazyVStack(alignment: .leading, spacing: 4) {
+                                ForEach(packCharacters) { companion in
+                                    HStack {
+                                        Toggle(companion.displayName, isOn: companionBinding(companion.id))
+                                        if preferences.activeCompanionIDs.contains(companion.id) {
+                                            Toggle("", isOn: muteBinding(companion.id))
+                                                .help("Mute: this companion animates but never speaks")
+                                                .frame(width: 60)
+                                            Text("mute").font(.caption2).foregroundColor(.secondary)
+                                        }
+                                    }
                                 }
                             }
                         }
+                        .frame(height: 240)
                         Text("Leave everything unchecked to use the pack's default pair.")
                             .font(.caption)
                             .foregroundColor(.secondary)
@@ -527,14 +585,6 @@ struct SettingsView: View {
                 CharacterPreviewView(characterID: preferences.previewCharacterID.isEmpty
                     ? preferences.activeCharacterID
                     : preferences.previewCharacterID)
-            }
-
-            card("Not available yet") {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("Toriel & Undyne — too hard to rip cleanly. Their robes and hair share colors with the sprite-sheet background, which eats holes in their sprites. They'll return once the extraction can tell background from body.")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
             }
 
             if !currentCredit.isEmpty {

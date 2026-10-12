@@ -114,6 +114,12 @@ enum BillState: String, CaseIterable, Sendable {
     case edgePeek
     case running
 
+    /// Pack-character theatre: plays an arbitrary family from the
+    /// character's sheet (`CharacterAnimationLibrary.showcaseFamily`),
+    /// so battle reactions, one-offs and outfit variants that no
+    /// standard state maps to are actually seen.
+    case showcasing
+
     /// Higher priority states can interrupt lower ones mid-beat.
     /// Reactive/emotional spikes outrank ambient/idle behavior. Rare
     /// Easter eggs sit deliberately high — once one rolls, it should play
@@ -158,6 +164,7 @@ enum BillState: String, CaseIterable, Sendable {
         case .crouching, .launching, .rising, .falling, .landingSoft, .landingHard,
              .ledgeGrabbing, .climbingUp, .climbingDown, .hangingIdle, .edgePeek, .running:
             return 55
+        case .showcasing: return 52
         case .thinking, .talking: return 45
         case .charging: return 40
         case .walking: return 30
@@ -185,7 +192,8 @@ enum BillState: String, CaseIterable, Sendable {
              .huffy, .dancing,
              .caneTwist, .hookCane, .conjuring, .tumbling, .dashTarget, .grumpEyes, .zipAround,
              .rampaging, .ritualBuildup, .zodiacRage, .prismDance, .zodiacCrimson,
-             .crouching, .launching, .landingSoft, .landingHard, .ledgeGrabbing, .edgePeek:
+             .crouching, .launching, .landingSoft, .landingHard, .ledgeGrabbing, .edgePeek,
+             .showcasing:
             return false
         }
     }

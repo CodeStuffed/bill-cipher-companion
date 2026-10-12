@@ -153,7 +153,14 @@ enum AnimationClipLibrary {
         case .climbingDown: return climbingDown
         case .hangingIdle: return hangingIdle
         case .edgePeek: return edgePeek
-        case .running: return running
+        // The deselector gates STATES, but roaming's `.running` renders
+        // through the rampaging art row — disabling "rampaging" in Settings
+        // must suppress that art everywhere, including the run.
+        case .running:
+            return AppPreferences.isStateDisabledShared("rampaging") ? walking : running
+        // Pack-character theatre: the staged family comes through the pack
+        // clip provider; Bill never routes here.
+        case .showcasing: return idle
         }
     }
 

@@ -176,19 +176,62 @@ final class StatusItemController: NSObject {
             let header = NSMenuItem(title: packName, action: nil, keyEquivalent: "")
             header.isEnabled = false
             submenu.addItem(header)
+
+            // Hollow Knight ships 100+ enemies and NPCs — nest them so
+            // the pack stays one screen tall: leads inline, the rest in
+            // Enemies/NPCs submenus.
+            if packName == "Hollow Knight" {
+                for definition in characters where !definition.isEnemy && !definition.isNPC {
+                    submenu.addItem(makeCharacterItem(definition))
+                }
+                let enemies = characters.filter(\.isEnemy)
+                let npcs = characters.filter(\.isNPC)
+                if !enemies.isEmpty {
+                    let enemiesMenu = NSMenu()
+                    for definition in enemies {
+                        enemiesMenu.addItem(makeCharacterItem(definition))
+                    }
+                    let enemiesItem = NSMenuItem(
+                        title: "Enemies (\(enemies.count))",
+                        action: nil,
+                        keyEquivalent: ""
+                    )
+                    enemiesItem.submenu = enemiesMenu
+                    submenu.addItem(enemiesItem)
+                }
+                if !npcs.isEmpty {
+                    let npcsMenu = NSMenu()
+                    for definition in npcs {
+                        npcsMenu.addItem(makeCharacterItem(definition))
+                    }
+                    let npcsItem = NSMenuItem(
+                        title: "NPCs (\(npcs.count))",
+                        action: nil,
+                        keyEquivalent: ""
+                    )
+                    npcsItem.submenu = npcsMenu
+                    submenu.addItem(npcsItem)
+                }
+                continue
+            }
+
             for definition in characters {
-                let item = NSMenuItem(
-                    title: definition.displayName,
-                    action: #selector(switchCharacter(_:)),
-                    keyEquivalent: ""
-                )
-                item.target = self
-                item.representedObject = definition.id
-                item.state = definition.id == characterEngine.character.id ? .on : .off
-                submenu.addItem(item)
+                submenu.addItem(makeCharacterItem(definition))
             }
         }
         return submenu
+    }
+
+    private func makeCharacterItem(_ definition: CharacterDefinition) -> NSMenuItem {
+        let item = NSMenuItem(
+            title: definition.displayName,
+            action: #selector(switchCharacter(_:)),
+            keyEquivalent: ""
+        )
+        item.target = self
+        item.representedObject = definition.id
+        item.state = definition.id == characterEngine.character.id ? .on : .off
+        return item
     }
 
     @objc private func toggleAlwaysOnTop() {

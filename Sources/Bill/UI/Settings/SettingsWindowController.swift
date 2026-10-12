@@ -18,6 +18,8 @@ final class SettingsWindowController: NSObject {
     /// Set by `AppDelegate` — fires a reaction trigger live.
     var onTestTrigger: ((_ keys: [String], _ animationKey: String) -> Void)?
     var onSwitchCharacter: ((_ id: String) -> Void)?
+    /// Set by `AppDelegate` — plays the Deltarune world crossfade.
+    var onWorldModeChanged: (() -> Void)?
 
     /// The window's frame in screen coordinates, or `nil` while closed —
     /// Bill's drop-by Easter egg (drag him onto Settings, he reacts)
@@ -42,7 +44,8 @@ final class SettingsWindowController: NSObject {
                 onTestWeather: { [weak self] in self?.onTestWeather?() },
                 onOpenQuotesManager: { [weak self] in self?.onOpenQuotesManager?() },
                 onTestTrigger: { [weak self] keys, anim in self?.onTestTrigger?(keys, anim) },
-                onSwitchCharacter: { [weak self] id in self?.onSwitchCharacter?(id) }
+                onSwitchCharacter: { [weak self] id in self?.onSwitchCharacter?(id) },
+                onWorldModeChanged: { [weak self] in self?.onWorldModeChanged?() }
             )
             let hosting = NSHostingController(rootView: view)
             let win = NSWindow(contentViewController: hosting)

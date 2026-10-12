@@ -1,4 +1,5 @@
 import Foundation
+import SpriteKit
 
 /// Bill's behavior brain — separate from both the renderer (`Animation/`)
 /// and the AI chat system. Decides *when* Bill should be in a given state:
@@ -21,7 +22,11 @@ final class CharacterEngine {
     private(set) var catalog: CharacterSpriteCatalog?
     /// The active pack character's animation library — kept for the
     /// ambient-safety check (`isAmbientSafe`).
-    private var ambientLibrary: CharacterAnimationLibrary?
+    private(set) var ambientLibrary: CharacterAnimationLibrary?
+    /// Non-nil for pack characters: the ambient clip library, exposed for
+    /// the roaming controller so directional walking can sync
+    /// `walkDirection` (the sheet's own left/right rows) with facing.
+    var animationLibrary: CharacterAnimationLibrary? { ambientLibrary }
 
     private var idleBeatTimer: Timer?
     private var catchUpTimer: Timer?
@@ -132,13 +137,34 @@ final class CharacterEngine {
 
         // Re-roll the next idle beat so the new character's idle starts
         // breathing promptly rather than after the previous delay.
+        showcasedFamilies = []
+        lastIdleState = nil
         if isRunning { scheduleNextIdleBeat() }
+    }
+
+    /// The Deltarune world transition: dark world and light world are
+    /// different places — flipping between them can't be a texture pop.
+    /// The body dips to near-invisible, re-resolves every family under
+    /// the new mode, and fades back in. Called by Settings when the
+    /// world-mode picker changes.
+    func transitionWorld() {
+        let body = rig.bodyNode
+        body.removeAction(forKey: "worldFade")
+        let fade = SKAction.sequence([
+            SKAction.fadeAlpha(to: 0.08, duration: 0.45),
+            SKAction.run { [weak self] in
+                // Re-resolve the current state's clip under the new mode —
+                // idle re-picks the dark/light idle row and so on.
+                self?.stateMachine.request(.idle, force: true)
+            },
+            SKAction.fadeAlpha(to: 1, duration: 0.6),
+        ])
+        body.run(fade, withKey: "worldFade")
     }
 
     func start() {
         guard !isRunning else { return }
-        isRunning = true
-        // Kicks off the continuous idle bob (see `BillStateMachine.init`'s
+        isRunning = true        // Kicks off the continuous idle bob (see `BillStateMachine.init`'s
         // doc comment for why this can't happen at construction time) so
         // Bill is already gently moving before the very first idle beat,
         // rather than sitting frozen for the first 4-9s.
@@ -269,6 +295,11 @@ final class CharacterEngine {
 
         if rollFanServiceBark() { return }
         if rollRareEvent() { return }
+        // Pack-character theatre: before the standard state roll, a chance
+        // to perform one of the sheet's own families — battle reactions,
+        // one-offs, outfit variants — so the whole sheet is genuinely
+        // seen, not just the states the library maps.
+        if rollShowcase() { return }
 
         let roll = Double.random(in: 0..<1)
         if roll < Self.commonTierChance {
@@ -278,6 +309,37 @@ final class CharacterEngine {
         } else {
             playIdle(Self.idleUncommonStates)
         }
+    }
+
+    /// Families already performed this session — they cycle before any
+    /// repeats, so a sansdt steadily works through all 85 battle rows.
+    private var showcasedFamilies: Set<String> = []
+
+    /// Roughly one idle beat in six becomes a sheet-family performance
+    /// for pack characters with rich sheets. The state then plays exactly
+    /// that family (see `CharacterAnimationLibrary.showcaseFamily`).
+    private func rollShowcase() -> Bool {
+        guard let library = ambientLibrary else { return false }
+        // Only sheet-rich characters perform — on a five-family sheet the
+        // rotation reads as spamming the one weird frame (temmie's
+        // "feeling of being watched" on loop).
+        guard library.allFamilies.count >= 10 else { return false }
+        guard Double.random(in: 0..<1) < 1.0 / 6.0 else { return false }
+        var candidates = library.showcaseCandidates
+        guard !candidates.isEmpty else { return false }
+        // Fresh first; once everything has been seen, start a new act.
+        let fresh = candidates.filter { !showcasedFamilies.contains($0) }
+        if fresh.isEmpty {
+            showcasedFamilies = []
+            candidates = []
+        }
+        let pool = fresh.isEmpty ? library.showcaseCandidates : fresh
+        guard let family = pool.randomElement() else { return false }
+        showcasedFamilies.insert(family)
+        library.showcaseFamily = family
+        stateMachine.request(.showcasing, force: true)
+        holdBeat(for: .showcasing)
+        return true
     }
 
     /// Requests one of `states` (never the one that just played) and holds

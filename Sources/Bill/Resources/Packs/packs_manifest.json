@@ -1,119 +1,9 @@
 {
- "sans": {
-  "canvas": [
-   34,
-   37
-  ],
-  "idle_h": 30,
-  "families": {
-   "down": 4,
-   "left": 4,
-   "right": 4,
-   "shrug": 2,
-   "sleep": 2,
-   "stool-and-ocmb": 5,
-   "stool-chup": 10,
-   "trike-and-wink": 4,
-   "trombone": 2,
-   "up": 4
-  }
- },
- "sansdt": {
-  "canvas": [
-   23,
-   30
-  ],
-  "idle_h": 30,
-  "families": {
-   "idle": 8,
-   "talking": 12,
-   "happy": 8,
-   "surprised": 8,
-   "annoyed": 8,
-   "dazed": 8
-  }
- },
- "papyrus": {
-  "canvas": [
-   36,
-   43
-  ],
-  "idle_h": 42,
-  "families": {
-   "admiration": 11,
-   "silly": 9,
-   "walk-back": 12,
-   "walk-left": 12,
-   "walk-up": 4
-  }
- },
- "frisk": {
-  "canvas": [
-   28,
-   37
-  ],
-  "idle_h": 29,
-  "families": {
-   "down": 4,
-   "drop-water": 8,
-   "left": 2,
-   "rain-down": 4,
-   "rain-left": 2,
-   "rain-right": 2,
-   "rain-up": 4,
-   "right": 2,
-   "up": 4
-  }
- },
- "flowey": {
-  "canvas": [
-   25,
-   27
-  ],
-  "idle_h": 21,
-  "families": {
-   "empty": 1,
-   "face-grow": 9,
-   "face-laugh": 3,
-   "face-shrink": 9,
-   "sink": 4,
-   "talking": 2
-  }
- },
- "temmie": {
-  "canvas": [
-   39,
-   43
-  ],
-  "idle_h": 43,
-  "families": {
-   "feeling-of-bein-watched": 1,
-   "hoivs": 5,
-   "talk": 4,
-   "walk-left": 4,
-   "walk-right": 4
-  }
- },
- "monsterkid": {
-  "canvas": [
-   28,
-   28
-  ],
-  "idle_h": 28,
-  "families": {
-   "forward": 6,
-   "right-face-fall-stand-left-face-fall": 41,
-   "walk-back": 6,
-   "walk-left": 6,
-   "walk-right": 6
-  }
- },
  "annoyingdog": {
   "canvas": [
-   30,
-   24
+   29,
+   21
   ],
-  "idle_h": 19,
   "families": {
    "christams": 1,
    "defualt": 1,
@@ -133,87 +23,82 @@
    "tail-fire-walk": 4,
    "variation-transformations": 8,
    "walk": 2
-  }
+  },
+  "idle_h": 19
  },
- "nikoow": {
+ "flowey": {
   "canvas": [
-   20,
-   29
+   28,
+   23
   ],
-  "idle_h": 29,
   "families": {
-   "idle": 3,
-   "walking": 3,
-   "walkup": 3,
-   "talking": 3,
-   "happy": 3,
-   "sad": 3,
-   "surprised": 3
-  }
+   "empty": 1,
+   "face-grow": 9,
+   "face-laugh": 3,
+   "face-shrink": 9,
+   "sink": 4,
+   "talking": 2
+  },
+  "idle_h": 21
  },
- "niko": {
+ "frisk": {
   "canvas": [
    25,
-   37
+   32
   ],
-  "idle_h": 29,
   "families": {
-   "black-forward-walk": 4,
-   "black-left-walk": 4,
-   "black-light-walk-backwards": 4,
-   "black-light-walk-forward": 4,
-   "black-light-walk-left": 4,
-   "black-light-walk-right": 4,
-   "black-mask-walk-back": 4,
-   "black-mask-walk-forwards": 4,
-   "black-mask-walk-left": 4,
-   "black-mask-walk-right": 4,
-   "black-right-walk": 4,
-   "black-walk-backwards": 4,
-   "dark-light-mask-walk-backwards": 4,
-   "dark-light-mask-walk-forwards": 4,
-   "dark-light-mask-walk-left": 4,
-   "dark-light-mask-walk-right": 4,
-   "dark-light-walk-backwards": 4,
-   "dark-light-walk-forward": 4,
-   "dark-light-walk-left": 4,
-   "dark-light-walk-right": 4,
-   "dark-mask-walk-backwards": 4,
-   "dark-mask-walk-forward": 4,
-   "dark-mask-walk-right": 4,
-   "dark-walk-backwards": 4,
-   "dark-walk-left": 4,
-   "dark-walk-right": 4,
-   "forward-walk": 4,
-   "left-walk": 4,
-   "light-left-walk": 4,
-   "light-right-walk": 4,
-   "light-walk-backwards": 4,
-   "mask-light-walk-backwards": 4,
-   "mask-light-walk-forward": 4,
-   "mask-light-walk-left": 4,
-   "mask-light-walk-right": 4,
-   "mask-walk-backwards": 4,
-   "mask-walk-forward": 4,
-   "mask-walk-left": 4,
-   "mask-walk-right": 4,
-   "no-mask-black-light-walk-backwards": 4,
-   "no-mask-black-light-walk-left": 4,
-   "no-mask-black-light-walk-right": 4,
-   "right-walk": 4,
-   "save-1": 4,
-   "save-2": 4,
-   "spin": 4,
-   "spin-2": 5,
-   "walk-backwards": 4
-  }
+   "down": 4,
+   "drop-water": 8,
+   "left": 2,
+   "rain-down": 4,
+   "rain-left": 2,
+   "rain-right": 2,
+   "rain-up": 4,
+   "right": 2,
+   "up": 4
+  },
+  "idle_h": 29
+ },
+ "hornet": {
+  "canvas": [
+   244,
+   238
+  ],
+  "families": {
+   "fight-attack": 6,
+   "fight-idle": 7,
+   "happy": 8,
+   "hardland": 6,
+   "harpoonside": 2,
+   "idle": 2,
+   "jump": 10,
+   "land": 6,
+   "oc-idle": 6,
+   "oc-talk": 3,
+   "oc-walk": 6,
+   "talking": 4,
+   "throw": 8,
+   "throwside": 8,
+   "walking": 6,
+   "x01": 2,
+   "x02": 6,
+   "x03": 6,
+   "x04": 6,
+   "x05": 7,
+   "x06": 9,
+   "x07": 2,
+   "x08": 3,
+   "x09": 2,
+   "x10": 3,
+   "x11": 3
+  },
+  "idle_h": 213
  },
  "knight": {
   "canvas": [
-   84,
-   140
+   81,
+   143
   ],
-  "idle_h": 128,
   "families": {
    "attack": 17,
    "cast": 10,
@@ -302,49 +187,14 @@
    "x44": 10,
    "x45": 16,
    "x46": 16
-  }
- },
- "hornet": {
-  "canvas": [
-   253,
-   234
-  ],
-  "idle_h": 213,
-  "families": {
-   "fight-attack": 6,
-   "fight-idle": 7,
-   "happy": 8,
-   "hardland": 6,
-   "harpoonside": 2,
-   "idle": 2,
-   "jump": 10,
-   "land": 6,
-   "oc-idle": 6,
-   "oc-talk": 3,
-   "oc-walk": 6,
-   "talking": 4,
-   "throw": 8,
-   "throwside": 8,
-   "walking": 6,
-   "x01": 2,
-   "x02": 6,
-   "x03": 6,
-   "x04": 6,
-   "x05": 7,
-   "x06": 9,
-   "x07": 2,
-   "x08": 3,
-   "x09": 2,
-   "x10": 3,
-   "x11": 3
-  }
+  },
+  "idle_h": 128
  },
  "kris": {
   "canvas": [
-   49,
-   47
+   25,
+   41
   ],
-  "idle_h": 37,
   "families": {
    "battle-act": 11,
    "battle-attack-intro": 8,
@@ -379,14 +229,99 @@
    "white-walk-back": 4,
    "white-walk-left": 4,
    "white-walk-right": 4
-  }
+  },
+  "idle_h": 37
+ },
+ "monsterkid": {
+  "canvas": [
+   25,
+   31
+  ],
+  "families": {
+   "forward": 6,
+   "right-face-fall-stand-left-face-fall": 41,
+   "walk-back": 6,
+   "walk-left": 6,
+   "walk-right": 6
+  },
+  "idle_h": 28
+ },
+ "niko": {
+  "canvas": [
+   28,
+   32
+  ],
+  "families": {
+   "black-forward-walk": 4,
+   "black-left-walk": 4,
+   "black-light-walk-backwards": 4,
+   "black-light-walk-forward": 4,
+   "black-light-walk-left": 4,
+   "black-light-walk-right": 4,
+   "black-mask-walk-back": 4,
+   "black-mask-walk-forwards": 4,
+   "black-mask-walk-left": 4,
+   "black-mask-walk-right": 4,
+   "black-right-walk": 4,
+   "black-walk-backwards": 4,
+   "dark-light-mask-walk-backwards": 4,
+   "dark-light-mask-walk-forwards": 4,
+   "dark-light-mask-walk-left": 4,
+   "dark-light-mask-walk-right": 4,
+   "dark-light-walk-backwards": 4,
+   "dark-light-walk-forward": 4,
+   "dark-light-walk-left": 4,
+   "dark-light-walk-right": 4,
+   "dark-mask-walk-backwards": 4,
+   "dark-mask-walk-forward": 4,
+   "dark-mask-walk-right": 4,
+   "dark-walk-backwards": 4,
+   "dark-walk-left": 4,
+   "dark-walk-right": 4,
+   "forward-walk": 4,
+   "left-walk": 4,
+   "light-left-walk": 4,
+   "light-right-walk": 4,
+   "light-walk-backwards": 4,
+   "mask-light-walk-backwards": 4,
+   "mask-light-walk-forward": 4,
+   "mask-light-walk-left": 4,
+   "mask-light-walk-right": 4,
+   "mask-walk-backwards": 4,
+   "mask-walk-forward": 4,
+   "mask-walk-left": 4,
+   "mask-walk-right": 4,
+   "no-mask-black-light-walk-backwards": 4,
+   "no-mask-black-light-walk-left": 4,
+   "no-mask-black-light-walk-right": 4,
+   "right-walk": 4,
+   "save-1": 4,
+   "save-2": 4,
+   "spin": 4,
+   "spin-2": 5,
+   "walk-backwards": 4
+  },
+  "idle_h": 29
+ },
+ "papyrus": {
+  "canvas": [
+   35,
+   47
+  ],
+  "families": {
+   "admiration": 11,
+   "silly": 9,
+   "walk-back": 12,
+   "walk-left": 12,
+   "walk-up": 4
+  },
+  "idle_h": 42
  },
  "ralsei": {
   "canvas": [
-   69,
-   53
+   93,
+   49
   ],
-  "idle_h": 44,
   "families": {
    "attack": 7,
    "battle-idle": 5,
@@ -444,14 +379,127 @@
    "wave-hi": 7,
    "yarn-ball": 2,
    "yarn-ball-light": 2
-  }
+  },
+  "idle_h": 44
+ },
+ "sans": {
+  "canvas": [
+   31,
+   33
+  ],
+  "families": {
+   "down": 4,
+   "left": 4,
+   "right": 4,
+   "shrug": 2,
+   "sleep": 2,
+   "stool-and-ocmb": 5,
+   "stool-chup": 10,
+   "trike-and-wink": 4,
+   "trombone": 2,
+   "up": 4
+  },
+  "idle_h": 30
+ },
+ "sansdt": {
+  "canvas": [
+   31,
+   33
+  ],
+  "families": {
+   "angry": 10,
+   "annoyed": 16,
+   "blush": 10,
+   "bs-21": 14,
+   "bs-22": 16,
+   "bs-23": 20,
+   "bs-24": 10,
+   "bs-25": 8,
+   "bs-26": 8,
+   "bs-27": 8,
+   "bs-28": 16,
+   "bs-29": 14,
+   "bs-30": 16,
+   "bs-31": 14,
+   "bs-32": 10,
+   "bs-33": 5,
+   "bs-34": 5,
+   "bs-35": 10,
+   "bs-36": 8,
+   "bs-37": 10,
+   "bs-38": 6,
+   "bs-39": 6,
+   "bs-40": 9,
+   "bs-41": 5,
+   "bs-42": 6,
+   "bs-43": 8,
+   "bs-44": 18,
+   "bs-45": 10,
+   "bs-46": 10,
+   "bs-47": 5,
+   "bs-48": 12,
+   "bs-49": 8,
+   "bs-50": 8,
+   "bs-51": 8,
+   "bs-52": 12,
+   "bs-53": 6,
+   "bs-54": 6,
+   "bs-55": 6,
+   "bs-56": 4,
+   "bs-57": 8,
+   "bs-58": 12,
+   "bs-59": 12,
+   "bs-60": 8,
+   "bs-61": 5,
+   "bs-62": 10,
+   "bs-63": 12,
+   "bs-64": 12,
+   "bs-65": 12,
+   "bs-66": 8,
+   "bs-67": 8,
+   "bs-68": 8,
+   "bs-69": 16,
+   "bs-70": 8,
+   "bs-71": 8,
+   "bs-72": 8,
+   "bs-73": 8,
+   "bs-74": 5,
+   "bs-75": 5,
+   "bs-76": 3,
+   "bs-77": 5,
+   "bs-78": 5,
+   "bs-79": 3,
+   "bs-80": 3,
+   "bs-81": 8,
+   "bs-82": 3,
+   "bs-83": 9,
+   "dark-idle": 8,
+   "dark-laugh": 8,
+   "dark-side": 16,
+   "dazed": 8,
+   "eyeflash": 10,
+   "grin": 16,
+   "happy": 16,
+   "idle": 8,
+   "laugh": 8,
+   "nervous": 16,
+   "sad": 20,
+   "serious": 10,
+   "shocked": 8,
+   "side-talk": 12,
+   "surprised": 8,
+   "talk": 12,
+   "talk-fast": 12,
+   "talking": 12,
+   "wink": 8
+  },
+  "idle_h": 30
  },
  "susie": {
   "canvas": [
-   79,
-   57
+   71,
+   49
   ],
-  "idle_h": 44,
   "families": {
    "act": 12,
    "battle-intro": 12,
@@ -486,20 +534,35 @@
    "walk-right-dark-face": 4,
    "walk-right-no-face": 8,
    "walk-up-dark": 4
-  }
+  },
+  "idle_h": 44
+ },
+ "temmie": {
+  "canvas": [
+   52,
+   48
+  ],
+  "families": {
+   "feeling-of-bein-watched": 1,
+   "hoivs": 5,
+   "talk": 4,
+   "walk-left": 4,
+   "walk-right": 4
+  },
+  "idle_h": 43
  },
  "toriel": {
   "canvas": [
-   37,
-   53
+   33,
+   58
   ],
-  "idle_h": 52,
   "families": {
    "chair": 10,
    "down": 6,
    "left": 6,
    "right": 10,
    "up": 4
-  }
+  },
+  "idle_h": 52
  }
 }
